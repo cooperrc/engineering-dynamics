@@ -360,10 +360,24 @@ acceleration of point <span class="math notranslate nohighlight">\(P\)</span> <e
 <p>The definitions of position, velocity, and acceleration all describe a
 single point, but dynamic engineering systems are composed of rigid
 bodies is needed to describe the position of an object.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
-<span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../dyn-logo.svg&#39;</span><span class="p">)</span>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
+
+<span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./images/position_angle.svg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/kinematics_3_0.svg" src="../_images/kinematics_3_0.svg" /></div>
+</div>
+<p><em>In the figure above, the center of the block is located at
+<span class="math notranslate nohighlight">\(r_{P/O}=x\hat{i}+y\hat{j}\)</span> in both the left and right images, but the
+two locations are not the same. The orientation of the block is
+important for determining the position of all the material points.</em></p>
+<p>In general, a rigid body has a <em>pitch</em>, <em>yaw</em>, and <em>roll</em> that describes
+its rotational orientation. If the rigid body is constrained to rotate
+in a plane, it just has a single orientation angle.</p>
 </div>
 
     <script type="text/x-thebe-config">
