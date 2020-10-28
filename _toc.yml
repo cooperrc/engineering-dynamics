@@ -2,7 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: intro
+- file: module_00/meet_cooper
 - file: content
+- file: module_00/overview.md
   sections:
-    - file: markdown
-    - file: notebooks
+    - file: module_00/introduction
+    - file: module_00/participation
