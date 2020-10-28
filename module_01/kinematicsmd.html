@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adams tutorial: projectile motion prediction &#8212; Engineering Dynamics</title>
+    <title>Geometry of motion - kinematics &#8212; Engineering Dynamics</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -157,9 +157,12 @@
     
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        
+        <a class="dropdown-buttons"
+            href="../_sources/module_01/kinematicsmd.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_01/project_01.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_01/kinematicsmd.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -179,7 +182,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/project_01.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/kinematicsmd.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -195,10 +198,71 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/_build/module_01/kinematicsmd.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Geometry of motion - kinematics
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#position">
+   Position
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#velocity">
+   Velocity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#speed">
+     Speed
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceleration">
+   Acceleration
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-in-planar-motion">
+   Rotation
+   <em>
+    in planar motion
+   </em>
+  </a>
+ </li>
+</ul>
+
+        </nav>
         
     </div>
 </div>
@@ -207,12 +271,54 @@
         
               <div>
                 
-  <div class="section" id="adams-tutorial-projectile-motion-prediction">
-<h1>Adams tutorial: projectile motion prediction<a class="headerlink" href="#adams-tutorial-projectile-motion-prediction" title="Permalink to this headline">¶</a></h1>
-<p>In this tutorial, you will create a 3D computational model of a projectile that
-is given an initial velocity and acted upon by gravity.</p>
-<p>The first step is to complete the tutorial, answer the questions in the Google
-Form, then save your work for the preparation of your Adams Project Report 01.</p>
+  <div class="section" id="geometry-of-motion-kinematics">
+<h1>Geometry of motion - kinematics<a class="headerlink" href="#geometry-of-motion-kinematics" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="position">
+<h1>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h1>
+<p>Classical physics describes the position of an object using three
+independent coordinates e.g.</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{r}_{P/O}\)</span> is the position of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point
+of origin</em> <span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(x,~y,~z\)</span> are magnitudes of distance along a
+Cartesian coordinate system and <span class="math notranslate nohighlight">\(\hat{i},~\hat{j}\)</span> and <span class="math notranslate nohighlight">\(\hat{k}\)</span> are
+unit vectors that describe three</p>
+</div>
+<div class="section" id="velocity">
+<h1>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">¶</a></h1>
+<p>The velocity of an object is the change in position per length of time.</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
+\dot{z}\hat{k}\)</span></p>
+<p>This definition of velocity depends upon the change in position of all
+three independent coordinates, where
+<span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}\)</span>.</p>
+<div class="section" id="speed">
+<h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h2>
+<p>The speed of an object is the
+<a class="reference external" href="https://www.mathsisfun.com/algebra/vectors.html">magnitude</a> of the
+velocity,</p>
+<p><span class="math notranslate nohighlight">\(|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
+\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}\)</span></p>
+</div>
+</div>
+<div class="section" id="acceleration">
+<h1>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h1>
+<p>The acceleration of an object is the change in velocity per length of
+time.</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{a}_{P/O} = \frac{d \mathbf{v}_{P/O} }{dt} = \ddot{x}\hat{i} +
+\ddot{y}\hat{j} + \ddot{z}\hat{k}\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\ddot{x}=\frac{d^2 x}{dt^2}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a}_{P/O}\)</span> is the
+acceleration of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point of origin</em> <span class="math notranslate nohighlight">\(O\)</span>.</p>
+</div>
+<div class="section" id="rotation-in-planar-motion">
+<h1>Rotation <em>in planar motion</em><a class="headerlink" href="#rotation-in-planar-motion" title="Permalink to this headline">¶</a></h1>
+<p>The definitions of position, velocity, and acceleration all describe a
+single point, but dynamic engineering systems are composed of rigid
+bodies is needed to describe the position of an object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
+<span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../dyn-logo.svg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
