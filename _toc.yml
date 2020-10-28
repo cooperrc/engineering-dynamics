@@ -8,3 +8,9 @@
   sections:
     - file: module_00/introduction
     - file: module_00/participation
+
+- file: module_01/overview
+  sections:
+    - file: module_01/introduction
+    - file: module_01/kinematics
+    - file: module_01/kinetics
