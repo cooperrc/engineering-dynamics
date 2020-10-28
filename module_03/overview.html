@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Materials &#8212; Engineering Dynamics</title>
+    <title>Module 03 - Momentum and Energy &#8212; Engineering Dynamics</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,6 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Numerical Solution of Yoyo despinning" href="yoyo-despin.html" />
+    <link rel="prev" title="Geometry of motion - kinematics" href="../module_01/kinematics.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -96,7 +98,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../module_00/meet_cooper.html">
    About the Instructor
@@ -117,10 +119,27 @@
    Module 1 - Dynamic equations and definitions
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../module_03/overview.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Module 03 - Momentum and Energy
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="yoyo-despin.html#define-the-state-and-d-dt-state">
+     Define the state and d/dt(state)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="yoyo-despin.html#to-save-to-file-from-python-output">
+     To save to file from python output
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -164,7 +183,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_04/readings.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_03/overview.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -184,7 +203,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_04/readings.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_03/overview.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -212,25 +231,11 @@
         
               <div>
                 
-  <div class="section" id="materials">
-<h1>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.11">Kasdin and Paley’s <em>Engineering Dynamics</em> ch. 8</a></p></li>
-</ul>
-<p>Focus on:</p>
-<ol class="simple">
-<li><p><strong>Equations 8.5, 8.13, 8.21, and definition 8.1</strong>: The transport equation</p></li>
-<li><p><strong>Example 8.1</strong> Kinematics of a compound pendulum</p></li>
-<li><p><strong>Example 8.2</strong> The velocity of a rolling wheel</p></li>
-<li><p><strong>Example 8.3</strong> The gear ratio</p></li>
-<li><p><strong>Example 8.4</strong> A two-bar linakage</p></li>
-<li><p><strong>Example 8.7</strong> A ~~three-~~four-bar linkage</p></li>
-<li><p><strong>Tutorial 8.1</strong> The Watt linkage</p></li>
-</ol>
-<p><strong>Choose three examples and discuss how kinematics (specifically the transport
-equation) were applied to describe the geometry of motion.</strong> Take a look at
-what the rest of the class writes and add some discussion points on a
-colleague’s interpretation.</p>
+  <div class="section" id="module-03-momentum-and-energy">
+<h1>Module 03 - Momentum and Energy<a class="headerlink" href="#module-03-momentum-and-energy" title="Permalink to this headline">¶</a></h1>
+<p>This module uses energy and momentum methods directly.</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -246,7 +251,7 @@ colleague’s interpretation.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./module_04"
+            path: "./module_03"
         },
         predefinedOutput: true
     }
@@ -261,6 +266,8 @@ colleague’s interpretation.</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../module_01/kinematics.html" title="previous page">Geometry of motion - kinematics</a>
+    <a class='right-next' id="next-link" href="yoyo-despin.html" title="next page">Numerical Solution of Yoyo despinning</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
