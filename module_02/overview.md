@@ -10,6 +10,7 @@
   a. count degrees of freedom choose variables
   b. define forces and kinematics with chosen variable
   c. solve for constrained equation of motion
-3. Transforming coordinate systems
+3. Using smart coordinate systems 
+  a. using mixed unit vectors
   a. radial and spherical
   b. rotating systems 
