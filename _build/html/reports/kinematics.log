@@ -17,19 +17,24 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import odeint
-import pretty_plots # script to set up LaTex and increase line-width and font size
+t = np.arange(0,10)
+x = 4*t + 3
+y = 3*t -1
+plt.plot(x,y,'o')
+plt.title('position of car on road every 1 second')
+plt.xlabel('x-position (m)')
+plt.ylabel('y-position (m)');
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m<ipython-input-1-5108677927e6>[0m in [0;36m<module>[0;34m[0m
-[1;32m      2[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      3[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mintegrate[0m [0;32mimport[0m [0modeint[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 4[0;31m [0;32mimport[0m [0mpretty_plots[0m [0;31m# script to set up LaTex and increase line-width and font size[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mModuleNotFoundError[0m: No module named 'pretty_plots'
-ModuleNotFoundError: No module named 'pretty_plots'
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-2-3c2b8aa907dd>[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0mx[0m [0;34m=[0m [0;36m4[0m[0;34m*[0m[0mt[0m [0;34m+[0m [0;36m3[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0my[0m [0;34m=[0m [0;36m3[0m[0;34m*[0m[0mt[0m [0;34m-[0m[0;36m1[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 4[0;31m [0mplt[0m[0;34m.[0m[0mplot[0m[0;34m([0m[0mx[0m[0;34m,[0m[0my[0m[0;34m,[0m[0;34m'o'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0mplt[0m[0;34m.[0m[0mtitle[0m[0;34m([0m[0;34m'position of car on road every 1 second'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m [0mplt[0m[0;34m.[0m[0mxlabel[0m[0;34m([0m[0;34m'x-position (m)'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mNameError[0m: name 'plt' is not defined
+NameError: name 'plt' is not defined
 

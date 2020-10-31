@@ -1,22 +1,23 @@
 # Module 1 - Dynamic equations and definitions
 
-In this course, we are focused on kinematic _geometry of
-motion_ and kinetic _forces, energy, and impacts_
-equations. This module covers the basic equations and
-definitions for describing dynamic motion.
+_ball rolling on plane_
+
+In this course, we are focused on kinematic _geometry of motion_ and kinetic
+_forces, energy, and impacts_ equations. This module covers the basic equations
+and definitions for describing dynamic motion.
 
 # Outline
 
 1. Kinematics
-  a. define position
-  b. velocity 
-  c. acceleration
-  d. degrees of freedom and coordinates
+  1. define position
+  2. velocity 
+  3. acceleration
+  4. degrees of freedom and coordinates
 2. Kinetics
-  a. Newton-Euler equations
-  b. Impulse-momentum
-  c. Work-energy
-  d. equations of motion = second order diff eq
+  1. Newton-Euler equations
+  2. Impulse-momentum
+  3. Work-energy
+  4. equations of motion = second order diff eq
 3. Solving dynamic problem
-  a. Newton-Euler equations define eom
-  b. Use ODE solution for x(t)
+  1. Newton-Euler equations define eom
+  2. Use ODE solution for x(t)

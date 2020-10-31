@@ -13,6 +13,9 @@
     - file: module_01/introduction
     - file: module_01/kinematics
     - file: module_01/kinetics
+- file: module_02/overview
 - file: module_03/overview
   sections:
     - file: module_03/yoyo-despin
+- file: module_04/overview
+- file: module_05/overview
