@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Engineering Dynamics</title>
+    <title>Module 4 - Momentum and Energy &#8212; Engineering Dynamics</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,6 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Module 5 - dynamics in three dimensions" href="../module_05/overview.html" />
+    <link rel="prev" title="Numerical Solution of Yoyo despinning" href="../module_03/yoyo-despin.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -96,7 +98,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../module_00/meet_cooper.html">
    About the Instructor
@@ -123,7 +125,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="overview.html">
+  <a class="reference internal" href="../module_02/overview.html">
    Module 2 - constrained dynamic motion
   </a>
  </li>
@@ -132,8 +134,8 @@
    Module 3 - Constrained engineering systems
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../module_04/overview.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Module 4 - Momentum and Energy
   </a>
  </li>
@@ -184,7 +186,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_02/module_summary.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_04/overview.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -204,7 +206,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_02/module_summary.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_04/overview.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -225,15 +227,6 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
-</ul>
-
-        </nav>
-        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -241,32 +234,26 @@
         
               <div>
                 
-  <table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Module Objectives</p></th>
-<th class="head"><p>Related Instructional Materials</p></th>
-<th class="head"><p>Related Learning Activities</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1. Predict the motion of a pendulum using Newton’s second law and kinematic constraints</p></td>
-<td><p>Videos 1c and 2 and Kasdin ch. 3-4</p></td>
-<td><p>HW and project</p></td>
-</tr>
-<tr class="row-odd"><td><p>2. Predict the motion of a pendulum using Adams multibody dynamic solver</p></td>
-<td><p>Video 1c and 2</p></td>
-<td><p>Project</p></td>
-</tr>
-<tr class="row-even"><td><p>3. Solve a nonlinear equation of motion</p></td>
-<td><p>Video 2</p></td>
-<td><p>HW and project</p></td>
-</tr>
-<tr class="row-odd"><td><p>4. Compare analytical and numerical solutions for linear and nonlinear equations of motion</p></td>
-<td><p>Videos 1a-d and 2 and Kasdin ch. 3</p></td>
-<td><p>Report</p></td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="module-4-momentum-and-energy">
+<h1>Module 4 - Momentum and Energy<a class="headerlink" href="#module-4-momentum-and-energy" title="Permalink to this headline">¶</a></h1>
+<p><em>yoyo despin</em></p>
+<p>This module uses energy and momentum methods directly.</p>
+<ol class="simple">
+<li><p>Energy and Momentum are different forms of Newton’s
+second law</p>
+<ol class="simple">
+<li><p>Impulse-momentum is Fdt=dp</p></li>
+<li><p>Work-energy is Fdx=dT</p></li>
+<li><p>momentum is a vector</p></li>
+<li><p>energy is a scalar</p></li>
+</ol>
+</li>
+<li><p>Describes states of system</p></li>
+<li><p>Impulse happens over short time in impact</p></li>
+<li><p>energy in conservative system ia conserved</p></li>
+<li><p>combining methods</p></li>
+</ol>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -281,7 +268,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./module_02"
+            path: "./module_04"
         },
         predefinedOutput: true
     }
@@ -296,6 +283,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../module_03/yoyo-despin.html" title="previous page">Numerical Solution of Yoyo despinning</a>
+    <a class='right-next' id="next-link" href="../module_05/overview.html" title="next page">Module 5 - dynamics in three dimensions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
