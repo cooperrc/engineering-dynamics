@@ -15,7 +15,8 @@
     - file: module_01/kinetics
 - file: module_02/overview
 - file: module_03/overview
-  sections:
-    - file: module_03/yoyo-despin
 - file: module_04/overview
+  sections:
+    - file: module_04/yoyo-despin
+    - file: module_04/yoyo-despin_02
 - file: module_05/overview

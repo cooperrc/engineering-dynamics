@@ -7,13 +7,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
-import pretty_plots # script to set up LaTex and increase line-width and font size
-
-
-# In[3]:
-
-
-pretty_plots.setdefaults()
 
 
 # # Numerical Solution of Yoyo despinning
@@ -24,7 +17,7 @@ pretty_plots.setdefaults()
 
 # Here we plot the relation between angular velocity and distance from center of cylinder just based upon conservation of angular momentum:
 
-# In[4]:
+# In[2]:
 
 
 m=0.1 #kg
@@ -54,7 +47,7 @@ plt.title('conservation of angular momentum\n h=constant');
 # 
 # We call the function, `yoyo_ode(y,t)`, where `y` is the state and `t` is the current time.
 
-# In[5]:
+# In[3]:
 
 
 def yoyo_ode(y,t):
@@ -65,7 +58,7 @@ def yoyo_ode(y,t):
     return dr
 
 
-# In[9]:
+# In[4]:
 
 
 yoyo_ode([0.15,1],0)
@@ -81,7 +74,7 @@ yoyo_ode([0.15,1],0)
 # 
 # in the line, `t=np.linspace(0,0.5)`
 
-# In[10]:
+# In[5]:
 
 
 t=np.linspace(0,0.5)
@@ -96,7 +89,7 @@ plt.ylabel('yoyo pos (m)')
 # 
 # Have to join the time, $r$, and $\dot{r}$ into an array then save to a file:
 
-# In[11]:
+# In[6]:
 
 
 np.savetxt('t_r_rdot.csv',np.array([t,r[:,0],r[:,1]]).T,delimiter=',')
