@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module 4 - Momentum and Energy" href="../module_04/overview.html" />
-    <link rel="prev" title="Module 3 - Constrained engineering systems" href="overview.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -98,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../module_00/meet_cooper.html">
    About the Instructor
@@ -129,27 +127,10 @@
    Module 2 - constrained dynamic motion
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1">
   <a class="reference internal" href="overview.html">
    Module 3 - Constrained engineering systems
   </a>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Numerical Solution of Yoyo despinning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#to-save-to-file-from-python-output">
-     To save to file from python output
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../module_04/overview.html">
@@ -201,14 +182,11 @@
     
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/module_03/yoyo-despin.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+        
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_03/yoyo-despin.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_03/yoyo-despin.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -306,6 +284,26 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">import</span> <span class="nn">pretty_plots</span> <span class="c1"># script to set up LaTex and increase line-width and font size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mf">5108677927e6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pretty_plots</span> <span class="c1"># script to set up LaTex and increase line-width and font size</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pretty_plots&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pretty_plots</span><span class="o">.</span><span class="n">setdefaults</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -334,7 +332,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/yoyo-despin_3_0.png" src="../_images/yoyo-despin_3_0.png" />
+<img alt="../_images/yoyo-despin_4_0.png" src="../_images/yoyo-despin_4_0.png" />
 </div>
 </div>
 </div>
@@ -364,7 +362,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.        , 8.14404432])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.        ,  8.14404432])
 </pre></div>
 </div>
 </div>
@@ -386,10 +384,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;yoyo pos (m)&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0,0.5,&#39;yoyo pos (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/yoyo-despin_8_1.png" src="../_images/yoyo-despin_8_1.png" />
+<img alt="../_images/yoyo-despin_9_1.png" src="../_images/yoyo-despin_9_1.png" />
 </div>
 </div>
 </div>
@@ -452,8 +450,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">Module 3 - Constrained engineering systems</a>
-    <a class='right-next' id="next-link" href="../module_04/overview.html" title="next page">Module 4 - Momentum and Energy</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
