@@ -1,19 +1,18 @@
 ---
-jupytext:
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.12
-    jupytext_version: 1.6.0
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.2'
+      jupytext_version: 1.6.0
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
 ---
 
-```{code-cell} ipython3
-:tags: [hide-cell]
+```python tags = ['hide-cell']
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -23,8 +22,7 @@ plt.style.use('fivethirtyeight')
 
 # Yoyo despin revisited (cord constraint)
 
-```{code-cell} ipython3
-:tags: [hide-input]
+```python tags = ['hide-input']
 
 from IPython.core.display import SVG
 
@@ -73,7 +71,7 @@ $m_P=m_Q=0.1~kg$. The system is released at $t = 0~s$ when the payload
 is spinning at $\omega_B^0=10~rad/s$. 
 ```
 
-```{code-cell} ipython3
+```python
 M = 1
 R = 0.1
 I = M*R**2/2
@@ -157,7 +155,7 @@ with the solution for $\dot{\theta}$
 $\omega_B^0 +\omega_B = \omega_B +\dot{\theta} \rightarrow \omega_B^0 =
 \dot{\theta}$.
 
-```{code-cell} ipython3
+```python
 t = np.linspace(0,1)
 theta = w0*t 
 ```
@@ -174,8 +172,7 @@ $c(\omega_B^0 - \omega_B) = (\omega_B^0 t)^2(\omega_B+\omega_B^0)$
 
 $\omega_B(t) = \frac{c-(\omega_B^0 t)^2}{c+(\omega_B^0 t)^2}\omega_B^0.$
 
-```{code-cell} ipython3
-:tags: [hide-input]
+```python tags=['hide-input']
 
 c = np.sqrt(I/2/m/R**2 + 1)
 wB = lambda t: (c-w0**2*t**2)/(c+w0**2*t**2)*w0
@@ -203,7 +200,7 @@ R\omega_B^0 t_f$
 
 $l_F = \sqrt{\frac{I}{2m}+R^2}$
 
-```{code-cell} ipython3
+```python
 tf = np.sqrt(c)/w0
 lf = R*np.sqrt(c)
 plt.plot(t,wB(t),label = 'w_B(t) solution')
@@ -213,6 +210,6 @@ plt.xlabel('time (s)')
 plt.ylabel('payload angular velocity (rad/s)');
 ```
 
-```{code-cell} ipython3
+```python
 
 ```

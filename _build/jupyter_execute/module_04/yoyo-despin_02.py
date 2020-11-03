@@ -4,6 +4,7 @@
 # In[1]:
 
 
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
@@ -13,6 +14,7 @@ plt.style.use('fivethirtyeight')
 # # Yoyo despin revisited (cord constraint)
 
 # In[2]:
+
 
 
 from IPython.core.display import SVG
@@ -106,8 +108,7 @@ w0 = 10
 # are release and $\theta = \dot{\theta}=0$. There are three unknown
 # variables in this angular momentum equation, $\omega_B$, $\theta$, and
 # $\dot{\theta}$. You need another equation, use work-energy.
-# 
-# 
+
 # # Engineering system - kinetics (work-energy formulation)
 # 
 # There is no external work done to the system, the tension in the yoyo
@@ -170,6 +171,7 @@ theta = w0*t
 # In[5]:
 
 
+
 c = np.sqrt(I/2/m/R**2 + 1)
 wB = lambda t: (c-w0**2*t**2)/(c+w0**2*t**2)*w0
 wC = wB(t) + w0
@@ -206,4 +208,10 @@ plt.plot(tf,wB(tf),'o', label = 'release point, t_f')
 plt.legend();
 plt.xlabel('time (s)')
 plt.ylabel('payload angular velocity (rad/s)');
+
+
+# In[ ]:
+
+
+
 
