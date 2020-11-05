@@ -3,19 +3,20 @@
 
 # # Geometry of motion - kinematics
 # 
-# # Position
+# ## Position
 # 
 # Classical physics describes the position of an object using three
 # independent coordinates e.g. 
 # 
-# $$
+# <a id='position'></a>
+# \begin{equation}
 # \mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}
-# $$ (position)
+# \end{equation}
 # 
 # where $\mathbf{r}_{P/O}$ is the position of point $P$ _with respect to the point
 # of origin_ $O$, $x,~y,~z$ are magnitudes of distance along a
 # Cartesian coordinate system and $\hat{i},~\hat{j}$ and $\hat{k}$ are
-# unit vectors that describe three
+# unit vectors that describe three 
 
 # In[1]:
 
@@ -25,41 +26,34 @@ import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
 
 
-# # Velocity
+# ## Velocity
 # 
-# The velocity of an object is the change in position, equation
-# {eq}`position`, per length of time.
+# The velocity of an object is the change in [position](#position) per length of time.
+# <a id='velociy'></a>
 # 
-# $$
+# \begin{equation}
 # \mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
 # \dot{z}\hat{k}
-# $$ (velocity)
+# \end{equation}
 # 
-# ```{note}
-# The notation $\dot{x}$ and $\ddot{x}$ is short-hand for writing out
-# $\frac{dx}{dt}$ and $\frac{d^2x}{dt^2}$, respectively.
-# ```
+# > __Note:__ The notation $\dot{x}$ and $\ddot{x}$ is short-hand for writing out
+# > $\frac{dx}{dt}$ and $\frac{d^2x}{dt^2}$, respectively.
 # 
 # The definition of velocity in equation {eq}`velocity` depends upon the change in position of all
 # three independent coordinates, where
 # $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}$. 
+
+# > __Note:__ Remember the chain rule:
+# > $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
+# > x\dot{\hat{i}}$, but $\dot{\hat{i}}=0$ because this unit vector is not
+# > changing direction. You'll see other unit vectors later that do change.
 # 
-# 
-# ```{note}
-# Remember the chain rule: $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
-# x\dot{\hat{i}}$, but $\dot{\hat{i}}=0$ because this unit vector is not
-# changing direction. You'll see other unit vectors later that _do
-# change_.
-# ```
-# 
-# {numref}`postion-velocity`
 # ## Example - GPS vs speedometer
 # You can find velocity based upon postion, but you can only find changes
 # in position with velocity. Consider tracking the motion of a car driving
 # down a road using GPS. You determine its motion and create the position,
 # $\mathbf{r} = x\hat{i} +y\hat{j}$, where
-# 
-# 
+
 # $x(t) = 4t +3$ and $y(t) = 3t - 1$
 # 
 # To get the velocity, calculate $\mathbf{v} = \dot{\mathbf{r}}$
@@ -80,6 +74,9 @@ plt.xlabel('x-position (m)')
 plt.ylabel('y-position (m)');
 
 
+# 
+# 
+
 # ## Speed
 # 
 # The speed of an object is the
@@ -89,7 +86,7 @@ plt.ylabel('y-position (m)');
 # $|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
 # \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}$
 # 
-# # Acceleration
+# ## Acceleration
 # 
 # The acceleration of an object is the change in velocity per length of
 # time. 
@@ -100,11 +97,11 @@ plt.ylabel('y-position (m)');
 # where $\ddot{x}=\frac{d^2 x}{dt^2}$ and $\mathbf{a}_{P/O}$ is the
 # acceleration of point $P$ _with respect to the point of origin_ $O$. 
 # 
-# # Rotation and Orientation
+# ## Rotation and Orientation
 # 
 # The definitions of position, velocity, and acceleration all describe a
 # single point, but dynamic engineering systems are composed of rigid
-# bodies is needed to describe the position of an object.
+# bodies is needed to describe the position of an object. 
 
 # In[3]:
 
@@ -122,6 +119,7 @@ SVG(filename='./images/position_angle.svg')
 # In general, a rigid body has a _pitch_, _yaw_, and _roll_ that describes
 # its rotational orientation, as seen in the animation below. We will
 # revisit 3D motion in Module_05
+# 
 
 # In[4]:
 
@@ -131,7 +129,7 @@ vid = YouTubeVideo("li7t--8UZms?loop=1")
 display(vid)
 
 
-# # Rotation in planar motion
+# ## Rotation in planar motion
 # 
 # Our initial focus is planar rotations e.g. yaw and roll are fixed. For a
 # body constrained to planar motion, you need 3 independent measurements

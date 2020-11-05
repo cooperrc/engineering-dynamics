@@ -1,20 +1,26 @@
 ---
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.12
-    jupytext_version: 1.6.0
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.2'
+      jupytext_version: 1.6.0
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
 ---
 
-```{code-cell} ipython3
+```python tags=["hide-cell"]
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
+import pretty_plots # script to set up LaTex and increase line-width and font size
+```
+
+```python
+pretty_plots.setdefaults()
 ```
 
 # Numerical Solution of Yoyo despinning
@@ -23,11 +29,10 @@ $\ddot{r} = r \dot{\theta}^2$
 
 $\ddot{r} = r\left(\frac{2mr_0^2+MR^2/2}{2mr^2+MR^2/2}\right)^2 \dot{\theta}(0)$
 
-+++
 
 Here we plot the relation between angular velocity and distance from center of cylinder just based upon conservation of angular momentum:
 
-```{code-cell} ipython3
+```python
 m=0.1 #kg
 M=1 #kg
 R=0.1 #meter
@@ -55,7 +60,7 @@ d/dt(state) = $[\dot{r},~\ddot{r}]=[\dot{r},~\frac{F_r}{m}]$
 
 We call the function, `yoyo_ode(y,t)`, where `y` is the state and `t` is the current time.
 
-```{code-cell} ipython3
+```python
 def yoyo_ode(y,t):
     '''define d2r/dt2= r*(h0/2m)^2/(M*R^2/4m+r^2)^2'''
     dr=np.zeros(np.shape(y))
@@ -64,7 +69,7 @@ def yoyo_ode(y,t):
     return dr
 ```
 
-```{code-cell} ipython3
+```python
 yoyo_ode([0.15,1],0)
 ```
 
@@ -78,7 +83,7 @@ $t = [0-0.5~s]$
 
 in the line, `t=np.linspace(0,0.5)`
 
-```{code-cell} ipython3
+```python
 t=np.linspace(0,0.5)
 r=odeint(yoyo_ode,[0.1,0],t)
 
@@ -91,7 +96,7 @@ plt.ylabel('yoyo pos (m)')
 
 Have to join the time, $r$, and $\dot{r}$ into an array then save to a file:
 
-```{code-cell} ipython3
+```python
 np.savetxt('t_r_rdot.csv',np.array([t,r[:,0],r[:,1]]).T,delimiter=',')
 ```
 

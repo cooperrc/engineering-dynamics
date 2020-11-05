@@ -365,18 +365,18 @@ angular momentum, and conservation of energy.</p>
 <h1>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this headline">¶</a></h1>
 <p>As the yoyo mass unravels, it moves further from the payload. The total
 distance from the payload center of mass (COM) is described by</p>
-<p><span class="math notranslate nohighlight">\(r_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(R\)</span> is the payload radius, <span class="math notranslate nohighlight">\(l\)</span> is the length of the cord, and
 <span class="math notranslate nohighlight">\(\hat{e}_R\)</span> and <span class="math notranslate nohighlight">\(\hat{e}_{\theta}\)</span> are unit vectors in a cylindrical
 coordinate system. The length of the cord depends upon the angle of the
 payload, <span class="math notranslate nohighlight">\(\theta\)</span>. Consider a spool of thread rolling across the floor,
 the thread left on the floor is equal to distance traveled or,
 <span class="math notranslate nohighlight">\(R\theta\)</span>. Now, the position of yoyo P is</p>
-<p><span class="math notranslate nohighlight">\(r_{P/G} = R\hat{e}_R + R\theta\hat{e}_{\theta}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/G} = R\hat{e}_R + R\theta\hat{e}_{\theta}\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the change in angle of the payload after the yoyos are
-released. The velocity of mass P is <span class="math notranslate nohighlight">\(\dot{r}_{P/G}\)</span>, using the transport
+released. The velocity of mass P is <span class="math notranslate nohighlight">\(\dot{\mathbf{r}}_{P/G}\)</span>, using the transport
 equation</p>
-<p><span class="math notranslate nohighlight">\(v_{P/G} = \frac{d}{dt}(R\hat{e}_R + R\theta\hat{e}_{\theta}) +
+<p><span class="math notranslate nohighlight">\(\mathbf{v}_{P/G} = \frac{d}{dt}(R\hat{e}_R + R\theta\hat{e}_{\theta}) +
 {}^I\mathbf{\omega}^C \times(R\hat{e}_R + R\theta\hat{e}_{\theta})\)</span></p>
 <p>where the total angular velocity is the combination of the payload’s
 angular velocity <span class="math notranslate nohighlight">\(\mathbf{\omega}_B\)</span> and the angular velocity of the
@@ -392,7 +392,8 @@ is spinning at <span class="math notranslate nohighlight">\(\omega_B^0=10~rad/s\
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up the Python variables</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">I</span> <span class="o">=</span> <span class="n">M</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mf">0.1</span>

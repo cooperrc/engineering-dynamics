@@ -32,7 +32,7 @@ SVG(filename='./yoyo-rocket.svg')
 # As the yoyo mass unravels, it moves further from the payload. The total
 # distance from the payload center of mass (COM) is described by 
 # 
-# $r_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}$
+# $\mathbf{r}_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}$
 # 
 # where $R$ is the payload radius, $l$ is the length of the cord, and
 # $\hat{e}_R$ and $\hat{e}_{\theta}$ are unit vectors in a cylindrical
@@ -41,13 +41,13 @@ SVG(filename='./yoyo-rocket.svg')
 # the thread left on the floor is equal to distance traveled or,
 # $R\theta$. Now, the position of yoyo P is
 # 
-# $r_{P/G} = R\hat{e}_R + R\theta\hat{e}_{\theta}$
+# $\mathbf{r}_{P/G} = R\hat{e}_R + R\theta\hat{e}_{\theta}$
 # 
 # where $\theta$ is the change in angle of the payload after the yoyos are
-# released. The velocity of mass P is $\dot{r}_{P/G}$, using the transport
+# released. The velocity of mass P is $\dot{\mathbf{r}}_{P/G}$, using the transport
 # equation
 # 
-# $v_{P/G} = \frac{d}{dt}(R\hat{e}_R + R\theta\hat{e}_{\theta}) +
+# $\mathbf{v}_{P/G} = \frac{d}{dt}(R\hat{e}_R + R\theta\hat{e}_{\theta}) +
 # {}^I\mathbf{\omega}^C \times(R\hat{e}_R + R\theta\hat{e}_{\theta})$
 # 
 # where the total angular velocity is the combination of the payload's
@@ -67,6 +67,7 @@ SVG(filename='./yoyo-rocket.svg')
 # In[3]:
 
 
+# Set up the Python variables
 M = 1
 R = 0.1
 I = M*R**2/2
@@ -169,7 +170,6 @@ theta = w0*t
 # $\omega_B(t) = \frac{c-(\omega_B^0 t)^2}{c+(\omega_B^0 t)^2}\omega_B^0.$
 
 # In[5]:
-
 
 
 c = np.sqrt(I/2/m/R**2 + 1)

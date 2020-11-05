@@ -14,50 +14,54 @@ jupyter:
 
 # Geometry of motion - kinematics
 
-## Position
+# Position
 
 Classical physics describes the position of an object using three
 independent coordinates e.g. 
 
-<a id='position'></a>
-\begin{equation}
+$$
 \mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}
-\end{equation}
+$$ (position)
 
 where $\mathbf{r}_{P/O}$ is the position of point $P$ _with respect to the point
 of origin_ $O$, $x,~y,~z$ are magnitudes of distance along a
 Cartesian coordinate system and $\hat{i},~\hat{j}$ and $\hat{k}$ are
 unit vectors that describe three 
 
-```python tags=[hide-cell]
+```python tags = ["hide-cell"]
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
 ```
 
-## Velocity
+# Velocity
 
-The velocity of an object is the change in [position](#position) per length of time.
-<a id='velociy'></a>
+The velocity of an object is the change in position, equation
+{eq}`position`, per length of time.
 
-\begin{equation}
+$$
 \mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
 \dot{z}\hat{k}
-\end{equation}
+$$ (velocity)
 
-> __Note:__ The notation $\dot{x}$ and $\ddot{x}$ is short-hand for writing out
-> $\frac{dx}{dt}$ and $\frac{d^2x}{dt^2}$, respectively.
+```{note}
+The notation $\dot{x}$ and $\ddot{x}$ is short-hand for writing out
+$\frac{dx}{dt}$ and $\frac{d^2x}{dt^2}$, respectively.
+```
 
 The definition of velocity in equation {eq}`velocity` depends upon the change in position of all
 three independent coordinates, where
 $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}$. 
 
 
-> __Note:__ Remember the chain rule:
-> $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
-> x\dot{\hat{i}}$, but $\dot{\hat{i}}=0$ because this unit vector is not
-> changing direction. You'll see other unit vectors later that do change.
+```{note}
+Remember the chain rule: $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
+x\dot{\hat{i}}$, but $\dot{\hat{i}}=0$ because this unit vector is not
+changing direction. You'll see other unit vectors later that _do
+change_.
+```
 
+{numref}`postion-velocity`
 ## Example - GPS vs speedometer
 You can find velocity based upon postion, but you can only find changes
 in position with velocity. Consider tracking the motion of a car driving
@@ -71,7 +75,7 @@ To get the velocity, calculate $\mathbf{v} = \dot{\mathbf{r}}$
 
 $\mathbf{v} = 4\hat{i} +3 \hat{j}$
 
-```python tags=["hide-input"]
+```python tags = ["hide-input"]
 t = np.arange(0,5)
 x = 4*t + 3
 y = 3*t -1
@@ -95,7 +99,7 @@ velocity,
 $|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
 \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}$
 
-## Acceleration
+# Acceleration
 
 The acceleration of an object is the change in velocity per length of
 time. 
@@ -106,13 +110,13 @@ $\mathbf{a}_{P/O} = \frac{d \mathbf{v}_{P/O} }{dt} = \ddot{x}\hat{i} +
 where $\ddot{x}=\frac{d^2 x}{dt^2}$ and $\mathbf{a}_{P/O}$ is the
 acceleration of point $P$ _with respect to the point of origin_ $O$. 
 
-## Rotation and Orientation
+# Rotation and Orientation
 
 The definitions of position, velocity, and acceleration all describe a
 single point, but dynamic engineering systems are composed of rigid
 bodies is needed to describe the position of an object. 
 
-```python tags=["hide-input"]
+```python tags = ["hide-input"]
 from IPython.core.display import SVG
 
 SVG(filename='./images/position_angle.svg')
@@ -128,12 +132,12 @@ its rotational orientation, as seen in the animation below. We will
 revisit 3D motion in Module_05
 
 
-```python tags=["hide-input"]
+```python tags = ["hide-input"]
 from IPython.display import YouTubeVideo
 vid = YouTubeVideo("li7t--8UZms?loop=1")
 display(vid)
 ```
-## Rotation in planar motion
+# Rotation in planar motion
 
 Our initial focus is planar rotations e.g. yaw and roll are fixed. For a
 body constrained to planar motion, you need 3 independent measurements
