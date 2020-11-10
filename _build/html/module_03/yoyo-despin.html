@@ -120,11 +120,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../module_01/overview.html#outline">
-   Outline
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../module_02/overview.html">
    Module 2 - constrained dynamic motion
   </a>
@@ -203,9 +198,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_03/yoyo-despin.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_03/yoyo-despin.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -238,6 +233,29 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=lab/tree/module_03/yoyo-despin.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=lab/tree/engineering-dynamics/module_03/yoyo-despin.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -275,21 +293,43 @@
         
               <div>
                 
-  <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+  <div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
 <span class="kn">import</span> <span class="nn">pretty_plots</span> <span class="c1"># script to set up LaTex and increase line-width and font size</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pretty_plots</span><span class="o">.</span><span class="n">setdefaults</span><span class="p">()</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mf">5108677927e6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pretty_plots</span> <span class="c1"># script to set up LaTex and increase line-width and font size</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pretty_plots&#39;
 </pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pretty_plots</span><span class="o">.</span><span class="n">setdefaults</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="numerical-solution-of-yoyo-despinning">
 <h1>Numerical Solution of Yoyo despinning<a class="headerlink" href="#numerical-solution-of-yoyo-despinning" title="Permalink to this headline">¶</a></h1>
 <p><span class="math notranslate nohighlight">\(\ddot{r} = r \dot{\theta}^2\)</span></p>
 <p><span class="math notranslate nohighlight">\(\ddot{r} = r\left(\frac{2mr_0^2+MR^2/2}{2mr^2+MR^2/2}\right)^2 \dot{\theta}(0)\)</span></p>
 <p>Here we plot the relation between angular velocity and distance from center of cylinder just based upon conservation of angular momentum:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">=</span><span class="mf">0.1</span> <span class="c1">#kg</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">=</span><span class="mf">0.1</span> <span class="c1">#kg</span>
 <span class="n">M</span><span class="o">=</span><span class="mi">1</span> <span class="c1">#kg</span>
 <span class="n">R</span><span class="o">=</span><span class="mf">0.1</span> <span class="c1">#meter</span>
 <span class="n">w0</span><span class="o">=</span><span class="mi">10</span> <span class="c1"># rad/s</span>
@@ -305,6 +345,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/yoyo-despin_4_0.png" src="../_images/yoyo-despin_4_0.png" />
+</div>
+</div>
+</div>
 <div class="section" id="define-the-state-and-d-dt-state">
 <h1>Define the state and d/dt(state)<a class="headerlink" href="#define-the-state-and-d-dt-state" title="Permalink to this headline">¶</a></h1>
 <p>In this part, we define the second order differential equation as a state-space form</p>
@@ -312,7 +357,9 @@
 <p>and the derivative of the state is</p>
 <p>d/dt(state) = <span class="math notranslate nohighlight">\([\dot{r},~\ddot{r}]=[\dot{r},~\frac{F_r}{m}]\)</span></p>
 <p>We call the function, <code class="docutils literal notranslate"><span class="pre">yoyo_ode(y,t)</span></code>, where <code class="docutils literal notranslate"><span class="pre">y</span></code> is the state and <code class="docutils literal notranslate"><span class="pre">t</span></code> is the current time.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">yoyo_ode</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">yoyo_ode</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;define d2r/dt2= r*(h0/2m)^2/(M*R^2/4m+r^2)^2&#39;&#39;&#39;</span>
     <span class="n">dr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
     <span class="n">dr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -320,15 +367,28 @@
     <span class="k">return</span> <span class="n">dr</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">yoyo_ode</span><span class="p">([</span><span class="mf">0.15</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yoyo_ode</span><span class="p">([</span><span class="mf">0.15</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.        ,  8.14404432])
+</pre></div>
+</div>
+</div>
 </div>
 <p>The function <code class="docutils literal notranslate"><span class="pre">odeint</span></code> integrates our <code class="docutils literal notranslate"><span class="pre">yoyo_ode</span></code> based upon the initial condtions,</p>
 <p><span class="math notranslate nohighlight">\([r(0),~\dot{r}(0)] = [0.1~m,~0~m/s]\)</span></p>
 <p>and the time span of interest,</p>
 <p><span class="math notranslate nohighlight">\(t = [0-0.5~s]\)</span></p>
 <p>in the line, <code class="docutils literal notranslate"><span class="pre">t=np.linspace(0,0.5)</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">r</span><span class="o">=</span><span class="n">odeint</span><span class="p">(</span><span class="n">yoyo_ode</span><span class="p">,[</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
@@ -337,11 +397,23 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0,0.5,&#39;yoyo pos (m)&#39;)
+</pre></div>
+</div>
+<img alt="../_images/yoyo-despin_9_1.png" src="../_images/yoyo-despin_9_1.png" />
+</div>
+</div>
+</div>
 <div class="section" id="to-save-to-file-from-python-output">
 <h1>To save to file from python output<a class="headerlink" href="#to-save-to-file-from-python-output" title="Permalink to this headline">¶</a></h1>
 <p>Have to join the time, <span class="math notranslate nohighlight">\(r\)</span>, and <span class="math notranslate nohighlight">\(\dot{r}\)</span> into an array then save to a file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;t_r_rdot.csv&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">r</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;t_r_rdot.csv&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">r</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>This line of code organizes a comma-separated-value file into the file t_r_rdot.csv with no headers.</p>
 <table class="colwidths-auto table">
