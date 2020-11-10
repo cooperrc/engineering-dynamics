@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module 5 - dynamics in three dimensions" href="../module_05/overview.html" />
-    <link rel="prev" title="Numerical Solution of Yoyo despinning" href="yoyo-despin.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -98,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../module_00/meet_cooper.html">
    About the Instructor
@@ -129,52 +127,10 @@
    Module 3 - Constrained engineering systems
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1">
   <a class="reference internal" href="overview.html">
    Module 4 - Momentum and Energy
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="yoyo-despin.html">
-     Numerical Solution of Yoyo despinning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Yoyo despin revisited (cord constraint)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#engineering-system-kinematics">
-     Engineering system - kinematics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#engineering-system-kinetics-conservation-of-angular-momentum">
-     Engineering system - kinetics (conservation of angular momentum)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#engineering-system-kinetics-work-energy-formulation">
-     Engineering system - kinetics (work-energy formulation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#combining-equations-and-solving">
-     Combining equations and solving
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../module_05/overview.html">
@@ -223,9 +179,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_04/yoyo-despin_02.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_04/bak.yoyo-despin_02.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -243,7 +199,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_04/yoyo-despin_02.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_04/bak.yoyo-despin_02.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -258,29 +214,6 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=lab/tree/module_04/yoyo-despin_02.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=lab/tree/engineering-dynamics/module_04/yoyo-despin_02.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
 
     </div>
 
@@ -328,28 +261,20 @@
         
               <div>
                 
-  <div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+  <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
 <div class="section" id="yoyo-despin-revisited-cord-constraint">
 <h1>Yoyo despin revisited (cord constraint)<a class="headerlink" href="#yoyo-despin-revisited-cord-constraint" title="Permalink to this headline">¶</a></h1>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
 
 <span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./yoyo-rocket.svg&#39;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/yoyo-despin_02_2_0.svg" src="../_images/yoyo-despin_02_2_0.svg" /></div>
 </div>
 <p>A rocket yoyo-despinning mechanism uses cords wrapped around the
 payload. These cords unravel and slow the spinning of the rocket. In
@@ -360,18 +285,18 @@ angular momentum, and conservation of energy.</p>
 <h1>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this headline">¶</a></h1>
 <p>As the yoyo mass unravels, it moves further from the payload. The total
 distance from the payload center of mass (COM) is described by</p>
-<p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}\)</span></p>
+<p><span class="math notranslate nohighlight">\(r_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(R\)</span> is the payload radius, <span class="math notranslate nohighlight">\(l\)</span> is the length of the cord, and
 <span class="math notranslate nohighlight">\(\hat{e}_R\)</span> and <span class="math notranslate nohighlight">\(\hat{e}_{\theta}\)</span> are unit vectors in a cylindrical
 coordinate system. The length of the cord depends upon the angle of the
 payload, <span class="math notranslate nohighlight">\(\theta\)</span>. Consider a spool of thread rolling across the floor,
 the thread left on the floor is equal to distance traveled or,
 <span class="math notranslate nohighlight">\(R\theta\)</span>. Now, the position of yoyo P is</p>
-<p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/G} = R\hat{e}_R + R\theta\hat{e}_{\theta}\)</span></p>
+<p><span class="math notranslate nohighlight">\(r_{P/G} = R\hat{e}_R + R\theta\hat{e}_{\theta}\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the change in angle of the payload after the yoyos are
-released. The velocity of mass P is <span class="math notranslate nohighlight">\(\dot{\mathbf{r}}_{P/G}\)</span>, using the transport
+released. The velocity of mass P is <span class="math notranslate nohighlight">\(\dot{r}_{P/G}\)</span>, using the transport
 equation</p>
-<p><span class="math notranslate nohighlight">\(\mathbf{v}_{P/G} = \frac{d}{dt}(R\hat{e}_R + R\theta\hat{e}_{\theta}) +
+<p><span class="math notranslate nohighlight">\(v_{P/G} = \frac{d}{dt}(R\hat{e}_R + R\theta\hat{e}_{\theta}) +
 {}^I\mathbf{\omega}^C \times(R\hat{e}_R + R\theta\hat{e}_{\theta})\)</span></p>
 <p>where the total angular velocity is the combination of the payload’s
 angular velocity <span class="math notranslate nohighlight">\(\mathbf{\omega}_B\)</span> and the angular velocity of the
@@ -385,17 +310,12 @@ payload and yoyo angular velocity is the total</p>
 <span class="math notranslate nohighlight">\(m_P=m_Q=0.1~kg\)</span>. The system is released at <span class="math notranslate nohighlight">\(t = 0~s\)</span> when the payload
 is spinning at <span class="math notranslate nohighlight">\(\omega_B^0=10~rad/s\)</span>.</p>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up the Python variables</span>
-<span class="n">M</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">I</span> <span class="o">=</span> <span class="n">M</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">w0</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>The yoyos P and Q will remain anti-symmetric if released at the same time, so</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/G} = -\mathbf{r}_{Q/G},~|\mathbf{r}_{P/G}| =
@@ -455,13 +375,9 @@ m(R^2\theta^2(\omega_B+\dot{\theta})^2+R^2\omega_B^2)\)</span></p>
 <p>with the solution for <span class="math notranslate nohighlight">\(\dot{\theta}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\omega_B^0 +\omega_B = \omega_B +\dot{\theta} \rightarrow \omega_B^0 =
 \dot{\theta}\)</span>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">w0</span><span class="o">*</span><span class="n">t</span> 
 </pre></div>
-</div>
-</div>
 </div>
 <p>This result, <em>combining conservation of angular momentum and
 work-energy</em>, tells you that the angular velocity of the yoyos will be
@@ -472,9 +388,8 @@ the orginal conservation of angular momentum equation to solve for
 <span class="math notranslate nohighlight">\(\omega_B\)</span></p>
 <p><span class="math notranslate nohighlight">\(c(\omega_B^0 - \omega_B) = (\omega_B^0 t)^2(\omega_B+\omega_B^0)\)</span></p>
 <p><span class="math notranslate nohighlight">\(\omega_B(t) = \frac{c-(\omega_B^0 t)^2}{c+(\omega_B^0 t)^2}\omega_B^0.\)</span></p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">I</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">m</span><span class="o">/</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">wB</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="p">(</span><span class="n">c</span><span class="o">-</span><span class="n">w0</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">c</span><span class="o">+</span><span class="n">w0</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">w0</span>
 <span class="n">wC</span> <span class="o">=</span> <span class="n">wB</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">w0</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">wC</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">R</span><span class="o">*</span><span class="n">w0</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">wC</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
@@ -488,11 +403,6 @@ the orginal conservation of angular momentum equation to solve for
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/yoyo-despin_02_9_0.png" src="../_images/yoyo-despin_02_9_0.png" />
-</div>
-</div>
 <p>The added benefit of using cords to release the yoyos is that the
 payload angular velocity can be reduced to 0 rad/s at time, <span class="math notranslate nohighlight">\(t_f\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\omega_B(t_f) = 0 = c - (\omega_B^0t)^2 \rightarrow t_f =
@@ -501,9 +411,7 @@ payload angular velocity can be reduced to 0 rad/s at time, <span class="math no
 <p>The final cord length, is unraveling distance, <span class="math notranslate nohighlight">\(l_F = R\theta  =
 R\omega_B^0 t_f\)</span></p>
 <p><span class="math notranslate nohighlight">\(l_F = \sqrt{\frac{I}{2m}+R^2}\)</span></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="n">w0</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="n">w0</span>
 <span class="n">lf</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">wB</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;w_B(t) solution&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tf</span><span class="p">,</span><span class="n">wB</span><span class="p">(</span><span class="n">tf</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;release point, t_f&#39;</span><span class="p">)</span>
@@ -512,10 +420,8 @@ R\omega_B^0 t_f\)</span></p>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;payload angular velocity (rad/s)&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/yoyo-despin_02_11_0.png" src="../_images/yoyo-despin_02_11_0.png" />
-</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </div>
 
@@ -547,8 +453,6 @@ R\omega_B^0 t_f\)</span></p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="yoyo-despin.html" title="previous page">Numerical Solution of Yoyo despinning</a>
-    <a class='right-next' id="next-link" href="../module_05/overview.html" title="next page">Module 5 - dynamics in three dimensions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

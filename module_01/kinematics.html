@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Module 2 - constrained dynamic motion" href="../module_02/overview.html" />
+    <link rel="next" title="Driving forces for moving systems" href="driving-forces.html" />
     <link rel="prev" title="Module 1 - Dynamic equations and definitions" href="overview.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -114,14 +114,9 @@
    Module 0 - Getting Started
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active">
   <a class="reference internal" href="overview.html">
    Module 1 - Dynamic equations and definitions
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="overview.html#outline">
-   Outline
   </a>
   <ul class="current">
    <li class="toctree-l2 current active">
@@ -130,28 +125,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="#position">
-     Position
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#velocity">
-     Velocity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#acceleration">
-     Acceleration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#rotation-and-orientation">
-     Rotation and Orientation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#rotation-in-planar-motion">
-     Rotation in planar motion
+    <a class="reference internal" href="driving-forces.html">
+     Driving forces for moving systems
     </a>
    </li>
   </ul>
@@ -216,14 +191,11 @@
     
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/module_01/kinematics.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+        
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_01/kinematics.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_01/kinematics.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -262,14 +234,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=lab/tree/module_01/kinematics.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=lab/tree/module_01/kinematics.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=lab/tree/engineering-dynamics/module_01/kinematics.md&branch=master"><button type="button"
+        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=lab/tree/engineering-dynamics/module_01/kinematics.ipynb&branch=master"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -290,44 +262,37 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Geometry of motion - kinematics
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#position">
    Position
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#velocity">
    Velocity
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-gps-vs-speedometer">
-     Example - GPS vs speedometer
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#speed">
-     Speed
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-gps-vs-speedometer">
+   Example - GPS vs speedometer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#speed">
+   Speed
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#acceleration">
    Acceleration
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-and-orientation">
    Rotation and Orientation
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-in-planar-motion">
    Rotation in planar motion
   </a>
@@ -345,15 +310,15 @@
                 
   <div class="section" id="geometry-of-motion-kinematics">
 <h1>Geometry of motion - kinematics<a class="headerlink" href="#geometry-of-motion-kinematics" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="position">
-<h1>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h1>
+<h2>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h2>
 <p>Classical physics describes the position of an object using three
 independent coordinates e.g.</p>
-<div class="math notranslate nohighlight" id="equation-position">
-<span class="eqno">(1)<a class="headerlink" href="#equation-position" title="Permalink to this equation">¶</a></span>\[
+<p><a id='position'></a></p>
+<div class="amsmath math notranslate nohighlight" id="equation-64782423-c9c5-4893-84de-8ac1bdfad284">
+<span class="eqno">(1)<a class="headerlink" href="#equation-64782423-c9c5-4893-84de-8ac1bdfad284" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}
-\]</div>
+\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{r}_{P/O}\)</span> is the position of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point
 of origin</em> <span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(x,~y,~z\)</span> are magnitudes of distance along a
 Cartesian coordinate system and <span class="math notranslate nohighlight">\(\hat{i},~\hat{j}\)</span> and <span class="math notranslate nohighlight">\(\hat{k}\)</span> are
@@ -369,30 +334,28 @@ unit vectors that describe three</p>
 </div>
 </div>
 <div class="section" id="velocity">
-<h1>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">¶</a></h1>
-<p>The velocity of an object is the change in position, equation
-<a class="reference internal" href="#equation-position">(1)</a>, per length of time.</p>
-<div class="math notranslate nohighlight" id="equation-velocity">
-<span class="eqno">(2)<a class="headerlink" href="#equation-velocity" title="Permalink to this equation">¶</a></span>\[
+<h2>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">¶</a></h2>
+<p>The velocity of an object is the change in <a class="reference external" href="#position">position</a> per length of time.
+<a id='velociy'></a></p>
+<div class="amsmath math notranslate nohighlight" id="equation-e7f28f6d-526c-44b4-891c-7bd9472522fd">
+<span class="eqno">(2)<a class="headerlink" href="#equation-e7f28f6d-526c-44b4-891c-7bd9472522fd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
 \dot{z}\hat{k}
-\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The notation <span class="math notranslate nohighlight">\(\dot{x}\)</span> and <span class="math notranslate nohighlight">\(\ddot{x}\)</span> is short-hand for writing out
+\end{equation}\]</div>
+<blockquote>
+<div><p><strong>Note:</strong> The notation <span class="math notranslate nohighlight">\(\dot{x}\)</span> and <span class="math notranslate nohighlight">\(\ddot{x}\)</span> is short-hand for writing out
 <span class="math notranslate nohighlight">\(\frac{dx}{dt}\)</span> and <span class="math notranslate nohighlight">\(\frac{d^2x}{dt^2}\)</span>, respectively.</p>
-</div>
-<p>The definition of velocity in equation <a class="reference internal" href="#equation-velocity">(2)</a> depends upon the change in position of all
+</div></blockquote>
+<p>The definition of velocity in equation <a class="reference internal" href="../kinematics.html#equation-velocity">()</a> depends upon the change in position of all
 three independent coordinates, where
 <span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}\)</span>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Remember the chain rule: <span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
+<blockquote>
+<div><p><strong>Note:</strong> Remember the chain rule:
+<span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
 x\dot{\hat{i}}\)</span>, but <span class="math notranslate nohighlight">\(\dot{\hat{i}}=0\)</span> because this unit vector is not
-changing direction. You’ll see other unit vectors later that <em>do
-change</em>.</p>
+changing direction. You’ll see other unit vectors later that do change.</p>
+</div></blockquote>
 </div>
-<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">postion-velocity</span></code></p>
 <div class="section" id="example-gps-vs-speedometer">
 <h2>Example - GPS vs speedometer<a class="headerlink" href="#example-gps-vs-speedometer" title="Permalink to this headline">¶</a></h2>
 <p>You can find velocity based upon postion, but you can only find changes
@@ -417,7 +380,7 @@ down a road using GPS. You determine its motion and create the position,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/kinematics_3_0.png" src="../_images/kinematics_3_0.png" />
+<img alt="../_images/kinematics_5_0.png" src="../_images/kinematics_5_0.png" />
 </div>
 </div>
 </div>
@@ -429,9 +392,8 @@ velocity,</p>
 <p><span class="math notranslate nohighlight">\(|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
 \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}\)</span></p>
 </div>
-</div>
 <div class="section" id="acceleration">
-<h1>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h1>
+<h2>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h2>
 <p>The acceleration of an object is the change in velocity per length of
 time.</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{a}_{P/O} = \frac{d \mathbf{v}_{P/O} }{dt} = \ddot{x}\hat{i} +
@@ -440,7 +402,7 @@ time.</p>
 acceleration of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point of origin</em> <span class="math notranslate nohighlight">\(O\)</span>.</p>
 </div>
 <div class="section" id="rotation-and-orientation">
-<h1>Rotation and Orientation<a class="headerlink" href="#rotation-and-orientation" title="Permalink to this headline">¶</a></h1>
+<h2>Rotation and Orientation<a class="headerlink" href="#rotation-and-orientation" title="Permalink to this headline">¶</a></h2>
 <p>The definitions of position, velocity, and acceleration all describe a
 single point, but dynamic engineering systems are composed of rigid
 bodies is needed to describe the position of an object.</p>
@@ -453,7 +415,7 @@ bodies is needed to describe the position of an object.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/kinematics_5_0.svg" src="../_images/kinematics_5_0.svg" /></div>
+<img alt="../_images/kinematics_8_0.svg" src="../_images/kinematics_8_0.svg" /></div>
 </div>
 <p><em>In the figure above, the center of the block is located at
 <span class="math notranslate nohighlight">\(r_{P/O}=x\hat{i}+y\hat{j}\)</span> in both the left and right images, but the
@@ -483,10 +445,11 @@ revisit 3D motion in Module_05</p>
 </div>
 </div>
 <div class="section" id="rotation-in-planar-motion">
-<h1>Rotation in planar motion<a class="headerlink" href="#rotation-in-planar-motion" title="Permalink to this headline">¶</a></h1>
+<h2>Rotation in planar motion<a class="headerlink" href="#rotation-in-planar-motion" title="Permalink to this headline">¶</a></h2>
 <p>Our initial focus is planar rotations e.g. yaw and roll are fixed. For a
 body constrained to planar motion, you need 3 independent measurements
 to describe its position e.g. <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(\theta\)</span></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -518,7 +481,7 @@ to describe its position e.g. <span class="math notranslate nohighlight">\(x\)</
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="overview.html" title="previous page">Module 1 - Dynamic equations and definitions</a>
-    <a class='right-next' id="next-link" href="../module_02/overview.html" title="next page">Module 2 - constrained dynamic motion</a>
+    <a class='right-next' id="next-link" href="driving-forces.html" title="next page">Driving forces for moving systems</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

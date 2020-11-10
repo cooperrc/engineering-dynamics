@@ -1,11 +1,15 @@
 ---
-jupytext:
-  formats: md:myst
-  text_representation:
-    format_name: myst
-kernelspec:
-  display_name: Python 3
-  name: python3
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.2'
+      jupytext_version: 1.6.0
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
 ---
 
 # Geometry of motion - kinematics
@@ -24,10 +28,7 @@ of origin_ $O$, $x,~y,~z$ are magnitudes of distance along a
 Cartesian coordinate system and $\hat{i},~\hat{j}$ and $\hat{k}$ are
 unit vectors that describe three 
 
-```{code-cell} ipython3
----
-tags: [hide-cell]
----
+```python tags = ["hide-cell"]
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
@@ -74,10 +75,7 @@ To get the velocity, calculate $\mathbf{v} = \dot{\mathbf{r}}$
 
 $\mathbf{v} = 4\hat{i} +3 \hat{j}$
 
-```{code-cell} ipython3
----
-tags: [hide-input]
----
+```python tags = ["hide-input"]
 t = np.arange(0,5)
 x = 4*t + 3
 y = 3*t -1
@@ -118,10 +116,7 @@ The definitions of position, velocity, and acceleration all describe a
 single point, but dynamic engineering systems are composed of rigid
 bodies is needed to describe the position of an object. 
 
-```{code-cell} ipython3
----
-tags: [hide-input]
----
+```python tags = ["hide-input"]
 from IPython.core.display import SVG
 
 SVG(filename='./images/position_angle.svg')
@@ -137,10 +132,7 @@ its rotational orientation, as seen in the animation below. We will
 revisit 3D motion in Module_05
 
 
-```{code-cell} ipython3
----
-tags: [hide-input]
----
+```python tags = ["hide-input"]
 from IPython.display import YouTubeVideo
 vid = YouTubeVideo("li7t--8UZms?loop=1")
 display(vid)
