@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 1 - Dynamic equations and definitions &#8212; Engineering Dynamics</title>
+    <title>Mechanical advantage &#8212; Engineering Dynamics</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Geometry of motion - kinematics" href="kinematics.html" />
-    <link rel="prev" title="Participation Videos" href="../module_00/participation.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -98,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../module_00/meet_cooper.html">
    About the Instructor
@@ -114,27 +112,10 @@
    Module 0 - Getting Started
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
    Module 1 - Dynamic equations and definitions
   </a>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="kinematics.html">
-     Geometry of motion - kinematics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mechanical-advantage.html">
-     Mechanical advantage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="driving-forces.html">
-     Driving forces for moving systems
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../module_02/overview.html">
@@ -198,9 +179,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_01/overview.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_01/mechcanical-advantage.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -218,7 +199,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/overview.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/mechcanical-advantage.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -234,6 +215,29 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=lab/tree/module_01/mechcanical-advantage.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=lab/tree/engineering-dynamics/module_01/mechcanical-advantage.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -245,8 +249,8 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outline">
-   Outline
+  <a class="reference internal nav-link" href="#kinematics">
+   Kinematics
   </a>
  </li>
 </ul>
@@ -260,47 +264,66 @@
         
               <div>
                 
-  <div class="section" id="module-1-dynamic-equations-and-definitions">
-<h1>Module 1 - Dynamic equations and definitions<a class="headerlink" href="#module-1-dynamic-equations-and-definitions" title="Permalink to this headline">¶</a></h1>
-<p><em>ball rolling on plane</em></p>
-<p>In this module, we want to understand what makes objects move and how we
-can describe motion. In previous physics courses, you might remember the
-<a class="reference external" href="https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/Map%3A_University_Physics_I_-_Mechanics_Sound_Oscillations_and_Waves_(OpenStax)/03%3A_Motion_Along_a_Straight_Line/3.07%3A_Free_Fall">kinematic
-equations</a>
-that describe the motion of a free-falling object.  How do these
-equations relate to a ball rolling on the ground? or a domino falling
-over?</p>
-<p>As an engineer, you will need to design objects that move or interact
-with moving objects. You need quantitative descriptions for impacts,
-forces, and work. This module will give you the tools to describe motion,
-forces, work, and impact.</p>
-<div class="section" id="outline">
-<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Kinematics</p>
-<ol class="simple">
-<li><p>define position</p></li>
-<li><p>velocity</p></li>
-<li><p>acceleration</p></li>
-<li><p>degrees of freedom and coordinates</p></li>
-</ol>
-</li>
-<li><p>Kinetics</p>
-<ol class="simple">
-<li><p>Newton-Euler equations</p></li>
-<li><p>Impulse-momentum</p></li>
-<li><p>Work-energy</p></li>
-<li><p>equations of motion = second order diff eq</p></li>
-</ol>
-</li>
-<li><p>Solving dynamic problem</p>
-<ol class="simple">
-<li><p>Newton-Euler equations define eom</p></li>
-<li><p>Use ODE solution for x(t)</p></li>
-</ol>
-</li>
-</ol>
-<div class="toctree-wrapper compound">
+  <div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mechanical-advantage">
+<h1>Mechanical advantage<a class="headerlink" href="#mechanical-advantage" title="Permalink to this headline">¶</a></h1>
+<p>In the diagram below, there is a 50-N force, <span class="math notranslate nohighlight">\(F\)</span>, applied downwards on a
+constrained linkage system. There is a restoring force, <span class="math notranslate nohighlight">\(R\)</span>, that
+maintains a slow change in the angle of the mechanism, <span class="math notranslate nohighlight">\(\theta\)</span>, as it
+changes from <span class="math notranslate nohighlight">\(89^o\)</span> to <span class="math notranslate nohighlight">\(-89^o\)</span>. Your
+goal is to determine the necessary restoring force <span class="math notranslate nohighlight">\(R\)</span> as a
+function of angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
+<span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./images/position_angle.svg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mechcanical-advantage_2_0.svg" src="../_images/mechcanical-advantage_2_0.svg" /></div>
+</div>
+<div class="section" id="kinematics">
+<h2>Kinematics<a class="headerlink" href="#kinematics" title="Permalink to this headline">¶</a></h2>
+<p>This system has two rigid bodies connected at point <span class="math notranslate nohighlight">\(A\)</span> by a pin and the
+whole system is pinned to the ground at <span class="math notranslate nohighlight">\(O\)</span>. Point <span class="math notranslate nohighlight">\(B\)</span> slides
+along a horizontal surface. The total degrees of freedom are</p>
+<p>3 (link 1) + 3 (link 2) - 2 constraints (<span class="math notranslate nohighlight">\(O\)</span>) - 2 constraints (<span class="math notranslate nohighlight">\(A) - 1
+constraint (\)</span>B<span class="math notranslate nohighlight">\() - 1 constraint (\)</span>\theta$-fixed) = <strong>0 DOF</strong></p>
+<p>For a given angle <span class="math notranslate nohighlight">\(\theta\)</span>, there can only be one configuration in the
+system. Create the constraint equations using the relative position of
+point <span class="math notranslate nohighlight">\(A\)</span> as such</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_A = \mathbf{r}_B + \mathbf{r}_{A/B}\)</span></p>
+<p>where</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_A = L(\cos\theta \hat{i}+ \sin\theta \hat{j})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_B = d\hat{i}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_{A/B} = L(-\cos\theta \hat{i} + \sin\theta \hat{j})\)</span></p>
+<p>solving for the <span class="math notranslate nohighlight">\(\hat{i}-\)</span> and <span class="math notranslate nohighlight">\(\hat{j}-\)</span>components creates two
+equations that describe the state of the system</p>
+<p><span class="math notranslate nohighlight">\(\theta = \theta\)</span> which states because we have an isosceles triangle,
+two angles have to be equal</p>
+<p><span class="math notranslate nohighlight">\(d = 2 L \cos\theta\)</span> so <span class="math notranslate nohighlight">\(\mathbf{r}_{B} = 2L \cos\theta \hat{i}\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">89</span><span class="p">,</span><span class="o">-</span><span class="mi">89</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$ (deg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;d (m)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mechcanical-advantage_4_0.png" src="../_images/mechcanical-advantage_4_0.png" />
+</div>
 </div>
 </div>
 </div>
@@ -333,8 +356,6 @@ forces, work, and impact.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../module_00/participation.html" title="previous page">Participation Videos</a>
-    <a class='right-next' id="next-link" href="kinematics.html" title="next page">Geometry of motion - kinematics</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
