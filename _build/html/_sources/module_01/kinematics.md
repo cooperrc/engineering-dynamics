@@ -29,7 +29,7 @@ of origin_ $O$, $x,~y,~z$ are magnitudes of distance along a
 Cartesian coordinate system and $\hat{i},~\hat{j}$ and $\hat{k}$ are
 unit vectors that describe three 
 
-```python tags=[hide-cell]
+```python tags=["hide-cell"]
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
