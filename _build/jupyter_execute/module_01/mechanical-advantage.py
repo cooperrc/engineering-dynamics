@@ -7,6 +7,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
+from IPython.core.display import SVG
 
 
 # # Mechanical advantage
@@ -21,13 +22,6 @@ plt.style.use('fivethirtyeight')
 # ![an image in markdown](./images/two-bar.svg)
 # 
 
-# In[2]:
-
-
-from IPython.core.display import SVG
-SVG(filename='./images/position_angle.svg')
-
-
 # ## Kinematics - geometry of motion
 # 
 # This system has two rigid bodies connected at point $A$ by a pin and the
@@ -41,7 +35,9 @@ SVG(filename='./images/position_angle.svg')
 # system. Create the constraint equations using the relative position of
 # point $A$ as such
 # 
-# $\mathbf{r}_A = \mathbf{r}_B + \mathbf{r}_{A/B}$
+# $\mathbf{r}_A =  \mathbf{r}_{A/B} + \mathbf{r}_B$
+# 
+# ![two-bar constraint diagram](./images/two-bar_constraints.svg)
 # 
 # where 
 # 
@@ -58,7 +54,7 @@ SVG(filename='./images/position_angle.svg')
 # two angles have to be equal
 # * $d = 2 L \cos\theta$ so $\mathbf{r}_{B} = 2L \cos\theta \hat{i}$
 
-# In[3]:
+# In[2]:
 
 
 theta = np.linspace(89,-89)*np.pi/180
@@ -75,18 +71,14 @@ plt.ylabel('d (m)');
 # The applied force, $F=50~N$ is constant, but $R$ is dependent upon the
 # geometry of the system. You solved for the kinematics in the first part,
 # here you can use the Newton-Euler equations to solve for $R$ given $\theta$ and
-# $F$. Separate the system into the left and right links, 
-
-# In[4]:
-
-
-SVG(filename='./images/position_angle.svg')
-
+# $F$. Separate the system into the left and right links,
+# 
+# ![two-bar FBD Newton-Euler equations](./images/two-bar_FBD.svg)
 
 # The Newton-Euler equations:
 # 
 # * $\mathbf{F} = m\mathbf{a} = \mathbf{0}$ links moving slowly
-# * $M_G$ = I\alpha = 0$ links rotating slowly
+# * $M_G = I\alpha = 0$ links rotating slowly
 
 # Newton-Euler equations for the left bar:
 # 
@@ -119,18 +111,20 @@ SVG(filename='./images/position_angle.svg')
 # 
 # $F\cos\theta = 2R\sin\theta\rightarrow R = \frac{F}{2}\cot\theta$
 
-# In[5]:
+# In[3]:
 
 
 R = 50/2*np.tan(theta)**-1
 plt.plot(theta*180/np.pi, R)
 plt.xticks(np.arange(-90,91,30))
+plt.xlabel(r'$\theta$ (deg)')
+plt.ylabel('restoring force, R (N)')
 plt.xlim(90,-90)
-plt.ylim(-200,200)
+plt.ylim(-200,200);
 
 
-# In[ ]:
-
-
-
-
+# ## Wrapping up
+# 
+# Take a look at the mechanical advantage and disadvantage this system can create. For angles close to $\theta\approx 90^o$, the restoring force is close to zero. In this case, the applied force is mostly directed at constraints on the system. When the angles are close to $\theta \approx 0^o$, the required restoring force can be $>100\times$ the input force. 
+# 
+# Have you seen this type of linkage system in engineering devices?
