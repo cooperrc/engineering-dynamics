@@ -277,6 +277,11 @@
    Kinetics - applied forces and constraint forces
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrapping-up">
+   Wrapping up
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -293,6 +298,7 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
 </pre></div>
 </div>
 </div>
@@ -306,16 +312,6 @@ changes from <span class="math notranslate nohighlight">\(89^o\)</span> to <span
 goal is to determine the necessary restoring force <span class="math notranslate nohighlight">\(R\)</span> as a
 function of angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p><img alt="an image in markdown" src="../_images/two-bar.svg" /></p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
-<span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./images/position_angle.svg&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/mechanical-advantage_2_0.svg" src="../_images/mechanical-advantage_2_0.svg" /></div>
-</div>
 <div class="section" id="kinematics-geometry-of-motion">
 <h2>Kinematics - geometry of motion<a class="headerlink" href="#kinematics-geometry-of-motion" title="Permalink to this headline">¶</a></h2>
 <p>This system has two rigid bodies connected at point <span class="math notranslate nohighlight">\(A\)</span> by a pin and the
@@ -326,7 +322,8 @@ constraint (<span class="math notranslate nohighlight">\(B\)</span>) - 1 constra
 <p>For a given angle <span class="math notranslate nohighlight">\(\theta\)</span>, there can only be one configuration in the
 system. Create the constraint equations using the relative position of
 point <span class="math notranslate nohighlight">\(A\)</span> as such</p>
-<p><span class="math notranslate nohighlight">\(\mathbf{r}_A = \mathbf{r}_B + \mathbf{r}_{A/B}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r}_A =  \mathbf{r}_{A/B} + \mathbf{r}_B\)</span></p>
+<p><img alt="two-bar constraint diagram" src="../_images/two-bar_constraints.svg" /></p>
 <p>where</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{r}_A = L(\cos\theta \hat{i}+ \sin\theta \hat{j})\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mathbf{r}_B = d\hat{i}\)</span></p>
@@ -351,7 +348,7 @@ two angles have to be equal</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/mechanical-advantage_4_0.png" src="../_images/mechanical-advantage_4_0.png" />
+<img alt="../_images/mechanical-advantage_3_0.png" src="../_images/mechanical-advantage_3_0.png" />
 </div>
 </div>
 </div>
@@ -361,19 +358,11 @@ two angles have to be equal</p></li>
 geometry of the system. You solved for the kinematics in the first part,
 here you can use the Newton-Euler equations to solve for <span class="math notranslate nohighlight">\(R\)</span> given <span class="math notranslate nohighlight">\(\theta\)</span> and
 <span class="math notranslate nohighlight">\(F\)</span>. Separate the system into the left and right links,</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./images/position_angle.svg&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/mechanical-advantage_6_0.svg" src="../_images/mechanical-advantage_6_0.svg" /></div>
-</div>
+<p><img alt="two-bar FBD Newton-Euler equations" src="../_images/two-bar_FBD.svg" /></p>
 <p>The Newton-Euler equations:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a} = \mathbf{0}\)</span> links moving slowly</p></li>
-<li><p><span class="math notranslate nohighlight">\(M_G\)</span> = I\alpha = 0$ links rotating slowly</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_G = I\alpha = 0\)</span> links rotating slowly</p></li>
 </ul>
 <p>Newton-Euler equations for the left bar:</p>
 <ol class="simple">
@@ -406,18 +395,22 @@ equations relate <span class="math notranslate nohighlight">\(R\)</span> to <spa
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="mi">50</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">**-</span><span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mi">30</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$ (deg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;restoring force, R (N)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="o">-</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-200.0, 200.0)
-</pre></div>
-</div>
-<img alt="../_images/mechanical-advantage_9_1.png" src="../_images/mechanical-advantage_9_1.png" />
+<img alt="../_images/mechanical-advantage_7_0.png" src="../_images/mechanical-advantage_7_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>Take a look at the mechanical advantage and disadvantage this system can create. For angles close to <span class="math notranslate nohighlight">\(\theta\approx 90^o\)</span>, the restoring force is close to zero. In this case, the applied force is mostly directed at constraints on the system. When the angles are close to <span class="math notranslate nohighlight">\(\theta \approx 0^o\)</span>, the required restoring force can be <span class="math notranslate nohighlight">\(&gt;100\times\)</span> the input force.</p>
+<p>Have you seen this type of linkage system in engineering devices?</p>
 </div>
 </div>
 
