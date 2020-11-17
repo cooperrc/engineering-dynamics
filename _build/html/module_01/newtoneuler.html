@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 1 - Dynamic equations and definitions &#8212; Engineering Dynamics</title>
+    <title>The Newton-Euler equations &#8212; Engineering Dynamics</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Geometry of motion - kinematics" href="kinematics.html" />
-    <link rel="prev" title="Participation Videos" href="../module_00/participation.html" />
+    <link rel="next" title="Mechanical advantage" href="mechanical-advantage.html" />
+    <link rel="prev" title="Geometry of motion - kinematics" href="kinematics.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -115,17 +115,17 @@
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="overview.html">
    Module 1 - Dynamic equations and definitions
   </a>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="kinematics.html">
      Geometry of motion - kinematics
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="newtoneuler.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      The Newton-Euler equations
     </a>
    </li>
@@ -203,7 +203,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_01/overview.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_01/newtoneuler.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -223,7 +223,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/overview.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/newtoneuler.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -250,8 +250,8 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outline">
-   Outline
+  <a class="reference internal nav-link" href="#example">
+   Example
   </a>
  </li>
 </ul>
@@ -265,47 +265,77 @@
         
               <div>
                 
-  <div class="section" id="module-1-dynamic-equations-and-definitions">
-<h1>Module 1 - Dynamic equations and definitions<a class="headerlink" href="#module-1-dynamic-equations-and-definitions" title="Permalink to this headline">¶</a></h1>
-<p><em>ball rolling on plane</em></p>
-<p>In this module, we want to understand what makes objects move and how we
-can describe motion. In previous physics courses, you might remember the
-<a class="reference external" href="https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/Map%3A_University_Physics_I_-_Mechanics_Sound_Oscillations_and_Waves_(OpenStax)/03%3A_Motion_Along_a_Straight_Line/3.07%3A_Free_Fall">kinematic
-equations</a>
-that describe the motion of a free-falling object.  How do these
-equations relate to a ball rolling on the ground? or a domino falling
-over?</p>
-<p>As an engineer, you will need to design objects that move or interact
-with moving objects. You need quantitative descriptions for impacts,
-forces, and work. This module will give you the tools to describe motion,
-forces, work, and impact.</p>
-<div class="section" id="outline">
-<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+  <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="the-newton-euler-equations">
+<h1>The Newton-Euler equations<a class="headerlink" href="#the-newton-euler-equations" title="Permalink to this headline">¶</a></h1>
+<p>Engineering mechanics uses 6 equations of motion to describe the
+relationship between applied forces and moments to the motion of rigid
+bodies. These 6 equations are the <em>Newton-Euler</em> kinetic equations, you
+can write the equations succinctly as vector-relationships between
+forces and acceleration as</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a}\)</span> equations 1-3</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{M}_{G} = \frac{d}{dt}\mathbf{h}_G\)</span> equations 4-6</p></li>
+</ul>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the resultant sum of forces on a rigid body,
+<span class="math notranslate nohighlight">\(\mathbf{M}_{G}\)</span> is the resultant sum of moments about a rigid body’s
+center of mass, and $\mathbf{h}_G is the <em>angular momentum</em> of a rigid
+body. Angular momentum is a description of the inertia in a rigid body
+due to spinning. To start, we are limiting our study to 3-DOF planar
+rigid body motion. This simplifies the Newton-Euler equation to 3
+coupled differential equations as such,</p>
 <ol class="simple">
-<li><p>Kinematics</p>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{F}\cdot\hat{e}_1 = m\mathbf{a}\cdot\hat{e}_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{F}\cdot\hat{e}_2 = m\mathbf{a}\cdot\hat{e}_2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{M}_{G}\cdot\hat{e}_3 = I_{zz}\alpha\)</span></p></li>
+</ol>
+<p>where <span class="math notranslate nohighlight">\(\hat{e}_{1},~\hat{e}_{2},\)</span> and <span class="math notranslate nohighlight">\(\hat{e}_{3}\)</span> are three orthogonal
+unit vectors, <span class="math notranslate nohighlight">\(I_zz\)</span> is the moment of inertia for the rigid body, and
+<span class="math notranslate nohighlight">\(\alpha\)</span> is the angular acceleration of the rigid body. Every rigid body
+in an engineering system can be described by the Newton-Euler equations.</p>
+<blockquote>
+<div><p><strong>Note:</strong> The mass of an object describes how difficult it is to move
+it in a straight line. The moment of inertia describes how difficult
+it is to rotate an object. The units for moment of inertia are
+<span class="math notranslate nohighlight">\(kg-m^2\)</span> (in SI). A quick explanation of moment of inertia is that it
+is the variance in the center of mass.</p>
+</div></blockquote>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Consider a baseball that is thrown. It has an initial velocity of 6 m/s
+at an angle of 60<span class="math notranslate nohighlight">\(^o\)</span> from the ground and its rotating 10 times/sec.
+Determine the acceleration of the baseball and its maximum height.</p>
+<p>In this example, consider the three planar Newton-Euler equations by
+first drawing a Free Body Diagram as seen below.</p>
+<p><img alt="baseball FBD" src="module_01/./images/baseball_FBD.svg" /></p>
+<p>The force of gravity acts over the entire object equally and no other
+forces are present. Now, write out the 3 Newton-Euler equations</p>
+<blockquote>
+<div><p><strong>Note:</strong> You will include force of drag, but for now just consider
+the motion without drag.</p>
+</div></blockquote>
 <ol class="simple">
-<li><p>define position</p></li>
-<li><p>velocity</p></li>
-<li><p>acceleration</p></li>
-<li><p>degrees of freedom and coordinates</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 = m\ddot{x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-mg = m\ddot{y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0 = I_{zz}\alpha\)</span></p></li>
 </ol>
-</li>
-<li><p>Kinetics</p>
+<p>Integrating the three equations, you get three equations to describe the
+position and angle of the baseball.</p>
 <ol class="simple">
-<li><p>Newton-Euler equations</p></li>
-<li><p>Impulse-momentum</p></li>
-<li><p>Work-energy</p></li>
-<li><p>equations of motion = second order diff eq</p></li>
+<li><p><span class="math notranslate nohighlight">\(x(t) = x(0)+6\cos\frac{\pi}{3}t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y(t) = y(0)+6\sin\frac{\pi}{3}t-\frac{gt^2}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta(t) = \theta(0)+10\frac{rot}{s}\frac{2\pi~rad}{rot}t\)</span></p></li>
 </ol>
-</li>
-<li><p>Solving dynamic problem</p>
-<ol class="simple">
-<li><p>Newton-Euler equations define eom</p></li>
-<li><p>Use ODE solution for x(t)</p></li>
-</ol>
-</li>
-</ol>
-<div class="toctree-wrapper compound">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">t</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">-</span><span class="mf">9.81</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">t</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">theta</span><span class="p">))</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -338,8 +368,8 @@ forces, work, and impact.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../module_00/participation.html" title="previous page">Participation Videos</a>
-    <a class='right-next' id="next-link" href="kinematics.html" title="next page">Geometry of motion - kinematics</a>
+    <a class='left-prev' id="prev-link" href="kinematics.html" title="previous page">Geometry of motion - kinematics</a>
+    <a class='right-next' id="next-link" href="mechanical-advantage.html" title="next page">Mechanical advantage</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

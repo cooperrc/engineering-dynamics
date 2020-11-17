@@ -13,6 +13,7 @@
     - file: module_01/introduction
     - file: module_01/kinematics
     - file: module_01/kinetics
+    - file: module_01/newtoneuler
     - file: module_01/mechanical-advantage
     - file: module_01/driving-forces
 - file: module_02/overview
