@@ -24,7 +24,7 @@ unit vectors that describe three
 
 ```{code-cell} ipython3
 ---
-tags: [hide-input]
+tags: [remove-cell]
 ---
 import numpy as np
 r = np.array([1,2,3])
@@ -68,25 +68,7 @@ The definitions of position, velocity, and acceleration all describe a
 single point, but dynamic engineering systems are composed of rigid
 bodies is needed to describe the position of an object. 
 
-```{code-cell} ipython3
----
-tags: [hide-input]
----
+```python
 from IPython.core.display import SVG
-
-SVG(filename='./images/position_angle.svg')
+SVG(filename='../dyn-logo.svg')
 ```
-_In the figure above, the center of the block is located at
-$r_{P/O}=x\hat{i}+y\hat{j}$ in both the left and right images, but the
-two locations are not the same. The orientation of the block is
-important for determining the position of all the material points._
-
-In general, a rigid body has a _pitch_, _yaw_, and _roll_ that describes
-its rotational orientation. If the rigid body is constrained to rotate
-in a plane, it just has a single orientation angle. 
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/li7t--8UZms?Version=3&loop=1" frameborder="0"
-allow="accelerometer; autoplay; loop =1; "clipboard-write; encrypted-media;
-gyroscope; picture-in-picture" allowfullscreen></iframe>
-
