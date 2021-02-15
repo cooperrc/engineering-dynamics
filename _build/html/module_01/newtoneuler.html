@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Newton-Euler equations &#8212; Engineering Dynamics</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -25,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,18 +34,17 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -57,8 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mechanical advantage" href="mechanical-advantage.html" />
-    <link rel="prev" title="Geometry of motion - kinematics" href="kinematics.html" />
+    <link rel="next" title="Module 2 - constrained dynamic motion" href="../module_02/overview.html" />
+    <link rel="prev" title="Snowflake time of flight" href="snowflake.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -83,15 +82,12 @@
   <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
    Welcome to Applied Mechanics II - Engineering Dynamics
@@ -109,19 +105,48 @@
    Module Content
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../module_00/overview.html">
    Module 0 - Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#objectives">
+     Objectives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#activities">
+     Activities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/participation.html">
+     Participation Videos
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="overview.html">
    Module 1 - Dynamic equations and definitions
   </a>
-  <ul class="current">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="kinematics.html">
      Geometry of motion - kinematics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="snowflake.html">
+     Snowflake time of flight
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -129,32 +154,106 @@
      The Newton-Euler equations
     </a>
    </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_02/overview.html">
+   Module 2 - constrained dynamic motion
+  </a>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="mechanical-advantage.html">
+    <a class="reference internal" href="../module_02/mechanical-advantage.html">
      Mechanical advantage
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="driving-forces.html">
+    <a class="reference internal" href="../module_02/driving-forces.html">
      Driving forces for moving systems
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/valentine.html">
+     Happy Valentine’s Linkage
+    </a>
+   </li>
   </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../module_02/overview.html">
-   Module 2 - constrained dynamic motion
-  </a>
- </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../module_03/overview.html">
    Module 3 - Constrained engineering systems
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/yoyo-despin.html#define-the-state-and-d-dt-state">
+     Define the state and d/dt(state)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/yoyo-despin.html#to-save-to-file-from-python-output">
+     To save to file from python output
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../module_04/overview.html">
    Module 4 - Momentum and Energy
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html#define-the-state-and-d-dt-state">
+     Define the state and d/dt(state)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html#to-save-to-file-from-python-output">
+     To save to file from python output
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html">
+     Yoyo despin revisited (cord constraint)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinematics">
+     Engineering system - kinematics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-conservation-of-angular-momentum">
+     Engineering system - kinetics (conservation of angular momentum)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-work-energy-formulation">
+     Engineering system - kinetics (work-energy formulation)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#combining-equations-and-solving">
+     Combining equations and solving
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../module_05/overview.html">
@@ -163,9 +262,7 @@
  </li>
 </ul>
 
-</nav>
-
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
   Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
@@ -194,24 +291,24 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_01/newtoneuler.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_01/newtoneuler.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -239,6 +336,29 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_01/newtoneuler.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_01/newtoneuler.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -254,6 +374,11 @@
    Example
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#galileo-s-rolling-experiment">
+   Galileo’s rolling experiment
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -265,10 +390,26 @@
         
               <div>
                 
-  <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+  <div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">bbb40a30a5e1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="the-newton-euler-equations">
 <h1>The Newton-Euler equations<a class="headerlink" href="#the-newton-euler-equations" title="Permalink to this headline">¶</a></h1>
@@ -294,7 +435,7 @@ coupled differential equations as such,</p>
 <li><p><span class="math notranslate nohighlight">\(\mathbf{M}_{G}\cdot\hat{e}_3 = I_{zz}\alpha\)</span></p></li>
 </ol>
 <p>where <span class="math notranslate nohighlight">\(\hat{e}_{1},~\hat{e}_{2},\)</span> and <span class="math notranslate nohighlight">\(\hat{e}_{3}\)</span> are three orthogonal
-unit vectors, <span class="math notranslate nohighlight">\(I_zz\)</span> is the moment of inertia for the rigid body, and
+unit vectors, <span class="math notranslate nohighlight">\(I_{zz}\)</span> is the moment of inertia for the rigid body, and
 <span class="math notranslate nohighlight">\(\alpha\)</span> is the angular acceleration of the rigid body. Every rigid body
 in an engineering system can be described by the Newton-Euler equations.</p>
 <blockquote>
@@ -321,7 +462,7 @@ the motion without drag.</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(0 = m\ddot{x}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(-mg = m\ddot{y}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(0 = I_{zz}\alpha\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0 = I_{zz}\ddot{\theta}\)</span></p></li>
 </ol>
 <p>Integrating the three equations, you get three equations to describe the
 position and angle of the baseball.</p>
@@ -330,13 +471,47 @@ position and angle of the baseball.</p>
 <li><p><span class="math notranslate nohighlight">\(y(t) = y(0)+6\sin\frac{\pi}{3}t-\frac{gt^2}{2}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\theta(t) = \theta(0)+10\frac{rot}{s}\frac{2\pi~rad}{rot}t\)</span></p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">t</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">-</span><span class="mf">9.81</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">t</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">theta</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;distance (m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;height (m)&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/newtoneuler_2_0.png" src="../_images/newtoneuler_2_0.png" />
+</div>
+</div>
+<p>A freefalling object does not have an applied moment, so the angular
+acceleration is 0 rad/s/s. The ball will continue spinning until an
+external moment is applied.</p>
+</div>
+<div class="section" id="galileo-s-rolling-experiment">
+<h2>Galileo’s rolling experiment<a class="headerlink" href="#galileo-s-rolling-experiment" title="Permalink to this headline">¶</a></h2>
+<p>Galileo is credited with creating the field of kinematics. One of his
+earliest experiments was to measure the position and speed of a ball
+rolling on an incline plane. He determined that the position was
+proportional to the square of time. This means that the motion is
+described by constant acceleration.</p>
+<p>Here, consider a lacrosse ball rolling on a slope. Before you create
+the equations of motion for the ball, consider the kinematics of a
+rolling ball. The point-of-contact between the ground and ball has the
+same velocity both on the ball and the ground. The ground isn’t moving,
+so the point-of-contact isn’t moving.</p>
+<p>The ball rolls down an incline of 5<span class="math notranslate nohighlight">\(^o\)</span> and its speed is increasing at</p>
+<p>As before, start
+with the free body diagram and</p>
+<p><img alt="ball rolling FBD" src="module_01/./images/ball-rolling_FBD.svg" /></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(mg\sin\alpha - F_f = m\ddot{x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(N-mg\cos\alpha = m\ddot{y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-r\cdotF_f = I_{zz}\ddot{\theta}\)</span></p></li>
+</ol>
 </div>
 </div>
 
@@ -368,8 +543,8 @@ position and angle of the baseball.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="kinematics.html" title="previous page">Geometry of motion - kinematics</a>
-    <a class='right-next' id="next-link" href="mechanical-advantage.html" title="next page">Mechanical advantage</a>
+    <a class='left-prev' id="prev-link" href="snowflake.html" title="previous page">Snowflake time of flight</a>
+    <a class='right-next' id="next-link" href="../module_02/overview.html" title="next page">Module 2 - constrained dynamic motion</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -389,7 +564,7 @@ position and angle of the baseball.</p>
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

@@ -19,6 +19,7 @@
   sections:
     - file: module_02/mechanical-advantage
     - file: module_02/driving-forces
+    - file: module_02/valentine
 - file: module_03/overview
   sections:
     - file: module_03/yoyo-despin
