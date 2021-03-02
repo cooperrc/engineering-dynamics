@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolling on hemisphere &#8212; Engineering Dynamics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Module 4 - Momentum and Energy" href="../module_04/overview.html" />
+    <link rel="prev" title="Numerical Solution of Yoyo despinning" href="yoyo-despin.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/dyn_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Applied Mechanics II - Engineering Dynamics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../module_00/meet_cooper.html">
+   About the Instructor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content.html">
+   Module Content
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_00/overview.html">
+   Module 0 - Getting Started
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#objectives">
+     Objectives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#activities">
+     Activities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/participation.html">
+     Participation Videos
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_01/overview.html">
+   Module 1 - Dynamic equations and definitions
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/kinematics.html">
+     Geometry of motion - kinematics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/snowflake.html">
+     Snowflake time of flight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/newtoneuler.html">
+     The Newton-Euler equations
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_02/overview.html">
+   Module 2 - constrained dynamic motion
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/mechanical-advantage.html">
+     Mechanical advantage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/driving-forces.html">
+     Driving forces for moving systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/valentine.html">
+     Happy Valentine’s Linkage
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="overview.html">
+   Module 3 - Constrained engineering systems
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="yoyo-despin.html#define-the-state-and-d-dt-state">
+     Define the state and d/dt(state)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="yoyo-despin.html#to-save-to-file-from-python-output">
+     To save to file from python output
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Rolling on hemisphere
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_04/overview.html">
+   Module 4 - Momentum and Energy
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html#define-the-state-and-d-dt-state">
+     Define the state and d/dt(state)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html#to-save-to-file-from-python-output">
+     To save to file from python output
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html">
+     Yoyo despin revisited (cord constraint)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinematics">
+     Engineering system - kinematics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-conservation-of-angular-momentum">
+     Engineering system - kinetics (conservation of angular momentum)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-work-energy-formulation">
+     Engineering system - kinetics (work-energy formulation)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html#combining-equations-and-solving">
+     Combining equations and solving
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../module_05/overview.html">
+   Module 5 - dynamics in three dimensions
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/module_03/hemisphere-rolling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/engineering-dynamics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_03/hemisphere-rolling.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_03/hemisphere-rolling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_03/hemisphere-rolling.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equation-of-motion-and-contact-force">
+   Equation of motion and contact force
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normal-force-prediction">
+   Normal force prediction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solving-for-loss-of-contact">
+   Solving for loss-of-contact
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-and-solving-a-nonlinear-equation">
+     Defining and solving a nonlinear equation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrapping-up">
+   Wrapping up
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;text.usetex&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;font.family&quot;</span><span class="p">:</span> <span class="s2">&quot;sans-serif&quot;</span>
+<span class="p">})</span>
+<span class="c1">#plt.rcParams[&#39;text.latex.preamble&#39;]=[r&#39;sansmath&#39;]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;uOq4AbvWF08&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="400"
+    height="300"
+    src="https://www.youtube.com/embed/uOq4AbvWF08"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="section" id="rolling-on-hemisphere">
+<h1>Rolling on hemisphere<a class="headerlink" href="#rolling-on-hemisphere" title="Permalink to this headline">¶</a></h1>
+<p><img alt="rolling on hemisphere note" src="../_images/hemisphere-rolling.png" /></p>
+<p>In this example, a small ball with negligible moment of inertia rolls on a hemisphere and loses contact at some point. Your goal is to determine the point where the ball loses contact with the hemisphere. The hemisphere has radius, <span class="math notranslate nohighlight">\(R=1~m\)</span>, and the ball has mass <span class="math notranslate nohighlight">\(m=1~kg\)</span>.</p>
+<p>There are two states in this problem:</p>
+<ol class="simple">
+<li><p>Ball and hemisphere are in contact with normal force <span class="math notranslate nohighlight">\(N&gt;0\)</span></p></li>
+<li><p>Ball and hemisphere are not in contact, so normal force <span class="math notranslate nohighlight">\(N=0\)</span></p></li>
+</ol>
+<p>There cannot be a state where <span class="math notranslate nohighlight">\(N&lt;0\)</span> because that would mean there is an attractive force between the ball and hemisphere.</p>
+<div class="section" id="equation-of-motion-and-contact-force">
+<h2>Equation of motion and contact force<a class="headerlink" href="#equation-of-motion-and-contact-force" title="Permalink to this headline">¶</a></h2>
+<p>Using the free body diagram and kinetic diagram, you can derive these two equations for state 1 (contact):</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\ddot{\theta} = \frac{g}{R}\sin\theta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(N = mg\cos\theta-mR\dot{\theta}^2\)</span></p></li>
+</ol>
+<p>Integrate equation 1 by using the chain rule,</p>
+<p><span class="math notranslate nohighlight">\(\frac{d\theta}{d\theta}\frac{d\dot{\theta}}{dt} = \frac{g}{R}\sin\theta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{d\theta}{dt}\frac{d\dot{\theta}}{d\theta} = \frac{g}{R}\sin\theta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\int_{\dot{\theta}_0}^{\dot{\theta}}\dot{\theta}d\dot{\theta} = 
+\int_{\theta_0}^{\theta}\frac{g}{R}\sin\theta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dot{\theta} = \sqrt{\dot{\theta}_0^2+\frac{g}{R}(\cos\theta_0-\cos\theta)}\)</span></p>
+<p>Now, you plot the relation between <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}\)</span> for initial conditions,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta_0 = 0~rad\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}_0=0~rad/s\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta_0 = 0~rad\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}_0=2~rad/s\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta_0 = 0~rad\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}_0=4~rad/s\)</span></p></li>
+</ul>
+<blockquote>
+<div><p>__Reflection:__When do you expect the ball to lose contact for 0, 2, and 4 rad/s angular velocities? Will it happen sooner or later if the ball is travelling faster at the top of the hemisphere?</p>
+</div></blockquote>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">dtheta</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dt0</span><span class="p">,</span><span class="n">theta</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dt0</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="mf">9.81</span><span class="o">/</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">dtheta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">theta</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=0~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">dtheta</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">theta</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=2~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">dtheta</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">theta</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=4~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;speed vs angle along hemisphere&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$ (deg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}$ (rad/s)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/hemisphere-rolling_4_0.png" src="../_images/hemisphere-rolling_4_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="normal-force-prediction">
+<h2>Normal force prediction<a class="headerlink" href="#normal-force-prediction" title="Permalink to this headline">¶</a></h2>
+<p>The second equation relates the normal force, <span class="math notranslate nohighlight">\(N\)</span> to <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}\)</span>. Now, plot the <span class="math notranslate nohighlight">\(N-vs-\theta\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(N = mg\cos\theta-mR\dot{\theta}^2\)</span></p>
+<p>If this equation predicts <span class="math notranslate nohighlight">\(N&lt;0\)</span>, then the ball has lost contact with the hemisphere. It will transition into a freefalling object with initial position and velocity,</p>
+<p>When N=0, transition state:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{r} = R\hat{e}_r=R(\sin\theta\hat{i}+\cos\theta\hat{j})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{v} = R\dot{\theta}\hat{e}_{\theta}= R\dot{\theta}(\cos\theta\hat{i}-\sin\theta\hat{j})\)</span></p></li>
+</ul>
+<p>Below, you see the plots for <span class="math notranslate nohighlight">\(N-vs-\theta\)</span> for <span class="math notranslate nohighlight">\(\theta = 0-180^o\)</span>,</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N0</span> <span class="o">=</span> <span class="mf">9.81</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">dtheta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">N2</span> <span class="o">=</span> <span class="mf">9.81</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">dtheta</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">N4</span> <span class="o">=</span> <span class="mf">9.81</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">dtheta</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">N0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=0~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">N2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=2~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">N4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=4~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$ (deg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;N (N)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9c3bf3c250&gt;
+</pre></div>
+</div>
+<img alt="../_images/hemisphere-rolling_6_1.png" src="../_images/hemisphere-rolling_6_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="solving-for-loss-of-contact">
+<h2>Solving for loss-of-contact<a class="headerlink" href="#solving-for-loss-of-contact" title="Permalink to this headline">¶</a></h2>
+<p>The graph above reveals that at <span class="math notranslate nohighlight">\(\dot{\theta}_0=4~rad/s\)</span>, the ball never makes contact with the hemisphere. It skims the top, and falls as</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x(t) = 4t~[m]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y(t) = 1-\frac{g}{2}t^2~[m]\)</span></p></li>
+</ul>
+<p>In the cases of <span class="math notranslate nohighlight">\(\dot{\theta}_0=0~and~2~rad/s\)</span>, the ball loses contact between <span class="math notranslate nohighlight">\(\theta=25^o-50^o\)</span>. You can use algebra to solve for <span class="math notranslate nohighlight">\(N(\theta^*)=0\)</span>, where <span class="math notranslate nohighlight">\(\theta^*\)</span> is the location where contact is lost.</p>
+<p><em>or</em></p>
+<p>You have Python here that can solve nolinear problems. Import <code class="docutils literal notranslate"><span class="pre">fsolve</span></code> from the <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="defining-and-solving-a-nonlinear-equation">
+<h3>Defining and solving a nonlinear equation<a class="headerlink" href="#defining-and-solving-a-nonlinear-equation" title="Permalink to this headline">¶</a></h3>
+<p>You have two equations,</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\dot{\theta} = \sqrt{\dot{\theta}_0^2+\frac{g}{R}(\cos\theta_0-\cos\theta)} = g(\dot{\theta}_0,~\theta)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(N = mg\cos\theta-mR\dot{\theta}^2 = f(\theta,~\dot{\theta}) = f(\theta, g(\dot{\theta}_0,~\theta))\)</span></p></li>
+</ol>
+<p>For clarity, you can define equation (1) first, then use it in equation (2) as such</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dtheta</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dt0</span><span class="p">,</span><span class="n">theta</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dt0</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="mf">9.81</span><span class="o">/</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)))</span>
+<span class="n">N</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dt0</span><span class="p">,</span> <span class="n">theta</span><span class="p">:</span> <span class="mf">9.81</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">dtheta</span><span class="p">(</span><span class="n">dt0</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thetastar_0</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">N</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">thetastar_2</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">N</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">N0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=0~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">N2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=2~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">N4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_0=4~rad/s$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetastar_0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">N</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">thetastar_0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">),</span> <span class="s1">&#39;b*&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetastar_2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">N</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">thetastar_2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">),</span> <span class="s1">&#39;r*&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$ (deg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;N (N)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Lose contact at $\theta=$ &#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1"> and </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">thetastar_0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">thetastar_2</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9c3a712fa0&gt;
+</pre></div>
+</div>
+<img alt="../_images/hemisphere-rolling_12_1.png" src="../_images/hemisphere-rolling_12_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>In this notebook, you compared two possible states for a ball rolling on a hemisphere: contact and no contact. You used free body diagrams, kinetic diagrams, and the chain rule to find the transition between contact and no contact.</p>
+<p>You used <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fsolve.html"><code class="docutils literal notranslate"><span class="pre">scipy.optimize.fsolve</span></code></a> to solve for when a function is 0.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./module_03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="yoyo-despin.html" title="previous page">Numerical Solution of Yoyo despinning</a>
+    <a class='right-next' id="next-link" href="../module_04/overview.html" title="next page">Module 4 - Momentum and Energy</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
