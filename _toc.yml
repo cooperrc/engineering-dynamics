@@ -23,6 +23,7 @@
 - file: module_03/overview
   sections:
     - file: module_03/yoyo-despin
+    - file: module_03/hemisphere-rolling
 - file: module_04/overview
   sections:
     - file: module_04/yoyo-despin
