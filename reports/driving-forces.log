@@ -17,32 +17,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from IPython.core.display import SVG
-
-SVG(filename='./images/piston-flywheel.svg')
+SVG(filename = './images/flywheel-constraints.svg')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m<ipython-input-2-79c7f263a907>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0mdisplay[0m [0;32mimport[0m [0mSVG[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;34m[0m[0m
-[0;32m----> 3[0;31m [0mSVG[0m[0;34m([0m[0mfilename[0m[0;34m=[0m[0;34m'./images/piston-flywheel.svg'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-2-899b50e7ed7a>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mSVG[0m[0;34m([0m[0mfilename[0m [0;34m=[0m [0;34m'./images/flywheel-constraints.svg'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;32m~/.conda/envs/work/lib/python3.9/site-packages/IPython/core/display.py[0m in [0;36m__init__[0;34m(self, data, url, filename, metadata)[0m
-[1;32m    628[0m             [0mself[0m[0;34m.[0m[0mmetadata[0m [0;34m=[0m [0;34m{[0m[0;34m}[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    629[0m [0;34m[0m[0m
-[0;32m--> 630[0;31m         [0mself[0m[0;34m.[0m[0mreload[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    631[0m         [0mself[0m[0;34m.[0m[0m_check_data[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    632[0m [0;34m[0m[0m
-
-[0;32m~/.conda/envs/work/lib/python3.9/site-packages/IPython/core/display.py[0m in [0;36mreload[0;34m(self)[0m
-[1;32m    653[0m         [0;34m"""Reload the raw data from file or URL."""[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    654[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0mfilename[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 655[0;31m             [0;32mwith[0m [0mopen[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfilename[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_read_flags[0m[0;34m)[0m [0;32mas[0m [0mf[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    656[0m                 [0mself[0m[0;34m.[0m[0mdata[0m [0;34m=[0m [0mf[0m[0;34m.[0m[0mread[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    657[0m         [0;32melif[0m [0mself[0m[0;34m.[0m[0murl[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: './images/piston-flywheel.svg'
-FileNotFoundError: [Errno 2] No such file or directory: './images/piston-flywheel.svg'
+[0;31mNameError[0m: name 'SVG' is not defined
+NameError: name 'SVG' is not defined
 
