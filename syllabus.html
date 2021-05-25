@@ -1,0 +1,988 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syllabus - CE2120 Summer 2021 &#8212; Engineering Dynamics</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About the Instructor" href="module_00/meet_cooper.html" />
+    <link rel="prev" title="Welcome to Applied Mechanics II - Engineering Dynamics" href="intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/dyn_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to Applied Mechanics II - Engineering Dynamics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Syllabus - CE2120 Summer 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_00/meet_cooper.html">
+   About the Instructor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content.html">
+   Module Content
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="module_00/overview.html">
+   Module 0 - Getting Started
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_00/introduction.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_00/introduction.html#objectives">
+     Objectives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_00/introduction.html#activities">
+     Activities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_00/participation.html">
+     Participation Videos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="module_01/overview.html">
+   Module 1 - Definitions and equations
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_01/introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_01/kinematics.html">
+     Kinematics: the geometry of motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_01/snowflake.html">
+     Snowflake time of flight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_01/newtoneuler.html">
+     The Newton-Euler equations
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="module_02/overview.html">
+   Module 2 - constrained dynamic motion
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_02/mechanical-advantage.html">
+     Mechanical advantage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_02/driving-forces.html">
+     Driving forces for moving systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_02/valentine.html">
+     Happy Valentine’s Linkage
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="module_03/overview.html">
+   Module 3 - Constrained engineering systems
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="getting-started/03_integrate.html">
+     Introduction to functions and integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_03/hemisphere-rolling.html">
+     Rolling on hemisphere
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="module_04/overview.html">
+   Module 4 - Momentum and Energy
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_04/yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_04/yoyo-despin_02.html">
+     Yoyo despin revisited (cord constraint)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="module_05/overview.html">
+   Module 5 - dynamics in three dimensions
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/syllabus.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/engineering-dynamics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fsyllabus.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applied-mechanics-ii-dynamics">
+   Applied Mechanics II: Dynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-and-instructor-information">
+     Course and Instructor Information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-materials">
+     Course Materials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-description">
+     Course Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-objectives">
+     Course Objectives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-expectations">
+     Course Expectations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applications">
+     Applications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-requirements-and-grading">
+     Course Requirements and Grading
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-due-dates">
+       Note on Due dates
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-participation-grade">
+       Note on Participation grade
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-homeworks">
+       Note on Homeworks
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-the-project-report">
+       Note on the Project Report
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grading-scale">
+     Grading Scale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#due-dates-and-late-policy">
+     Due Dates and Late Policy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feedback-and-grades">
+     Feedback and Grades
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#student-authentication-and-verification">
+     Student Authentication and Verification
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#student-responsibilities-and-resources">
+     Student Responsibilities and Resources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#academic-integrity">
+     Academic Integrity:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-on-grading-and-quizzes">
+     Note on grading and quizzes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#students-with-disabilities">
+     Students with Disabilities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#software-technical-requirements-with-accessibility-and-privacy-information">
+     Software/Technical Requirements (with Accessibility and Privacy Information)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#help">
+     Help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-technical-skills">
+     Minimum Technical Skills
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation-of-the-course">
+     Evaluation of the Course
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="syllabus-ce2120-summer-2021">
+<h1>Syllabus - CE2120 Summer 2021<a class="headerlink" href="#syllabus-ce2120-summer-2021" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="applied-mechanics-ii-dynamics">
+<h2>Applied Mechanics II: Dynamics<a class="headerlink" href="#applied-mechanics-ii-dynamics" title="Permalink to this headline">¶</a></h2>
+<p><strong>Excluding materials for purchase, syllabus information may be subject
+to change. The most up-to-date syllabus is located within the course in
+HuskyCT.</strong></p>
+<div class="section" id="course-and-instructor-information">
+<h3>Course and Instructor Information<a class="headerlink" href="#course-and-instructor-information" title="Permalink to this headline">¶</a></h3>
+<p><strong>Course Title:</strong> CE2120 - Applied Mechanics II</p>
+<p><strong>Format:</strong> Online</p>
+<p><strong>Prerequisite:</strong> CE 2110 and MATH 2110 or 2130</p>
+<p><strong>Instructor</strong>: Prof. Ryan C. Cooper
+<a class="reference external" href="mailto:ryan&#46;c&#46;cooper&#37;&#52;&#48;uconn&#46;edu"><em><strong>ryan<span>&#46;</span>c<span>&#46;</span>cooper<span>&#64;</span>uconn<span>&#46;</span>edu</strong></em></a></p>
+<p><strong>Office Hours/Availability:</strong> by appointment (Mon/Wed/Thur 9-5) <em>post
+questions on Campuswire (the preferred contact)</em></p>
+<p><strong>Preferred Contact:</strong> Post course-related questions and comments to
+Campuswire:</p>
+<p><a class="reference external" href="https://campuswire.com/p/G452A9F32"><em>https://campuswire.com/p/G452A9F32</em></a></p>
+<p>Use code: <strong>3556</strong></p>
+<p>Personal questions should be communicated privately via UConn email or
+Campuswire Direct Message (DM)</p>
+</div>
+<div class="section" id="course-materials">
+<h3>Course Materials<a class="headerlink" href="#course-materials" title="Permalink to this headline">¶</a></h3>
+<p><strong>Required textbook:</strong> Engineering Dynamics by Jeremy Kasdin and Derek
+Paley. Princeton University Press.</p>
+<p>All of the required textbook content is freely available (as PDF
+download) through the UConn library subscription at the following links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.4">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.4"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.4">* ch.
+1*</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.5">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.5"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.5">* ch.
+2*</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.6">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.6"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.6">* ch.
+3*</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.7">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.7"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.7">* ch.
+4*</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.8">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.8"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.8">* ch.
+5*</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.11">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.11"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.11">* ch.
+8*</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.12">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.12"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.12">* ch.
+9*</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.14">*Kasdin and Paley’s
+*</a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.14"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.14">* ch.
+11*</a></p></li>
+</ul>
+<p>Additional materials are being created at the following link:</p>
+<p><a class="reference external" href="https://cooperrc.github.io/engineering-dynamics/intro.html"><em>Engineering
+Dynamics</em></a><a class="reference external" href="https://cooperrc.github.io/engineering-dynamics/intro.html">*
+by Ryan C.
+Cooper*</a>
+*this is a work in progress. Feel free to add
+suggestions/comments/updates in the *<a class="reference external" href="https://github.com/cooperrc/engineering-dynamics"><em>GitHub
+repository</em></a></p>
+<p>**You will create your own example to share with the class in the
+textbook. **</p>
+<p><strong>Virtual Computer Lab:</strong> UConn Engineering Desktop
+<a class="reference external" href="https://horizon.uconn.edu"><em>https://horizon.uconn.edu</em></a></p>
+<p>All of the <strong>Required Python software</strong> you need for this course is installed
+and ready at <a class="reference external" href="https://compmech.uconn.edu">compmech.uconn.edu</a></p>
+<p><strong>Required software:</strong> Jupyter, Python, GitHub, and
+(<a class="reference external" href="https://software.uconn.edu/software/google-apps/"><em>Google</em></a>/<a class="reference external" href="https://software.uconn.edu/microsoft-products-students/"><em>Microsoft</em></a>/OpenOffice),
+Plotting software (Python, Excel, or Google Sheets)</p>
+<p><strong>Campuswire:</strong> This session we will be using <a class="reference external" href="https://campuswire.com/p/G99A7982C">*Campuswire
+*</a>for class discussion. The system
+is catered to getting you help fast and efficiently from classmates and
+myself. Rather than emailing questions, I prefer you to post your
+questions on Campuswire. If you have any problems or feedback for the
+developers, email <a class="reference external" href="mailto:tade&#37;&#52;&#48;campuswire&#46;com"><em>tade<span>&#64;</span>campuswire<span>&#46;</span>com</em></a>.</p>
+<p>Find our class page at:
+<a class="reference external" href="https://campuswire.com/p/G452A9F32"><em>https://campuswire.com/p/G452A9F32</em></a>
+Use code: <strong>3556</strong></p>
+<p>**Schedule: <strong>The course schedule is on the <a class="reference external" href="https://calendar.google.com/calendar/u/0?cid=Y19waHVoMDQycjR1a2pxNWtnZ3FqNW5tbWM0b0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"><em>CE2120 - Spring Google
+Calendar</em></a></strong>.
+**Assignments are due by 11:59pm on the specified due dates. You can add
+the Google Calendar to your student or personal Google account for
+updates.</p>
+</div>
+<div class="section" id="course-description">
+<h3>Course Description<a class="headerlink" href="#course-description" title="Permalink to this headline">¶</a></h3>
+<p>Fundamentals of dynamics using vector methods. Rectilinear and
+curvilinear motion, translation, rotation, plane motion; work, energy
+and power; impulse and momentum. We will work through five course
+modules:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="module_00/overview.html"><span class="doc std std-doc">Module_0 - Getting Started</span></a></p></li>
+<li><p><a class="reference internal" href="module_01/overview.html"><span class="doc std std-doc">Module_1 - Definitions and equations</span></a></p></li>
+<li><p><a class="reference internal" href="module_02/overview.html"><span class="doc std std-doc">Module_2 - constrained dynamic motion</span></a></p></li>
+<li><p><a class="reference internal" href="module_03/overview.html"><span class="doc std std-doc">Module_3 - constrained engineering systems</span></a></p></li>
+<li><p><a class="reference internal" href="module_04/overview.html"><span class="doc std std-doc">Module_4 - angular momentum in engineering</span></a></p></li>
+<li><p><a class="reference internal" href="module_05/overview.html"><span class="doc std std-doc">Module_5 - further applications in dynamics</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="course-objectives">
+<h3>Course Objectives<a class="headerlink" href="#course-objectives" title="Permalink to this headline">¶</a></h3>
+<p>Applied mechanics II is the study of objects in motion and their
+interactions. It is the foundational knowledge for solid mechanics,
+fluid mechanics, aerodynamic studies, control theory, systems and
+mechanics, etc. Students are expected to use two disciplines to solve
+problems:</p>
+<ol>
+<li><p>Apply <strong>kinematics</strong> to rigid body engineering problems, including:</p>
+<ol class="simple">
+<li><p>Vector algebra</p></li>
+<li><p>Vector calculus</p></li>
+<li><p>Geometry.</p></li>
+</ol>
+</li>
+<li><p>Appy <strong>kinetics</strong> to rigid body engineering problems, including:</p>
+<ol>
+<li><p>The Newton-Euler equations: $<span class="math notranslate nohighlight">\(F = \mathit{ma}\)</span>$and</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(M = \frac{d}{dt}h\)</span></p>
+</div></blockquote>
+</li>
+<li><p>Conservation of energy:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(T_{1} + V_{1} + W_{1\rightarrow 2} = T_{2} + V_{2}\)</span></p>
+</div></blockquote>
+</li>
+<li><p>Conservation of momentum: <span class="math notranslate nohighlight">\(\mathbf{F}dt = d(m\mathbf{v})\)</span>$</p>
+<blockquote>
+<div><p>and <span class="math notranslate nohighlight">\(\mathbf{M}dt = d\mathbf{h}\)</span></p>
+</div></blockquote>
+</li>
+</ol>
+</li>
+<li><p>Apply kinematics and kinetics to solve a variety of engineering
+problems and use these disciplines to extend this work to problems
+in solid and fluid mechanics.</p></li>
+<li><p>Analyze, interpret, and communicate results from dynamic analysis.</p></li>
+<li><p>Create engineering design under constraints.</p></li>
+</ol>
+</div>
+<div class="section" id="course-expectations">
+<h3>Course Expectations<a class="headerlink" href="#course-expectations" title="Permalink to this headline">¶</a></h3>
+<p>Students are expected to quantitatively describe the motion of objects
+using calculus, Newton’s laws of motion, energy, and momentum. Students
+should be able to identify degrees of freedom and solve for the
+position, velocity, and acceleration of rigid body objects based upon
+applied forces.</p>
+<p>This course will introduce analytical and numerical solutions to dynamic
+interactions of objects. We will use Newton’s laws of motion, calculus,
+and algebra to derive differential equations of motion. We will use
+Python to analyze and visualize dynamic problems.</p>
+<p>In order to be successful in this course I expect:</p>
+<ul class="simple">
+<li><p>You watch all media content provided</p></li>
+<li><p>You do the assigned readings and provide discussion content</p></li>
+<li><p>You go through derivations on your own</p></li>
+<li><p>You turn in all assignments</p></li>
+</ul>
+</div>
+<div class="section" id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Automotive design: cam shafts, power requirements (both engine and
+brakes), windshield wipers, frame design, etc.</p></li>
+<li><p>Aerospace design: turbine blades, power requirements, flight
+tracking, etc.</p></li>
+<li><p>Biomechanics design: artificial knees/hips/…, sports physics,
+health/fitness tracking, etc.</p></li>
+<li><p>Sports: ball-tracking, speedometers, helmet design, equipment design
+(baseball bat, lacrosse stick,…), etc.</p></li>
+<li><p>…</p></li>
+</ul>
+</div>
+<div class="section" id="course-requirements-and-grading">
+<h3>Course Requirements and Grading<a class="headerlink" href="#course-requirements-and-grading" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p><strong>Item</strong>         <strong>Percent</strong>   <strong>Requirement</strong>
+Participation    20 %          Campuswire discussions and peer review
+Homework         30 %          Submit solutions on HuskyCT and revise based upon textbook solution
+Quizzes          30 %          5 quizzes
+Project Report   20 %          Create one dynamics application to share with new engineers</p>
+<hr class="docutils" />
+<div class="section" id="note-on-due-dates">
+<h4>Note on Due dates<a class="headerlink" href="#note-on-due-dates" title="Permalink to this headline">¶</a></h4>
+<p>All the course due dates are included in the <a class="reference external" href="https://calendar.google.com/calendar/u/0?cid=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"><em>CE2120 - Summer Google
+Calendar</em></a>.
+Assignments should be submitted before 11:59pm on the due date.</p>
+<p>*Addendum (2021-01-22): *Due dates are flexible to account for
+uncertainty during this pandemic. You do not need an excuse, but you
+need to contact
+<a class="reference external" href="mailto:ryan&#46;c&#46;cooper&#37;&#52;&#48;uconn&#46;edu"><em>ryan<span>&#46;</span>c<span>&#46;</span>cooper<span>&#64;</span>uconn<span>&#46;</span>edu</em></a> to ask for
+an extension. If you need help with the material, we can set up a
+Webex/Zoom meeting. If you just need more time, I’m happy to provide a
+few extra days to get to an assignment.</p>
+</div>
+<div class="section" id="note-on-participation-grade">
+<h4>Note on Participation grade<a class="headerlink" href="#note-on-participation-grade" title="Permalink to this headline">¶</a></h4>
+<p>The participation grade is based upon: Campuswire participation, reading
+assignments, and peer review</p>
+<ol class="simple">
+<li><p>You must participate in the discussions for credit. My expectation
+is that you post at least three questions or answers each week..</p></li>
+<li><p>The reading assignments have Campuswire discussions, post an answer
+to the question for 1-out-of-3 posts. You can respond to a
+colleague’s post for 2-out-of-3 posts/week.</p></li>
+<li><p>The peer review will be done in week 4. You should provide helpful
+feedback to two colleagues’ Project Reports. Focus on how to make
+the problem statements and solutions clear and accurate.</p></li>
+</ol>
+</div>
+<div class="section" id="note-on-homeworks">
+<h4>Note on Homeworks<a class="headerlink" href="#note-on-homeworks" title="Permalink to this headline">¶</a></h4>
+<p>All hand-written solutions need a legible scan. Android users should use
+Google Drive’s Scanning function:</p>
+<p><a class="reference external" href="https://support.google.com/drive/answer/3145835?co=GENIE.Platform%3DAndroid&amp;hl=en&amp;oco=0"><em><strong>Google Drive scanning support
+(support.google.com)</strong></em></a></p>
+<p>iOS users can use the following upload instructions:</p>
+<p>Download
+<a class="reference external" href="https://itunes.apple.com/us/app/evernote-scannable/id883338188?mt=8"><em><strong>Scannable</strong></em></a>
+from the app store. Scan the document, press “send”, press “share”,
+select “Google Drive”, select “Upload”.</p>
+<p>[]{#anchor-16}Note on Quizzes</p>
+<p>There will be six quizzes, one for each module. The quizzes are composed
+of 2-4 questions based upon the readings and homeworks. You will scan
+and upload your work to HuskyCT <em>along with a 10-30-second video
+explaining your solution</em>.</p>
+</div>
+<div class="section" id="note-on-the-project-report">
+<h4>Note on the Project Report<a class="headerlink" href="#note-on-the-project-report" title="Permalink to this headline">¶</a></h4>
+<p>This Summer, I want you to build a dynamics project that interests you.
+Ideally, you can use this project in an engineering portfolio to
+demonstrate your grasp of Newtonian mechanics. My goal is to help you
+build this solution in a Jupyter notebook.</p>
+</div>
+</div>
+<div class="section" id="grading-scale">
+<h3>Grading Scale<a class="headerlink" href="#grading-scale" title="Permalink to this headline">¶</a></h3>
+<p>+—————–+——————+———+
+| <strong>Explanation</strong> | <strong>Letter Grade</strong> | <strong>GPA</strong> |
++—————–+——————+———+
+| Excellent       | <strong>A</strong>            | 4       |
++—————–+——————+———+
+| <strong>A-</strong>          | 3.7              |         |
++—————–+——————+———+
+| Very Good       | <strong>B+</strong>           | 3.3     |
++—————–+——————+———+
+| Good            | <strong>B</strong>            | 3       |
++—————–+——————+———+
+| <strong>B-</strong>          | 2.7              |         |
++—————–+——————+———+
+| <strong>C+</strong>          | 2.3              |         |
++—————–+——————+———+
+| Average         | <strong>C</strong>            | 2       |
++—————–+——————+———+
+| Fair            | <strong>C-</strong>           | 1.7     |
++—————–+——————+———+
+| Poor            | <strong>D+</strong>           | 1.3     |
++—————–+——————+———+
+| <strong>D</strong>           | 1                |         |
++—————–+——————+———+
+| Merely Passing  | <strong>D-</strong>           | 0.7     |
++—————–+——————+———+
+| Failure         | <strong>F</strong>            | 0       |
++—————–+——————+———+</p>
+</div>
+<div class="section" id="due-dates-and-late-policy">
+<h3>Due Dates and Late Policy<a class="headerlink" href="#due-dates-and-late-policy" title="Permalink to this headline">¶</a></h3>
+<p>All course due dates are identified in the <a class="reference external" href="https://calendar.google.com/calendar/u/0?cid=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"><em>CE2120 - Summer Google
+Calendar</em></a>.
+Deadlines are based on Eastern Time; if you are in a different time
+zone, please adjust your submittal times accordingly. The instructor
+reserves the right to change dates accordingly as the semester
+progresses. <em>All changes will be communicated via the calendar or
+another appropriate notification.</em></p>
+<p><strong>Late Policy:</strong> If you need more time for an assignment or experience
+technical difficulties, reach out via Campuswire or email. The
+instructor can make accommodations for work, family, and personal
+reasons. *We ask that you be respectful of the instructor’s limited time
+and resources. *</p>
+</div>
+<div class="section" id="feedback-and-grades">
+<h3>Feedback and Grades<a class="headerlink" href="#feedback-and-grades" title="Permalink to this headline">¶</a></h3>
+<p>I will make every effort to provide feedback and grades within 2 days.
+To keep track of your performance in the course, refer to My Grades in
+HuskyCT.</p>
+<p><strong>Weekly Time Commitment</strong></p>
+<p>You should expect to dedicate between 25 - 30 hours a week to this
+course. This expectation is based on the various course activities,
+assignments, and assessments and the University of Connecticut’s policy
+regarding credit hours. More information related to hours per week per
+credit can be accessed at the <a class="reference external" href="https://onlinestudent.uconn.edu/learn-more/#collapsepanel-269-1-0-07"><em>Online Student
+website</em></a>.</p>
+<p>This course requires <em>lots of practice</em>. You should set aside 5 hours
+per day (assuming a 5-day work-week) to write out example problems from
+the textbook, try homework problems, and revise answers. This is the
+best way to prepare for quizzes.</p>
+</div>
+<div class="section" id="student-authentication-and-verification">
+<h3>Student Authentication and Verification<a class="headerlink" href="#student-authentication-and-verification" title="Permalink to this headline">¶</a></h3>
+<p>The University of Connecticut is required to verify the identity of
+students who participate in online courses and to establish that
+students who register in an online course are the same students who
+participate in and complete the course activities and assessments and
+receive academic credit. Verification and authentication of student
+identity in this course will include:</p>
+<ol class="simple">
+<li><p>Secure access to the learning management system using your unique
+UConn NetID and password.</p></li>
+<li><p>Students will submit videos to describe solutions to the 6 module
+quizzes.</p></li>
+</ol>
+</div>
+<div class="section" id="student-responsibilities-and-resources">
+<h3>Student Responsibilities and Resources<a class="headerlink" href="#student-responsibilities-and-resources" title="Permalink to this headline">¶</a></h3>
+<p>As a member of the University of Connecticut student community, you are
+held to certain standards and academic policies. In addition, there are
+numerous resources available to help you succeed in your academic work.
+Review these important <a class="reference external" href="http://ecampus.uconn.edu/policies.html"><em>standards, policies and
+resources</em></a>, which include:</p>
+<ul class="simple">
+<li><p>The Student Code</p>
+<ul>
+<li><p>Academic Integrity</p></li>
+<li><p>Resources on Avoiding Cheating and Plagiarism</p></li>
+</ul>
+</li>
+<li><p>Copyrighted Materials</p></li>
+<li><p>Netiquette and Communication</p></li>
+<li><p>Adding or Dropping a Course</p></li>
+<li><p>Academic Calendar</p></li>
+<li><p>Policy Against Discrimination, Harassment and Inappropriate Romantic</p></li>
+<li><p>Relationships</p></li>
+<li><p>Sexual Assault Reporting Policy</p></li>
+</ul>
+</div>
+<div class="section" id="academic-integrity">
+<h3>Academic Integrity:<a class="headerlink" href="#academic-integrity" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The instructors of this class have a zero-tolerance policy for
+academic misconduct, that is copying others’ work either in the lab,
+field, or on an exam. Any student work that is found to be in
+violation of the university policy regarding academic misconduct
+will be assigned a grade of zero at a minimum.</p></li>
+<li><p>Read and understand <a class="reference external" href="http://www.community.uconn.edu/student_code.html"><em>The UConn Student Code of
+Conduct</em></a>.
+Students will follow all University regulations concerning the final
+exam.</p></li>
+</ul>
+</div>
+<div class="section" id="note-on-grading-and-quizzes">
+<h3>Note on grading and quizzes<a class="headerlink" href="#note-on-grading-and-quizzes" title="Permalink to this headline">¶</a></h3>
+<p>I will regrade the entire assignment if you ask for points on an
+individual question in the homeworks/quizzes/projects. The grade may go
+up or down.</p>
+<p>It is <em>your</em> responsibility to make sure your answers are correct. Use
+the textbook and class notes for the quizzes and exams.</p>
+<p>There are no extensions or rescheduling for quizzes. If you have an
+extreme circumstance due to family or medical emergency that requires
+rescheduling you must send documentation to me (Prof. Cooper) within 12
+hours of the passing quiz.</p>
+</div>
+<div class="section" id="students-with-disabilities">
+<h3>Students with Disabilities<a class="headerlink" href="#students-with-disabilities" title="Permalink to this headline">¶</a></h3>
+<p>The University of Connecticut is committed to protecting the rights of
+individuals with disabilities and assuring that the learning environment
+is accessible. If you anticipate or experience physical or academic
+barriers based on disability or pregnancy, please let me know
+immediately so that we can discuss options. Students who require
+accommodations should contact the Center for Students with Disabilities,
+Wilbur Cross Building Room 204, (860) 486-2020 or
+<a class="reference external" href="http://csd.uconn.edu/"><em>http://csd.uconn.edu/</em></a>.</p>
+<p>Blackboard measures and evaluates accessibility using two sets of
+standards: the WCAG 2.0 standards issued by the World Wide Web
+Consortium (W3C) and Section 508 of the Rehabilitation Act issued in the
+United States federal government.” (Retrieved March 24, 2013 from
+<a class="reference external" href="http://www.blackboard.com/platforms/learn/resources/accessibility.aspx"><em>Blackboard’s
+website</em></a>)</p>
+</div>
+<div class="section" id="software-technical-requirements-with-accessibility-and-privacy-information">
+<h3>Software/Technical Requirements (with Accessibility and Privacy Information)<a class="headerlink" href="#software-technical-requirements-with-accessibility-and-privacy-information" title="Permalink to this headline">¶</a></h3>
+<p>The software/technical requirements for this course include:</p>
+<ul class="simple">
+<li><p>Modern, up-to-date web browser e.g.
+<a class="reference external" href="https://www.google.com/chrome/"><em>Chrome</em></a>,
+<a class="reference external" href="https://www.mozilla.org/en-US/"><em>Firefox</em></a>, <a class="reference external" href="https://www.apple.com/safari/"><em>Safari (Mac
+OS)</em></a>, or <a class="reference external" href="https://www.microsoft.com/en-us/edge"><em>Microsoft
+Edge</em></a></p></li>
+<li><p>HuskyCT/Blackboard (<a class="reference external" href="http://www.blackboard.com/Platforms/Learn/Resources/Accessibility.aspx"><em>HuskyCT/ Blackboard Accessibility
+Statement</em></a>,
+<a class="reference external" href="http://www.blackboard.com/footer/privacy-policy.aspx"><em>HuskyCT/ Blackboard Privacy
+Policy</em></a>)</p></li>
+<li><p><a class="reference external" href="http://www.adobe.com/products/acrobat/readstep2.html"><em>Adobe Acrobat
+Reader</em></a>
+(<a class="reference external" href="http://www.adobe.com/accessibility/products/reader.html"><em>Adobe Reader Accessibility
+Statement</em></a>,
+<a class="reference external" href="http://www.adobe.com/privacy.html"><em>Adobe Reader Privacy Policy</em></a>)</p></li>
+<li><p>Google Apps (<a class="reference external" href="https://www.google.com/accessibility/"><em>Google Apps
+Accessibility</em></a>, <a class="reference external" href="https://www.google.com/edu/trust/"><em>Google for
+Education Privacy Policy</em></a></p></li>
+<li><p>Jupyter and Python: a full Jupyter environment with the necessary
+Python libraries is ready at
+<a class="reference external" href="https://compmech.uconn.edu">compmech.uconn.edu</a></p></li>
+<li><p>Dedicated access to high-speed internet with a minimum speed of 1.5
+Mbps (4 Mbps or higher is recommended).</p></li>
+<li><p>Webcam or phone camera: you should be able to record yourself and
+submit share the video online</p></li>
+</ul>
+<p>For information on managing your privacy at the University of
+Connecticut, visit the <a class="reference external" href="https://privacy.uconn.edu/"><em>University’s Privacy
+page</em></a>.</p>
+<p><strong>NOTE:</strong> This course was not tested or designed for mobile devices.</p>
+</div>
+<div class="section" id="help">
+<h3>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://ecampus.uconn.edu/help.html"><em>Technical and Academic Help</em></a>
+provides a guide to technical and academic assistance.</p>
+<p>This course is completely facilitated online using the learning
+management platform, <a class="reference external" href="https://lms.uconn.edu"><em>HuskyCT</em></a>. If you have
+difficulty accessing HuskyCT, you have access to the in person/live
+person support options available during regular business hours through
+the <a class="reference external" href="http://helpcenter.uconn.edu/"><em>Help Center</em></a>. You also have <a class="reference external" href="http://www.ecampus24x7.uconn.edu/"><em>24x7
+Course Support</em></a> including access to
+live chat, phone, and support documents.</p>
+</div>
+<div class="section" id="minimum-technical-skills">
+<h3>Minimum Technical Skills<a class="headerlink" href="#minimum-technical-skills" title="Permalink to this headline">¶</a></h3>
+<p>To be successful in this course, you will need the following technical
+skills:</p>
+<ul class="simple">
+<li><p>Use the Campuswire class discussions</p></li>
+<li><p>Create graphics and graphs and include them in Google documents and
+Jupyter notebooks</p></li>
+<li><p>Work within two or more browser windows simultaneously.</p></li>
+<li><p>Open and access PDF files</p></li>
+<li><p>Scan and upload PDF files</p></li>
+<li><p>Follow software tutorials on YouTube for Python and Jupyter</p></li>
+</ul>
+<p>University students are expected to demonstrate competency in Computer
+Technology. Explore the <a class="reference external" href="https://geoc.uconn.edu/computer-technology-competency/"><em>Computer Technology
+Competencies</em></a>
+page for more information.</p>
+</div>
+<div class="section" id="evaluation-of-the-course">
+<h3>Evaluation of the Course<a class="headerlink" href="#evaluation-of-the-course" title="Permalink to this headline">¶</a></h3>
+<p>Students will be provided an opportunity to evaluate instruction in this
+course using the University’s standard procedures, which are
+administered by the <a class="reference external" href="http://www.oire.uconn.edu/"><em>Office of Institutional Research and
+Effectiveness</em></a> (OIRE).</p>
+<p>Additional informal formative surveys may also be administered within
+the course as an optional evaluation tool.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Welcome to Applied Mechanics II - Engineering Dynamics</a>
+    <a class='right-next' id="next-link" href="module_00/meet_cooper.html" title="next page">About the Instructor</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

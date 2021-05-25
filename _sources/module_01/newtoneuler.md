@@ -5,7 +5,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.6.0
+      jupytext_version: 1.8.2
   kernelspec:
     display_name: Python 3
     language: python
@@ -42,7 +42,7 @@ coupled differential equations as such,
 3. $\mathbf{M}_{G}\cdot\hat{e}_3 = I_{zz}\alpha$
 
 where $\hat{e}_{1},~\hat{e}_{2},$ and $\hat{e}_{3}$ are three orthogonal
-unit vectors, $I_zz$ is the moment of inertia for the rigid body, and
+unit vectors, $I_{zz}$ is the moment of inertia for the rigid body, and
 $\alpha$ is the angular acceleration of the rigid body. Every rigid body
 in an engineering system can be described by the Newton-Euler equations. 
 
@@ -71,7 +71,7 @@ forces are present. Now, write out the 3 Newton-Euler equations
 
 1. $0 = m\ddot{x}$
 2. $-mg = m\ddot{y}$
-3. $0 = I_{zz}\alpha$
+3. $0 = I_{zz}\ddot{\theta}$
 
 Integrating the three equations, you get three equations to describe the
 position and angle of the baseball. 
@@ -83,9 +83,32 @@ position and angle of the baseball.
 
 
 ```python tags=["hide-input"]
-t = np.linspace(0,1.2,10)
+t = np.linspace(0,1.1,10)
 x = 6*np.cos(np.pi/3)*t
 y = 6*np.sin(np.pi/3)*t-9.81*t**2/2
 theta = 10*2*np.pi*t
-plt.plot(x,y, marker = (3, 0, theta))
+plt.plot(x,y,'o')
+plt.xlabel('distance (m)')
+plt.ylabel('height (m)');
 ```
+
+A freefalling object does not have a force in the x-direction or an
+applied moment, so the angular acceleration is 0 rad/s/s. The ball will
+continue spinning until an external moment is applied e.g. another
+player's baseball mitt. 
+
+## Describing kinetic properties
+
+The motion of the baseball, its path and its rotation, describes the
+__kinematics__ or _geometry of motion_. You can also use __kinetic__
+properties to describe moving object. The Newton-Euler create
+quantitative comparisons between __kinematic__ and __kinetic__
+properties. 
+
+The first __kinetic__ property is the _Forces_ acting on the baseball:
+
+$\mathbf{F} = 0\hat{i} - mg\hat{j}$. 
+
+where $\mathbf{F}$ is the _force_ acting on the baseball. A _force_ is a
+vector quantity with magnitude and direction or another way to state
+this is that it has components along each unit vector. 

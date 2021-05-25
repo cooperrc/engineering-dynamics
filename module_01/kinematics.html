@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geometry of motion - kinematics &#8212; Engineering Dynamics</title>
+    <title>Kinematics: the geometry of motion &#8212; Engineering Dynamics</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -44,7 +44,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,12 +54,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Snowflake time of flight" href="snowflake.html" />
-    <link rel="prev" title="Module 1 - Dynamic equations and definitions" href="overview.html" />
+    <link rel="prev" title="Introduction to Engineering Dynamics" href="introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -130,18 +130,28 @@
      Participation Videos
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="overview.html">
-   Module 1 - Dynamic equations and definitions
+   Module 1 - Definitions and equations
   </a>
   <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Geometry of motion - kinematics
+     Kinematics: the geometry of motion
     </a>
    </li>
    <li class="toctree-l2">
@@ -163,6 +173,11 @@
    Module 2 - constrained dynamic motion
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_02/mechanical-advantage.html">
      Mechanical advantage
@@ -188,18 +203,8 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html">
-     Numerical Solution of Yoyo despinning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
+    <a class="reference internal" href="../getting-started/03_integrate.html">
+     Introduction to functions and integration
     </a>
    </li>
    <li class="toctree-l2">
@@ -252,21 +257,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -284,7 +289,7 @@
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
+        <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -303,13 +308,13 @@
 </div>
 
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+        <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -334,21 +339,27 @@
     </div>
 </div>
 
-        </div>
+    </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#position">
-   Position
+  <a class="reference internal nav-link" href="#galileo-s-physics-kinematics">
+   Galileo’s Physics: Kinematics
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inclined-ramp-experiment">
+     Inclined ramp experiment
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#velocity">
@@ -396,7 +407,6 @@
 
         </nav>
         
-        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -404,16 +414,35 @@
         
               <div>
                 
-  <div class="section" id="geometry-of-motion-kinematics">
-<h1>Geometry of motion - kinematics<a class="headerlink" href="#geometry-of-motion-kinematics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="position">
-<h2>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="kinematics-the-geometry-of-motion">
+<h1>Kinematics: the geometry of motion<a class="headerlink" href="#kinematics-the-geometry-of-motion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="galileo-s-physics-kinematics">
+<h2>Galileo’s Physics: Kinematics<a class="headerlink" href="#galileo-s-physics-kinematics" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a>
+1564-1642, created the foundations for classical engineering physics by
+defining <strong>kinematics</strong>. <strong>Kinematics</strong> is the study of the
+geometry of motion. He observed the motion of planets, stars,
+falling objects, etc. Galileo defined used the relationships between
+position, velocity, and acceleration to make informed predictions.</p>
+<p>One of the first kinematic experiments, was Galileo’s inclined ramp.
+Galileo’s hypthosis: objects all fall at the same rate of change in
+speed. Now, engineers take this for granted and use a gravitational
+constant to describe acceleration, <span class="math notranslate nohighlight">\(g=9.81~\frac{m}{s^2}\)</span>.</p>
+<div class="section" id="inclined-ramp-experiment">
+<h3>Inclined ramp experiment<a class="headerlink" href="#inclined-ramp-experiment" title="Permalink to this headline">¶</a></h3>
+<p>Placing two round objects, of the same shape, on an inclined plane, you
+can release them and see they both</p>
+<ul class="simple">
+<li><p>move the same distance in the same amount of time</p></li>
+<li><p>move slowly at first, then fastest at the end of the ramp</p></li>
+<li><p>the distance travelled is <span class="math notranslate nohighlight">\(d \propto t^2\)</span> time-squared</p></li>
+</ul>
+<p>The last obeservation is harder to <em>see</em>, but if you use a stopwatch and
+meter stick you can create a table for distance and time.</p>
 <p>Classical physics describes the position of an object using three
 independent coordinates e.g.</p>
-<p><a id='position'></a>
-\begin{equation}
-\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}
-\end{equation}</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{r}_{P/O}\)</span> is the position of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point
 of origin</em> <span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(x,~y,~z\)</span> are magnitudes of distance along a
 Cartesian coordinate system and <span class="math notranslate nohighlight">\(\hat{i},~\hat{j}\)</span> and <span class="math notranslate nohighlight">\(\hat{k}\)</span> are
@@ -426,16 +455,30 @@ unit vectors that describe three</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">bbb40a30a5e1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="velocity">
 <h2>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">¶</a></h2>
 <p>The velocity of an object is the change in <a class="reference external" href="#position">position</a> per length of time.
 <a id='velociy'></a></p>
-<p>\begin{equation}
-\mathbf{v}<em>{P/O} = \frac{d\mathbf{r}</em>{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
+<div class="amsmath math notranslate nohighlight" id="equation-5b27cec3-fcda-4410-b55d-f5b84965881a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-5b27cec3-fcda-4410-b55d-f5b84965881a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
 \dot{z}\hat{k}
-\end{equation}</p>
+\end{equation}\]</div>
 <blockquote>
 <div><p><strong>Note:</strong> The notation <span class="math notranslate nohighlight">\(\dot{x}\)</span> and <span class="math notranslate nohighlight">\(\ddot{x}\)</span> is short-hand for writing out
 <span class="math notranslate nohighlight">\(\frac{dx}{dt}\)</span> and <span class="math notranslate nohighlight">\(\frac{d^2x}{dt^2}\)</span>, respectively.</p>
@@ -467,9 +510,6 @@ down a road using GPS. You determine its motion and create the position,
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/kinematics_4_0.png" src="../_images/kinematics_4_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="speed">
@@ -483,11 +523,12 @@ velocity,</p>
 <h3>Remember the chain rule<a class="headerlink" href="#remember-the-chain-rule" title="Permalink to this headline">¶</a></h3>
 <p>In Dynamics, there are many moving parts, so it is usually safer to
 assume that a variable is a function of time. Consider the derivative of
-position,
-\begin{equation}
+position,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5b60c1c5-7817-4c84-a2e2-7e08ce61a050">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5b60c1c5-7817-4c84-a2e2-7e08ce61a050" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{d}{dt}(x\hat{i}+y\hat{j}) = \dot{x}\hat{i} + \dot{y}\hat{j} +
-x\dot{\hat{i}} + y\dot{\hat{j}},
-\end{equation}</p>
+x\dot{\hat{i}} + y\dot{\hat{j}}, 
+\end{equation}\]</div>
 <p>in a fixed coordinate system (like the ground)
 <span class="math notranslate nohighlight">\(\dot{\hat{i}}=\dot{\hat{j}}=0\)</span> because these unit vectors do not change direction.</p>
 </div>
@@ -578,16 +619,6 @@ revisit 3D motion in Module_05</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="400"
-    height="300"
-    src="https://www.youtube.com/embed/li7t--8UZms?loop=1"
-    frameborder="0"
-    allowfullscreen
-></iframe>
-</div></div>
 </div>
 </div>
 <div class="section" id="rotation-in-planar-motion">
@@ -620,15 +651,15 @@ to describe its position e.g. <span class="math notranslate nohighlight">\(x\)</
 
               </div>
               
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">Module 1 - Dynamic equations and definitions</a>
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">Introduction to Engineering Dynamics</a>
     <a class='right-next' id="next-link" href="snowflake.html" title="next page">Snowflake time of flight</a>
 
-        </div>
-        
-        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
