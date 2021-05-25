@@ -20,14 +20,16 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
+plt.style.use('fivethirtyeight')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m<ipython-input-1-547520e49989>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-1-7bdb5217ed74>[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      3[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mintegrate[0m [0;32mimport[0m [0modeint[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0mplt[0m[0;34m.[0m[0mstyle[0m[0;34m.[0m[0muse[0m[0;34m([0m[0;34m'fivethirtyeight'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mModuleNotFoundError[0m: No module named 'matplotlib'
 ModuleNotFoundError: No module named 'matplotlib'

@@ -16,7 +16,7 @@ payload. These cords unravel and slow the spinning of the rocket. In
 this tutorial, you will consider the engineering system, conservation of
 angular momentum, and conservation of energy. 
 
-# Engineering system - kinematics
+## Engineering system - kinematics
 
 As the yoyo mass unravels, it moves further from the payload. The total
 distance from the payload center of mass (COM) is described by 
@@ -73,7 +73,7 @@ The equations for position and velocity are the essential kinematic
 equations to define angular momentum and kinetic energy, the two kinetic
 equations. 
 
-# Engineering system - kinetics (conservation of angular momentum)
+## Engineering system - kinetics (conservation of angular momentum)
 
 The angular momentum is constant because $\sum \mathbf{M}_G = 0 =
 \frac{d}{dt}\mathbf{h}_G$. The total angular momentum is as such
@@ -95,7 +95,7 @@ are release and $\theta = \dot{\theta}=0$. There are three unknown
 variables in this angular momentum equation, $\omega_B$, $\theta$, and
 $\dot{\theta}$. You need another equation, use work-energy.
 
-# Engineering system - kinetics (work-energy formulation)
+## Engineering system - kinetics (work-energy formulation)
 
 There is no external work done to the system, the tension in the yoyo
 cords are internal constraint forces, so the total work done is 0, e.g.
@@ -113,7 +113,7 @@ combining terms and simplifying
 $\left(\frac{I_G}{2mR^2}+1\right)( (\omega_B^0)^2-\omega_B)  = 
 \theta^2(\omega_B+\dot{\theta})^2$
 
-# Combining equations and solving
+## Combining equations and solving
 
 Substitute $c = \left(\frac{I_G}{2mR^2}+1\right)$ so you are left with 
 
@@ -182,4 +182,3 @@ plt.plot(tf,wB(tf),'o', label = 'release point, t_f')
 plt.legend();
 plt.xlabel('time (s)')
 plt.ylabel('payload angular velocity (rad/s)');
-

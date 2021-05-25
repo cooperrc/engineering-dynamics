@@ -1,4 +1,4 @@
-# Module 1 - Dynamic equations and definitions
+# Module 1 - Definitions and equations
 
 _ball rolling on plane_
 
@@ -22,12 +22,7 @@ forces, work, and impact.
 	1. define position
 	2. velocity 
 	3. acceleration
-	4. degrees of freedom and coordinates
 2. Kinetics
 	1. Newton-Euler equations
 	2. Impulse-momentum
 	3. Work-energy
-	4. equations of motion = second order diff eq
-3. Solving dynamic problem
-	1. Newton-Euler equations define eom
-	2. Use ODE solution for x(t)

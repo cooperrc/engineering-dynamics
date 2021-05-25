@@ -2,12 +2,14 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: intro
+- file: syllabus
 - file: module_00/meet_cooper
 - file: content
 - file: module_00/overview.md
   sections:
     - file: module_00/introduction
     - file: module_00/participation
+    - file: getting-started/01_interactions
 - file: module_01/overview
   sections:
     - file: module_01/introduction
@@ -17,12 +19,13 @@
     - file: module_01/newtoneuler
 - file: module_02/overview
   sections:
+    - file: getting-started/02_Working_with_Python
     - file: module_02/mechanical-advantage
     - file: module_02/driving-forces
     - file: module_02/valentine
 - file: module_03/overview
   sections:
-    - file: module_03/yoyo-despin
+    - file: getting-started/03_integrate
     - file: module_03/hemisphere-rolling
 - file: module_04/overview
   sections:

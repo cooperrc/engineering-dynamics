@@ -25,9 +25,8 @@ describes orientation.
 
 $DOF = 3 + 3 = 6$
 
-from IPython.core.display import SVG
-
-SVG(filename='./images/piston-flywheel.svg')
+from IPython.display import SVG
+SVG(filename = './images/piston-flywheel.svg')
 
 ## Describing constraints 
 
@@ -149,5 +148,3 @@ plt.ylim(-0.1,0.1)
 plt.xticks(np.arange(0,360,30))
 plt.xlabel(r'$\theta$ (degrees)')
 plt.ylabel('Piston Force');
-
-

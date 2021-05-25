@@ -130,18 +130,28 @@
      Participation Videos
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="overview.html">
-   Module 1 - Dynamic equations and definitions
+   Module 1 - Definitions and equations
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="kinematics.html">
-     Geometry of motion - kinematics
+     Kinematics: the geometry of motion
     </a>
    </li>
    <li class="toctree-l2">
@@ -163,6 +173,11 @@
    Module 2 - constrained dynamic motion
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_02/mechanical-advantage.html">
      Mechanical advantage
@@ -188,18 +203,13 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html">
-     Numerical Solution of Yoyo despinning
+    <a class="reference internal" href="../getting-started/03_integrate.html">
+     Introduction to functions and integration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
+    <a class="reference internal" href="../module_03/hemisphere-rolling.html">
+     Rolling on hemisphere
     </a>
    </li>
   </ul>
@@ -217,38 +227,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../module_04/yoyo-despin_02.html">
      Yoyo despin revisited (cord constraint)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinematics">
-     Engineering system - kinematics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-conservation-of-angular-momentum">
-     Engineering system - kinetics (conservation of angular momentum)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-work-energy-formulation">
-     Engineering system - kinetics (work-energy formulation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#combining-equations-and-solving">
-     Combining equations and solving
     </a>
    </li>
   </ul>
@@ -300,9 +280,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_01/newtoneuler.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/module_01/newtoneuler.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -336,29 +316,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_01/newtoneuler.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_01/newtoneuler.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -375,8 +332,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#galileo-s-rolling-experiment">
-   Galileo’s rolling experiment
+  <a class="reference internal nav-link" href="#describing-kinetic-properties">
+   Describing kinetic properties
   </a>
  </li>
 </ul>
@@ -390,26 +347,10 @@
         
               <div>
                 
-  <div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+  <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">bbb40a30a5e1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="the-newton-euler-equations">
 <h1>The Newton-Euler equations<a class="headerlink" href="#the-newton-euler-equations" title="Permalink to this headline">¶</a></h1>
@@ -452,7 +393,7 @@ at an angle of 60<span class="math notranslate nohighlight">\(^o\)</span> from t
 Determine the acceleration of the baseball and its maximum height.</p>
 <p>In this example, consider the three planar Newton-Euler equations by
 first drawing a Free Body Diagram as seen below.</p>
-<p><img alt="baseball FBD" src="module_01/./images/baseball_FBD.svg" /></p>
+<p><img alt="baseball FBD" src="../_images/baseball_FBD.svg" /></p>
 <p>The force of gravity acts over the entire object equally and no other
 forces are present. Now, write out the 3 Newton-Euler equations</p>
 <blockquote>
@@ -471,9 +412,7 @@ position and angle of the baseball.</p>
 <li><p><span class="math notranslate nohighlight">\(y(t) = y(0)+6\sin\frac{\pi}{3}t-\frac{gt^2}{2}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\theta(t) = \theta(0)+10\frac{rot}{s}\frac{2\pi~rad}{rot}t\)</span></p></li>
 </ol>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">t</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">-</span><span class="mf">9.81</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">t</span>
@@ -482,36 +421,23 @@ position and angle of the baseball.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;height (m)&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+<p>A freefalling object does not have a force in the x-direction or an
+applied moment, so the angular acceleration is 0 rad/s/s. The ball will
+continue spinning until an external moment is applied e.g. another
+player’s baseball mitt.</p>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/newtoneuler_2_0.png" src="../_images/newtoneuler_2_0.png" />
-</div>
-</div>
-<p>A freefalling object does not have an applied moment, so the angular
-acceleration is 0 rad/s/s. The ball will continue spinning until an
-external moment is applied.</p>
-</div>
-<div class="section" id="galileo-s-rolling-experiment">
-<h2>Galileo’s rolling experiment<a class="headerlink" href="#galileo-s-rolling-experiment" title="Permalink to this headline">¶</a></h2>
-<p>Galileo is credited with creating the field of kinematics. One of his
-earliest experiments was to measure the position and speed of a ball
-rolling on an incline plane. He determined that the position was
-proportional to the square of time. This means that the motion is
-described by constant acceleration.</p>
-<p>Here, consider a lacrosse ball rolling on a slope. Before you create
-the equations of motion for the ball, consider the kinematics of a
-rolling ball. The point-of-contact between the ground and ball has the
-same velocity both on the ball and the ground. The ground isn’t moving,
-so the point-of-contact isn’t moving.</p>
-<p>The ball rolls down an incline of 5<span class="math notranslate nohighlight">\(^o\)</span> and its speed is increasing at</p>
-<p>As before, start
-with the free body diagram and</p>
-<p><img alt="ball rolling FBD" src="module_01/./images/ball-rolling_FBD.svg" /></p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(mg\sin\alpha - F_f = m\ddot{x}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(N-mg\cos\alpha = m\ddot{y}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(-r\cdotF_f = I_{zz}\ddot{\theta}\)</span></p></li>
-</ol>
+<div class="section" id="describing-kinetic-properties">
+<h2>Describing kinetic properties<a class="headerlink" href="#describing-kinetic-properties" title="Permalink to this headline">¶</a></h2>
+<p>The motion of the baseball, its path and its rotation, describes the
+<strong>kinematics</strong> or <em>geometry of motion</em>. You can also use <strong>kinetic</strong>
+properties to describe moving object. The Newton-Euler create
+quantitative comparisons between <strong>kinematic</strong> and <strong>kinetic</strong>
+properties.</p>
+<p>The first <strong>kinetic</strong> property is the <em>Forces</em> acting on the baseball:</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{F} = 0\hat{i} - mg\hat{j}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the <em>force</em> acting on the baseball. A <em>force</em> is a
+vector quantity with magnitude and direction or another way to state
+this is that it has components along each unit vector.</p>
 </div>
 </div>
 

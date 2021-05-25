@@ -1,14 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
+plt.style.use('fivethirtyeight')
 
 # Numerical Solution of Yoyo despinning
+
+![Yoyo Despin on a track](./yoyo-despin_01.svg)
+
+The image above shows a proposed yoyo despin mechanism that has two
+masses attached to a sliding track that keeps the two small masses, $m$, 
+in line with the larger cylindrical mass, $M$. 
 
 $\ddot{r} = r \dot{\theta}^2$
 
 $\ddot{r} = r\left(\frac{2mr_0^2+MR^2/2}{2mr^2+MR^2/2}\right)^2 \dot{\theta}(0)$
 
-Here we plot the relation between angular velocity and distance from center of cylinder just based upon conservation of angular momentum:
+where $\dot{\theta} = \Omega(t)$
+
+Here you plot the relation between angular velocity and distance from center of cylinder just based upon conservation of angular momentum:
 
 m=0.1 #kg
 M=1 #kg
@@ -24,7 +33,7 @@ plt.xlabel('yoyo distance (m)')
 plt.ylabel('angular velocity (rad/s)')
 plt.title('conservation of angular momentum\n h=constant');
 
-# Define the state and d/dt(state)
+## Define the state and d/dt(state)
 
 In this part, we define the second order differential equation as a state-space form
 
@@ -62,7 +71,7 @@ plt.plot(t,r[:,0])
 plt.xlabel('time (s)')
 plt.ylabel('yoyo pos (m)')
 
-# To save to file from python output
+## To save to file from python output
 
 Have to join the time, $r$, and $\dot{r}$ into an array then save to a file:
 

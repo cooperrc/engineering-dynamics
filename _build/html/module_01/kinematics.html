@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geometry of motion - kinematics &#8212; Engineering Dynamics</title>
+    <title>Kinematics: the geometry of motion &#8212; Engineering Dynamics</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Snowflake time of flight" href="snowflake.html" />
-    <link rel="prev" title="Module 1 - Dynamic equations and definitions" href="overview.html" />
+    <link rel="prev" title="Introduction to Engineering Dynamics" href="introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -130,18 +130,28 @@
      Participation Videos
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="overview.html">
-   Module 1 - Dynamic equations and definitions
+   Module 1 - Definitions and equations
   </a>
   <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Geometry of motion - kinematics
+     Kinematics: the geometry of motion
     </a>
    </li>
    <li class="toctree-l2">
@@ -163,6 +173,11 @@
    Module 2 - constrained dynamic motion
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_02/mechanical-advantage.html">
      Mechanical advantage
@@ -188,18 +203,13 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html">
-     Numerical Solution of Yoyo despinning
+    <a class="reference internal" href="../getting-started/03_integrate.html">
+     Introduction to functions and integration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
+    <a class="reference internal" href="../module_03/hemisphere-rolling.html">
+     Rolling on hemisphere
     </a>
    </li>
   </ul>
@@ -217,38 +227,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../module_04/yoyo-despin_02.html">
      Yoyo despin revisited (cord constraint)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinematics">
-     Engineering system - kinematics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-conservation-of-angular-momentum">
-     Engineering system - kinetics (conservation of angular momentum)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-work-energy-formulation">
-     Engineering system - kinetics (work-energy formulation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#combining-equations-and-solving">
-     Combining equations and solving
     </a>
    </li>
   </ul>
@@ -370,9 +350,16 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#position">
-   Position
+  <a class="reference internal nav-link" href="#galileo-s-physics-kinematics">
+   Galileo’s Physics: Kinematics
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inclined-ramp-experiment">
+     Inclined ramp experiment
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#velocity">
@@ -388,6 +375,18 @@
   <a class="reference internal nav-link" href="#speed">
    Speed
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remember-the-chain-rule">
+     Remember the chain rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chain-rule-in-dynamics">
+     Chain rule in dynamics
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#acceleration">
@@ -415,17 +414,35 @@
         
               <div>
                 
-  <div class="section" id="geometry-of-motion-kinematics">
-<h1>Geometry of motion - kinematics<a class="headerlink" href="#geometry-of-motion-kinematics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="position">
-<h2>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="kinematics-the-geometry-of-motion">
+<h1>Kinematics: the geometry of motion<a class="headerlink" href="#kinematics-the-geometry-of-motion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="galileo-s-physics-kinematics">
+<h2>Galileo’s Physics: Kinematics<a class="headerlink" href="#galileo-s-physics-kinematics" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a>
+1564-1642, created the foundations for classical engineering physics by
+defining <strong>kinematics</strong>. <strong>Kinematics</strong> is the study of the
+geometry of motion. He observed the motion of planets, stars,
+falling objects, etc. Galileo defined used the relationships between
+position, velocity, and acceleration to make informed predictions.</p>
+<p>One of the first kinematic experiments, was Galileo’s inclined ramp.
+Galileo’s hypthosis: objects all fall at the same rate of change in
+speed. Now, engineers take this for granted and use a gravitational
+constant to describe acceleration, <span class="math notranslate nohighlight">\(g=9.81~\frac{m}{s^2}\)</span>.</p>
+<div class="section" id="inclined-ramp-experiment">
+<h3>Inclined ramp experiment<a class="headerlink" href="#inclined-ramp-experiment" title="Permalink to this headline">¶</a></h3>
+<p>Placing two round objects, of the same shape, on an inclined plane, you
+can release them and see they both</p>
+<ul class="simple">
+<li><p>move the same distance in the same amount of time</p></li>
+<li><p>move slowly at first, then fastest at the end of the ramp</p></li>
+<li><p>the distance travelled is <span class="math notranslate nohighlight">\(d \propto t^2\)</span> time-squared</p></li>
+</ul>
+<p>The last obeservation is harder to <em>see</em>, but if you use a stopwatch and
+meter stick you can create a table for distance and time.</p>
 <p>Classical physics describes the position of an object using three
 independent coordinates e.g.</p>
-<p><a id='position'></a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-307b1451-64bb-4a13-b961-170289921eeb">
-<span class="eqno">(1)<a class="headerlink" href="#equation-307b1451-64bb-4a13-b961-170289921eeb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
-\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}
-\end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{r}_{P/O}\)</span> is the position of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point
 of origin</em> <span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(x,~y,~z\)</span> are magnitudes of distance along a
 Cartesian coordinate system and <span class="math notranslate nohighlight">\(\hat{i},~\hat{j}\)</span> and <span class="math notranslate nohighlight">\(\hat{k}\)</span> are
@@ -452,12 +469,13 @@ unit vectors that describe three</p>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="velocity">
 <h2>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">¶</a></h2>
 <p>The velocity of an object is the change in <a class="reference external" href="#position">position</a> per length of time.
 <a id='velociy'></a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-cabd160c-5b57-4bdd-ab34-cdf514406628">
-<span class="eqno">(2)<a class="headerlink" href="#equation-cabd160c-5b57-4bdd-ab34-cdf514406628" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5b27cec3-fcda-4410-b55d-f5b84965881a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-5b27cec3-fcda-4410-b55d-f5b84965881a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
 \dot{z}\hat{k}
 \end{equation}\]</div>
@@ -468,12 +486,6 @@ unit vectors that describe three</p>
 <p>The definition of velocity in equation <a class="reference internal" href="../kinematics.html#equation-velocity">()</a> depends upon the change in position of all
 three independent coordinates, where
 <span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}\)</span>.</p>
-<blockquote>
-<div><p><strong>Note:</strong> Remember the chain rule:
-<span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
-x\dot{\hat{i}}\)</span>, but <span class="math notranslate nohighlight">\(\dot{\hat{i}}=0\)</span> because this unit vector is not
-changing direction. You’ll see other unit vectors later that do change.</p>
-</div></blockquote>
 </div>
 <div class="section" id="example-gps-vs-speedometer">
 <h2>Example - GPS vs speedometer<a class="headerlink" href="#example-gps-vs-speedometer" title="Permalink to this headline">¶</a></h2>
@@ -481,7 +493,7 @@ changing direction. You’ll see other unit vectors later that do change.</p>
 in position with velocity. Consider tracking the motion of a car driving
 down a road using GPS. You determine its motion and create the position,
 <span class="math notranslate nohighlight">\(\mathbf{r} = x\hat{i} +y\hat{j}\)</span>, where</p>
-<p><span class="math notranslate nohighlight">\(x(t) = 4t +3\)</span> and <span class="math notranslate nohighlight">\(y(t) = 3t - 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(x(t) = 4t + 3\)</span> and <span class="math notranslate nohighlight">\(y(t) = 3t - 1\)</span></p>
 <p>To get the velocity, calculate <span class="math notranslate nohighlight">\(\mathbf{v} = \dot{\mathbf{r}}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mathbf{v} = 4\hat{i} +3 \hat{j}\)</span></p>
 <div class="cell tag_hide-input docutils container">
@@ -507,6 +519,65 @@ down a road using GPS. You determine its motion and create the position,
 velocity,</p>
 <p><span class="math notranslate nohighlight">\(|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
 \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}\)</span></p>
+<div class="section" id="remember-the-chain-rule">
+<h3>Remember the chain rule<a class="headerlink" href="#remember-the-chain-rule" title="Permalink to this headline">¶</a></h3>
+<p>In Dynamics, there are many moving parts, so it is usually safer to
+assume that a variable is a function of time. Consider the derivative of
+position,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5b60c1c5-7817-4c84-a2e2-7e08ce61a050">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5b60c1c5-7817-4c84-a2e2-7e08ce61a050" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{d}{dt}(x\hat{i}+y\hat{j}) = \dot{x}\hat{i} + \dot{y}\hat{j} +
+x\dot{\hat{i}} + y\dot{\hat{j}}, 
+\end{equation}\]</div>
+<p>in a fixed coordinate system (like the ground)
+<span class="math notranslate nohighlight">\(\dot{\hat{i}}=\dot{\hat{j}}=0\)</span> because these unit vectors do not change direction.</p>
+</div>
+<div class="section" id="chain-rule-in-dynamics">
+<h3>Chain rule in dynamics<a class="headerlink" href="#chain-rule-in-dynamics" title="Permalink to this headline">¶</a></h3>
+<p>In calculus, many times the <a class="reference external" href="https://en.wikipedia.org/wiki/Chain_rule">chain rule</a> is shown as an example</p>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dx}(\sin x^2) = \frac{d}{dx}(x^2)\cdot \cos x^2\]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dx}(\sin x^2)= 2x\cos x^2\]</div>
+</li>
+</ul>
+<p>When you do this calculation, you have used the chain rule, but there is
+a hidden step <em>multiplying by a chain rule operator</em>
+$<span class="math notranslate nohighlight">\(\frac{dx^2}{dx^2}\)</span>$:</p>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dx}(\sin x^2) = \frac{dx^2}{dx}\frac{d}{dx^2}\cdot \cos
+x^2\]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dx}(\sin x^2) =
+\frac{d}{dx}{x^2}\cdot\frac{d}{dx^2}(\cos x^2)\]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dx}(\sin x^2) = \frac{d}{dx}(x^2)\cdot \cos x^2\]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dx}(\sin x^2)= 2x\cos x^2\]</div>
+</li>
+</ul>
+<p>The chain rule in our case is used for functions of time, $<span class="math notranslate nohighlight">\(t\)</span><span class="math notranslate nohighlight">\(
+e.g. \)</span><span class="math notranslate nohighlight">\(x(t),~y(t),~\theta(t)\)</span>$</p>
+<p>So, when you take a derivative of a function:</p>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dt}\sin\theta =
+\frac{d\theta}{dt}\frac{d}{d\theta}\sin\theta\]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dt}\sin\theta =\frac{d\theta}{dt}\cos\theta\]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[\frac{d}{dt}\sin\theta =\dot{\theta}\cos\theta\]</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="acceleration">
 <h2>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h2>
@@ -586,7 +657,7 @@ to describe its position e.g. <span class="math notranslate nohighlight">\(x\)</
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">Module 1 - Dynamic equations and definitions</a>
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">Introduction to Engineering Dynamics</a>
     <a class='right-next' id="next-link" href="snowflake.html" title="next page">Snowflake time of flight</a>
 
     </div>

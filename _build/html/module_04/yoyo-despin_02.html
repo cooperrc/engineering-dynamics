@@ -130,18 +130,28 @@
      Participation Videos
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../module_01/overview.html">
-   Module 1 - Dynamic equations and definitions
+   Module 1 - Definitions and equations
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module_01/kinematics.html">
-     Geometry of motion - kinematics
+     Kinematics: the geometry of motion
     </a>
    </li>
    <li class="toctree-l2">
@@ -163,6 +173,11 @@
    Module 2 - constrained dynamic motion
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_02/mechanical-advantage.html">
      Mechanical advantage
@@ -188,18 +203,13 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html">
-     Numerical Solution of Yoyo despinning
+    <a class="reference internal" href="../getting-started/03_integrate.html">
+     Introduction to functions and integration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
+    <a class="reference internal" href="../module_03/hemisphere-rolling.html">
+     Rolling on hemisphere
     </a>
    </li>
   </ul>
@@ -216,39 +226,9 @@
      Numerical Solution of Yoyo despinning
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Yoyo despin revisited (cord constraint)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#engineering-system-kinematics">
-     Engineering system - kinematics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#engineering-system-kinetics-conservation-of-angular-momentum">
-     Engineering system - kinetics (conservation of angular momentum)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#engineering-system-kinetics-work-energy-formulation">
-     Engineering system - kinetics (work-energy formulation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#combining-equations-and-solving">
-     Combining equations and solving
     </a>
    </li>
   </ul>
@@ -369,27 +349,22 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Yoyo despin revisited (cord constraint)
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#engineering-system-kinematics">
    Engineering system - kinematics
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#engineering-system-kinetics-conservation-of-angular-momentum">
    Engineering system - kinetics (conservation of angular momentum)
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#engineering-system-kinetics-work-energy-formulation">
    Engineering system - kinetics (work-energy formulation)
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combining-equations-and-solving">
    Combining equations and solving
   </a>
@@ -445,9 +420,8 @@
 payload. These cords unravel and slow the spinning of the rocket. In
 this tutorial, you will consider the engineering system, conservation of
 angular momentum, and conservation of energy.</p>
-</div>
 <div class="section" id="engineering-system-kinematics">
-<h1>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this headline">¶</a></h1>
+<h2>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this headline">¶</a></h2>
 <p>As the yoyo mass unravels, it moves further from the payload. The total
 distance from the payload center of mass (COM) is described by</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}\)</span></p>
@@ -497,7 +471,7 @@ equations to define angular momentum and kinetic energy, the two kinetic
 equations.</p>
 </div>
 <div class="section" id="engineering-system-kinetics-conservation-of-angular-momentum">
-<h1>Engineering system - kinetics (conservation of angular momentum)<a class="headerlink" href="#engineering-system-kinetics-conservation-of-angular-momentum" title="Permalink to this headline">¶</a></h1>
+<h2>Engineering system - kinetics (conservation of angular momentum)<a class="headerlink" href="#engineering-system-kinetics-conservation-of-angular-momentum" title="Permalink to this headline">¶</a></h2>
 <p>The angular momentum is constant because <span class="math notranslate nohighlight">\(\sum \mathbf{M}_G = 0 =
 \frac{d}{dt}\mathbf{h}_G\)</span>. The total angular momentum is as such</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{h}_G = I_G \omega_B \hat{k} + m_P \mathbf{r}_{P/G} \times
@@ -515,7 +489,7 @@ variables in this angular momentum equation, <span class="math notranslate nohig
 <span class="math notranslate nohighlight">\(\dot{\theta}\)</span>. You need another equation, use work-energy.</p>
 </div>
 <div class="section" id="engineering-system-kinetics-work-energy-formulation">
-<h1>Engineering system - kinetics (work-energy formulation)<a class="headerlink" href="#engineering-system-kinetics-work-energy-formulation" title="Permalink to this headline">¶</a></h1>
+<h2>Engineering system - kinetics (work-energy formulation)<a class="headerlink" href="#engineering-system-kinetics-work-energy-formulation" title="Permalink to this headline">¶</a></h2>
 <p>There is no external work done to the system, the tension in the yoyo
 cords are internal constraint forces, so the total work done is 0, e.g.
 for a <span class="math notranslate nohighlight">\(T\Delta l\)</span> there is an equal and opposite <span class="math notranslate nohighlight">\(-T\Delta l\)</span> on
@@ -529,7 +503,7 @@ m(R^2\theta^2(\omega_B+\dot{\theta})^2+R^2\omega_B^2)\)</span></p>
 \theta^2(\omega_B+\dot{\theta})^2\)</span></p>
 </div>
 <div class="section" id="combining-equations-and-solving">
-<h1>Combining equations and solving<a class="headerlink" href="#combining-equations-and-solving" title="Permalink to this headline">¶</a></h1>
+<h2>Combining equations and solving<a class="headerlink" href="#combining-equations-and-solving" title="Permalink to this headline">¶</a></h2>
 <p>Substitute <span class="math notranslate nohighlight">\(c = \left(\frac{I_G}{2mR^2}+1\right)\)</span> so you are left with</p>
 <ol class="simple">
 <li><p>conservation of angular momentum</p></li>
@@ -605,6 +579,7 @@ R\omega_B^0 t_f\)</span></p>
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/yoyo-despin_02_11_0.png" src="../_images/yoyo-despin_02_11_0.png" />
+</div>
 </div>
 </div>
 </div>

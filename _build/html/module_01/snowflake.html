@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="The Newton-Euler equations" href="newtoneuler.html" />
-    <link rel="prev" title="Geometry of motion - kinematics" href="kinematics.html" />
+    <link rel="prev" title="Kinematics: the geometry of motion" href="kinematics.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -130,18 +130,28 @@
      Participation Videos
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="overview.html">
-   Module 1 - Dynamic equations and definitions
+   Module 1 - Definitions and equations
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="kinematics.html">
-     Geometry of motion - kinematics
+     Kinematics: the geometry of motion
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -163,6 +173,11 @@
    Module 2 - constrained dynamic motion
   </a>
   <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_02/mechanical-advantage.html">
      Mechanical advantage
@@ -188,18 +203,13 @@
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html">
-     Numerical Solution of Yoyo despinning
+    <a class="reference internal" href="../getting-started/03_integrate.html">
+     Introduction to functions and integration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
+    <a class="reference internal" href="../module_03/hemisphere-rolling.html">
+     Rolling on hemisphere
     </a>
    </li>
   </ul>
@@ -217,38 +227,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin.html#define-the-state-and-d-dt-state">
-     Define the state and d/dt(state)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin.html#to-save-to-file-from-python-output">
-     To save to file from python output
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../module_04/yoyo-despin_02.html">
      Yoyo despin revisited (cord constraint)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinematics">
-     Engineering system - kinematics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-conservation-of-angular-momentum">
-     Engineering system - kinetics (conservation of angular momentum)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#engineering-system-kinetics-work-energy-formulation">
-     Engineering system - kinetics (work-energy formulation)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html#combining-equations-and-solving">
-     Combining equations and solving
     </a>
    </li>
   </ul>
@@ -518,7 +498,7 @@
 <h2>Improved model with air resistance<a class="headerlink" href="#improved-model-with-air-resistance" title="Permalink to this headline">¶</a></h2>
 <p>Adding drag to the free body diagram, now you have a new model.</p>
 <p><span class="math notranslate nohighlight">\(m\ddot{y} = -mg + C_d \frac{r\dot{y}^2}{2}A\)</span></p>
-<p>where <span class="math notranslate nohighlight">\(C_d\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Drag_coefficient">unitless drag coefficient</a>, <span class="math notranslate nohighlight">\(r=1.025~kg/m^3\)</span> is the <a class="reference external" href="https://www.macinstruments.com/blog/what-is-the-density-of-air-at-stp/">density of air</a>,  <span class="math notranslate nohighlight">\(m=3~mg\)</span> is the <a class="reference external" href="https://hypertextbook.com/facts/2001/JudyMoy.shtml">mass of a snowflake</a>, and <span class="math notranslate nohighlight">\(A=\piD^2/4\)</span> is the area of the snowflake of <a class="reference external" href="https://gpm.nasa.gov/sites/default/files/document_files/parsivel_Tokay_c3vp_agu.pdf">diameter</a> <span class="math notranslate nohighlight">\(D=6~mm\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(C_d\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Drag_coefficient">unitless drag coefficient</a>, <span class="math notranslate nohighlight">\(r=1.025~kg/m^3\)</span> is the <a class="reference external" href="https://www.macinstruments.com/blog/what-is-the-density-of-air-at-stp/">density of air</a>,  <span class="math notranslate nohighlight">\(m=3~mg\)</span> is the <a class="reference external" href="https://hypertextbook.com/facts/2001/JudyMoy.shtml">mass of a snowflake</a>, and <span class="math notranslate nohighlight">\(A=\pi D^2/4\)</span> is the area of the snowflake of <a class="reference external" href="https://gpm.nasa.gov/sites/default/files/document_files/parsivel_Tokay_c3vp_agu.pdf">diameter</a> <span class="math notranslate nohighlight">\(D=6~mm\)</span>.</p>
 <blockquote>
 <div><p><strong>Note:</strong> The force of drag always opposes the velocity of the snowflake. Keep in mind if the snowflake moves upward, the force reverses direction.</p>
 </div></blockquote>
@@ -613,7 +593,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="kinematics.html" title="previous page">Geometry of motion - kinematics</a>
+    <a class='left-prev' id="prev-link" href="kinematics.html" title="previous page">Kinematics: the geometry of motion</a>
     <a class='right-next' id="next-link" href="newtoneuler.html" title="next page">The Newton-Euler equations</a>
 
     </div>

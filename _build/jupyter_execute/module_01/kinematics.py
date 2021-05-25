@@ -1,14 +1,34 @@
-# Geometry of motion - kinematics
+# Kinematics: the geometry of motion
 
-## Position
+## Galileo's Physics: Kinematics
+
+[Galileo Galilei](https://en.wikipedia.org/wiki/Galileo_Galilei)
+1564-1642, created the foundations for classical engineering physics by
+defining __kinematics__. __Kinematics__ is the study of the
+geometry of motion. He observed the motion of planets, stars,
+falling objects, etc. Galileo defined used the relationships between
+position, velocity, and acceleration to make informed predictions. 
+
+One of the first kinematic experiments, was Galileo's inclined ramp.
+Galileo's hypthosis: objects all fall at the same rate of change in
+speed. Now, engineers take this for granted and use a gravitational
+constant to describe acceleration, $g=9.81~\frac{m}{s^2}$. 
+
+### Inclined ramp experiment
+
+Placing two round objects, of the same shape, on an inclined plane, you
+can release them and see they both
+- move the same distance in the same amount of time
+- move slowly at first, then fastest at the end of the ramp
+- the distance travelled is $d \propto t^2$ time-squared
+
+The last obeservation is harder to _see_, but if you use a stopwatch and
+meter stick you can create a table for distance and time. 
 
 Classical physics describes the position of an object using three
 independent coordinates e.g. 
 
-<a id='position'></a>
-\begin{equation}
-\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}
-\end{equation}
+$$\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}$$
 
 where $\mathbf{r}_{P/O}$ is the position of point $P$ _with respect to the point
 of origin_ $O$, $x,~y,~z$ are magnitudes of distance along a
@@ -36,18 +56,13 @@ The definition of velocity in equation {eq}`velocity` depends upon the change in
 three independent coordinates, where
 $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}$. 
 
-> __Note:__ Remember the chain rule:
-> $\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i} +
-> x\dot{\hat{i}}$, but $\dot{\hat{i}}=0$ because this unit vector is not
-> changing direction. You'll see other unit vectors later that do change.
-
 ## Example - GPS vs speedometer
 You can find velocity based upon postion, but you can only find changes
 in position with velocity. Consider tracking the motion of a car driving
 down a road using GPS. You determine its motion and create the position,
 $\mathbf{r} = x\hat{i} +y\hat{j}$, where
 
-$x(t) = 4t +3$ and $y(t) = 3t - 1$
+$x(t) = 4t + 3$ and $y(t) = 3t - 1$
 
 To get the velocity, calculate $\mathbf{v} = \dot{\mathbf{r}}$
 
@@ -63,9 +78,6 @@ plt.title('Position of car on road every 1 second'+
 plt.xlabel('x-position (m)')
 plt.ylabel('y-position (m)');
 
-
-
-
 ## Speed
 
 The speed of an object is the
@@ -74,6 +86,45 @@ velocity,
 
 $|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
 \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}$
+
+### Remember the chain rule
+In Dynamics, there are many moving parts, so it is usually safer to
+assume that a variable is a function of time. Consider the derivative of
+position, 
+\begin{equation}
+\frac{d}{dt}(x\hat{i}+y\hat{j}) = \dot{x}\hat{i} + \dot{y}\hat{j} +
+x\dot{\hat{i}} + y\dot{\hat{j}}, 
+\end{equation}
+
+in a fixed coordinate system (like the ground)
+$\dot{\hat{i}}=\dot{\hat{j}}=0$ because these unit vectors do not change direction.
+
+### Chain rule in dynamics
+
+In calculus, many times the [chain rule](https://en.wikipedia.org/wiki/Chain_rule) is shown as an example
+
+- $$\frac{d}{dx}(\sin x^2) = \frac{d}{dx}(x^2)\cdot \cos x^2$$ 
+- $$\frac{d}{dx}(\sin x^2)= 2x\cos x^2$$
+
+When you do this calculation, you have used the chain rule, but there is
+a hidden step _multiplying by a chain rule operator_
+$$\frac{dx^2}{dx^2}$$:
+- $$\frac{d}{dx}(\sin x^2) = \frac{dx^2}{dx}\frac{d}{dx^2}\cdot \cos
+x^2$$
+-  $$\frac{d}{dx}(\sin x^2) =
+\frac{d}{dx}{x^2}\cdot\frac{d}{dx^2}(\cos x^2)$$ 
+- $$\frac{d}{dx}(\sin x^2) = \frac{d}{dx}(x^2)\cdot \cos x^2$$ 
+- $$\frac{d}{dx}(\sin x^2)= 2x\cos x^2$$
+
+The chain rule in our case is used for functions of time, $$t$$
+e.g. $$x(t),~y(t),~\theta(t)$$
+
+So, when you take a derivative of a function:
+
+- $$\frac{d}{dt}\sin\theta =
+\frac{d\theta}{dt}\frac{d}{d\theta}\sin\theta$$
+- $$\frac{d}{dt}\sin\theta =\frac{d\theta}{dt}\cos\theta$$
+- $$\frac{d}{dt}\sin\theta =\dot{\theta}\cos\theta$$
 
 ## Acceleration
 
