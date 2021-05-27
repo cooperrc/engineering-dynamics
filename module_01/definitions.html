@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Definitions in Dynamics: kinematics and kinetics &#8212; Engineering Dynamics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Snowflake time of flight" href="snowflake.html" />
+    <link rel="prev" title="Philosophy of Newtonian Mechanics" href="philosophy.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/dyn_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Applied Mechanics II - Engineering Dynamics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus - CE2120 Summer 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../module_00/meet_cooper.html">
+   About the Instructor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content.html">
+   Module Content
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_00/overview.html">
+   Module 0 - Getting Started
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#objectives">
+     Objectives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#activities">
+     Activities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/participation.html">
+     Participation Videos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="overview.html">
+   Module 1 - Definitions and equations
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="philosophy.html">
+     Philosophy of Newtonian Mechanics
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Definitions in Dynamics: kinematics and kinetics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="snowflake.html">
+     Snowflake time of flight
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_02/overview.html">
+   Module 2 - constrained dynamic motion
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/mechanical-advantage.html">
+     Mechanical advantage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/driving-forces.html">
+     Driving forces for moving systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/valentine.html">
+     Happy Valentine’s Linkage
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_03/overview.html">
+   Module 3 - Constrained engineering systems
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/03_integrate.html">
+     Introduction to functions and integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/hemisphere-rolling.html">
+     Rolling on hemisphere
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_04/overview.html">
+   Module 4 - Momentum and Energy
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html">
+     Yoyo despin revisited (cord constraint)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../module_05/overview.html">
+   Module 5 - dynamics in three dimensions
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/module_01/definitions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/engineering-dynamics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/definitions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_01/definitions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_01/definitions.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kinematics-the-geometry-of-motion">
+   Kinematics: the geometry of motion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#position">
+     Position
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#velocity">
+     Velocity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-velocity-given-position">
+     Example - velocity given position
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#speed">
+   Speed
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceleration">
+   Acceleration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-and-orientation">
+   Rotation and Orientation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#planar-motion-angular-velocity">
+   Planar motion: angular velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kinetics-forces-work-energy-impulse-momentum">
+   Kinetics - forces, work-energy, impulse-momentum
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#newton-euler-equations">
+     Newton-Euler equations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-changing-a-tire">
+     Example - changing a tire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#work-energy-equations">
+     Work-Energy equations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-elevator-motor-selection">
+     Example - elevator motor selection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impulse-momentum-equations">
+     Impulse-momentum equations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-hitting-a-golf-ball">
+     Example - hitting a golf ball
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrapping-up">
+   Wrapping up
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="definitions-in-dynamics-kinematics-and-kinetics">
+<h1>Definitions in Dynamics: kinematics and kinetics<a class="headerlink" href="#definitions-in-dynamics-kinematics-and-kinetics" title="Permalink to this headline">¶</a></h1>
+<p>Dynamics (and Applied Mechanics II) is the study of motion and interacting objects. Dynamic models have two sets of deinitions</p>
+<ol class="simple">
+<li><p>Kinematics: the study of the geometry of motion</p></li>
+<li><p>Kinetics: the study of forces, work, and impulsive components</p></li>
+</ol>
+<div class="section" id="kinematics-the-geometry-of-motion">
+<h2>Kinematics: the geometry of motion<a class="headerlink" href="#kinematics-the-geometry-of-motion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="position">
+<h3>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h3>
+<p>Classical physics describes the position of an object using three
+independent coordinates e.g.</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{r}_{P/O} = x\hat{i} + y\hat{j} + z\hat{k}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{r}_{P/O}\)</span> is the position of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point
+of origin</em> <span class="math notranslate nohighlight">\(O\)</span>, <span class="math notranslate nohighlight">\(x,~y,~z\)</span> are magnitudes of distance along a
+Cartesian coordinate system and <span class="math notranslate nohighlight">\(\hat{i},~\hat{j}\)</span> and <span class="math notranslate nohighlight">\(\hat{k}\)</span> are
+unit vectors that describe three directions.</p>
+<p>A <strong>unit vector</strong> is a unitless vector with a magnitude of 1. It only describes a direction. In a 3D coordinate system, you can descirbe the x-, y-, and z-axes using <span class="math notranslate nohighlight">\(\hat{i},~\hat{j},~and~\hat{k}\)</span>.</p>
+<p>In the figure below, the three unit vectors are plotted as blue arrows and a vector, <span class="math notranslate nohighlight">\(\mathbf{v}=-1\hat{i}+1\hat{j}+1\hat{k}\)</span> is plotted in red.</p>
+<ul class="simple">
+<li><p>the values, <span class="math notranslate nohighlight">\([-1,~1,~1]\)</span> are the <em>components</em> of the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p></li>
+<li><p><em>components</em> depend upon the coordinate system.</p></li>
+<li><p>the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> describes a magnitude, <span class="math notranslate nohighlight">\(|\mathbf{v}| = \sqrt{1^2+1^2+1^2}=\sqrt{3}\)</span> and direction, <span class="math notranslate nohighlight">\(\hat{e} = -\frac{1}{\sqrt{3}}\hat{i}+\frac{1}{\sqrt{3}}\hat{j}+\frac{1}{\sqrt{3}}\hat{k}\)</span></p></li>
+<li><p><em>unit vectors</em> help to quantify the magnitude and direction, but the vector is independent of the <em>unit vectors</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+          <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;unit vectors&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;v = -1i+1j+1k&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlim</span><span class="p">((</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x-axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y-axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;z-axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Unit vectors for x-y-z fixed coordinate system&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/definitions_2_0.png" src="../_images/definitions_2_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="velocity">
+<h3>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">¶</a></h3>
+<p>The velocity of an object is the change in position per length of time.</p>
+<p>\begin{equation}
+\mathbf{v}<em>{P/O} = \frac{d\mathbf{r}</em>{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
+\dot{z}\hat{k}
+\end{equation}</p>
+<blockquote>
+<div><p><strong>Note:</strong> The notation <span class="math notranslate nohighlight">\(\dot{x}\)</span> and <span class="math notranslate nohighlight">\(\ddot{x}\)</span> is short-hand for writing out
+<span class="math notranslate nohighlight">\(\frac{dx}{dt}\)</span> and <span class="math notranslate nohighlight">\(\frac{d^2x}{dt^2}\)</span>, respectively.</p>
+</div></blockquote>
+<p>The definition of velocity depends upon the change in position of all
+three independent coordinates, where
+<span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}\)</span>.</p>
+</div>
+<div class="section" id="example-velocity-given-position">
+<h3>Example - velocity given position<a class="headerlink" href="#example-velocity-given-position" title="Permalink to this headline">¶</a></h3>
+<p>You can find velocity based upon postion, but you can only find changes
+in position with velocity. Consider tracking the motion of a car driving
+down a road using GPS. You determine its motion and create the position,</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{r} = x\hat{i} +y\hat{j}~miles\)</span>, where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x(t) = t^2 + 3~miles\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y(t) = 3t - 1~miles\)</span></p></li>
+<li><p>and <span class="math notranslate nohighlight">\(t\)</span> is measured in hours</p></li>
+</ul>
+<p>To get the velocity, calculate <span class="math notranslate nohighlight">\(\mathbf{v} = \dot{\mathbf{r}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{v} = (2t)\hat{i} +3 \hat{j}\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Position of car on road every hour&#39;</span><span class="o">+</span>
+    <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">velocity shown as arrow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-position (m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-position (m)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/definitions_5_0.png" src="../_images/definitions_5_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="speed">
+<h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h2>
+<p>The speed of an object is the
+<a class="reference external" href="https://www.mathsisfun.com/algebra/vectors.html">magnitude</a> of the
+velocity,</p>
+<p><span class="math notranslate nohighlight">\(|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
+\sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}\)</span></p>
+<p>In the example above, the speed of the car, <span class="math notranslate nohighlight">\(v\)</span>, is given by</p>
+<p><span class="math notranslate nohighlight">\(v = |\mathbf{v}| = \sqrt{\dot{x}^2+\dot{y}^2} = \sqrt{4t^2 +9}\)</span></p>
+</div>
+<div class="section" id="acceleration">
+<h2>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h2>
+<p>The acceleration of an object is the change in velocity per length of
+time.</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{a}_{P/O} = \frac{d \mathbf{v}_{P/O} }{dt} = \ddot{x}\hat{i} +
+\ddot{y}\hat{j} + \ddot{z}\hat{k}\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\ddot{x}=\frac{d^2 x}{dt^2}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a}_{P/O}\)</span> is the
+acceleration of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point of origin</em> <span class="math notranslate nohighlight">\(O\)</span>.</p>
+</div>
+<div class="section" id="rotation-and-orientation">
+<h2>Rotation and Orientation<a class="headerlink" href="#rotation-and-orientation" title="Permalink to this headline">¶</a></h2>
+<p>The definitions of position, velocity, and acceleration all describe a
+single point, but dynamic engineering systems are composed of rigid
+bodies is needed to describe the position of an object.</p>
+<p><img alt="fixed position - different orientations" src="../_images/position_angle.svg" /></p>
+<p><em>In the figure above, the center of the block is located at
+<span class="math notranslate nohighlight">\(r_{P/O}=x\hat{i}+y\hat{j}\)</span> in both the left and right images, but the
+two locations are not the same. The orientation of the block is
+important for determining the position of all the material points.</em></p>
+<p>In general, a rigid body has a <em>pitch</em>, <em>yaw</em>, and <em>roll</em> that describes
+its rotational orientation, as seen in the animation below. We will
+revisit 3D motion in Module_05. For now, we will limit our description of
+motion to <em>planar motion</em>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">vid</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;li7t--8UZms?loop=1&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">vid</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/li7t--8UZms?loop=1"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        </div></div>
+</div>
+</div>
+<div class="section" id="planar-motion-angular-velocity">
+<h2>Planar motion: angular velocity<a class="headerlink" href="#planar-motion-angular-velocity" title="Permalink to this headline">¶</a></h2>
+<p>Planar motion means that an object’s motion is described using three components:</p>
+<ul class="simple">
+<li><p>x-position</p></li>
+<li><p>y-position</p></li>
+<li><p>orientation (<span class="math notranslate nohighlight">\(\theta\)</span>)</p></li>
+</ul>
+<p>The x-y-positions describe a point (such as the center of mass) in the object and <span class="math notranslate nohighlight">\(\theta\)</span> describes its rotation. The change in angle over time is called <strong>angular velocity</strong></p>
+<ul class="simple">
+<li><p><strong>angular velocity</strong> has a magnitude and direction, <span class="math notranslate nohighlight">\(\mathbf{\omega} = \dot{\theta}\hat{k}\)</span></p></li>
+<li><p>the derivative of angular velocity is <strong>angular acceleration</strong>, <span class="math notranslate nohighlight">\(\mathbf{\alpha}=\frac{d\mathbf{\omega}}{dt} = \ddot{\theta}\hat{k}\)</span></p></li>
+</ul>
+<p>Now, you can describe a planar object’s motion with</p>
+<ul class="simple">
+<li><p>position, <span class="math notranslate nohighlight">\(\mathbf{r}=x\hat{i}+y\hat{j}\)</span>, and orientation <span class="math notranslate nohighlight">\(\theta\)</span></p></li>
+<li><p>velocity, <span class="math notranslate nohighlight">\(\mathbf{v}=\dot{x}\hat{i}+\dot{y}\hat{j}\)</span>, and angular velocity <span class="math notranslate nohighlight">\(\mathbf{\omega}=\dot{\theta}\hat{k}\)</span></p></li>
+<li><p>acceleration, <span class="math notranslate nohighlight">\(\mathbf{r}=\ddot{x}\hat{i}+\ddot{y}\hat{j}\)</span>, and angular acceleration <span class="math notranslate nohighlight">\(\mathbf{\alpha}=\ddot{\theta}\hat{k}\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="kinetics-forces-work-energy-impulse-momentum">
+<h2>Kinetics - forces, work-energy, impulse-momentum<a class="headerlink" href="#kinetics-forces-work-energy-impulse-momentum" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="newton-euler-equations">
+<h3>Newton-Euler equations<a class="headerlink" href="#newton-euler-equations" title="Permalink to this headline">¶</a></h3>
+<p>In this course, you will use the Newton-Euler equations to relate motion to applied forces and moments</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{M} = I\mathbf{\alpha}\)</span></p></li>
+</ul>
+<p>The Newton-Euler equations describe forces in terms of acceleration and angular acceleration. The <span class="math notranslate nohighlight">\(m\)</span> is the mass of the object and the <span class="math notranslate nohighlight">\(I\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Moment_of_inertia">moment of inertia</a> of the object. You can think of <em>moment of inertia</em> as a way to measure distribution of mass, its measured in terms of <span class="math notranslate nohighlight">\([kg\cdot m^2]\)</span>, in SI units.</p>
+</div>
+<div class="section" id="example-changing-a-tire">
+<h3>Example - changing a tire<a class="headerlink" href="#example-changing-a-tire" title="Permalink to this headline">¶</a></h3>
+<p>When you change a tire, you either need to engage the brakes or leave the tire in contact with the ground. If not, you can calculate how quickly the tire will accelerate for a an applied moment.</p>
+<p>In this example, a <span class="math notranslate nohighlight">\(m=10~kg\)</span>, tire with moment of inertia <span class="math notranslate nohighlight">\(I =1~kg\cdot m^2\)</span> is able to rotate freely. The tire iron has a 10-N force on both sides, each 0.1-m from the center of the tire.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sum F_x = 0 + 0 = m\ddot{x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum F_y = 10 - 10 = m\ddot{y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum M = 0.1\cdot 10 + 0.1 \cdot 10 = I\ddot{\theta}\)</span></p></li>
+</ul>
+<p>Both the acceleration components are <span class="math notranslate nohighlight">\(\ddot{x} = \ddot{y} = 0~m/s\)</span>. The angular acceleration is <span class="math notranslate nohighlight">\(\ddot{\theta}\hat{k} = \frac{2~N\cdot m}{1~kg-m^2} = 2~\frac{rad}{s^2}\hat{k}\)</span>.</p>
+</div>
+<div class="section" id="work-energy-equations">
+<h3>Work-Energy equations<a class="headerlink" href="#work-energy-equations" title="Permalink to this headline">¶</a></h3>
+<p><strong>Work</strong> is defined as a force acting through a distance and/or a moment acting over a given rotation, <span class="math notranslate nohighlight">\(dW=F\cdot d\mathbf{r}+Md\theta\)</span>. When mechanical <strong>work</strong> is added to a dynamic system, the energy of the system has to change. If you <em>ignore changes in temperature</em>, then there are two possible conversions</p>
+<ul class="simple">
+<li><p>kinetic energy, <span class="math notranslate nohighlight">\(T = \frac{1}{2}mv^2 + \frac{1}{2}I\dot{\theta}^2\)</span></p></li>
+<li><p>potential energy, <span class="math notranslate nohighlight">\(V\)</span></p></li>
+</ul>
+<p>The kinetic energy quantifies the speed and mass of an object. For a solid object, like the tire from the last example, this include the <em>translational kinetic energy</em> <span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span> and the <em>rotational kinetic energy</em>, <span class="math notranslate nohighlight">\(\frac{1}{2}I\dot{\theta}^2\)</span>. The potential energy can describe work done by <em>conservative forces</em>, such as</p>
+<ul class="simple">
+<li><p>springs, <span class="math notranslate nohighlight">\(V_{spring} = \frac{1}{2}kx^2\)</span>, where x is distance the spring stretched and k is the spring stiffness</p></li>
+<li><p>gravity <em>near Earth surface</em>, <span class="math notranslate nohighlight">\(V_{gravity} = mgh\)</span>, where <span class="math notranslate nohighlight">\(h\)</span> is the change in height of the object</p></li>
+<li><p>gravity <em>general</em>, <span class="math notranslate nohighlight">\(V_{gravity} = \frac{GMm}{r}\)</span>, where <span class="math notranslate nohighlight">\(G=6.674\times10^{11} \frac{m^3}{kg \cdot s^2}\)</span>, <span class="math notranslate nohighlight">\(M\)</span> is mass of Earth, and <span class="math notranslate nohighlight">\(r\)</span> is distance from Earth’s center</p></li>
+<li><p>…</p></li>
+</ul>
+<p>Potential energy is independent of velocity and the path an object takes. If you raise a 5-kg bowling ball 1 meter, it has <span class="math notranslate nohighlight">\(V=mgh=(5~kg)(9.81~\frac{m}{s^2})(1~m) = 49~J\)</span> of potential energy. It does not matter if it was raised slowly or quickly or if it reached the height on a vertical path or angled path.</p>
+<p>The work-energy equation satisfies the <a class="reference external" href="https://en.wikipedia.org/wiki/First_law_of_thermodynamics">first law of thermodynamics</a>: energy can neither be created or destroyed</p>
+<p><span class="math notranslate nohighlight">\(T_1 + V_1 + W_{1\rightarrow 2} = T_2+V_2\)</span></p>
+<p>This equation states that the mechanical work, <span class="math notranslate nohighlight">\(W_{1\rightarrow 2}\)</span>, will create a change in total energy of the system, <span class="math notranslate nohighlight">\(T+V\)</span>. The subscripts <span class="math notranslate nohighlight">\(1~and~2\)</span> describe a starting and ending point.</p>
+</div>
+<div class="section" id="example-elevator-motor-selection">
+<h3>Example - elevator motor selection<a class="headerlink" href="#example-elevator-motor-selection" title="Permalink to this headline">¶</a></h3>
+<p>You are an engineer asked to select an electric motor for a 1000-kg elevator. The elevator has a 1000-kg counterweight as shown below. What information do you need to select the motor?</p>
+<p><img alt="diagram of elevator with counterweight and motor" src="../_images/elevator.svg" /></p>
+<p>First, consider the work done to go from 0-30 m.</p>
+<p><span class="math notranslate nohighlight">\(T_1 + V_1 +W_{1\rightarrow 2} = T_2 + V_2\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_1 = T_2 = 0\)</span> since the elevator and counterweight stop at 30 m and 0 m, respectively</p></li>
+<li><p><span class="math notranslate nohighlight">\(V_1 = (1000~kg)(9.81~m/s^2)(30~m)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V_2 = (1000~kg)(9.81~m/s^2)(30~m)\)</span></p></li>
+</ul>
+<p>This means, <span class="math notranslate nohighlight">\(W_{1\rightarrow 2}=V_2-V_1=0~J\)</span>. How can this be?</p>
+<p>The counterweight is there to balance the weight of the elevator, so no matter what height the elevator reaches, the work done to overcome gravity is <span class="math notranslate nohighlight">\(0~J\)</span>. Does this mean you can move the elevator with a 0-N-m motor? <em>not quite</em>.</p>
+<p>The motor might not need to overcome gravity, but if you want to reach the top floor in a certain amount of time, you need to add kinetic energy to the system. A 30-m building is 10 stories tall. You would want to know how fast the elevator needs to travel. Let’s estimate that it takes 20 seconds to go floor 1 to 10.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_1 = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2 = \frac{30~m}{20~s} = 1.5~m/s\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T_2 = \frac{1}{2}(1000~kg)(1.5~m/s)^2+\frac{1}{2}(1000~kg)(1.5~m/s)^2\)</span></p></li>
+</ul>
+<p>Now, you have</p>
+<p><span class="math notranslate nohighlight">\(W_{1\rightarrow 2}=T_2-T_1=2250~J=2250~N\cdot m\)</span></p>
+<p>The work done to get the elevator to its cruising speed is 2.25 kJ. When you stop, you will have to remove 2.25 kJ using the motor or a brake. Now, how <em>quickly</em> should you start and stop? Standard practice for comfort is to <a class="reference external" href="https://www.treehugger.com/how-fast-should-elevator-go-4858555#:~:text=The%20elevator%20could%20be%20going,pushing%20the%20limits%20of%20comfort.">accelerate elevators</a> at <span class="math notranslate nohighlight">\(1.5~m/s^2\)</span>.</p>
+<p>So the time it takes to reach maximum speed is <span class="math notranslate nohighlight">\(\Delta t = 1~s\)</span>. You should select a motor that creates <span class="math notranslate nohighlight">\(\dot{W}_{1\rightarrow 2} = \frac{2250~J}{1~s} = 2.25~kW\)</span> of power.</p>
+</div>
+<div class="section" id="impulse-momentum-equations">
+<h3>Impulse-momentum equations<a class="headerlink" href="#impulse-momentum-equations" title="Permalink to this headline">¶</a></h3>
+<p>Newton first described the laws of motion in terms of <em>momentum</em>, <span class="math notranslate nohighlight">\(\mathbf{p} = m\mathbf{v}\)</span> and force. The second law was stated as the equation</p>
+<p><span class="math notranslate nohighlight">\(F = d(m\mathbf{v})\)</span></p>
+<p>The applied force, <span class="math notranslate nohighlight">\(F\)</span>, will change the momentum, <span class="math notranslate nohighlight">\(m\mathbf{v}\)</span>. The same equation is true for rotation of an object</p>
+<p><span class="math notranslate nohighlight">\(M = d(\mathbf{h})\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{h}\)</span> is the angular momentum of an object. In planar systems, <span class="math notranslate nohighlight">\(\mathbf{h} = I\dot{\theta}\hat{k}\)</span>.</p>
+<p>An <em>impulse</em> is a force or moment applied over a period of time. When there is an impact or explosion, you can use the <em>impulse-momentum</em> equations as such</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m\mathbf{v}_1 + \mathbf{F}dt = m\mathbf{v}_2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(I\dot{\theta}_1 + \mathbf{M}dt = I\dot{\theta}_2\)</span></p></li>
+</ul>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}dt\)</span> is the linear impulse, <span class="math notranslate nohighlight">\(\mathbf{M}dt\)</span> is the moment-impulse, <span class="math notranslate nohighlight">\(m\mathbf{v}\)</span> is linear momentum, and <span class="math notranslate nohighlight">\(I\dot{\theta}\)</span> is angular momentum.</p>
+</div>
+<div class="section" id="example-hitting-a-golf-ball">
+<h3>Example - hitting a golf ball<a class="headerlink" href="#example-hitting-a-golf-ball" title="Permalink to this headline">¶</a></h3>
+<p>When a golf ball is hit by a club, it goes from rest to 45 m/s (~100 mph) almost instantly. If you take the derivative of velocity to get acceleration, you have</p>
+<p><span class="math notranslate nohighlight">\(a = \frac{45~m/s}{0~s} = \infty~m/s^2\)</span></p>
+<p>which would mean that the applied force is <a class="reference external" href="https://golf.com/gear/golf-balls/how-many-dimples-on-a-golf-ball/#:~:text=But%20in%20the%20modern%20game,1.620%20ounces%2C%20or%2045.93%20grams.">0.045~kg</a><span class="math notranslate nohighlight">\(\cdot \infty~m/s^2=\infty~N\)</span>. Its just not helpful information, and in reality there must be some change in time between 0 and <span class="math notranslate nohighlight">\(45~m/s\)</span>.</p>
+<p>Instead, use the <em>impulse-momentum</em> equation to determine the <em>impulse</em> required to change the <em>momentum</em> of the golf ball</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{F}dt = m\mathbf{v}_2- m\mathbf{v}_1 = (0.045~kg)(45~m/s) = 2.02~\frac{kg\cdot m}{s} = 2.02~N\cdot s\)</span></p>
+</div>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>In this notebook you defined:</p>
+<ul class="simple">
+<li><p>Kinematics - the geometry of motion</p>
+<ul>
+<li><p>position, <span class="math notranslate nohighlight">\(\mathbf{r} = x\hat{i}+y\hat{j}+z\hat{k}\)</span></p></li>
+<li><p>velocity, <span class="math notranslate nohighlight">\(\mathbf{v} = \frac{d\mathbf{r}}{dt}\)</span></p></li>
+<li><p>acceleration, <span class="math notranslate nohighlight">\(\mathbf{a} = \frac{d\mathbf{a}}{dt}\)</span></p></li>
+<li><p>angular velocity, <span class="math notranslate nohighlight">\(\mathbf{\omega} = \dot{\theta}\hat{k}\)</span> <em>in planar motion</em></p></li>
+<li><p>angular acceleration, <span class="math notranslate nohighlight">\(\mathbf{\alpha} = \ddot{\theta}\hat{k}\)</span> <em>in planar motion</em></p></li>
+</ul>
+</li>
+<li><p>Kinetics - the study of forces, work-energy, and impulse-momentum</p>
+<ul>
+<li><p>Newton-Euler equations: <span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{M} = \frac{d}{dt}\mathbf{h}\)</span></p></li>
+<li><p>work-energy equation: <span class="math notranslate nohighlight">\(T_1+V_1 +W_{1\rightarrow 2} = T_2 + V_2\)</span></p></li>
+<li><p>impulse-momentum equation: <span class="math notranslate nohighlight">\(m\mathbf{v}_1 + Fdt = m\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(I\omega_1 + Mdt = I\omega_2\)</span> _in planar motion</p></li>
+</ul>
+</li>
+</ul>
+<p>Every rigid-body dynamic problem is solved using these kinematic and kinetic equations. You will use a combination of algebra, geometry, and calculus to get final solutions, but the <strong>core engineering concepts</strong> in dynamics are <em>kinematics</em> and <em>kinetics</em> equations.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./module_01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="philosophy.html" title="previous page">Philosophy of Newtonian Mechanics</a>
+    <a class='right-next' id="next-link" href="snowflake.html" title="next page">Snowflake time of flight</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
