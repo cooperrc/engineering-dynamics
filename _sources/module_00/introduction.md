@@ -27,36 +27,24 @@ Upon completion of this module you will be able to
 
 1. Recognize the course objectives, requirements, grading policy, required
 software, and materials
-
-1. View video content and submit answers in a Google Form
-
-2. Use the discussion board on Piazza
-
-3. Locate course areas and features, and recognize their general purposes
-
-3. Download and install Respondus Lockdown Browser with Monitor to ensure you
-can successfully take the graded quizzes.
-
-2. Scan and upload a hand-written assignment
-
-2. Open an Adams file and save a figure
-
-3. Submit a Google Document in HuskyCT 
+2. View video content and submit answers on Campuswire
+3. Use the discussion board on Campuswire
+4. Locate course areas and features, and recognize their general purposes
+5. Complete a Jupyter notebook exercise
+5. Scan and upload a hand-written assignment
+6. Submit a Google Document in HuskyCT
 
 # Activities
 
-* Read the syllabus and post a discussion response on Piazza
-* Acquaint yourself with the course instructor.
-* Verify your computer settings are HuskyCT compatible.
-* Read about the course's organization and tools.
-* Take a 5-minute practice quiz
-* Submit a practice quiz.
-* Download Respondus Lockdown Browser on the computer you plan to use in this
-course.
-* Review the University of Connecticut's academic policies.
-* Watch the Introduction videos and answer the questions
-* Finish a tutorial on Adams and complete the Google form
-* Turn in a 1-page report that has a figure from the Adams tutorial
+* Read the syllabus and post a discussion response on Campuswire
+* Acquaint yourself with the course instructor
+* Verify your computer settings are HuskyCT compatible
+* Read about the course’s organization and tools 
+* Complete and submit a Jupyter notebook
+* Take a 5-minute practice quiz 
+* Submit a practice quiz. 
+* Review the University of Connecticut’s academic policies. 
+* Watch the Introduction videos and answer the questions 
 
 <p><strong>Note:</strong> See the course schedule for specific due dates</p> 
 <iframe
