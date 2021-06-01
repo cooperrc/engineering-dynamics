@@ -17,22 +17,65 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import matplotlib.pyplot as plt
-import imageio 
+reader = imageio.get_reader('https://go.gwu.edu/engcomp3vidmit', format='mp4')
+image = reader.get_data(1100)
 
-plt.style.use('fivethirtyeight')
+plt.imshow(image, interpolation='nearest');
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m<ipython-input-1-0337e5f87bde>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 3[0;31m [0;32mimport[0m [0mimageio[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      4[0m [0;34m[0m[0m
-[1;32m      5[0m [0mplt[0m[0;34m.[0m[0mstyle[0m[0;34m.[0m[0muse[0m[0;34m([0m[0;34m'fivethirtyeight'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m~/.conda/envs/work/lib/python3.9/site-packages/imageio/plugins/ffmpeg.py[0m in [0;36m_get_ffmpeg_api[0;34m()[0m
+[1;32m     58[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 59[0;31m             [0;32mimport[0m [0mimageio_ffmpeg[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     60[0m         [0;32mexcept[0m [0mImportError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mModuleNotFoundError[0m: No module named 'imageio'
-ModuleNotFoundError: No module named 'imageio'
+[0;31mModuleNotFoundError[0m: No module named 'imageio_ffmpeg'
+
+During handling of the above exception, another exception occurred:
+
+[0;31mImportError[0m                               Traceback (most recent call last)
+[0;32m<ipython-input-7-a3d12a9c08d7>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mreader[0m [0;34m=[0m [0mimageio[0m[0;34m.[0m[0mget_reader[0m[0;34m([0m[0;34m'https://go.gwu.edu/engcomp3vidmit'[0m[0;34m,[0m [0mformat[0m[0;34m=[0m[0;34m'mp4'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0mimage[0m [0;34m=[0m [0mreader[0m[0;34m.[0m[0mget_data[0m[0;34m([0m[0;36m1100[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0mplt[0m[0;34m.[0m[0mimshow[0m[0;34m([0m[0mimage[0m[0;34m,[0m [0minterpolation[0m[0;34m=[0m[0;34m'nearest'[0m[0;34m)[0m[0;34m;[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.conda/envs/work/lib/python3.9/site-packages/imageio/core/functions.py[0m in [0;36mget_reader[0;34m(uri, format, mode, **kwargs)[0m
+[1;32m    184[0m [0;34m[0m[0m
+[1;32m    185[0m     [0;31m# Return its reader object[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 186[0;31m     [0;32mreturn[0m [0mformat[0m[0;34m.[0m[0mget_reader[0m[0;34m([0m[0mrequest[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    187[0m [0;34m[0m[0m
+[1;32m    188[0m [0;34m[0m[0m
+
+[0;32m~/.conda/envs/work/lib/python3.9/site-packages/imageio/core/format.py[0m in [0;36mget_reader[0;34m(self, request)[0m
+[1;32m    168[0m                 [0;34m"Format %s cannot read in %s mode"[0m [0;34m%[0m [0;34m([0m[0mself[0m[0;34m.[0m[0mname[0m[0;34m,[0m [0mmodename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    169[0m             )
+[0;32m--> 170[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mReader[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mrequest[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    171[0m [0;34m[0m[0m
+[1;32m    172[0m     [0;32mdef[0m [0mget_writer[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mrequest[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.conda/envs/work/lib/python3.9/site-packages/imageio/core/format.py[0m in [0;36m__init__[0;34m(self, format, request)[0m
+[1;32m    219[0m             [0mself[0m[0;34m.[0m[0m_request[0m [0;34m=[0m [0mrequest[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    220[0m             [0;31m# Open the reader/writer[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 221[0;31m             [0mself[0m[0;34m.[0m[0m_open[0m[0;34m([0m[0;34m**[0m[0mself[0m[0;34m.[0m[0mrequest[0m[0;34m.[0m[0mkwargs[0m[0;34m.[0m[0mcopy[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    222[0m [0;34m[0m[0m
+[1;32m    223[0m         [0;34m@[0m[0mproperty[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.conda/envs/work/lib/python3.9/site-packages/imageio/plugins/ffmpeg.py[0m in [0;36m_open[0;34m(self, loop, size, dtype, pixelformat, print_info, ffmpeg_params, input_params, output_params, fps)[0m
+[1;32m    255[0m         ):
+[1;32m    256[0m             [0;31m# Get generator functions[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 257[0;31m             [0mself[0m[0;34m.[0m[0m_ffmpeg_api[0m [0;34m=[0m [0m_get_ffmpeg_api[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    258[0m             [0;31m# Process input args[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    259[0m             [0mself[0m[0;34m.[0m[0m_arg_loop[0m [0;34m=[0m [0mbool[0m[0;34m([0m[0mloop[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.conda/envs/work/lib/python3.9/site-packages/imageio/plugins/ffmpeg.py[0m in [0;36m_get_ffmpeg_api[0;34m()[0m
+[1;32m     59[0m             [0;32mimport[0m [0mimageio_ffmpeg[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     60[0m         [0;32mexcept[0m [0mImportError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 61[0;31m             raise ImportError(
+[0m[1;32m     62[0m                 [0;34m"To use the imageio ffmpeg plugin you need to "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     63[0m                 [0;34m"'pip install imageio-ffmpeg'"[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mImportError[0m: To use the imageio ffmpeg plugin you need to 'pip install imageio-ffmpeg'
+ImportError: To use the imageio ffmpeg plugin you need to 'pip install imageio-ffmpeg'
 

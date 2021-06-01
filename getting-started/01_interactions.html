@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Module 1 - Definitions and equations" href="../module_01/overview.html" />
-    <link rel="prev" title="Participation Videos" href="../module_00/participation.html" />
+    <link rel="prev" title="Overview" href="../module_00/introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -128,11 +128,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../module_00/introduction.html#activities">
      Activities
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_00/participation.html">
-     Participation Videos
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -712,34 +707,8 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </li>
 <li><p>Suppose the cover price of a book is <span class="math notranslate nohighlight">\(\$ 24.95\)</span>, but bookstores get a <span class="math notranslate nohighlight">\(40\%\)</span> discount. Shipping costs <span class="math notranslate nohighlight">\(\$3\)</span> for the first copy and <span class="math notranslate nohighlight">\(75\)</span> cents for each additional copy. What is the total wholesale cost for <span class="math notranslate nohighlight">\(60\)</span> copies? Compare your answer with the solution up to 2 decimal numbers.</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;V of r=6.65-cm sphere =</span><span class="si">{:.4f}</span><span class="s1"> cm^3&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="mf">3.14159</span><span class="o">*</span><span class="p">(</span><span class="mf">6.65</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total cost of 60 copies =$</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mf">24.95</span><span class="o">*</span><span class="mf">0.6</span><span class="o">+</span><span class="mi">59</span><span class="o">*</span><span class="mf">0.75</span><span class="o">+</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V of r=6.65-cm sphere =153.9796 cm^3
-total cost of 60 copies =$945.45
-</pre></div>
-</div>
-</div>
-</div>
 <p>To reveal the answers, highlight the following line of text using the mouse:</p>
 <p>Answer exercise 1: <span style="color:white"> 153.9796 </span> Answer exercise 2: <span style="color:white"> 945.45 </span></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">945.45</span><span class="o">/</span><span class="mi">60</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15.7575
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="variables-and-their-type">
@@ -1195,24 +1164,25 @@ For now, we will look at just the first three of these.</p>
 </div>
 <div class="section" id="problems">
 <h2>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
-<ol>
-<li><p>Calculate some properties of a rectangular box that is 12.5”<span class="math notranslate nohighlight">\(\times\)</span>11”<span class="math notranslate nohighlight">\(\times\)</span>14” and weighs 31 lbs</p>
-<p>a. What is the volume of the box?</p>
-<p>b. What is the average density of the box?</p>
-<p>c. What is the result of the following logical operation, <code class="docutils literal notranslate"><span class="pre">volume&gt;1000</span></code> (in inches^3)</p>
-</li>
-</ol>
-<ol>
-<li><p>Use the variables given below, <code class="docutils literal notranslate"><span class="pre">str1</span></code> and <code class="docutils literal notranslate"><span class="pre">str2</span></code>, and check the following</p>
-<p>a. <code class="docutils literal notranslate"><span class="pre">str1&lt;str2</span></code></p>
-<p>b. <code class="docutils literal notranslate"><span class="pre">str1==str2</span></code></p>
-<p>c. <code class="docutils literal notranslate"><span class="pre">str1&gt;str2</span></code></p>
-<p>d. How could you force (b) to be true? <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html?highlight=str.lower#str.lower">Hint</a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html?highlight=str.lower#str.upper">Hint</a></p>
-</li>
-</ol>
-<ol class="simple">
-<li><p>The following code has an error, fix the error so that the correct result is returned:</p></li>
-</ol>
+<p><strong>1.</strong> Calculate some properties of a rectangular box that is 12.5”<span class="math notranslate nohighlight">\(\times\)</span>11”<span class="math notranslate nohighlight">\(\times\)</span>14” and weighs 31 lbs</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a. What is the volume of the box?
+
+b. What is the average density of the box?
+
+c. What is the result of the following logical operation, `volume&gt;1000` (in inches^3)
+</pre></div>
+</div>
+<p><strong>2.</strong> Use the variables given below, <code class="docutils literal notranslate"><span class="pre">str1</span></code> and <code class="docutils literal notranslate"><span class="pre">str2</span></code>, and check the following</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a. `str1&lt;str2`
+
+b. `str1==str2`
+
+c. `str1&gt;str2`
+
+d. How could you force (b) to be true? [Hint](https://docs.python.org/3/library/stdtypes.html?highlight=str.lower#str.lower) or [Hint](https://docs.python.org/3/library/stdtypes.html?highlight=str.lower#str.upper)
+</pre></div>
+</div>
+<p><strong>3.</strong> The following code has an error, fix the error so that the correct result is returned:</p>
 <p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">is</span> <span class="pre">20</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">is</span> <span class="pre">less</span> <span class="pre">than</span> <span class="pre">y</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
 <span class="n">y</span><span class="o">=</span><span class="mi">20</span>
@@ -1223,11 +1193,14 @@ For now, we will look at just the first three of these.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is not less than y&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol>
-<li><p>Create a script that takes the clock hour in 24 hours and prints the clock hour with am or pm.</p>
-<p>Hint: Use an if-else statement with <code class="docutils literal notranslate"><span class="pre">print</span></code> commands</p>
-</li>
-</ol>
+<p><strong>4.</strong> Write a script using <code class="docutils literal notranslate"><span class="pre">if-else</span></code> that returns <code class="docutils literal notranslate"><span class="pre">g=9.81</span></code> if <code class="docutils literal notranslate"><span class="pre">unit</span> <span class="pre">=</span> <span class="pre">'kgms'</span></code> and <code class="docutils literal notranslate"><span class="pre">g=32.2</span></code> if <code class="docutils literal notranslate"><span class="pre">unit</span> <span class="pre">=</span> <span class="pre">'lbfts'</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unit</span> <span class="o">=</span> <span class="s1">&#39;kgms&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -1256,7 +1229,7 @@ For now, we will look at just the first three of these.</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../module_00/participation.html" title="previous page">Participation Videos</a>
+    <a class='left-prev' id="prev-link" href="../module_00/introduction.html" title="previous page">Overview</a>
     <a class='right-next' id="next-link" href="../module_01/overview.html" title="next page">Module 1 - Definitions and equations</a>
 
         </div>
