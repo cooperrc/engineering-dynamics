@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -191,6 +191,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../module_02/valentine.html">
      Happy Valentine’s Linkage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/project.html">
+     Module 2 - Project: four-bar linkage design
     </a>
    </li>
   </ul>
@@ -879,14 +884,14 @@ c3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTguNzYuMTAw
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<iframe
-    width="400"
-    height="300"
-    src="https://www.youtube.com/embed/xQ4znShlK5A"
-    frameborder="0"
-    allowfullscreen
-></iframe>
-</div></div>
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/xQ4znShlK5A"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        </div></div>
 </div>
 <p>We learn from the video that the marks on the panel are every <span class="math notranslate nohighlight">\(0.25\rm{m}\)</span>, and on the <a class="reference external" href="http://techtv.mit.edu/collections/physicsdemos/videos/831-strobe-of-a-falling-ball">website</a> they say that the strobe light flashes at about 15 Hz (that’s 15 times per second). The final <a class="reference external" href="https://www.flickr.com/photos/physicsdemos/3174207211">image on Flickr</a> notes that the strobe fired 16.8 times per second.</p>
 <p>The ball is freefalling, so the acceleration is constant, <span class="math notranslate nohighlight">\(a = g = 9.81~\frac{m}{s^2}\)</span>. Its not moving left or right, so you can describe its position and velocity as</p>
@@ -905,62 +910,7 @@ c3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTguNzYuMTAw
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">~/.conda/envs/work/lib/python3.9/site-packages/imageio/plugins/ffmpeg.py</span> in <span class="ni">_get_ffmpeg_api</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span>             <span class="kn">import</span> <span class="nn">imageio_ffmpeg</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span>         <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;imageio_ffmpeg&#39;
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">a3d12a9c08d7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">imageio</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="s1">&#39;https://go.gwu.edu/engcomp3vidmit&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mp4&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">image</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="mi">1100</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">);</span>
-
-<span class="nn">~/.conda/envs/work/lib/python3.9/site-packages/imageio/core/functions.py</span> in <span class="ni">get_reader</span><span class="nt">(uri, format, mode, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">184</span> 
-<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="c1"># Return its reader object</span>
-<span class="ne">--&gt; </span><span class="mi">186</span>     <span class="k">return</span> <span class="nb">format</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">187</span> 
-<span class="g g-Whitespace">    </span><span class="mi">188</span> 
-
-<span class="nn">~/.conda/envs/work/lib/python3.9/site-packages/imageio/core/format.py</span> in <span class="ni">get_reader</span><span class="nt">(self, request)</span>
-<span class="nn">    168                 &quot;Format %s cannot read</span> in <span class="ni">%s mode&quot; % </span><span class="nt">(self.name, modename)</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>             <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">170</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Reader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">171</span> 
-<span class="g g-Whitespace">    </span><span class="mi">172</span>     <span class="k">def</span> <span class="nf">get_writer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
-
-<span class="nn">~/.conda/envs/work/lib/python3.9/site-packages/imageio/core/format.py</span> in <span class="ni">__init__</span><span class="nt">(self, format, request)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_request</span> <span class="o">=</span> <span class="n">request</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>             <span class="c1"># Open the reader/writer</span>
-<span class="ne">--&gt; </span><span class="mi">221</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span> 
-<span class="g g-Whitespace">    </span><span class="mi">223</span>         <span class="nd">@property</span>
-
-<span class="nn">~/.conda/envs/work/lib/python3.9/site-packages/imageio/plugins/ffmpeg.py</span> in <span class="ni">_open</span><span class="nt">(self, loop, size, dtype, pixelformat, print_info, ffmpeg_params, input_params, output_params, fps)</span>
-<span class="g g-Whitespace">    </span><span class="mi">255</span>         <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">256</span>             <span class="c1"># Get generator functions</span>
-<span class="ne">--&gt; </span><span class="mi">257</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_ffmpeg_api</span> <span class="o">=</span> <span class="n">_get_ffmpeg_api</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span>             <span class="c1"># Process input args</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_arg_loop</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">loop</span><span class="p">)</span>
-
-<span class="nn">~/.conda/envs/work/lib/python3.9/site-packages/imageio/plugins/ffmpeg.py</span> in <span class="ni">_get_ffmpeg_api</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>             <span class="kn">import</span> <span class="nn">imageio_ffmpeg</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span>         <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">61</span>             <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span>                 <span class="s2">&quot;To use the imageio ffmpeg plugin you need to &quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span>                 <span class="s2">&quot;&#39;pip install imageio-ffmpeg&#39;&quot;</span>
-
-<span class="ne">ImportError</span>: To use the imageio ffmpeg plugin you need to &#39;pip install imageio-ffmpeg&#39;
-</pre></div>
-</div>
+<img alt="../_images/introduction_15_0.png" src="../_images/introduction_15_0.png" />
 </div>
 </div>
 <p>The first position after releasing the ball, is just below the first white line at 125 pixels. The average distance between markers is 495 pixels/meter, so the camera would measure an acceleration</p>
@@ -992,7 +942,7 @@ c3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTguNzYuMTAw
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[494.28571429] px/m
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f993dbd3bb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f92f6d30eb0&gt;
 </pre></div>
 </div>
 <img alt="../_images/introduction_17_2.png" src="../_images/introduction_17_2.png" />

@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 2 - Project: four-bar linkage design &#8212; Engineering Dynamics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Module 3 - Constrained engineering systems" href="../module_03/overview.html" />
+    <link rel="prev" title="Happy Valentine’s Linkage" href="valentine.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/dyn_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Applied Mechanics II - Engineering Dynamics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus - CE2120 Summer 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../module_00/meet_cooper.html">
+   About the Instructor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content.html">
+   Module Content
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_00/overview.html">
+   Module 0 - Getting Started
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#objectives">
+     Objectives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_00/introduction.html#activities">
+     Activities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/01_interactions.html">
+     Interacting with Python
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_01/overview.html">
+   Module 1 - Definitions and equations
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/introduction.html">
+     Introduction to Engineering Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/philosophy.html">
+     Philosophy of Newtonian Mechanics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/definitions.html">
+     Definitions in Dynamics: kinematics and kinetics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/snowflake.html">
+     Snowflake time of flight
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="overview.html">
+   Module 2 - constrained dynamic motion
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
+     Working with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mechanical-advantage.html">
+     Mechanical advantage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="driving-forces.html">
+     Driving forces for moving systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="valentine.html">
+     Happy Valentine’s Linkage
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Module 2 - Project: four-bar linkage design
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_03/overview.html">
+   Module 3 - Constrained engineering systems
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting-started/03_integrate.html">
+     Introduction to functions and integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/hemisphere-rolling.html">
+     Rolling on hemisphere
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../module_04/overview.html">
+   Module 4 - Momentum and Energy
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin.html">
+     Numerical Solution of Yoyo despinning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/yoyo-despin_02.html">
+     Yoyo despin revisited (cord constraint)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../module_05/overview.html">
+   Module 5 - dynamics in three dimensions
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/module_02/project.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/engineering-dynamics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_02/project.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_02/project.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_02/project.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-you-ll-do">
+   What you’ll do
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-you-ll-need">
+   What you’ll need
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-your-system">
+   Defining your system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motion-of-the-links">
+   Motion of the links
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-one-orientation-and-the-paths">
+     Plot one orientation and the paths
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determining-the-speed-of-the-components">
+   Determining the speed of the components
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrapping-up">
+   Wrapping up
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;sans&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="module-2-project-four-bar-linkage-design">
+<h1>Module 2 - Project: four-bar linkage design<a class="headerlink" href="#module-2-project-four-bar-linkage-design" title="Permalink to this headline">¶</a></h1>
+<p>In this notebook, you will build your own four-bar mechanical linkage and plot the path of the components. You can choose your own link sizes. Some areas of interest for different backgrounds:</p>
+<ul class="simple">
+<li><p>Automotive design: <a class="reference external" href="https://youtu.be/d4eLPEVJ64E">windshield wiper motion</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Watt%27s_linkage">watt linkage suspension</a></p></li>
+<li><p>biomechanics: <a class="reference external" href="https://www.youtube.com/watch?v=wWvB3lNYXB0">ACL-PCL knee joint model</a> and <a class="reference external" href="https://youtu.be/6aWOnEAPY8o">knee replacement</a></p></li>
+<li><p><em>anything else</em>?</p></li>
+</ul>
+<p>In this notebook, you will step through the process of defining the
+kinematics of a <a class="reference external" href="https://en.wikipedia.org/wiki/Four-bar_linkage">four-bar
+linkage</a>.</p>
+<div class="section" id="what-you-ll-do">
+<h2>What you’ll do<a class="headerlink" href="#what-you-ll-do" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>solve a series of nonlinear equations using
+<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fsolve.html"><code class="docutils literal notranslate"><span class="pre">fsolve</span></code></a></p></li>
+<li><p>use solutions to create 2D
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">arrays</a> that vary in time and
+location</p></li>
+<li><p>plot and animate the motion of the four-bar linkage</p></li>
+</ul>
+</div>
+<div class="section" id="what-you-ll-need">
+<h2>What you’ll need<a class="headerlink" href="#what-you-ll-need" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Jupyter and Python - you can run this notebook with the “Launch” icon in the Engineering Dynamics online resource</p></li>
+<li><p>vector equations to solve for the constraints on the linkage mechanism</p></li>
+<li><p>A mechanical system to consider: choose three link lengths and the relative mounting position between the two</p></li>
+<li><p>some plots and background explanation to explain what your mechanism is supposed to do</p></li>
+</ul>
+<p><img alt="Diagram of a general four-bar linkage" src="../_images/4bar-general.svg" /></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(l_1\sin\theta_1+l_2\sin\theta_2-l_3\sin\theta_3 -d_y = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x = 0\)</span></p></li>
+</ol>
+<p>If you have one of the angles, e.g. <span class="math notranslate nohighlight">\(\theta_1\)</span>, you use equations 1 and 2
+to solve for the other two angles, <span class="math notranslate nohighlight">\(\theta_2~and\theta_3\)</span>. Here you can
+create a function and
+use <code class="docutils literal notranslate"><span class="pre">fsolve</span></code>. The function input is a vector with two values and the output is a
+vector with two values.</p>
+<p><span class="math notranslate nohighlight">\(\bar{f}(\bar{x})= \left[\begin{array}{c}
+f_1(\theta_2,~\theta_3) \\ 
+f_2(\theta_2,~\theta_3)\end{array}\right]=\left[\begin{array}{c}
+l_1\sin\theta_1+l_2\sin\theta_2-l_3\sin\theta_3 -d_y\\
+l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
+\end{array}\right]\)</span></p>
+</div>
+<div class="section" id="defining-your-system">
+<h2>Defining your system<a class="headerlink" href="#defining-your-system" title="Permalink to this headline">¶</a></h2>
+<p>As an example, I am creating a short arm that pivots a longer arm. Similar to a windshield wiper design</p>
+<blockquote>
+<div><p><strong>Note</strong>: you can double-click this cell in Jupyter to edit the text. Then, you can update the geometry of your four-bar linkage.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>link 1: <span class="math notranslate nohighlight">\(l_1 = 0.25~m\)</span></p></li>
+<li><p>link 2: <span class="math notranslate nohighlight">\(l_2 = 1~m\)</span></p></li>
+<li><p>link 3: <span class="math notranslate nohighlight">\(l_3 = 1~m\)</span></p></li>
+<li><p>support: <span class="math notranslate nohighlight">\(d_x=0.95~m~and~d_y=0~m\)</span></p></li>
+</ul>
+<p>The constraint function is defined below as <code class="docutils literal notranslate"><span class="pre">Fbar</span></code>, a function of
+<span class="math notranslate nohighlight">\(\theta_1\)</span> and an array of <span class="math notranslate nohighlight">\([\theta_2,~\theta_3]\)</span> as such,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="n">Fbar</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a1</span><span class="p">,</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">l1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span><span class="o">+</span><span class="n">l2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="n">l3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="n">dy</span><span class="p">,</span>
+                           <span class="n">l1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span><span class="o">+</span><span class="n">l2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="n">l3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="n">dx</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, I choose a range of motion for link 1</p>
+<p><span class="math notranslate nohighlight">\(\theta_1 = (0,~2\pi) = (0,~360^o)\)</span></p>
+<p>and solve for the angles of links 2 and 3 as such</p>
+<ul class="simple">
+<li><p>initialize my variables <code class="docutils literal notranslate"><span class="pre">a1</span></code> as <span class="math notranslate nohighlight">\(0-2\pi\)</span>, <code class="docutils literal notranslate"><span class="pre">a2</span></code> as zeros, <code class="docutils literal notranslate"><span class="pre">a3</span></code> as zeros</p></li>
+<li><p>set an initial solution guess for <code class="docutils literal notranslate"><span class="pre">fsolve</span></code></p></li>
+<li><p>use a <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> to solve for <code class="docutils literal notranslate"><span class="pre">a2</span></code> and <code class="docutils literal notranslate"><span class="pre">a3</span></code> at each configuration</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+<span class="n">a3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+<span class="n">xsol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">)):</span>
+    <span class="n">xsol</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Fbar</span><span class="p">(</span><span class="n">a1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">x</span><span class="p">),</span> <span class="n">xsol</span><span class="p">)</span>
+    <span class="n">a2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">xsol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a3</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">xsol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\theta_2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a3</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\theta_3$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta_1$ (radian)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;output angle (radian)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/project_7_0.png" src="../_images/project_7_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="motion-of-the-links">
+<h2>Motion of the links<a class="headerlink" href="#motion-of-the-links" title="Permalink to this headline">¶</a></h2>
+<p>Now I have the position of the links, but I want to see what it looks like and what paths the components trace. Here, I use the vector definitions to define the positions of the links and connections</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r_A = l_1 \cos\theta_1\hat{i} + l_1 \sin\theta_1\hat{j}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_B = r_A + r_{B/A} = r_A + l_2\cos\theta_2\hat{i} + l_2 \sin\theta_2\hat{j}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_C = r_B + r_{C/B} = r_B - l_3\cos\theta_3\hat{i} - l_3 \sin\theta_3\hat{j}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_P = r_A + r_{P/A} = r_A + \frac{l_2}{2}\cos\theta_2\hat{i} + \frac{l_2}{2} \sin\theta_2\hat{j}\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rA</span> <span class="o">=</span> <span class="n">l1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a1</span><span class="p">)])</span>
+<span class="n">rB</span> <span class="o">=</span> <span class="n">rA</span> <span class="o">+</span> <span class="n">l2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a2</span><span class="p">)])</span>
+<span class="n">rC</span> <span class="o">=</span> <span class="n">rB</span> <span class="o">-</span> <span class="n">l3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a3</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a3</span><span class="p">)])</span>
+<span class="n">rP</span> <span class="o">=</span> <span class="n">rA</span> <span class="o">+</span> <span class="n">l2</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a2</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-one-orientation-and-the-paths">
+<h3>Plot one orientation and the paths<a class="headerlink" href="#plot-one-orientation-and-the-paths" title="Permalink to this headline">¶</a></h3>
+<p>The paths of the links are now in the variables <code class="docutils literal notranslate"><span class="pre">rA</span></code>, <code class="docutils literal notranslate"><span class="pre">rB</span></code>, <code class="docutils literal notranslate"><span class="pre">rC</span></code>, and <code class="docutils literal notranslate"><span class="pre">rP</span></code>. I will plot the paths of these 4 points and the shape at a point in time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links_x_locations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">)),</span> 
+                              <span class="n">rA</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span>
+                              <span class="n">rB</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span>
+                              <span class="n">rC</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links_y_locations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">)),</span> 
+                              <span class="n">rA</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:],</span>
+                              <span class="n">rB</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:],</span>
+                              <span class="n">rC</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]])</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">links_x_locations</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> 
+        <span class="n">links_y_locations</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="s1">&#39;k-o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rA</span><span class="p">[</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">rA</span><span class="p">[</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;hinge A&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rB</span><span class="p">[</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">rB</span><span class="p">[</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;hinge B&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rC</span><span class="p">[</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">rC</span><span class="p">[</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;hinge C&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rP</span><span class="p">[</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">rP</span><span class="p">[</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;midpoint AB&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Paths and orientation for</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span> 
+          <span class="sa">r</span><span class="s1">&#39;$\theta_1$ = </span><span class="si">{:.1f}</span><span class="s1">, $\theta_2$ = </span><span class="si">{:.1f}</span><span class="s1">, $\theta_3$ = </span><span class="si">{:.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">a2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">a3</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/project_12_0.png" src="../_images/project_12_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="determining-the-speed-of-the-components">
+<h2>Determining the speed of the components<a class="headerlink" href="#determining-the-speed-of-the-components" title="Permalink to this headline">¶</a></h2>
+<p>Now, I use the constraint equations from above to determine the speed of the link motion.</p>
+<p><span class="math notranslate nohighlight">\(\frac{d\bar{f}(\bar{x})}{dt}= \left[\begin{array}{c}
+f_1(\theta_2,~\theta_3) \\ 
+f_2(\theta_2,~\theta_3)\end{array}\right]=\left[\begin{array}{c}
+l_1\dot{\theta_1}\cos\theta_1+l_2\dot{\theta_2}\cos\theta_2-l_3\dot{\theta_3}\cos\theta_3\\
+l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\sin\theta_3
+\end{array}\right]\)</span></p>
+<ol class="simple">
+<li><p>define the 2-equation function</p></li>
+<li><p>initialize the solutions for the arrays: <code class="docutils literal notranslate"><span class="pre">da1</span></code>, <code class="docutils literal notranslate"><span class="pre">da2</span></code>, <code class="docutils literal notranslate"><span class="pre">da3</span></code></p></li>
+<li><p>solve the equations at each step in time in a <code class="docutils literal notranslate"><span class="pre">for-loop</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drive_rate</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#rad/s</span>
+<span class="n">dFbar</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">a3</span><span class="p">,</span> <span class="n">dx</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">l1</span><span class="o">*</span><span class="n">drive_rate</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span><span class="o">+</span>\
+                                         <span class="n">l2</span><span class="o">*</span><span class="n">dx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span><span class="o">-</span>\
+                                         <span class="n">l3</span><span class="o">*</span><span class="n">dx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a3</span><span class="p">),</span>\
+                                         <span class="n">l1</span><span class="o">*</span><span class="n">drive_rate</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span><span class="o">+</span>\
+                                         <span class="n">l2</span><span class="o">*</span><span class="n">dx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span><span class="o">-</span>\
+                                         <span class="n">l3</span><span class="o">*</span><span class="n">dx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a3</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span><span class="o">*</span><span class="mi">10</span>
+<span class="n">da2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+<span class="n">da3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">))</span>
+<span class="n">xsol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a1</span><span class="p">)):</span>
+    <span class="n">xsol</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dx</span><span class="p">:</span> <span class="n">dFbar</span><span class="p">(</span><span class="n">a1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">a2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">a3</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">dx</span><span class="p">),</span> <span class="n">xsol</span><span class="p">)</span>
+    <span class="n">da2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">xsol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">da3</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">xsol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">da1</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_1$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">da2</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">da3</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\dot{\theta}_3$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta_1$ (radian)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;output angular speed (radian/s)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;output angular speed (radian/s)&#39;)
+</pre></div>
+</div>
+<img alt="../_images/project_16_1.png" src="../_images/project_16_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>You should edit this notebook to create your own four-bar linkage analysis.</p>
+<ul class="simple">
+<li><p>Choose a geometry</p></li>
+<li><p>plot the motion and paths</p></li>
+<li><p>plot the speeds of the links</p></li>
+<li><p>add your own <strong>wrapping up</strong> section to add any details or further analysis</p></li>
+<li><p>what did you learn?</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./module_02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="valentine.html" title="previous page">Happy Valentine’s Linkage</a>
+    <a class='right-next' id="next-link" href="../module_03/overview.html" title="next page">Module 3 - Constrained engineering systems</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
