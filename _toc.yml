@@ -25,6 +25,8 @@
 - file: module_03/overview
   sections:
     - file: getting-started/03_integrate
+    - file: module_03/plotting-solutions
+    - file: module_03/pendulum
     - file: module_03/hemisphere-rolling
 - file: module_04/overview
   sections:
