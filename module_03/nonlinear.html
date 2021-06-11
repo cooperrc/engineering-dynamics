@@ -56,6 +56,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rolling on hemisphere" href="hemisphere-rolling.html" />
+    <link rel="prev" title="Pendulum plotting solution" href="pendulum.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,7 +94,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
    Syllabus - CE2120 Summer 2021
@@ -200,11 +202,11 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="overview.html">
    Module 3 - Constrained engineering systems
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../getting-started/03_integrate.html">
      Introduction to functions and integration
@@ -223,6 +225,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="pendulum.html#wrapping-up">
      Wrapping up
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Nonlinear pendulum solution
     </a>
    </li>
    <li class="toctree-l2">
@@ -372,6 +379,23 @@
   <a class="reference internal nav-link" href="#using-work-energy-for-the-pendulum">
    Using work-energy for the pendulum
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phase-plot-of-the-simple-pendulum">
+     Phase plot of the simple pendulum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numerical-integration">
+   Numerical integration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrapping-up">
+   Wrapping up
+  </a>
  </li>
 </ul>
 
@@ -385,7 +409,7 @@
         
               <div>
                 
-  <div class="cell tag_hide-input docutils container">
+  <div class="cell tag_hide-input tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -447,13 +471,131 @@
 <p>The motion of the pendulum must obey the work-energy. Add potential and kinetic energy you have</p>
 <p><span class="math notranslate nohighlight">\(T_0 + V_0 = T(t) + V(t)\)</span></p>
 <ul class="simple">
-<li><p>The kinetic energy is <span class="math notranslate nohighlight">\(T = 1/2mv^2 = 1/2mL\dot{\theta}^2\)</span></p></li>
+<li><p>The kinetic energy is <span class="math notranslate nohighlight">\(T = 1/2mv^2 = 1/2mL^2\dot{\theta}^2\)</span></p></li>
 <li><p>the potential energy is <span class="math notranslate nohighlight">\(V = mgh = mgL(1 - \cos\theta)\)</span></p></li>
 <li><p>initial kinetic energy (if starting from rest) is <span class="math notranslate nohighlight">\(T_0=0\)</span></p></li>
 <li><p>initial potential energy is <span class="math notranslate nohighlight">\(V_0 = mgL(1 - \cos\theta_0)\)</span></p></li>
 </ul>
 <p>So you can solve for <span class="math notranslate nohighlight">\(\dot{\theta} = f(\theta)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\dot{\theta} = \sqrt{\frac{2g}{L}(\cos\theta - \cos\theta_0)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dot{\theta} = \pm \sqrt{\frac{2g}{L}(\cos\theta - \cos\theta_0)}\)</span></p>
+<blockquote>
+<div><p><strong>Note</strong>: This is the <em>same</em> solution derived in the video by using integration by parts. <span class="math notranslate nohighlight">\(\frac{d\dot{\theta}}{dt} = -\frac{g}{L}\sin\theta \rightarrow \frac{d\dot{\theta}}{d\theta}\frac{d\theta}{dt} = -\frac{g}{L}\sin\theta\)</span>. The work-energy formula is a shortcut to integrating an equation of motion by parts.</p>
+</div></blockquote>
+<p>Below, you can see the angular velocity as a function of angle for a L=0.5 m pendulum released at <span class="math notranslate nohighlight">\(\theta_0 = 90^o = \pi/2~rad\)</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">dtheta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mf">9.81</span><span class="o">/</span><span class="n">L</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">dtheta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="o">-</span><span class="n">dtheta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+<span class="c1"># plt.axis(&#39;equal&#39;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$ (deg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}$ (deg/s)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/nonlinear_4_0.png" src="../_images/nonlinear_4_0.png" />
+</div>
+</div>
+<div class="section" id="phase-plot-of-the-simple-pendulum">
+<h3>Phase plot of the simple pendulum<a class="headerlink" href="#phase-plot-of-the-simple-pendulum" title="Permalink to this headline">¶</a></h3>
+<p>This type of plot is called a <a class="reference external" href="https://en.wikipedia.org/wiki/Phase_portrait">phase plot</a>. You can use it to compare different initial conditions and stability. Extending this phase plot to account for initial angles, <span class="math notranslate nohighlight">\(\theta_0 = (18^o...180^o)\)</span>, you see the concentric circles move outward (from light to dark) with higher speeds.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">opacity</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">theta0</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">theta0</span><span class="p">,</span> <span class="n">theta0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">dtheta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mf">9.81</span><span class="o">/</span><span class="n">L</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta0</span><span class="p">)))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">dtheta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">+</span><span class="n">opacity</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="o">-</span><span class="n">dtheta</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="o">+</span><span class="n">opacity</span><span class="p">))</span>
+    <span class="n">opacity</span> <span class="o">+=</span> <span class="mf">0.1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pendulum speed vs angle for</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span>
+          <span class="sa">r</span><span class="s1">&#39;$\theta_0=(18^o...180^o)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$ (deg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\dot{\theta}$ (deg/s)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/nonlinear_6_0.png" src="../_images/nonlinear_6_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numerical-integration">
+<h2>Numerical integration<a class="headerlink" href="#numerical-integration" title="Permalink to this headline">¶</a></h2>
+<p>The phase plot can be used for a number of engineering analyses. It tells you the maximum and minimum speeds and displacements for the pendulum, how fast the system is moving at given location, etc. It <em>does not</em> tell you what <span class="math notranslate nohighlight">\(\theta(t)\)</span> is. If you have a nonlinear equation of motion and you need the solution for <span class="math notranslate nohighlight">\(\theta(t)\)</span>, you have to use a <em>numerical integration</em>.</p>
+<p>Numerical integration only works on first order differential equations. The idea behind the integration is that if you know the current value and you know how quickly it changes, then you can estimate the next value</p>
+<p><span class="math notranslate nohighlight">\(next~value = current~value + \frac{d~value}{dt}*\Delta t\)</span></p>
+<p>Here, you will separate the second order differential equation,</p>
+<p><span class="math notranslate nohighlight">\(\ddot{\theta} = -\frac{g}{L}\sin\theta\)</span></p>
+<p>into 2 first-order differential equations</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{d\theta}{dt} = \dot{\theta}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d\dot{\theta}}{dt} = -\frac{g}{L}\sin\theta\)</span></p></li>
+</ol>
+<p>Now, you have 2 differential equations and one <em>state</em> varible, <span class="math notranslate nohighlight">\(\mathbf{x} = [\theta,~\dot{\theta}]\)</span>.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{dx_1}{dt} = x_2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d x_2}{dt} = -\frac{g}{L}\sin x_1\)</span></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="k">def</span> <span class="nf">pendulum</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;pendulum equations of motion for theta and dtheta/dt</span>
+<span class="sd">    arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    t: current time</span>
+<span class="sd">    x: current state variable [theta, dtheta/dt]</span>
+<span class="sd">    outputs</span>
+<span class="sd">    -------</span>
+<span class="sd">    dx: current derivative of state variable [dtheta/dt, ddtheta/ddt]&#39;&#39;&#39;</span>
+    
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">dx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">dx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">g</span><span class="o">/</span><span class="n">L</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">dx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The SciPy function <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html"><code class="docutils literal notranslate"><span class="pre">solve_ivp</span></code></a> can now be used to integrate <code class="docutils literal notranslate"><span class="pre">pendulum</span></code> and plot the solutions below. You can use a <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> to generate multiple solutions on one graph to compare results. Below, the solutions are plotted for <span class="math notranslate nohighlight">\(\theta_0 = (18^o...180^o)\)</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="k">for</span> <span class="n">theta0</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="n">pendulum</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="n">theta0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\theta_0$=</span><span class="si">{:1.0f}</span><span class="s1">$^o$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">theta0</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7feb567f4520&gt;
+</pre></div>
+</div>
+<img alt="../_images/nonlinear_10_1.png" src="../_images/nonlinear_10_1.png" />
+</div>
+</div>
+<p>Notice in the graphs how the time period changes depending upon initial angle, <span class="math notranslate nohighlight">\(\theta_0\)</span>. You may have experienced this first hand if you have played on a swingset. Initially, you need to pump your legs quickly to get started, but then as you swing higher, you spend more time between pumps.</p>
+<blockquote>
+<div><p><strong>Note</strong>: What happens at the <span class="math notranslate nohighlight">\(\theta_0 = 180^o\)</span>? Why is it constant?</p>
+</div></blockquote>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>In this notebook, you used two techniques to solve the nonlinear pendulum equation of motion</p>
+<ol class="simple">
+<li><p>work-energy formula <em>which is equivalent to integrating by parts</em></p></li>
+<li><p>numerical integration using <code class="docutils literal notranslate"><span class="pre">solve_ivp</span></code></p></li>
+</ol>
+<p>You can use either of these techniques for <em>any</em> engineering system. Similarly, you can always linearize an equation of motion so you don’t need to use nonlinear solutions. Just keep in mind, a linearized solution will introduce error in your model results.</p>
 </div>
 </div>
 
@@ -482,6 +624,8 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="pendulum.html" title="previous page">Pendulum plotting solution</a>
+    <a class='right-next' id="next-link" href="hemisphere-rolling.html" title="next page">Rolling on hemisphere</a>
 
         </div>
         
