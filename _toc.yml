@@ -29,6 +29,7 @@
     - file: module_03/pendulum
     - file: module_03/nonlinear
     - file: module_03/hemisphere-rolling
+    - file: module_03/project
 - file: module_04/overview
   sections:
     - file: module_04/yoyo-despin
