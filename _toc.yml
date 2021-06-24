@@ -33,6 +33,6 @@
 - file: module_04/overview
   sections:
     - file: module_04/dice
-    - file: module_04/yoyo-despin
     - file: module_04/yoyo-despin_02
+    - file: module_04/project
 - file: module_05/overview
