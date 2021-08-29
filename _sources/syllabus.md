@@ -1,4 +1,4 @@
-# Syllabus - CE2120 Summer 2021
+# Syllabus - CE2120 Fall 2021
 
 ## Applied Mechanics II: Dynamics
 
@@ -10,7 +10,7 @@ HuskyCT.**
 
 **Course Title:** CE2120 - Applied Mechanics II
 
-**Format:** Online
+**Format:** Hybrid
 
 **Prerequisite:** CE 2110 and MATH 2110 or 2130
 
@@ -23,9 +23,9 @@ questions on Campuswire (the preferred contact)*
 **Preferred Contact:** Post course-related questions and comments to
 Campuswire:
 
-[*https://campuswire.com/p/G452A9F32*](https://campuswire.com/p/G452A9F32)
+[*https://campuswire.com/p/G526851D6*](https://campuswire.com/p/G526851D6)
 
-Use code: **3556**
+Use code: **5394**
 
 Personal questions should be communicated privately via UConn email or
 Campuswire Direct Message (DM)
@@ -95,18 +95,18 @@ and ready at [compmech.uconn.edu](https://compmech.uconn.edu)
 Plotting software (Python, Excel, or Google Sheets)
 
 **Campuswire:** This session we will be using [*Campuswire
-*](https://campuswire.com/p/G99A7982C)for class discussion. The system
+*](https://campuswire.com/p/G526851D6)for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
 questions on Campuswire. If you have any problems or feedback for the
 developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
 
 Find our class page at:
-[*https://campuswire.com/p/G452A9F32*](https://campuswire.com/p/G452A9F32)
+[*https://campuswire.com/p/G526851D6*](https://campuswire.com/p/G526851D6)
 Use code: **3556**
 
-**Schedule: **The course schedule is on the [*CE2120 - Spring Google
-Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19waHVoMDQycjR1a2pxNWtnZ3FqNW5tbWM0b0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
+**Schedule: **The course schedule is on the [*CE2120 - Fall Google
+Calendar*](https://calendar.google.com/calendar/u/0?cid=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
 **Assignments are due by 11:59pm on the specified due dates. You can add
 the Google Calendar to your student or personal Google account for
 updates.
@@ -196,7 +196,7 @@ In order to be successful in this course I expect:
 
   ---------------- ------------- ---------------------------------------------------------------------
   **Item**         **Percent**   **Requirement**
-  Participation    20 %          Campuswire discussions and peer review
+  Participation    20 %          Discussions and peer review
   Homework         30 %          Submit solutions on HuskyCT and revise based upon textbook solution
   Quizzes          30 %          5 quizzes
   Project Report   20 %          Create one dynamics application to share with new engineers
@@ -208,8 +208,8 @@ All the course due dates are included in the [*CE2120 - Summer Google
 Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
 Assignments should be submitted before 11:59pm on the due date.
 
-*Addendum (2021-01-22): *Due dates are flexible to account for
-uncertainty during this pandemic. You do not need an excuse, but you
+*Due dates are flexible to account for
+personal scheduling*. You do not need an excuse, but you
 need to contact
 [*ryan.c.cooper\@uconn.edu*](mailto:ryan.c.cooper@uconn.edu) to ask for
 an extension. If you need help with the material, we can set up a
@@ -222,7 +222,7 @@ The participation grade is based upon: Campuswire participation, reading
 assignments, and peer review
 
 1.  You must participate in the discussions for credit. My expectation
-    is that you post at least three questions or answers each week..
+    is that you post at least three questions or answers each module.
 2.  The reading assignments have Campuswire discussions, post an answer
     to the question for 1-out-of-3 posts. You can respond to a
     colleague's post for 2-out-of-3 posts/week.
@@ -254,7 +254,7 @@ explaining your solution*.
 
 #### Note on the Project Report
 
-This Summer, I want you to build a dynamics project that interests you.
+I want you to build a dynamics project that interests you.
 Ideally, you can use this project in an engineering portfolio to
 demonstrate your grasp of Newtonian mechanics. My goal is to help you
 build this solution in a Jupyter notebook.
@@ -291,8 +291,8 @@ build this solution in a Jupyter notebook.
 
 ### Due Dates and Late Policy
 
-All course due dates are identified in the [*CE2120 - Summer Google
-Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
+All course due dates are identified in the [*CE2120 - Fall Google
+Calendar*](https://calendar.google.com/calendar/u/0?cid=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
 Deadlines are based on Eastern Time; if you are in a different time
 zone, please adjust your submittal times accordingly. The instructor
 reserves the right to change dates accordingly as the semester
@@ -302,26 +302,26 @@ another appropriate notification.*
 **Late Policy:** If you need more time for an assignment or experience
 technical difficulties, reach out via Campuswire or email. The
 instructor can make accommodations for work, family, and personal
-reasons. *We ask that you be respectful of the instructor's limited time
+reasons. *We ask that you be respectful of the instructors' limited time
 and resources. *
 
 ### Feedback and Grades
 
-I will make every effort to provide feedback and grades within 2 days.
+I will make every effort to provide feedback and grades within 7 days.
 To keep track of your performance in the course, refer to My Grades in
 HuskyCT.
 
 **Weekly Time Commitment**
 
-You should expect to dedicate between 25 - 30 hours a week to this
+You should expect to dedicate between 6 - 8 hours a week to this
 course. This expectation is based on the various course activities,
 assignments, and assessments and the University of Connecticut's policy
 regarding credit hours. More information related to hours per week per
 credit can be accessed at the [*Online Student
 website*](https://onlinestudent.uconn.edu/learn-more/#collapsepanel-269-1-0-07).
 
-This course requires *lots of practice*. You should set aside 5 hours
-per day (assuming a 5-day work-week) to write out example problems from
+This course requires *lots of practice*. You should set aside 6-8 hours
+per week (assuming a 5-day work-week) to write out example problems from
 the textbook, try homework problems, and revise answers. This is the
 best way to prepare for quizzes.
 

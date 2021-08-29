@@ -26,7 +26,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -95,7 +95,7 @@
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
-   Syllabus - CE2120 Summer 2021
+   Syllabus - CE2120 Fall 2021
   </a>
  </li>
  <li class="toctree-l1">
@@ -544,263 +544,324 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="mf">0.6</span><span class="o">/</span><span class="p">(</span><span class="n">l1</span><span class="o">+</span><span class="n">l2</span><span class="p">))</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.284862768173795
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Acceleration Data</span>
 
-<span class="n">relative_time</span><span class="p">,</span><span class="n">AccX</span>
-<span class="mi">0</span><span class="p">,</span><span class="mf">6.088439025878906</span>
-<span class="mi">57</span><span class="p">,</span><span class="mf">6.015989685058594</span>
-<span class="mi">124</span><span class="p">,</span><span class="mf">6.6276177978515625</span>
-<span class="mi">191</span><span class="p">,</span><span class="mf">6.831344146728516</span>
-<span class="mi">257</span><span class="p">,</span><span class="mf">5.952371978759766</span>
-<span class="mi">324</span><span class="p">,</span><span class="mf">6.048172760009766</span>
-<span class="mi">391</span><span class="p">,</span><span class="mf">6.569837951660157</span>
-<span class="mi">457</span><span class="p">,</span><span class="mf">7.891140289306641</span>
-<span class="mi">524</span><span class="p">,</span><span class="mf">7.355254669189454</span>
-<span class="mi">591</span><span class="p">,</span><span class="mf">7.687563629150391</span>
-<span class="mi">658</span><span class="p">,</span><span class="mf">6.846462707519532</span>
-<span class="mi">724</span><span class="p">,</span><span class="mf">5.8652531433105475</span>
-<span class="mi">790</span><span class="p">,</span><span class="mf">2.827320556640625</span>
-<span class="mi">859</span><span class="p">,</span><span class="mf">2.4285498046875</span>
-<span class="mi">924</span><span class="p">,</span><span class="mf">4.203109588623047</span>
-<span class="mi">991</span><span class="p">,</span><span class="mf">2.9063562011718753</span>
-<span class="mi">1058</span><span class="p">,</span><span class="o">-</span><span class="mf">1.6227754211425782</span>
-<span class="mi">1124</span><span class="p">,</span><span class="o">-</span><span class="mf">1.1536509704589843</span>
-<span class="mi">1191</span><span class="p">,</span><span class="mf">0.018112335205078125</span>
-<span class="mi">1258</span><span class="p">,</span><span class="mf">1.22625</span>
-<span class="mi">1324</span><span class="p">,</span><span class="mf">0.21345611572265627</span>
-<span class="mi">1391</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29728179931640625</span>
-<span class="mi">1458</span><span class="p">,</span><span class="mf">5.462291107177735</span>
-<span class="mi">1524</span><span class="p">,</span><span class="o">-</span><span class="mf">0.2625540161132813</span>
-<span class="mi">1591</span><span class="p">,</span><span class="mf">0.5255570983886719</span>
-<span class="mi">1659</span><span class="p">,</span><span class="mf">0.45999343872070314</span>
-<span class="mi">1724</span><span class="p">,</span><span class="mf">0.7653584289550782</span>
-<span class="mi">1791</span><span class="p">,</span><span class="mf">0.8496331787109376</span>
-<span class="mi">1859</span><span class="p">,</span><span class="o">-</span><span class="mf">1.982776794433594</span>
-<span class="mi">1924</span><span class="p">,</span><span class="o">-</span><span class="mf">2.871179351806641</span>
-<span class="mi">1991</span><span class="p">,</span><span class="mf">0.2947370910644531</span>
-<span class="mi">2058</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5355862426757813</span>
-<span class="mi">2124</span><span class="p">,</span><span class="o">-</span><span class="mf">1.7609381103515627</span>
-<span class="mi">2191</span><span class="p">,</span><span class="o">-</span><span class="mf">0.49172744750976566</span>
-<span class="mi">2258</span><span class="p">,</span><span class="mf">0.7605683898925781</span>
-<span class="mi">2324</span><span class="p">,</span><span class="mf">0.052690429687500005</span>
-<span class="mi">2391</span><span class="p">,</span><span class="mf">2.7331663513183595</span>
-<span class="mi">2458</span><span class="p">,</span><span class="o">-</span><span class="mf">0.12678634643554687</span>
-<span class="mi">2524</span><span class="p">,</span><span class="mf">1.414109344482422</span>
-<span class="mi">2591</span><span class="p">,</span><span class="mf">3.9439984130859376</span>
-<span class="mi">2659</span><span class="p">,</span><span class="mf">1.8408718872070313</span>
-<span class="mi">2723</span><span class="p">,</span><span class="mf">1.5705340576171876</span>
-<span class="mi">2791</span><span class="p">,</span><span class="mf">0.9348060607910157</span>
-<span class="mi">2858</span><span class="p">,</span><span class="mf">0.6608757019042969</span>
-<span class="mi">2923</span><span class="p">,</span><span class="mf">0.271834716796875</span>
-<span class="mi">2991</span><span class="p">,</span><span class="mf">2.366279296875</span>
-<span class="mi">3058</span><span class="p">,</span><span class="o">-</span><span class="mf">2.8262727355957034</span>
-<span class="mi">3124</span><span class="p">,</span><span class="mf">1.5356565856933595</span>
-<span class="mi">3191</span><span class="p">,</span><span class="mf">4.428989868164063</span>
-<span class="mi">3258</span><span class="p">,</span><span class="mf">6.99630111694336</span>
-<span class="mi">3324</span><span class="p">,</span><span class="o">-</span><span class="mf">3.5637890625</span>
-<span class="mi">3391</span><span class="p">,</span><span class="mf">2.4459136962890624</span>
-<span class="mi">3457</span><span class="p">,</span><span class="mf">0.6776408386230469</span>
-<span class="mi">3524</span><span class="p">,</span><span class="o">-</span><span class="mf">0.9943821716308594</span>
-<span class="mi">3591</span><span class="p">,</span><span class="o">-</span><span class="mf">1.0603948974609376</span>
-<span class="mi">3657</span><span class="p">,</span><span class="mf">2.012864227294922</span>
-<span class="mi">3724</span><span class="p">,</span><span class="mf">0.9659413146972656</span>
-<span class="mi">3791</span><span class="p">,</span><span class="mf">2.4507037353515626</span>
-<span class="mi">3857</span><span class="p">,</span><span class="mf">3.8601727294921875</span>
-<span class="mi">3924</span><span class="p">,</span><span class="mf">3.975283355712891</span>
-<span class="mi">3991</span><span class="p">,</span><span class="mf">1.253792724609375</span>
-<span class="mi">4057</span><span class="p">,</span><span class="mf">1.0783575439453126</span>
-<span class="mi">4124</span><span class="p">,</span><span class="mf">0.8780740356445313</span>
-<span class="mi">4191</span><span class="p">,</span><span class="mf">2.3787034606933597</span>
-<span class="mi">4257</span><span class="p">,</span><span class="o">-</span><span class="mf">1.803300018310547</span>
-<span class="mi">4324</span><span class="p">,</span><span class="o">-</span><span class="mf">2.7295738220214845</span>
-<span class="mi">4391</span><span class="p">,</span><span class="mf">3.579506378173828</span>
-<span class="mi">4458</span><span class="p">,</span><span class="mf">8.964707794189454</span>
-<span class="mi">4524</span><span class="p">,</span><span class="o">-</span><span class="mf">0.9575587463378906</span>
-<span class="mi">4591</span><span class="p">,</span><span class="mf">0.05059478759765625</span>
-<span class="mi">4658</span><span class="p">,</span><span class="mf">1.2243040466308595</span>
-<span class="mi">4724</span><span class="p">,</span><span class="o">-</span><span class="mf">0.7447013854980469</span>
-<span class="mi">4791</span><span class="p">,</span><span class="o">-</span><span class="mf">0.6192622375488281</span>
-<span class="mi">4857</span><span class="p">,</span><span class="mf">2.2504202270507814</span>
-<span class="mi">4924</span><span class="p">,</span><span class="mf">1.033151550292969</span>
-<span class="mi">4991</span><span class="p">,</span><span class="mf">1.4199472045898438</span>
-<span class="mi">5058</span><span class="p">,</span><span class="mf">2.8192373657226564</span>
-<span class="mi">5124</span><span class="p">,</span><span class="mf">4.0372544860839845</span>
-<span class="mi">5191</span><span class="p">,</span><span class="mf">1.3222004699707033</span>
-<span class="mi">5258</span><span class="p">,</span><span class="mf">1.1322454833984374</span>
-<span class="mi">5324</span><span class="p">,</span><span class="mf">1.8567388916015626</span>
-<span class="mi">5391</span><span class="p">,</span><span class="mf">1.0196795654296875</span>
-<span class="mi">5458</span><span class="p">,</span><span class="mf">1.1301498413085938</span>
-<span class="mi">5524</span><span class="p">,</span><span class="o">-</span><span class="mf">2.079775085449219</span>
-<span class="mi">5591</span><span class="p">,</span><span class="mf">3.393892364501953</span>
-<span class="mi">5658</span><span class="p">,</span><span class="mf">5.264402618408203</span>
-<span class="mi">5724</span><span class="p">,</span><span class="mf">5.975873107910156</span>
-<span class="mi">5791</span><span class="p">,</span><span class="o">-</span><span class="mf">1.2722044372558594</span>
-<span class="mi">5858</span><span class="p">,</span><span class="mf">2.7021807861328124</span>
-<span class="mi">5924</span><span class="p">,</span><span class="mf">1.4897021484375002</span>
-<span class="mi">5991</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3864962768554688</span>
-<span class="mi">6058</span><span class="p">,</span><span class="o">-</span><span class="mf">1.0559042358398438</span>
-<span class="mi">6124</span><span class="p">,</span><span class="mf">1.9118243408203126</span>
-<span class="mi">6191</span><span class="p">,</span><span class="mf">1.6149916076660158</span>
-<span class="mi">6258</span><span class="p">,</span><span class="mf">2.7785220336914063</span>
-<span class="mi">6324</span><span class="p">,</span><span class="mf">1.4711407470703126</span>
-<span class="mi">6391</span><span class="p">,</span><span class="mf">4.279301147460938</span>
-<span class="mi">6458</span><span class="p">,</span><span class="mf">0.6807843017578126</span>
-<span class="mi">6524</span><span class="p">,</span><span class="mf">1.375938720703125</span>
-<span class="mi">6591</span><span class="p">,</span><span class="mf">1.038240966796875</span>
-<span class="mi">6658</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05523513793945313</span>
-<span class="mi">6724</span><span class="p">,</span><span class="mf">0.8074209594726562</span>
-<span class="mi">6791</span><span class="p">,</span><span class="o">-</span><span class="mf">3.4194891357421877</span>
-<span class="mi">6858</span><span class="p">,</span><span class="mf">2.462828521728516</span>
-<span class="mi">6924</span><span class="p">,</span><span class="mf">6.651717681884766</span>
-<span class="mi">6990</span><span class="p">,</span><span class="mf">6.607709197998047</span>
-<span class="mi">7058</span><span class="p">,</span><span class="o">-</span><span class="mf">1.9749929809570312</span>
-<span class="mi">7123</span><span class="p">,</span><span class="mf">2.0372634887695313</span>
-<span class="mi">7190</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3998185729980469</span>
-<span class="mi">7258</span><span class="p">,</span><span class="o">-</span><span class="mf">1.6516653442382814</span>
-<span class="mi">7323</span><span class="p">,</span><span class="mf">1.031205596923828</span>
-<span class="mi">7390</span><span class="p">,</span><span class="mf">0.2856060791015625</span>
-<span class="mi">7458</span><span class="p">,</span><span class="mf">1.8754499816894532</span>
-<span class="mi">7523</span><span class="p">,</span><span class="mf">1.906285858154297</span>
-<span class="mi">7590</span><span class="p">,</span><span class="mf">5.2558703613281255</span>
-<span class="mi">7658</span><span class="p">,</span><span class="mf">2.896776123046875</span>
-<span class="mi">7724</span><span class="p">,</span><span class="o">-</span><span class="mf">0.6475534057617188</span>
-<span class="mi">7790</span><span class="p">,</span><span class="mf">3.500021667480469</span>
-<span class="mi">7858</span><span class="p">,</span><span class="mf">0.8405021667480469</span>
-<span class="mi">7924</span><span class="p">,</span><span class="o">-</span><span class="mf">0.18546432495117188</span>
-<span class="mi">7991</span><span class="p">,</span><span class="o">-</span><span class="mf">2.2552102661132816</span>
-<span class="mi">8058</span><span class="p">,</span><span class="mf">2.5927583312988283</span>
-<span class="mi">8124</span><span class="p">,</span><span class="mf">7.535779266357422</span>
-<span class="mi">8191</span><span class="p">,</span><span class="mf">3.8886135864257816</span>
-<span class="mi">8258</span><span class="p">,</span><span class="o">-</span><span class="mf">1.7265097045898439</span>
-<span class="mi">8324</span><span class="p">,</span><span class="mf">2.3510110473632815</span>
-<span class="mi">8391</span><span class="p">,</span><span class="o">-</span><span class="mf">0.40071670532226566</span>
-<span class="mi">8458</span><span class="p">,</span><span class="mf">0.09624984741210937</span>
-<span class="mi">8524</span><span class="p">,</span><span class="mf">1.4718891906738283</span>
-<span class="mi">8591</span><span class="p">,</span><span class="mf">1.0234217834472656</span>
-<span class="mi">8658</span><span class="p">,</span><span class="mf">1.400787048339844</span>
-<span class="mi">8724</span><span class="p">,</span><span class="mf">1.3956976318359375</span>
-<span class="mi">8791</span><span class="p">,</span><span class="mf">3.750450897216797</span>
-<span class="mi">8858</span><span class="p">,</span><span class="mf">2.8163932800292972</span>
-<span class="mi">8924</span><span class="p">,</span><span class="o">-</span><span class="mf">0.47615982055664063</span>
-<span class="mi">8991</span><span class="p">,</span><span class="mf">0.9877958679199219</span>
-<span class="mi">9057</span><span class="p">,</span><span class="mf">0.30865814208984377</span>
-<span class="mi">9124</span><span class="p">,</span><span class="mf">2.1207897949218752</span>
-<span class="mi">9191</span><span class="p">,</span><span class="o">-</span><span class="mf">1.7640815734863282</span>
-<span class="mi">9257</span><span class="p">,</span><span class="mf">1.0044113159179688</span>
-<span class="mi">9324</span><span class="p">,</span><span class="mf">4.470603332519532</span>
-<span class="mi">9391</span><span class="p">,</span><span class="mf">6.392157440185547</span>
-<span class="mi">9458</span><span class="p">,</span><span class="o">-</span><span class="mf">0.20627105712890625</span>
-<span class="mi">9524</span><span class="p">,</span><span class="mf">2.2052142333984377</span>
-<span class="mi">9591</span><span class="p">,</span><span class="mf">0.6014492797851563</span>
-<span class="mi">9658</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5774990844726563</span>
-<span class="mi">9724</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5375321960449219</span>
-<span class="mi">9791</span><span class="p">,</span><span class="mf">2.0938458251953125</span>
-<span class="mi">9857</span><span class="p">,</span><span class="o">-</span><span class="mf">1.8345849609375</span>
-<span class="mi">9924</span><span class="p">,</span><span class="mf">1.0600955200195312</span>
-<span class="mi">9991</span><span class="p">,</span><span class="mf">2.325414276123047</span>
-<span class="mi">10058</span><span class="p">,</span><span class="mf">4.619543609619141</span>
-<span class="mi">10124</span><span class="p">,</span><span class="mf">1.3482463073730468</span>
-<span class="mi">10191</span><span class="p">,</span><span class="mf">0.6773414611816406</span>
-<span class="mi">10258</span><span class="p">,</span><span class="mf">0.5769003295898438</span>
-<span class="mi">10324</span><span class="p">,</span><span class="mf">0.24339385986328127</span>
-<span class="mi">10391</span><span class="p">,</span><span class="mf">2.9428802490234376</span>
-<span class="mi">10456</span><span class="p">,</span><span class="o">-</span><span class="mf">4.0899449157714844</span>
-<span class="mi">10524</span><span class="p">,</span><span class="mf">3.496279449462891</span>
-<span class="mi">10591</span><span class="p">,</span><span class="mf">8.412805480957031</span>
-<span class="mi">10657</span><span class="p">,</span><span class="mf">0.31524444580078126</span>
-<span class="mi">10724</span><span class="p">,</span><span class="mf">1.9484980773925782</span>
-<span class="mi">10791</span><span class="p">,</span><span class="mf">1.5277230834960938</span>
-<span class="mi">10857</span><span class="p">,</span><span class="o">-</span><span class="mf">0.2077679443359375</span>
-<span class="mi">10924</span><span class="p">,</span><span class="o">-</span><span class="mf">1.115929412841797</span>
-<span class="mi">10991</span><span class="p">,</span><span class="mf">2.433190155029297</span>
-<span class="mi">11057</span><span class="p">,</span><span class="o">-</span><span class="mf">1.3118719482421877</span>
-<span class="mi">11124</span><span class="p">,</span><span class="mf">0.8164022827148438</span>
-<span class="mi">11191</span><span class="p">,</span><span class="mf">3.0567933654785158</span>
-<span class="mi">11257</span><span class="p">,</span><span class="mf">3.247496795654297</span>
-<span class="mi">11324</span><span class="p">,</span><span class="mf">2.202370147705078</span>
-<span class="mi">11391</span><span class="p">,</span><span class="mf">0.29114456176757814</span>
-<span class="mi">11457</span><span class="p">,</span><span class="mf">2.2676344299316407</span>
-<span class="mi">11523</span><span class="p">,</span><span class="mf">1.9285894775390626</span>
-<span class="mi">11591</span><span class="p">,</span><span class="mf">1.1295510864257814</span>
-<span class="mi">11657</span><span class="p">,</span><span class="o">-</span><span class="mf">3.6717146301269534</span>
-<span class="mi">11723</span><span class="p">,</span><span class="mf">4.044439544677735</span>
-<span class="mi">11791</span><span class="p">,</span><span class="mf">8.632847900390626</span>
-<span class="mi">11857</span><span class="p">,</span><span class="o">-</span><span class="mf">1.9095790100097658</span>
-<span class="mi">11924</span><span class="p">,</span><span class="mf">0.5596861267089844</span>
-<span class="mi">11991</span><span class="p">,</span><span class="mf">1.485959930419922</span>
-<span class="mi">12057</span><span class="p">,</span><span class="mf">0.05882766723632813</span>
-<span class="mi">12124</span><span class="p">,</span><span class="o">-</span><span class="mf">1.2364288330078126</span>
-<span class="mi">12191</span><span class="p">,</span><span class="mf">1.5269746398925783</span>
-<span class="mi">12257</span><span class="p">,</span><span class="o">-</span><span class="mf">1.1187734985351563</span>
-<span class="mi">12324</span><span class="p">,</span><span class="mf">3.7979022216796876</span>
-<span class="mi">12391</span><span class="p">,</span><span class="mf">1.7284556579589845</span>
-<span class="mi">12457</span><span class="p">,</span><span class="mf">4.189038848876954</span>
-<span class="mi">12523</span><span class="p">,</span><span class="mf">2.1203407287597655</span>
-<span class="mi">12590</span><span class="p">,</span><span class="mf">0.9583071899414063</span>
-<span class="mi">12657</span><span class="p">,</span><span class="mf">1.156644744873047</span>
-<span class="mi">12723</span><span class="p">,</span><span class="mf">0.305364990234375</span>
-<span class="mi">12790</span><span class="p">,</span><span class="mf">1.3332774353027343</span>
-<span class="mi">12857</span><span class="p">,</span><span class="o">-</span><span class="mf">3.4750236511230472</span>
-<span class="mi">12923</span><span class="p">,</span><span class="mf">2.9154872131347656</span>
-<span class="mi">12990</span><span class="p">,</span><span class="mf">10.07105712890625</span>
-<span class="mi">13057</span><span class="p">,</span><span class="mf">6.455775146484375</span>
-<span class="mi">13123</span><span class="p">,</span><span class="o">-</span><span class="mf">0.6867718505859375</span>
-<span class="mi">13190</span><span class="p">,</span><span class="mf">0.2537223815917969</span>
-<span class="mi">13257</span><span class="p">,</span><span class="mf">0.19100280761718752</span>
-<span class="mi">13324</span><span class="p">,</span><span class="o">-</span><span class="mf">0.26689498901367187</span>
-<span class="mi">13391</span><span class="p">,</span><span class="mf">1.242715759277344</span>
-<span class="mi">13457</span><span class="p">,</span><span class="o">-</span><span class="mf">0.36539016723632817</span>
-<span class="mi">13524</span><span class="p">,</span><span class="o">-</span><span class="mf">2.661914520263672</span>
-<span class="mi">13591</span><span class="p">,</span><span class="o">-</span><span class="mf">0.4397854614257813</span>
-<span class="mi">13657</span><span class="p">,</span><span class="mf">2.245330810546875</span>
-<span class="mi">13724</span><span class="p">,</span><span class="mf">2.4231610107421875</span>
-<span class="mi">13791</span><span class="p">,</span><span class="mf">3.0135333251953127</span>
-<span class="mi">13857</span><span class="p">,</span><span class="mf">1.7965640258789064</span>
-<span class="mi">13924</span><span class="p">,</span><span class="mf">1.0606942749023438</span>
-<span class="mi">13991</span><span class="p">,</span><span class="mf">0.03547622680664063</span>
-<span class="mi">14057</span><span class="p">,</span><span class="mf">0.4076023864746094</span>
-<span class="mi">14124</span><span class="p">,</span><span class="mf">0.47256729125976565</span>
-<span class="mi">14191</span><span class="p">,</span><span class="mf">0.08382568359375</span>
-<span class="mi">14257</span><span class="p">,</span><span class="o">-</span><span class="mf">0.7824229431152344</span>
-<span class="mi">14324</span><span class="p">,</span><span class="mf">1.5362553405761719</span>
-<span class="mi">14391</span><span class="p">,</span><span class="mf">7.250921630859375</span>
-<span class="mi">14457</span><span class="p">,</span><span class="mf">1.9643650817871094</span>
-<span class="mi">14524</span><span class="p">,</span><span class="mf">1.515897674560547</span>
-<span class="mi">14590</span><span class="p">,</span><span class="mf">0.8942404174804688</span>
-<span class="mi">14657</span><span class="p">,</span><span class="o">-</span><span class="mf">0.011825408935546875</span>
-<span class="mi">14724</span><span class="p">,</span><span class="mf">0.026943969726562503</span>
-<span class="mi">14791</span><span class="p">,</span><span class="mf">0.09265731811523438</span>
-<span class="mi">14857</span><span class="p">,</span><span class="mf">1.8271005249023438</span>
-<span class="mi">14924</span><span class="p">,</span><span class="mf">0.2484832763671875</span>
-<span class="mi">14991</span><span class="p">,</span><span class="o">-</span><span class="mf">1.713486785888672</span>
-<span class="mi">15057</span><span class="p">,</span><span class="mf">0.056133270263671875</span>
-<span class="mi">15124</span><span class="p">,</span><span class="mf">3.006947021484375</span>
-<span class="mi">15191</span><span class="p">,</span><span class="mf">5.926326141357422</span>
-<span class="mi">15257</span><span class="p">,</span><span class="mf">6.840475158691406</span>
-<span class="mi">15324</span><span class="p">,</span><span class="mf">3.896397399902344</span>
-<span class="mi">15391</span><span class="p">,</span><span class="mf">3.133433990478516</span>
-<span class="mi">15457</span><span class="p">,</span><span class="mf">1.435664520263672</span>
-<span class="mi">15524</span><span class="p">,</span><span class="mf">0.38739440917968754</span>
-<span class="mi">15591</span><span class="p">,</span><span class="mf">0.2785707092285156</span>
-<span class="mi">15657</span><span class="p">,</span><span class="mf">1.0241702270507813</span>
-<span class="mi">15724</span><span class="p">,</span><span class="mf">1.3702505493164063</span>
-<span class="mi">15791</span><span class="p">,</span><span class="mf">1.999691619873047</span>
+<span class="n">accel_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">6.088439025878906</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">57</span><span class="p">,</span><span class="mf">6.015989685058594</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">124</span><span class="p">,</span><span class="mf">6.6276177978515625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">191</span><span class="p">,</span><span class="mf">6.831344146728516</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">257</span><span class="p">,</span><span class="mf">5.952371978759766</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">324</span><span class="p">,</span><span class="mf">6.048172760009766</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">391</span><span class="p">,</span><span class="mf">6.569837951660157</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">457</span><span class="p">,</span><span class="mf">7.891140289306641</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">524</span><span class="p">,</span><span class="mf">7.355254669189454</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">591</span><span class="p">,</span><span class="mf">7.687563629150391</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">658</span><span class="p">,</span><span class="mf">6.846462707519532</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">724</span><span class="p">,</span><span class="mf">5.8652531433105475</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">790</span><span class="p">,</span><span class="mf">2.827320556640625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">859</span><span class="p">,</span><span class="mf">2.4285498046875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">924</span><span class="p">,</span><span class="mf">4.203109588623047</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">991</span><span class="p">,</span><span class="mf">2.9063562011718753</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1058</span><span class="p">,</span><span class="o">-</span><span class="mf">1.6227754211425782</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1124</span><span class="p">,</span><span class="o">-</span><span class="mf">1.1536509704589843</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1191</span><span class="p">,</span><span class="mf">0.018112335205078125</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1258</span><span class="p">,</span><span class="mf">1.22625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1324</span><span class="p">,</span><span class="mf">0.21345611572265627</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1391</span><span class="p">,</span><span class="o">-</span><span class="mf">0.29728179931640625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1458</span><span class="p">,</span><span class="mf">5.462291107177735</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1524</span><span class="p">,</span><span class="o">-</span><span class="mf">0.2625540161132813</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1591</span><span class="p">,</span><span class="mf">0.5255570983886719</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1659</span><span class="p">,</span><span class="mf">0.45999343872070314</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1724</span><span class="p">,</span><span class="mf">0.7653584289550782</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1791</span><span class="p">,</span><span class="mf">0.8496331787109376</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1859</span><span class="p">,</span><span class="o">-</span><span class="mf">1.982776794433594</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1924</span><span class="p">,</span><span class="o">-</span><span class="mf">2.871179351806641</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1991</span><span class="p">,</span><span class="mf">0.2947370910644531</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2058</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5355862426757813</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2124</span><span class="p">,</span><span class="o">-</span><span class="mf">1.7609381103515627</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2191</span><span class="p">,</span><span class="o">-</span><span class="mf">0.49172744750976566</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2258</span><span class="p">,</span><span class="mf">0.7605683898925781</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2324</span><span class="p">,</span><span class="mf">0.052690429687500005</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2391</span><span class="p">,</span><span class="mf">2.7331663513183595</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2458</span><span class="p">,</span><span class="o">-</span><span class="mf">0.12678634643554687</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2524</span><span class="p">,</span><span class="mf">1.414109344482422</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2591</span><span class="p">,</span><span class="mf">3.9439984130859376</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2659</span><span class="p">,</span><span class="mf">1.8408718872070313</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2723</span><span class="p">,</span><span class="mf">1.5705340576171876</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2791</span><span class="p">,</span><span class="mf">0.9348060607910157</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2858</span><span class="p">,</span><span class="mf">0.6608757019042969</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2923</span><span class="p">,</span><span class="mf">0.271834716796875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2991</span><span class="p">,</span><span class="mf">2.366279296875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3058</span><span class="p">,</span><span class="o">-</span><span class="mf">2.8262727355957034</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3124</span><span class="p">,</span><span class="mf">1.5356565856933595</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3191</span><span class="p">,</span><span class="mf">4.428989868164063</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3258</span><span class="p">,</span><span class="mf">6.99630111694336</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3324</span><span class="p">,</span><span class="o">-</span><span class="mf">3.5637890625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3391</span><span class="p">,</span><span class="mf">2.4459136962890624</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3457</span><span class="p">,</span><span class="mf">0.6776408386230469</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3524</span><span class="p">,</span><span class="o">-</span><span class="mf">0.9943821716308594</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3591</span><span class="p">,</span><span class="o">-</span><span class="mf">1.0603948974609376</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3657</span><span class="p">,</span><span class="mf">2.012864227294922</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3724</span><span class="p">,</span><span class="mf">0.9659413146972656</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3791</span><span class="p">,</span><span class="mf">2.4507037353515626</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3857</span><span class="p">,</span><span class="mf">3.8601727294921875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3924</span><span class="p">,</span><span class="mf">3.975283355712891</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3991</span><span class="p">,</span><span class="mf">1.253792724609375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4057</span><span class="p">,</span><span class="mf">1.0783575439453126</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4124</span><span class="p">,</span><span class="mf">0.8780740356445313</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4191</span><span class="p">,</span><span class="mf">2.3787034606933597</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4257</span><span class="p">,</span><span class="o">-</span><span class="mf">1.803300018310547</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4324</span><span class="p">,</span><span class="o">-</span><span class="mf">2.7295738220214845</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4391</span><span class="p">,</span><span class="mf">3.579506378173828</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4458</span><span class="p">,</span><span class="mf">8.964707794189454</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4524</span><span class="p">,</span><span class="o">-</span><span class="mf">0.9575587463378906</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4591</span><span class="p">,</span><span class="mf">0.05059478759765625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4658</span><span class="p">,</span><span class="mf">1.2243040466308595</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4724</span><span class="p">,</span><span class="o">-</span><span class="mf">0.7447013854980469</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4791</span><span class="p">,</span><span class="o">-</span><span class="mf">0.6192622375488281</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4857</span><span class="p">,</span><span class="mf">2.2504202270507814</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4924</span><span class="p">,</span><span class="mf">1.033151550292969</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">4991</span><span class="p">,</span><span class="mf">1.4199472045898438</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5058</span><span class="p">,</span><span class="mf">2.8192373657226564</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5124</span><span class="p">,</span><span class="mf">4.0372544860839845</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5191</span><span class="p">,</span><span class="mf">1.3222004699707033</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5258</span><span class="p">,</span><span class="mf">1.1322454833984374</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5324</span><span class="p">,</span><span class="mf">1.8567388916015626</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5391</span><span class="p">,</span><span class="mf">1.0196795654296875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5458</span><span class="p">,</span><span class="mf">1.1301498413085938</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5524</span><span class="p">,</span><span class="o">-</span><span class="mf">2.079775085449219</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5591</span><span class="p">,</span><span class="mf">3.393892364501953</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5658</span><span class="p">,</span><span class="mf">5.264402618408203</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5724</span><span class="p">,</span><span class="mf">5.975873107910156</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5791</span><span class="p">,</span><span class="o">-</span><span class="mf">1.2722044372558594</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5858</span><span class="p">,</span><span class="mf">2.7021807861328124</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5924</span><span class="p">,</span><span class="mf">1.4897021484375002</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5991</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3864962768554688</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6058</span><span class="p">,</span><span class="o">-</span><span class="mf">1.0559042358398438</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6124</span><span class="p">,</span><span class="mf">1.9118243408203126</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6191</span><span class="p">,</span><span class="mf">1.6149916076660158</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6258</span><span class="p">,</span><span class="mf">2.7785220336914063</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6324</span><span class="p">,</span><span class="mf">1.4711407470703126</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6391</span><span class="p">,</span><span class="mf">4.279301147460938</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6458</span><span class="p">,</span><span class="mf">0.6807843017578126</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6524</span><span class="p">,</span><span class="mf">1.375938720703125</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6591</span><span class="p">,</span><span class="mf">1.038240966796875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6658</span><span class="p">,</span><span class="o">-</span><span class="mf">0.05523513793945313</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6724</span><span class="p">,</span><span class="mf">0.8074209594726562</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6791</span><span class="p">,</span><span class="o">-</span><span class="mf">3.4194891357421877</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6858</span><span class="p">,</span><span class="mf">2.462828521728516</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6924</span><span class="p">,</span><span class="mf">6.651717681884766</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6990</span><span class="p">,</span><span class="mf">6.607709197998047</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7058</span><span class="p">,</span><span class="o">-</span><span class="mf">1.9749929809570312</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7123</span><span class="p">,</span><span class="mf">2.0372634887695313</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7190</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3998185729980469</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7258</span><span class="p">,</span><span class="o">-</span><span class="mf">1.6516653442382814</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7323</span><span class="p">,</span><span class="mf">1.031205596923828</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7390</span><span class="p">,</span><span class="mf">0.2856060791015625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7458</span><span class="p">,</span><span class="mf">1.8754499816894532</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7523</span><span class="p">,</span><span class="mf">1.906285858154297</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7590</span><span class="p">,</span><span class="mf">5.2558703613281255</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7658</span><span class="p">,</span><span class="mf">2.896776123046875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7724</span><span class="p">,</span><span class="o">-</span><span class="mf">0.6475534057617188</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7790</span><span class="p">,</span><span class="mf">3.500021667480469</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7858</span><span class="p">,</span><span class="mf">0.8405021667480469</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7924</span><span class="p">,</span><span class="o">-</span><span class="mf">0.18546432495117188</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7991</span><span class="p">,</span><span class="o">-</span><span class="mf">2.2552102661132816</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8058</span><span class="p">,</span><span class="mf">2.5927583312988283</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8124</span><span class="p">,</span><span class="mf">7.535779266357422</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8191</span><span class="p">,</span><span class="mf">3.8886135864257816</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8258</span><span class="p">,</span><span class="o">-</span><span class="mf">1.7265097045898439</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8324</span><span class="p">,</span><span class="mf">2.3510110473632815</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8391</span><span class="p">,</span><span class="o">-</span><span class="mf">0.40071670532226566</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8458</span><span class="p">,</span><span class="mf">0.09624984741210937</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8524</span><span class="p">,</span><span class="mf">1.4718891906738283</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8591</span><span class="p">,</span><span class="mf">1.0234217834472656</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8658</span><span class="p">,</span><span class="mf">1.400787048339844</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8724</span><span class="p">,</span><span class="mf">1.3956976318359375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8791</span><span class="p">,</span><span class="mf">3.750450897216797</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8858</span><span class="p">,</span><span class="mf">2.8163932800292972</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8924</span><span class="p">,</span><span class="o">-</span><span class="mf">0.47615982055664063</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8991</span><span class="p">,</span><span class="mf">0.9877958679199219</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9057</span><span class="p">,</span><span class="mf">0.30865814208984377</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9124</span><span class="p">,</span><span class="mf">2.1207897949218752</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9191</span><span class="p">,</span><span class="o">-</span><span class="mf">1.7640815734863282</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9257</span><span class="p">,</span><span class="mf">1.0044113159179688</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9324</span><span class="p">,</span><span class="mf">4.470603332519532</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9391</span><span class="p">,</span><span class="mf">6.392157440185547</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9458</span><span class="p">,</span><span class="o">-</span><span class="mf">0.20627105712890625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9524</span><span class="p">,</span><span class="mf">2.2052142333984377</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9591</span><span class="p">,</span><span class="mf">0.6014492797851563</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9658</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5774990844726563</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9724</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5375321960449219</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9791</span><span class="p">,</span><span class="mf">2.0938458251953125</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9857</span><span class="p">,</span><span class="o">-</span><span class="mf">1.8345849609375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9924</span><span class="p">,</span><span class="mf">1.0600955200195312</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9991</span><span class="p">,</span><span class="mf">2.325414276123047</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10058</span><span class="p">,</span><span class="mf">4.619543609619141</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10124</span><span class="p">,</span><span class="mf">1.3482463073730468</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10191</span><span class="p">,</span><span class="mf">0.6773414611816406</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10258</span><span class="p">,</span><span class="mf">0.5769003295898438</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10324</span><span class="p">,</span><span class="mf">0.24339385986328127</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10391</span><span class="p">,</span><span class="mf">2.9428802490234376</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10456</span><span class="p">,</span><span class="o">-</span><span class="mf">4.0899449157714844</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10524</span><span class="p">,</span><span class="mf">3.496279449462891</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10591</span><span class="p">,</span><span class="mf">8.412805480957031</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10657</span><span class="p">,</span><span class="mf">0.31524444580078126</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10724</span><span class="p">,</span><span class="mf">1.9484980773925782</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10791</span><span class="p">,</span><span class="mf">1.5277230834960938</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10857</span><span class="p">,</span><span class="o">-</span><span class="mf">0.2077679443359375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10924</span><span class="p">,</span><span class="o">-</span><span class="mf">1.115929412841797</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10991</span><span class="p">,</span><span class="mf">2.433190155029297</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11057</span><span class="p">,</span><span class="o">-</span><span class="mf">1.3118719482421877</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11124</span><span class="p">,</span><span class="mf">0.8164022827148438</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11191</span><span class="p">,</span><span class="mf">3.0567933654785158</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11257</span><span class="p">,</span><span class="mf">3.247496795654297</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11324</span><span class="p">,</span><span class="mf">2.202370147705078</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11391</span><span class="p">,</span><span class="mf">0.29114456176757814</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11457</span><span class="p">,</span><span class="mf">2.2676344299316407</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11523</span><span class="p">,</span><span class="mf">1.9285894775390626</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11591</span><span class="p">,</span><span class="mf">1.1295510864257814</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11657</span><span class="p">,</span><span class="o">-</span><span class="mf">3.6717146301269534</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11723</span><span class="p">,</span><span class="mf">4.044439544677735</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11791</span><span class="p">,</span><span class="mf">8.632847900390626</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11857</span><span class="p">,</span><span class="o">-</span><span class="mf">1.9095790100097658</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11924</span><span class="p">,</span><span class="mf">0.5596861267089844</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11991</span><span class="p">,</span><span class="mf">1.485959930419922</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12057</span><span class="p">,</span><span class="mf">0.05882766723632813</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12124</span><span class="p">,</span><span class="o">-</span><span class="mf">1.2364288330078126</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12191</span><span class="p">,</span><span class="mf">1.5269746398925783</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12257</span><span class="p">,</span><span class="o">-</span><span class="mf">1.1187734985351563</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12324</span><span class="p">,</span><span class="mf">3.7979022216796876</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12391</span><span class="p">,</span><span class="mf">1.7284556579589845</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12457</span><span class="p">,</span><span class="mf">4.189038848876954</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12523</span><span class="p">,</span><span class="mf">2.1203407287597655</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12590</span><span class="p">,</span><span class="mf">0.9583071899414063</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12657</span><span class="p">,</span><span class="mf">1.156644744873047</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12723</span><span class="p">,</span><span class="mf">0.305364990234375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12790</span><span class="p">,</span><span class="mf">1.3332774353027343</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12857</span><span class="p">,</span><span class="o">-</span><span class="mf">3.4750236511230472</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12923</span><span class="p">,</span><span class="mf">2.9154872131347656</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12990</span><span class="p">,</span><span class="mf">10.07105712890625</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13057</span><span class="p">,</span><span class="mf">6.455775146484375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13123</span><span class="p">,</span><span class="o">-</span><span class="mf">0.6867718505859375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13190</span><span class="p">,</span><span class="mf">0.2537223815917969</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13257</span><span class="p">,</span><span class="mf">0.19100280761718752</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13324</span><span class="p">,</span><span class="o">-</span><span class="mf">0.26689498901367187</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13391</span><span class="p">,</span><span class="mf">1.242715759277344</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13457</span><span class="p">,</span><span class="o">-</span><span class="mf">0.36539016723632817</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13524</span><span class="p">,</span><span class="o">-</span><span class="mf">2.661914520263672</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13591</span><span class="p">,</span><span class="o">-</span><span class="mf">0.4397854614257813</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13657</span><span class="p">,</span><span class="mf">2.245330810546875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13724</span><span class="p">,</span><span class="mf">2.4231610107421875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13791</span><span class="p">,</span><span class="mf">3.0135333251953127</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13857</span><span class="p">,</span><span class="mf">1.7965640258789064</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13924</span><span class="p">,</span><span class="mf">1.0606942749023438</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">13991</span><span class="p">,</span><span class="mf">0.03547622680664063</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14057</span><span class="p">,</span><span class="mf">0.4076023864746094</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14124</span><span class="p">,</span><span class="mf">0.47256729125976565</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14191</span><span class="p">,</span><span class="mf">0.08382568359375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14257</span><span class="p">,</span><span class="o">-</span><span class="mf">0.7824229431152344</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14324</span><span class="p">,</span><span class="mf">1.5362553405761719</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14391</span><span class="p">,</span><span class="mf">7.250921630859375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14457</span><span class="p">,</span><span class="mf">1.9643650817871094</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14524</span><span class="p">,</span><span class="mf">1.515897674560547</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14590</span><span class="p">,</span><span class="mf">0.8942404174804688</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14657</span><span class="p">,</span><span class="o">-</span><span class="mf">0.011825408935546875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14724</span><span class="p">,</span><span class="mf">0.026943969726562503</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14791</span><span class="p">,</span><span class="mf">0.09265731811523438</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14857</span><span class="p">,</span><span class="mf">1.8271005249023438</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14924</span><span class="p">,</span><span class="mf">0.2484832763671875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">14991</span><span class="p">,</span><span class="o">-</span><span class="mf">1.713486785888672</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15057</span><span class="p">,</span><span class="mf">0.056133270263671875</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15124</span><span class="p">,</span><span class="mf">3.006947021484375</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15191</span><span class="p">,</span><span class="mf">5.926326141357422</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15257</span><span class="p">,</span><span class="mf">6.840475158691406</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15324</span><span class="p">,</span><span class="mf">3.896397399902344</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15391</span><span class="p">,</span><span class="mf">3.133433990478516</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15457</span><span class="p">,</span><span class="mf">1.435664520263672</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15524</span><span class="p">,</span><span class="mf">0.38739440917968754</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15591</span><span class="p">,</span><span class="mf">0.2785707092285156</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15657</span><span class="p">,</span><span class="mf">1.0241702270507813</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15724</span><span class="p">,</span><span class="mf">1.3702505493164063</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15791</span><span class="p">,</span><span class="mf">1.999691619873047</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accel_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;./Untitled Experiment - Recording 1.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">a4fbd8b28770</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Acceleration Data</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">relative_time</span><span class="p">,</span><span class="n">AccX</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="mi">0</span><span class="p">,</span><span class="mf">6.088439025878906</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="mi">57</span><span class="p">,</span><span class="mf">6.015989685058594</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9604583</span><span class="n">a00d2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">shape</span>
 
-<span class="ne">NameError</span>: name &#39;relative_time&#39; is not defined
+<span class="ne">NameError</span>: name &#39;i1&#39; is not defined
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i1</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">i2</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="c1"># plt.plot(accel_data[i1:i2, 0], np.ones(i2-i1)*accel_data[i1:i2,1].mean())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;mean a_x = </span><span class="si">{:1.2f}</span><span class="s1"> m/s/s</span><span class="se">\n</span><span class="s1">a_y = </span><span class="si">{:1.2f}</span><span class="se">\n</span><span class="s1">a_z=</span><span class="si">{:1.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;mean a_x = 0.80 m/s/s\na_y = 9.33\na_z=2.50&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ce2120 project cook_10_1.png" src="../_images/ce2120 project cook_10_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mag_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">accel_data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">accel_data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">mag_a</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;mean |a| = </span><span class="si">{:1.2f}</span><span class="s1"> m/s/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mag_a</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;mean |a| = 9.66 m/s/s&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ce2120 project cook_11_1.png" src="../_images/ce2120 project cook_11_1.png" />
 </div>
 </div>
 </div>
