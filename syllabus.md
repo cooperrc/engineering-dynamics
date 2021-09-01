@@ -103,7 +103,7 @@ developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
 
 Find our class page at:
 [*https://campuswire.com/p/G526851D6*](https://campuswire.com/p/G526851D6)
-Use code: **3556**
+Use code: **5394**
 
 **Schedule: **The course schedule is on the [*CE2120 - Fall Google
 Calendar*](https://calendar.google.com/calendar/u/0?cid=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.

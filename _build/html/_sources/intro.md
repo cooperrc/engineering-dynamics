@@ -30,6 +30,7 @@ geometry of motion. __Kinetics__ is the study of forces, impacts, and
 energy on objects. 
 
 <p><strong>Note:</strong> See the course schedule for specific due dates</p> 
-<p><iframe width="800" height="400" style="border: solid 1px #777;"
-src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4&amp;mode=AGENDA"
-frameborder="0" scrolling="no"></iframe></p>
+<iframe
+src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548&mode=AGENDA"
+style="border:solid 1px #777" width="600" height="500" frameborder="0"
+scrolling="no"></iframe>
