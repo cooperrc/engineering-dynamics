@@ -143,13 +143,15 @@ problems:
 
 2.  Appy **kinetics** to rigid body engineering problems, including:
 
-    1.  The Newton-Euler equations: $$F = \mathit{ma}$$and
+    1.  The Newton-Euler equations: 
+        > $\mathbf{F} = m\mathbf{a}$$ and
         > $M = \frac{d}{dt}h$
 
     2.  Conservation of energy:
         > $T_{1} + V_{1} + W_{1\rightarrow 2} = T_{2} + V_{2}$
 
-    3.  Conservation of momentum: $\mathbf{F}dt = d(m\mathbf{v})$$
+    3.  Conservation of momentum: 
+        > $\mathbf{F}dt = d(m\mathbf{v})$
         > and $\mathbf{M}dt = d\mathbf{h}$
 
 3.  Apply kinematics and kinetics to solve a variety of engineering
@@ -194,17 +196,16 @@ In order to be successful in this course I expect:
 
 ### Course Requirements and Grading
 
-  ---------------- ------------- ---------------------------------------------------------------------
-  **Item**         **Percent**   **Requirement**
-  Participation    20 %          Discussions and peer review
-  Homework         30 %          Submit solutions on HuskyCT and revise based upon textbook solution
-  Quizzes          30 %          5 quizzes
-  Project Report   20 %          Create one dynamics application to share with new engineers
-  ---------------- ------------- ---------------------------------------------------------------------
+|**Item**  |       **Percent** |  **Requirement** |
+|---|---|---|
+|Participation|20 %|Discussions and peer review
+|Homework| 30 %|Submit solutions on HuskyCT and revise based upon textbook solution
+|Quizzes|30 %|5 quizzes
+|Project Report| 20 %|Create one dynamics application to share with new engineers
 
 #### Note on Due dates
 
-All the course due dates are included in the [*CE2120 - Summer Google
+All the course due dates are included in the [*CE2120 - Google
 Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
 Assignments should be submitted before 11:59pm on the due date.
 
@@ -214,7 +215,7 @@ need to contact
 [*ryan.c.cooper\@uconn.edu*](mailto:ryan.c.cooper@uconn.edu) to ask for
 an extension. If you need help with the material, we can set up a
 Webex/Zoom meeting. If you just need more time, I'm happy to provide a
-few extra days to get to an assignment.
+few extra days to get to an assignment done.
 
 #### Note on Participation grade
 
@@ -226,7 +227,8 @@ assignments, and peer review
 2.  The reading assignments have Campuswire discussions, post an answer
     to the question for 1-out-of-3 posts. You can respond to a
     colleague's post for 2-out-of-3 posts/week.
-3.  The peer review will be done in week 4. You should provide helpful
+3.  The peer review will be done in week while building the final
+project. You should provide helpful
     feedback to two colleagues' Project Reports. Focus on how to make
     the problem statements and solutions clear and accurate.
 
