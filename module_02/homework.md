@@ -1,14 +1,17 @@
-# Module_02 homework
- 
-![flywheel with moment applied](./flywheel.svg)
+# Module_02 Homework
+
+![flywheel with moment applied](./images/flywheel.svg)
+<!-- <img src="./images/flywheel.svg -->
+<!-- flywheel.svg" alt="flywheel with coupled forces applied" width="500" height="600"> -->
 
 1. A flywheel is accelerated using two cords attached to the top and bottom of
 the outer radii. Its acceleration when the forces are first applied is $\alpha
 = -50~rad\hat{k}$. Where $\hat{k}$ points upwards out of the diagram. The moment of inertia is equal to $I = mr^2/2 = 100~kg
 (0.1~m)^2/2 = 0.5~kg-m^2$. Use the Newton-Euler equations. What are the applied forces, $F$? 
 
-![two-bar linkage mechanism](./two-bar.svg)
-2. A mechanical sliding mechanism is designed for two arms to move the roller at
+![two-bar linkage mechanism](./images/two-bar.svg)
+ 
+3. A mechanical sliding mechanism is designed for two arms to move the roller at
 point C along the ground. A force $F=100~N$ is applied at the connecting link.
 The long arm OA has length $l_1 = 50~mm$ and the short arm has length $l_2 =
 42.43~mm$. A restoring force, $R$, is applied to prevent the system from accelerating

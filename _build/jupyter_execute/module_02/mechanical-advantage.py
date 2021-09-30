@@ -12,7 +12,7 @@ changes from $89^o$ to $-89^o$. Your
 goal is to determine the necessary restoring force $R$ as a
 function of angle $\theta$. 
 
-![an image in markdown](./images/two-bar.svg)
+![two-bar linkage sliding on surface](./images/two-bar.svg)
 
 
 ## Kinematics - geometry of motion
