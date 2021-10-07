@@ -18,6 +18,7 @@
 - file: module_02/overview
   sections:
     - file: getting-started/02_Working_with_Python
+    - file: module_02/rigid-bodies
     - file: module_02/mechanical-advantage
     - file: module_02/driving-forces
     - file: module_02/valentine
@@ -30,11 +31,13 @@
     - file: module_03/pendulum
     - file: module_03/nonlinear
     - file: module_03/hemisphere-rolling
+    - file: module_03/homework
     - file: module_03/project
 - file: module_04/overview
   sections:
     - file: module_04/dice
     - file: module_04/yoyo-despin_02
+    - file: module_04/homework
     - file: module_04/project
 - file: module_05/overview
   sections:
