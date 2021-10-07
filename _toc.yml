@@ -27,6 +27,8 @@
 - file: module_03/overview
   sections:
     - file: getting-started/03_integrate
+    - file: module_03/kasdin
+    - file: module_03/solving-eoms
     - file: module_03/plotting-solutions
     - file: module_03/pendulum
     - file: module_03/nonlinear
