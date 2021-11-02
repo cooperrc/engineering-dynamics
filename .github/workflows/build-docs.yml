@@ -16,7 +16,7 @@ jobs:
     # Install dependencies
     - name: System dependencies
       run: |
-        sudo apt-get update && apt-get install -y --no-install-recommends \
+        apt-get update && apt-get install -y --no-install-recommends \
         texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
         pip install ghp-import
     - name: Set up Python 3.9
