@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Engineering Dynamics
-author: Ryan C. Cooper
+author: "<a href = https://cooperrc.github.io> Ryan C. Cooper</a>"
 logo: dyn_logo.png
 
 # Force re-execution of notebooks on each build.
