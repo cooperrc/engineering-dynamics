@@ -1,4 +1,4 @@
-# Syllabus - CE2120 Fall 2021
+# Syllabus - CE2120 Spring 2022
 
 ## Applied Mechanics II: Dynamics
 
