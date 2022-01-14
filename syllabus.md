@@ -23,9 +23,9 @@ questions on Campuswire (the preferred contact)*
 **Preferred Contact:** Post course-related questions and comments to
 Campuswire:
 
-[*https://campuswire.com/p/G526851D6*](https://campuswire.com/p/G526851D6)
+[*campuswire.com/p/G14BA6D82*](https://campuswire.com/p/G14BA6D82)
 
-Use code: **5394**
+Use code: **0422**
 
 Personal questions should be communicated privately via UConn email or
 Campuswire Direct Message (DM)
@@ -81,9 +81,6 @@ Cooper*](https://cooperrc.github.io/engineering-dynamics/intro.html)
 suggestions/comments/updates in the *[*GitHub
 repository*](https://github.com/cooperrc/engineering-dynamics)
 
-**You will create your own example to share with the class in the
-textbook. **
-
 **Virtual Computer Lab:** UConn Engineering Desktop
 [*https://horizon.uconn.edu*](https://horizon.uconn.edu)
 
@@ -95,21 +92,32 @@ and ready at [compmech.uconn.edu](https://compmech.uconn.edu)
 Plotting software (Python, Excel, or Google Sheets)
 
 **Campuswire:** This session we will be using [*Campuswire
-*](https://campuswire.com/p/G526851D6)for class discussion. The system
+*](https://campuswire.com/p/G14BA6D82) for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
 questions on Campuswire. If you have any problems or feedback for the
 developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
 
-Find our class page at:
-[*https://campuswire.com/p/G526851D6*](https://campuswire.com/p/G526851D6)
 Use code: **5394**
 
-**Schedule: **The course schedule is on the [*CE2120 - Fall Google
-Calendar*](https://calendar.google.com/calendar/u/0?cid=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
-**Assignments are due by 11:59pm on the specified due dates. You can add
+**Google Classroom**: You will turn in assignments and check grades at
+[**Applied Mechanics II (Engineering
+Dynamics)**](https://classroom.google.com/c/NDQ3ODgzODUyNTYw?cjc=n323xxk).
+
+Use code: **n323xxk**
+
+**Schedule:** The course schedule is managed by Google Classroom,
+[*CE2120 - Spring Google
+Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19jbGFzc3Jvb20wNjUzMTNlMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
+Assignments are due by 11:59pm on the specified due dates. You can add
 the Google Calendar to your student or personal Google account for
 updates.
+
+<iframe
+src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb20wNjUzMTNlMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230047a8"
+style="border:solid 1px #777" width="600" height="400" frameborder="0"
+scrolling="no"></iframe>
+
 
 ### Course Description
 
@@ -144,7 +152,7 @@ problems:
 2.  Appy **kinetics** to rigid body engineering problems, including:
 
     1.  The Newton-Euler equations: 
-        > $\mathbf{F} = m\mathbf{a}$$ and
+        > $\mathbf{F} = m\mathbf{a}$ and
         > $M = \frac{d}{dt}h$
 
     2.  Conservation of energy:
@@ -214,7 +222,7 @@ personal scheduling*. You do not need an excuse, but you
 need to contact
 [*ryan.c.cooper\@uconn.edu*](mailto:ryan.c.cooper@uconn.edu) to ask for
 an extension. If you need help with the material, we can set up a
-Webex/Zoom meeting. If you just need more time, I'm happy to provide a
+[meeting](https://cooperrc.github.io). If you just need more time, I'm happy to provide a
 few extra days to get to an assignment done.
 
 #### Note on Participation grade
@@ -260,41 +268,26 @@ I want you to build a dynamics project that interests you.
 Ideally, you can use this project in an engineering portfolio to
 demonstrate your grasp of Newtonian mechanics. My goal is to help you
 build this solution in a Jupyter notebook.
-
 ### Grading Scale
 
-+-----------------+------------------+---------+
 | **Explanation** | **Letter Grade** | **GPA** |
-+-----------------+------------------+---------+
+|---|---|---|
 | Excellent       | **A**            | 4       |
-+-----------------+------------------+---------+
-| **A-**          | 3.7              |         |
-+-----------------+------------------+---------+
+| | **A-**          | 3.7              |
 | Very Good       | **B+**           | 3.3     |
-+-----------------+------------------+---------+
 | Good            | **B**            | 3       |
-+-----------------+------------------+---------+
-| **B-**          | 2.7              |         |
-+-----------------+------------------+---------+
-| **C+**          | 2.3              |         |
-+-----------------+------------------+---------+
+| | **B-**          | 2.7              |         
+| | **C+**          | 2.3              |         
 | Average         | **C**            | 2       |
-+-----------------+------------------+---------+
 | Fair            | **C-**           | 1.7     |
-+-----------------+------------------+---------+
 | Poor            | **D+**           | 1.3     |
-+-----------------+------------------+---------+
-| **D**           | 1                |         |
-+-----------------+------------------+---------+
+|                 | **D**            | 1       |
 | Merely Passing  | **D-**           | 0.7     |
-+-----------------+------------------+---------+
 | Failure         | **F**            | 0       |
-+-----------------+------------------+---------+
 
 ### Due Dates and Late Policy
 
-All course due dates are identified in the [*CE2120 - Fall Google
-Calendar*](https://calendar.google.com/calendar/u/0?cid=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
+All course due dates are identified in the course calendar.
 Deadlines are based on Eastern Time; if you are in a different time
 zone, please adjust your submittal times accordingly. The instructor
 reserves the right to change dates accordingly as the semester
@@ -305,7 +298,7 @@ another appropriate notification.*
 technical difficulties, reach out via Campuswire or email. The
 instructor can make accommodations for work, family, and personal
 reasons. *We ask that you be respectful of the instructors' limited time
-and resources. *
+and resources.*
 
 ### Feedback and Grades
 
@@ -380,20 +373,6 @@ resources*](http://ecampus.uconn.edu/policies.html), which include:
     Conduct*](http://www.community.uconn.edu/student_code.html).
     Students will follow all University regulations concerning the final
     exam.
-
-### Note on grading and quizzes
-
-I will regrade the entire assignment if you ask for points on an
-individual question in the homeworks/quizzes/projects. The grade may go
-up or down.
-
-It is *your* responsibility to make sure your answers are correct. Use
-the textbook and class notes for the quizzes and exams.
-
-There are no extensions or rescheduling for quizzes. If you have an
-extreme circumstance due to family or medical emergency that requires
-rescheduling you must send documentation to me (Prof. Cooper) within 12
-hours of the passing quiz.
 
 ### Students with Disabilities
 

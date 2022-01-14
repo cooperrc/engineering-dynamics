@@ -28,9 +28,3 @@ This course explores the geometry of motion and the effect of forces,
 impact, and energy in engineering. __Kinematics__ is the study of the
 geometry of motion. __Kinetics__ is the study of forces, impacts, and
 energy on objects. 
-
-<p><strong>Note:</strong> See the course schedule for specific due dates</p> 
-<iframe
-src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548&mode=AGENDA"
-style="border:solid 1px #777" width="600" height="500" frameborder="0"
-scrolling="no"></iframe>
