@@ -15,6 +15,7 @@
     - file: module_01/philosophy
     - file: module_01/definitions
     - file: module_01/snowflake
+    - file: module_01/homework
 - file: module_02/overview
   sections:
     - file: getting-started/02_Working_with_Python
