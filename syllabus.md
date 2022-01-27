@@ -106,6 +106,8 @@ Dynamics)**](https://classroom.google.com/c/NDQ3ODgzODUyNTYw?cjc=n323xxk).
 
 Use code: **n323xxk**
 
+### Course Calendar
+
 **Schedule:** The course schedule is managed by Google Classroom,
 [*CE2120 - Spring Google
 Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19jbGFzc3Jvb20wNjUzMTNlMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
@@ -227,18 +229,21 @@ few extra days to get to an assignment done.
 
 #### Note on Participation grade
 
-The participation grade is based upon: Campuswire participation, reading
-assignments, and peer review
+The participation grade is based upon your own self assessment of how
+youadd to our learning community. You will fill out 2 forms:
 
-1.  You must participate in the discussions for credit. My expectation
-    is that you post at least three questions or answers each module.
-2.  The reading assignments have Campuswire discussions, post an answer
-    to the question for 1-out-of-3 posts. You can respond to a
-    colleague's post for 2-out-of-3 posts/week.
-3.  The peer review will be done in week while building the final
-project. You should provide helpful
-    feedback to two colleagues' Project Reports. Focus on how to make
-    the problem statements and solutions clear and accurate.
+1. week 7: What is your current assessment? Why do you feel that way? I
+   will help connect you to others if you don't feel engaged
+2. week 14: What is your final assessment? How did you participate? This
+   is your final Participation grade.
+
+You can add to the class in a number
+of ways including, but not limited to:
+- adding questions or answers to Campuswire discussions
+- attending lectures
+- participating in a study group or group chat
+- sharing notes from lectures or videos
+
 
 #### Note on Homeworks
 
