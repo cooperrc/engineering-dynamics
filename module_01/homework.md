@@ -18,4 +18,4 @@ Solve for x(t) and plot for t= 0..3 seconds, given
 for the following three cases:
 
 ![Figure 2.7 Free-body diagrams for (a) sliding friction, (b) viscous friction,
-and (c) a linear spring acting on mass m.](./figure_2-7.png)
+and (c) a linear spring acting on mass m.](./images/eoms-1dof.png)
