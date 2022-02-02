@@ -120,6 +120,9 @@ src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23fff
 style="border:solid 1px #777" width="600" height="400" frameborder="0"
 scrolling="no"></iframe>
 
+### Course Livestreams
+
+#### [Prof. Cooper's YouTube Channel](https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA)
 
 ### Course Description
 
@@ -234,7 +237,7 @@ youadd to our learning community. You will fill out 2 forms:
 
 1. week 7: What is your current assessment? Why do you feel that way? I
    will help connect you to others if you don't feel engaged
-2. week 14: What is your final assessment? How did you participate? This
+2. week 14: What is your final assessment? How did you participate? Ths
    is your final Participation grade.
 
 You can add to the class in a number
