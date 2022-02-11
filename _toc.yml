@@ -11,6 +11,7 @@
     - file: getting-started/01_interactions
 - file: module_01/overview
   sections:
+    - file: module_01/readings
     - file: module_01/introduction
     - file: module_01/philosophy
     - file: module_01/definitions
@@ -18,6 +19,7 @@
     - file: module_01/homework
 - file: module_02/overview
   sections:
+    - file: module_02/readings
     - file: getting-started/02_Working_with_Python
     - file: module_02/rigid-bodies
     - file: module_02/mechanical-advantage
@@ -27,6 +29,7 @@
     - file: module_02/project
 - file: module_03/overview
   sections:
+    - file: module_03/readings
     - file: module_03/solving-eoms
     - file: getting-started/03_integrate
     - file: module_03/kasdin
@@ -38,6 +41,7 @@
     - file: module_03/project
 - file: module_04/overview
   sections:
+    - file: module_04/readings
     - file: module_04/dice
     - file: module_04/table-momentum
     - file: module_04/yoyo-despin_02
