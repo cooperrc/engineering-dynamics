@@ -11,17 +11,7 @@
 Focus on:
 
 1. __Read Ch. 1__
-
 1. __Equations 2.10 and 2.12__
-
 2. __Tutorials 2.1, 2.2, and 2.3__ Single force, equations of motion
-
 3. __Tutorial 2.6__ Tossed Point mass
-
 4. __Example 9.3__ A falling rigid body
-
-
-__In tutorials 2.1-2.3 and 2.6:__
-
-* __What is the equation of motion?__ 
-* __What can you do with the equation of motion?__ 
