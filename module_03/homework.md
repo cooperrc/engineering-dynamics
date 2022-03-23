@@ -1,4 +1,4 @@
-# Homeworkhttps://github.com/cooperrc/engineering-dynamics/edit/master/module_03/homework.md
+# Homework
 
 Complete problems: __3.1, 3.2, 3.3, 3.23, 3.30,
 3.34, and 3.37__
