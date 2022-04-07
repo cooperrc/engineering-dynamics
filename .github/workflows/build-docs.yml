@@ -10,10 +10,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-	steps:
-	  - uses: actions/checkout@v2
-	  - uses: FedericoCarboni/setup-ffmpeg@v1
-		id: setup-ffmpeg
+    steps:
+        - uses: actions/checkout@v2
+        - uses: FedericoCarboni/setup-ffmpeg@v1
   deploy-book:
     runs-on: ubuntu-latest
     steps:
