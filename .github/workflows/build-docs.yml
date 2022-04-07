@@ -12,7 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
+    - name: Run FedericoCarboni/setup-ffmpeg
+      uses: ./
+    - name: Run FedericoCarboni/setup-ffmpeg
+      id: setup-ffmpeg
+      uses: ./
+    - run: ffmpeg -version
+    - run: ffprobe -version
     # Install dependencies
     - name: System dependencies
       run: |
