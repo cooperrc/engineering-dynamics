@@ -1,7 +1,9 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: intro
+format: jb-book
+root: intro
+chapters:
 - file: syllabus
 - file: module_00/meet_cooper
 - file: content
