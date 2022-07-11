@@ -23,9 +23,9 @@ questions on Campuswire (the preferred contact)*
 **Preferred Contact:** Post course-related questions and comments to
 Campuswire:
 
-[*campuswire.com/p/G14BA6D82*](https://campuswire.com/p/G14BA6D82)
+[*campuswire.com/p/GB0F327C2*](https://campuswire.com/p/GB0F327C2)
 
-Use code: **0422**
+Use code: **6951**
 
 Personal questions should be communicated privately via UConn email or
 Campuswire Direct Message (DM)
@@ -92,31 +92,31 @@ and ready at [compmech.uconn.edu](https://compmech.uconn.edu)
 Plotting software (Python, Excel, or Google Sheets)
 
 **Campuswire:** This session we will be using [*Campuswire
-*](https://campuswire.com/p/G14BA6D82) for class discussion. The system
+*](https://campuswire.com/p/GB0F327C2) for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
 questions on Campuswire. If you have any problems or feedback for the
 developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
 
-Use code: **5394**
+Use code: **6951**
 
 **Google Classroom**: You will turn in assignments and check grades at
 [**Applied Mechanics II (Engineering
-Dynamics)**](https://classroom.google.com/c/NDQ3ODgzODUyNTYw?cjc=n323xxk).
+Dynamics)**](https://classroom.google.com/c/NTM2Mzc3MjA1NDY5?cjc=6p265nk).
 
-Use code: **n323xxk**
+Use code: **6p265nk**
 
 ### Course Calendar
 
 **Schedule:** The course schedule is managed by Google Classroom,
 [*CE2120 - Spring Google
-Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19jbGFzc3Jvb20wNjUzMTNlMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
+Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19jbGFzc3Jvb20zMWFlNmFkNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
 Assignments are due by 11:59pm on the specified due dates. You can add
 the Google Calendar to your student or personal Google account for
 updates.
 
 <iframe
-src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb20wNjUzMTNlMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230047a8"
+src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb20zMWFlNmFkNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23202124"
 style="border:solid 1px #777" width="600" height="400" frameborder="0"
 scrolling="no"></iframe>
 
@@ -233,11 +233,11 @@ few extra days to get to an assignment done.
 #### Note on Participation grade
 
 The participation grade is based upon your own self assessment of how
-youadd to our learning community. You will fill out 2 forms:
+you add to our learning community. You will fill out 2 forms:
 
-1. week 7: What is your current assessment? Why do you feel that way? I
+1. Halfway: What is your current assessment? Why do you feel that way? I
    will help connect you to others if you don't feel engaged
-2. week 14: What is your final assessment? How did you participate? Ths
+2. Final: What is your final assessment? How did you participate? Ths
    is your final Participation grade.
 
 You can add to the class in a number
@@ -409,10 +409,6 @@ The software/technical requirements for this course include:
     [*Firefox*](https://www.mozilla.org/en-US/), [*Safari (Mac
     OS)*](https://www.apple.com/safari/), or [*Microsoft
     Edge*](https://www.microsoft.com/en-us/edge)
--   HuskyCT/Blackboard ([*HuskyCT/ Blackboard Accessibility
-    Statement*](http://www.blackboard.com/Platforms/Learn/Resources/Accessibility.aspx),
-    [*HuskyCT/ Blackboard Privacy
-    Policy*](http://www.blackboard.com/footer/privacy-policy.aspx))
 -   [*Adobe Acrobat
     Reader*](http://www.adobe.com/products/acrobat/readstep2.html)
     ([*Adobe Reader Accessibility
