@@ -1,4 +1,4 @@
-# Syllabus - CE2120 Spring 2022
+# Syllabus - CE2120 Fall 2022
 
 ## Applied Mechanics II: Dynamics
 
@@ -23,9 +23,9 @@ questions on Campuswire (the preferred contact)*
 **Preferred Contact:** Post course-related questions and comments to
 Campuswire:
 
-[*campuswire.com/p/GB0F327C2*](https://campuswire.com/p/GB0F327C2)
+[*campuswire.com/p/G71D67C67*](https://campuswire.com/p/G71D67C67)
 
-Use code: **6951**
+Use code: **5970**
 
 Personal questions should be communicated privately via UConn email or
 Campuswire Direct Message (DM)
@@ -92,31 +92,31 @@ and ready at [compmech.uconn.edu](https://compmech.uconn.edu)
 Plotting software (Python, Excel, or Google Sheets)
 
 **Campuswire:** This session we will be using [*Campuswire
-*](https://campuswire.com/p/GB0F327C2) for class discussion. The system
+*](https://campuswire.com/p/G71D67C67) for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
 questions on Campuswire. If you have any problems or feedback for the
 developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
 
-Use code: **6951**
+Use code: **5970**
 
 **Google Classroom**: You will turn in assignments and check grades at
 [**Applied Mechanics II (Engineering
-Dynamics)**](https://classroom.google.com/c/NTM2Mzc3MjA1NDY5?cjc=6p265nk).
+Dynamics)**](https://classroom.google.com/c/NTQ0NDYzMDU0Njc1?cjc=ffhilaf).
 
-Use code: **6p265nk**
+Use code: **ffhilaf**
 
 ### Course Calendar
 
 **Schedule:** The course schedule is managed by Google Classroom,
-[*CE2120 - Spring Google
-Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19jbGFzc3Jvb20zMWFlNmFkNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)**.
+[*CE2120 - Fall Google
+Calendar*](https://calendar.google.com/calendar/embed?src=c_classroom79539dba%40group.calendar.google.com&ctz=America%2FNew_York)**.
 Assignments are due by 11:59pm on the specified due dates. You can add
 the Google Calendar to your student or personal Google account for
 updates.
 
 <iframe
-src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb20zMWFlNmFkNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23202124"
+src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=Y19jbGFzc3Jvb203OTUzOWRiYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230047a8"
 style="border:solid 1px #777" width="600" height="400" frameborder="0"
 scrolling="no"></iframe>
 
@@ -218,8 +218,9 @@ In order to be successful in this course I expect:
 
 #### Note on Due dates
 
-All the course due dates are included in the [*CE2120 - Google
-Calendar*](https://calendar.google.com/calendar/u/0?cid=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
+All the course due dates are included in the 
+[*CE2120 - Fall Google
+Calendar*](https://calendar.google.com/calendar/embed?src=c_classroom79539dba%40group.calendar.google.com&ctz=America%2FNew_York)**.
 Assignments should be submitted before 11:59pm on the due date.
 
 *Due dates are flexible to account for
