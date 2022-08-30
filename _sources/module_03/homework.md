@@ -1,1 +1,8 @@
-Complete problems: __4.4, 4.13, 5.1, 5.10, 5.18, and 9.20__
+# Homework
+
+Complete problems: __3.1, 3.2, 3.3, 3.23, 3.30,
+3.34, and 3.37__
+
+- [Chapter 2 - Kasdin and Paley](https://www.jstor.org/stable/j.ctvcm4ggj.5)
+- [Chapter 3 - Kasdin and Paley](https://www.jstor.org/stable/j.ctvcm4ggj.6)
+

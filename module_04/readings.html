@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Materials &#8212; Engineering Dynamics</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,24 +41,30 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-
+    <link rel="next" title="Weighted dice" href="dice.html" />
+    <link rel="prev" title="Module 4 - Momentum and Energy" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -70,30 +73,34 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/dyn_logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/dyn_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
    Welcome to Applied Mechanics II - Engineering Dynamics
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
-   Syllabus - CE2120 Fall 2021
+   Syllabus - CE2120 Fall 2022
   </a>
  </li>
  <li class="toctree-l1">
@@ -106,24 +113,19 @@
    Module Content
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_00/overview.html">
    Module 0 - Getting Started
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_00/introduction.html">
      Overview
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_00/introduction.html#objectives">
-     Objectives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_00/introduction.html#activities">
-     Activities
     </a>
    </li>
    <li class="toctree-l2">
@@ -132,14 +134,22 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_01/overview.html">
    Module 1 - Definitions and equations
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_01/introduction.html">
      Introduction to Engineering Dynamics
@@ -160,18 +170,36 @@
      Snowflake time of flight
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/homework.html">
+     Homework #1
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_02/overview.html">
    Module 2 - constrained dynamic motion
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
      Working with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/rigid-bodies.html">
+     Rigid body lectures and notes
     </a>
    </li>
    <li class="toctree-l2">
@@ -190,22 +218,45 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/homework.html">
+     Module_02 Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module_02/project.html">
      Module 2 - Project: four-bar linkage design
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_03/overview.html">
    Module 3 - Constrained engineering systems
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/solving-eoms.html">
+     Solutions with equations of motion
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../getting-started/03_integrate.html">
      Introduction to functions and integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/kasdin.html">
+     Examples in Kasdin+Paley dynamics
     </a>
    </li>
    <li class="toctree-l2">
@@ -229,27 +280,55 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/homework.html">
+     Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module_03/project.html">
      Module 3 - Project: pendulum solutions
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="overview.html">
    Module 4 - Momentum and Energy
   </a>
-  <ul class="collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Materials
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dice.html">
      Weighted dice
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="central-force.html">
+     Central force motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="table-momentum.html">
+     A moving reference frame with conservation of angular momentum
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="yoyo-despin_02.html">
-     Yoyo despin revisited (cord constraint)
+     Yoyo despin design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="homework.html">
+     Homework
     </a>
    </li>
    <li class="toctree-l2">
@@ -258,14 +337,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_05/overview.html">
    Module 5 - dynamics in your career
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_05/project.html">
      Module 05 - project
@@ -296,21 +378,15 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/ce2120%20project%20cook.html#background">
-     Background
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../M05_submissions/Contaxis-rough.html">
      Project proposal - robotic arm
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -354,7 +430,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -376,42 +452,108 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Materials
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#textbook-reference">
+   Textbook reference
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Materials</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Materials
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#textbook-reference">
+   Textbook reference
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="materials">
 <h1>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.11">Kasdin and Paley’s <em>Engineering Dynamics</em> ch. 8</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/DhYLTb2S7nY">Impulse-momentum</a> <a class="reference external" href="https://drive.google.com/file/d/11UkfMIjGK9wh6j1QCj6i7C8toku21EjL/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/Nah06VLVTRA">Angular momentum</a> <a class="reference external" href="https://drive.google.com/file/d/1NSJkcpVvdhfjWngGa5m8aeDwA2FVzPXl/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/MrEkVx93IPE">Energy methods</a> <a class="reference external" href="https://drive.google.com/file/d/184H8r2qmIRo4Ni49uCJPFG-tuVqesfLB/view?usp=sharin://drive.google.com/file/d/1cH9A2l1exs4wZDTSmJCuKMT1FkMKCa3f/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/dFms0OIOztw">Energy-momentum methods</a> <a class="reference external" href="https://drive.google.com/file/d/1VH8BdrjQPTO8gRkPfDmKpMbwtEvdVQPi/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=Tg5GLVqB8aU">Yoyo despinning solution</a> <a class="reference external" href="https://drive.google.com/file/d/12CWqUBmpp5rpJocE3XZ0HWtLYpUWwHnz/view?usp=sharing"><strong>Notes Here</strong></a></p></li>
+</ul>
+<p><strong>Yoyo despinning solutions:</strong></p>
+<p>a. <a class="reference external" href="https://drive.google.com/file/d/1DhufUmwnC2OtFE_SyAB4K-uUOVF1IsYk/view?usp=sharing">Python solution</a></p>
+<p>b. <a class="reference external" href="https://drive.google.com/file/d/1GOZuNAWuiBnnUX_hfiN_l-MQ_br-gK6f/view?usp=sharing">Matlab solution</a></p>
+<p>c. <a class="reference external" href="https://docs.google.com/spreadsheets/d/1D20Ti9VaPU7FFyrwDtFSFBK8uRoQBtpANqnALJ76y0U/edit?usp=sharing">Google Sheets Euler integration</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://forms.gle/jp7CyvFLCA5aNfPQ8"><strong>Video</strong>: Planar Kinetics of Rigid Bodies</a> <a class="reference external" href="https://drive.google.com/file/d/1FmJuH_eCVTddrL-rmIThEssO3epMKdoA/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+<li><p><a class="reference external" href="https://forms.gle/aLSg24BGcPQWh2yi6"><strong>Video</strong>: Rigid body impacts</a> <a class="reference external" href="https://drive.google.com/file/d/1nCQ7GvYNloXdjRs34JcepbIQEMBOAHUv/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+<li><p><a class="reference external" href="https://forms.gle/3gwCaeTR5WvDdugb7"><strong>Video</strong>: Top spinning experiment part 01</a> <a class="reference external" href="https://drive.google.com/file/d/184H8r2qmIRo4Ni49uCJPFG-tuVqesfLB/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+<li><p><a class="reference external" href="https://forms.gle/GiiuQzZFtcogwJ5v5"><strong>Video</strong>: Top spinning experiment part 02</a> <a class="reference external" href="https://drive.google.com/file/d/13UZLzk4lByypk9q32UmbdCOkz_a-Ieg_/view?usp=sharing"><strong>Notes here</strong></a></p></li>
+</ul>
+</div>
+<div class="section" id="textbook-reference">
+<h1>Textbook reference<a class="headerlink" href="#textbook-reference" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.7">Kasdin and Paley’s <em>Engineering Dynamics</em> ch. 4</a></p></li>
+<li><p><a class="reference external" href="https://www.jstor.org/stable/j.ctvcm4ggj.8">Kasdin and Paley’s <em>Engineering Dynamics</em> ch. 5</a></p></li>
 </ul>
 <p>Focus on:</p>
 <ol class="simple">
-<li><p><strong>Equations 8.5, 8.13, 8.21, and definition 8.1</strong>: The transport equation</p></li>
-<li><p><strong>Example 8.1</strong> Kinematics of a compound pendulum</p></li>
-<li><p><strong>Example 8.2</strong> The velocity of a rolling wheel</p></li>
-<li><p><strong>Example 8.3</strong> The gear ratio</p></li>
-<li><p><strong>Example 8.4</strong> A two-bar linakage</p></li>
-<li><p><strong>Example 8.7</strong> A ~~three-~~four-bar linkage</p></li>
-<li><p><strong>Tutorial 8.1</strong> The Watt linkage</p></li>
+<li><p><strong>Equation 4.2</strong> Impulse-Momentum equation</p></li>
+<li><p><strong>Example 4.1</strong> Impulsive spring</p></li>
+<li><p><strong>Definition 4.2 and Equation 4.7</strong> Angular momentum for of Newton’s second law</p></li>
+<li><p><strong>Example 4.3</strong> Calculating the angular momentum of a moving point mass</p></li>
+<li><p><strong>Example 4.7</strong> Tetherball</p></li>
+<li><p><strong>Equations 5.6 and 5.16 and Table 5.1</strong> Work-energy equation and potential energy</p></li>
 </ol>
 <p><strong>Choose three examples and discuss how kinematics (specifically the transport
 equation) were applied to describe the geometry of motion.</strong> Take a look at
@@ -441,34 +583,42 @@ colleague’s interpretation.</p>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Module 4 - Momentum and Energy</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="dice.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Weighted dice</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ryan C. Cooper<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By <a href = https://cooperrc.github.io> Ryan C. Cooper</a><br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
   </body>
 </html>

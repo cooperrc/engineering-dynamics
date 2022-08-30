@@ -1,6 +1,7 @@
 # Module 2 - constrained dynamic motion
 
-_pendulum motion_
+_four-bar linkage and other moving systems_
+
 
 1. Types of constraints and degrees of freedom
   1. pin joint
@@ -15,3 +16,7 @@ _pendulum motion_
   1. using mixed unit vectors
   1. radial and spherical
   2. rotating systems 
+     
+## Examples of constrained dynamic motion
+- [Disney's research team: Computational design of character motion](https://youtu.be/DfznnKUwywQ)
+- [Disney's research team: Inverse kinematics for retargeting robots](https://youtu.be/3ffYypVOGy4)

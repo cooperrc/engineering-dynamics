@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syllabus - CE2120 Fall 2021 &#8212; Engineering Dynamics</title>
+    <title>Syllabus - CE2120 Fall 2022 &#8212; Engineering Dynamics</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -44,28 +41,32 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="About the Instructor" href="module_00/meet_cooper.html" />
     <link rel="prev" title="Welcome to Applied Mechanics II - Engineering Dynamics" href="intro.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -74,30 +75,34 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
-  
-  <img src="_static/dyn_logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/dyn_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
    Welcome to Applied Mechanics II - Engineering Dynamics
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Syllabus - CE2120 Fall 2021
+   Syllabus - CE2120 Fall 2022
   </a>
  </li>
  <li class="toctree-l1">
@@ -110,24 +115,19 @@
    Module Content
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="module_00/overview.html">
    Module 0 - Getting Started
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="module_00/introduction.html">
      Overview
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="module_00/introduction.html#objectives">
-     Objectives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="module_00/introduction.html#activities">
-     Activities
     </a>
    </li>
    <li class="toctree-l2">
@@ -136,14 +136,22 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="module_01/overview.html">
    Module 1 - Definitions and equations
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_01/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="module_01/introduction.html">
      Introduction to Engineering Dynamics
@@ -164,18 +172,36 @@
      Snowflake time of flight
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_01/homework.html">
+     Homework #1
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="module_02/overview.html">
    Module 2 - constrained dynamic motion
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_02/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="getting-started/02_Working_with_Python.html">
      Working with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_02/rigid-bodies.html">
+     Rigid body lectures and notes
     </a>
    </li>
    <li class="toctree-l2">
@@ -194,22 +220,45 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="module_02/homework.html">
+     Module_02 Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="module_02/project.html">
      Module 2 - Project: four-bar linkage design
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="module_03/overview.html">
    Module 3 - Constrained engineering systems
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_03/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_03/solving-eoms.html">
+     Solutions with equations of motion
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="getting-started/03_integrate.html">
      Introduction to functions and integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_03/kasdin.html">
+     Examples in Kasdin+Paley dynamics
     </a>
    </li>
    <li class="toctree-l2">
@@ -233,27 +282,55 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="module_03/homework.html">
+     Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="module_03/project.html">
      Module 3 - Project: pendulum solutions
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="module_04/overview.html">
    Module 4 - Momentum and Energy
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_04/readings.html">
+     Materials
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="module_04/dice.html">
      Weighted dice
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="module_04/central-force.html">
+     Central force motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_04/table-momentum.html">
+     A moving reference frame with conservation of angular momentum
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="module_04/yoyo-despin_02.html">
-     Yoyo despin revisited (cord constraint)
+     Yoyo despin design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module_04/homework.html">
+     Homework
     </a>
    </li>
    <li class="toctree-l2">
@@ -262,14 +339,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="module_05/overview.html">
    Module 5 - dynamics in your career
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="module_05/project.html">
      Module 05 - project
@@ -300,21 +380,15 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="M05_submissions/ce2120%20project%20cook.html#background">
-     Background
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="M05_submissions/Contaxis-rough.html">
      Project proposal - robotic arm
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -358,7 +432,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -380,26 +454,25 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#applied-mechanics-ii-dynamics">
    Applied Mechanics II: Dynamics
@@ -414,6 +487,23 @@
     <a class="reference internal nav-link" href="#course-materials">
      Course Materials
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-calendar">
+     Course Calendar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-livestreams">
+     Course Livestreams
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#prof-cooper-s-youtube-channel">
+       Prof. Cooper’s YouTube Channel
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#course-description">
@@ -493,8 +583,159 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-on-grading-and-quizzes">
-     Note on grading and quizzes
+    <a class="reference internal nav-link" href="#students-with-disabilities">
+     Students with Disabilities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#software-technical-requirements-with-accessibility-and-privacy-information">
+     Software/Technical Requirements (with Accessibility and Privacy Information)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#help">
+     Help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-technical-skills">
+     Minimum Technical Skills
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation-of-the-course">
+     Evaluation of the Course
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Syllabus - CE2120 Fall 2022</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applied-mechanics-ii-dynamics">
+   Applied Mechanics II: Dynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-and-instructor-information">
+     Course and Instructor Information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-materials">
+     Course Materials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-calendar">
+     Course Calendar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-livestreams">
+     Course Livestreams
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#prof-cooper-s-youtube-channel">
+       Prof. Cooper’s YouTube Channel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-description">
+     Course Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-objectives">
+     Course Objectives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-expectations">
+     Course Expectations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applications">
+     Applications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-requirements-and-grading">
+     Course Requirements and Grading
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-due-dates">
+       Note on Due dates
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-participation-grade">
+       Note on Participation grade
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-homeworks">
+       Note on Homeworks
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-on-the-project-report">
+       Note on the Project Report
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grading-scale">
+     Grading Scale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#due-dates-and-late-policy">
+     Due Dates and Late Policy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feedback-and-grades">
+     Feedback and Grades
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#student-authentication-and-verification">
+     Student Authentication and Verification
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#student-responsibilities-and-resources">
+     Student Responsibilities and Resources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#academic-integrity">
+     Academic Integrity:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -526,18 +767,15 @@
  </li>
 </ul>
 
-        </nav>
-        
-        </div>
-    </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="syllabus-ce2120-fall-2021">
-<h1>Syllabus - CE2120 Fall 2021<a class="headerlink" href="#syllabus-ce2120-fall-2021" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="syllabus-ce2120-fall-2022">
+<h1>Syllabus - CE2120 Fall 2022<a class="headerlink" href="#syllabus-ce2120-fall-2022" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="applied-mechanics-ii-dynamics">
 <h2>Applied Mechanics II: Dynamics<a class="headerlink" href="#applied-mechanics-ii-dynamics" title="Permalink to this headline">¶</a></h2>
 <p><strong>Excluding materials for purchase, syllabus information may be subject
@@ -554,8 +792,8 @@ HuskyCT.</strong></p>
 questions on Campuswire (the preferred contact)</em></p>
 <p><strong>Preferred Contact:</strong> Post course-related questions and comments to
 Campuswire:</p>
-<p><a class="reference external" href="https://campuswire.com/p/G526851D6"><em>https://campuswire.com/p/G526851D6</em></a></p>
-<p>Use code: <strong>5394</strong></p>
+<p><a class="reference external" href="https://campuswire.com/p/G71D67C67"><em>campuswire.com/p/G71D67C67</em></a></p>
+<p>Use code: <strong>5970</strong></p>
 <p>Personal questions should be communicated privately via UConn email or
 Campuswire Direct Message (DM)</p>
 </div>
@@ -607,8 +845,6 @@ Cooper*</a>
 *this is a work in progress. Feel free to add
 suggestions/comments/updates in the *<a class="reference external" href="https://github.com/cooperrc/engineering-dynamics"><em>GitHub
 repository</em></a></p>
-<p>**You will create your own example to share with the class in the
-textbook. **</p>
 <p><strong>Virtual Computer Lab:</strong> UConn Engineering Desktop
 <a class="reference external" href="https://horizon.uconn.edu"><em>https://horizon.uconn.edu</em></a></p>
 <p>All of the <strong>Required Python software</strong> you need for this course is installed
@@ -616,20 +852,36 @@ and ready at <a class="reference external" href="https://compmech.uconn.edu">com
 <p><strong>Required software:</strong> Jupyter, Python, GitHub, and
 (<a class="reference external" href="https://software.uconn.edu/software/google-apps/"><em>Google</em></a>/<a class="reference external" href="https://software.uconn.edu/microsoft-products-students/"><em>Microsoft</em></a>/OpenOffice),
 Plotting software (Python, Excel, or Google Sheets)</p>
-<p><strong>Campuswire:</strong> This session we will be using <a class="reference external" href="https://campuswire.com/p/G526851D6">*Campuswire
-*</a>for class discussion. The system
+<p><strong>Campuswire:</strong> This session we will be using <a class="reference external" href="https://campuswire.com/p/G71D67C67">*Campuswire
+*</a> for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
 questions on Campuswire. If you have any problems or feedback for the
 developers, email <a class="reference external" href="mailto:tade&#37;&#52;&#48;campuswire&#46;com"><em>tade<span>&#64;</span>campuswire<span>&#46;</span>com</em></a>.</p>
-<p>Find our class page at:
-<a class="reference external" href="https://campuswire.com/p/G526851D6"><em>https://campuswire.com/p/G526851D6</em></a>
-Use code: <strong>5394</strong></p>
-<p>**Schedule: <strong>The course schedule is on the <a class="reference external" href="https://calendar.google.com/calendar/u/0?cid=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"><em>CE2120 - Fall Google
-Calendar</em></a></strong>.
-**Assignments are due by 11:59pm on the specified due dates. You can add
+<p>Use code: <strong>5970</strong></p>
+<p><strong>Google Classroom</strong>: You will turn in assignments and check grades at
+<a class="reference external" href="https://classroom.google.com/c/NTQ0NDYzMDU0Njc1?cjc=ffhilaf"><strong>Applied Mechanics II (Engineering
+Dynamics)</strong></a>.</p>
+<p>Use code: <strong>ffhilaf</strong></p>
+</div>
+<div class="section" id="course-calendar">
+<h3>Course Calendar<a class="headerlink" href="#course-calendar" title="Permalink to this headline">¶</a></h3>
+<p><strong>Schedule:</strong> The course schedule is managed by Google Classroom,
+<a class="reference external" href="https://calendar.google.com/calendar/embed?src=c_classroom79539dba%40group.calendar.google.com&amp;ctz=America%2FNew_York"><em>CE2120 - Fall Google
+Calendar</em></a>**.
+Assignments are due by 11:59pm on the specified due dates. You can add
 the Google Calendar to your student or personal Google account for
 updates.</p>
+<iframe
+src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=Y19jbGFzc3Jvb203OTUzOWRiYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230047a8"
+style="border:solid 1px #777" width="600" height="400" frameborder="0"
+scrolling="no"></iframe>
+</div>
+<div class="section" id="course-livestreams">
+<h3>Course Livestreams<a class="headerlink" href="#course-livestreams" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="prof-cooper-s-youtube-channel">
+<h4><a class="reference external" href="https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA">Prof. Cooper’s YouTube Channel</a><a class="headerlink" href="#prof-cooper-s-youtube-channel" title="Permalink to this headline">¶</a></h4>
+</div>
 </div>
 <div class="section" id="course-description">
 <h3>Course Description<a class="headerlink" href="#course-description" title="Permalink to this headline">¶</a></h3>
@@ -665,8 +917,8 @@ problems:</p>
 <ol>
 <li><p>The Newton-Euler equations:</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a}\)</span><span class="math notranslate nohighlight">\( and
-\)</span>M = \frac{d}{dt}h$</p>
+<div><p><span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a}\)</span> and
+<span class="math notranslate nohighlight">\(M = \frac{d}{dt}h\)</span></p>
 </div></blockquote>
 </li>
 <li><p>Conservation of energy:</p>
@@ -752,32 +1004,36 @@ health/fitness tracking, etc.</p></li>
 </table>
 <div class="section" id="note-on-due-dates">
 <h4>Note on Due dates<a class="headerlink" href="#note-on-due-dates" title="Permalink to this headline">¶</a></h4>
-<p>All the course due dates are included in the <a class="reference external" href="https://calendar.google.com/calendar/u/0?cid=Y19nNGVrNjQwN3Rna2wyOHE5amlsZHFsa29wc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"><em>CE2120 - Google
-Calendar</em></a>.
+<p>All the course due dates are included in the
+<a class="reference external" href="https://calendar.google.com/calendar/embed?src=c_classroom79539dba%40group.calendar.google.com&amp;ctz=America%2FNew_York"><em>CE2120 - Fall Google
+Calendar</em></a>**.
 Assignments should be submitted before 11:59pm on the due date.</p>
 <p><em>Due dates are flexible to account for
 personal scheduling</em>. You do not need an excuse, but you
 need to contact
 <a class="reference external" href="mailto:ryan&#46;c&#46;cooper&#37;&#52;&#48;uconn&#46;edu"><em>ryan<span>&#46;</span>c<span>&#46;</span>cooper<span>&#64;</span>uconn<span>&#46;</span>edu</em></a> to ask for
 an extension. If you need help with the material, we can set up a
-Webex/Zoom meeting. If you just need more time, I’m happy to provide a
+<a class="reference external" href="https://cooperrc.github.io">meeting</a>. If you just need more time, I’m happy to provide a
 few extra days to get to an assignment done.</p>
 </div>
 <div class="section" id="note-on-participation-grade">
 <h4>Note on Participation grade<a class="headerlink" href="#note-on-participation-grade" title="Permalink to this headline">¶</a></h4>
-<p>The participation grade is based upon: Campuswire participation, reading
-assignments, and peer review</p>
+<p>The participation grade is based upon your own self assessment of how
+you add to our learning community. You will fill out 2 forms:</p>
 <ol class="simple">
-<li><p>You must participate in the discussions for credit. My expectation
-is that you post at least three questions or answers each module.</p></li>
-<li><p>The reading assignments have Campuswire discussions, post an answer
-to the question for 1-out-of-3 posts. You can respond to a
-colleague’s post for 2-out-of-3 posts/week.</p></li>
-<li><p>The peer review will be done in week while building the final
-project. You should provide helpful
-feedback to two colleagues’ Project Reports. Focus on how to make
-the problem statements and solutions clear and accurate.</p></li>
+<li><p>Halfway: What is your current assessment? Why do you feel that way? I
+will help connect you to others if you don’t feel engaged</p></li>
+<li><p>Final: What is your final assessment? How did you participate? Ths
+is your final Participation grade.</p></li>
 </ol>
+<p>You can add to the class in a number
+of ways including, but not limited to:</p>
+<ul class="simple">
+<li><p>adding questions or answers to Campuswire discussions</p></li>
+<li><p>attending lectures</p></li>
+<li><p>participating in a study group or group chat</p></li>
+<li><p>sharing notes from lectures or videos</p></li>
+</ul>
 </div>
 <div class="section" id="note-on-homeworks">
 <h4>Note on Homeworks<a class="headerlink" href="#note-on-homeworks" title="Permalink to this headline">¶</a></h4>
@@ -806,38 +1062,68 @@ build this solution in a Jupyter notebook.</p>
 </div>
 <div class="section" id="grading-scale">
 <h3>Grading Scale<a class="headerlink" href="#grading-scale" title="Permalink to this headline">¶</a></h3>
-<p>+—————–+——————+———+
-| <strong>Explanation</strong> | <strong>Letter Grade</strong> | <strong>GPA</strong> |
-+—————–+——————+———+
-| Excellent       | <strong>A</strong>            | 4       |
-+—————–+——————+———+
-| <strong>A-</strong>          | 3.7              |         |
-+—————–+——————+———+
-| Very Good       | <strong>B+</strong>           | 3.3     |
-+—————–+——————+———+
-| Good            | <strong>B</strong>            | 3       |
-+—————–+——————+———+
-| <strong>B-</strong>          | 2.7              |         |
-+—————–+——————+———+
-| <strong>C+</strong>          | 2.3              |         |
-+—————–+——————+———+
-| Average         | <strong>C</strong>            | 2       |
-+—————–+——————+———+
-| Fair            | <strong>C-</strong>           | 1.7     |
-+—————–+——————+———+
-| Poor            | <strong>D+</strong>           | 1.3     |
-+—————–+——————+———+
-| <strong>D</strong>           | 1                |         |
-+—————–+——————+———+
-| Merely Passing  | <strong>D-</strong>           | 0.7     |
-+—————–+——————+———+
-| Failure         | <strong>F</strong>            | 0       |
-+—————–+——————+———+</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Explanation</strong></p></th>
+<th class="head"><p><strong>Letter Grade</strong></p></th>
+<th class="head"><p><strong>GPA</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Excellent</p></td>
+<td><p><strong>A</strong></p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p><strong>A-</strong></p></td>
+<td><p>3.7</p></td>
+</tr>
+<tr class="row-even"><td><p>Very Good</p></td>
+<td><p><strong>B+</strong></p></td>
+<td><p>3.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Good</p></td>
+<td><p><strong>B</strong></p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p><strong>B-</strong></p></td>
+<td><p>2.7</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p><strong>C+</strong></p></td>
+<td><p>2.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Average</p></td>
+<td><p><strong>C</strong></p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fair</p></td>
+<td><p><strong>C-</strong></p></td>
+<td><p>1.7</p></td>
+</tr>
+<tr class="row-even"><td><p>Poor</p></td>
+<td><p><strong>D+</strong></p></td>
+<td><p>1.3</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p><strong>D</strong></p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Merely Passing</p></td>
+<td><p><strong>D-</strong></p></td>
+<td><p>0.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Failure</p></td>
+<td><p><strong>F</strong></p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="due-dates-and-late-policy">
 <h3>Due Dates and Late Policy<a class="headerlink" href="#due-dates-and-late-policy" title="Permalink to this headline">¶</a></h3>
-<p>All course due dates are identified in the <a class="reference external" href="https://calendar.google.com/calendar/u/0?cid=Y184ZXVuYTVxOHZrM2I1dDBhbnE2bmw3aDB1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"><em>CE2120 - Fall Google
-Calendar</em></a>.
+<p>All course due dates are identified in the course calendar.
 Deadlines are based on Eastern Time; if you are in a different time
 zone, please adjust your submittal times accordingly. The instructor
 reserves the right to change dates accordingly as the semester
@@ -846,8 +1132,8 @@ another appropriate notification.</em></p>
 <p><strong>Late Policy:</strong> If you need more time for an assignment or experience
 technical difficulties, reach out via Campuswire or email. The
 instructor can make accommodations for work, family, and personal
-reasons. *We ask that you be respectful of the instructors’ limited time
-and resources. *</p>
+reasons. <em>We ask that you be respectful of the instructors’ limited time
+and resources.</em></p>
 </div>
 <div class="section" id="feedback-and-grades">
 <h3>Feedback and Grades<a class="headerlink" href="#feedback-and-grades" title="Permalink to this headline">¶</a></h3>
@@ -918,18 +1204,6 @@ Students will follow all University regulations concerning the final
 exam.</p></li>
 </ul>
 </div>
-<div class="section" id="note-on-grading-and-quizzes">
-<h3>Note on grading and quizzes<a class="headerlink" href="#note-on-grading-and-quizzes" title="Permalink to this headline">¶</a></h3>
-<p>I will regrade the entire assignment if you ask for points on an
-individual question in the homeworks/quizzes/projects. The grade may go
-up or down.</p>
-<p>It is <em>your</em> responsibility to make sure your answers are correct. Use
-the textbook and class notes for the quizzes and exams.</p>
-<p>There are no extensions or rescheduling for quizzes. If you have an
-extreme circumstance due to family or medical emergency that requires
-rescheduling you must send documentation to me (Prof. Cooper) within 12
-hours of the passing quiz.</p>
-</div>
 <div class="section" id="students-with-disabilities">
 <h3>Students with Disabilities<a class="headerlink" href="#students-with-disabilities" title="Permalink to this headline">¶</a></h3>
 <p>The University of Connecticut is committed to protecting the rights of
@@ -956,10 +1230,6 @@ website</em></a>)</p>
 <a class="reference external" href="https://www.mozilla.org/en-US/"><em>Firefox</em></a>, <a class="reference external" href="https://www.apple.com/safari/"><em>Safari (Mac
 OS)</em></a>, or <a class="reference external" href="https://www.microsoft.com/en-us/edge"><em>Microsoft
 Edge</em></a></p></li>
-<li><p>HuskyCT/Blackboard (<a class="reference external" href="http://www.blackboard.com/Platforms/Learn/Resources/Accessibility.aspx"><em>HuskyCT/ Blackboard Accessibility
-Statement</em></a>,
-<a class="reference external" href="http://www.blackboard.com/footer/privacy-policy.aspx"><em>HuskyCT/ Blackboard Privacy
-Policy</em></a>)</p></li>
 <li><p><a class="reference external" href="http://www.adobe.com/products/acrobat/readstep2.html"><em>Adobe Acrobat
 Reader</em></a>
 (<a class="reference external" href="http://www.adobe.com/accessibility/products/reader.html"><em>Adobe Reader Accessibility
@@ -1045,36 +1315,42 @@ the course as an optional evaluation tool.</p>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Welcome to Applied Mechanics II - Engineering Dynamics</a>
-    <a class='right-next' id="next-link" href="module_00/meet_cooper.html" title="next page">About the Instructor</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to Applied Mechanics II - Engineering Dynamics</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="module_00/meet_cooper.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">About the Instructor</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ryan C. Cooper<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By <a href = https://cooperrc.github.io> Ryan C. Cooper</a><br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
   </body>
 </html>

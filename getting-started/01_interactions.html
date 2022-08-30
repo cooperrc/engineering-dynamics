@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interacting with Python &#8212; Engineering Dynamics</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,28 +41,32 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Module 1 - Definitions and equations" href="../module_01/overview.html" />
     <link rel="prev" title="Overview" href="../module_00/introduction.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -74,30 +75,34 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/dyn_logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/dyn_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
    Welcome to Applied Mechanics II - Engineering Dynamics
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
-   Syllabus - CE2120 Fall 2021
+   Syllabus - CE2120 Fall 2022
   </a>
  </li>
  <li class="toctree-l1">
@@ -110,24 +115,19 @@
    Module Content
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../module_00/overview.html">
    Module 0 - Getting Started
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../module_00/introduction.html">
      Overview
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_00/introduction.html#objectives">
-     Objectives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_00/introduction.html#activities">
-     Activities
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -136,14 +136,22 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_01/overview.html">
    Module 1 - Definitions and equations
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_01/introduction.html">
      Introduction to Engineering Dynamics
@@ -164,18 +172,36 @@
      Snowflake time of flight
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_01/homework.html">
+     Homework #1
+    </a>
+   </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_02/overview.html">
    Module 2 - constrained dynamic motion
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02_Working_with_Python.html">
      Working with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/rigid-bodies.html">
+     Rigid body lectures and notes
     </a>
    </li>
    <li class="toctree-l2">
@@ -194,22 +220,45 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module_02/homework.html">
+     Module_02 Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module_02/project.html">
      Module 2 - Project: four-bar linkage design
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_03/overview.html">
    Module 3 - Constrained engineering systems
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/readings.html">
+     Reference Material: Videos + Notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/solving-eoms.html">
+     Solutions with equations of motion
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03_integrate.html">
      Introduction to functions and integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/kasdin.html">
+     Examples in Kasdin+Paley dynamics
     </a>
    </li>
    <li class="toctree-l2">
@@ -233,27 +282,55 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module_03/homework.html">
+     Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module_03/project.html">
      Module 3 - Project: pendulum solutions
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_04/overview.html">
    Module 4 - Momentum and Energy
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/readings.html">
+     Materials
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_04/dice.html">
      Weighted dice
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/central-force.html">
+     Central force motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/table-momentum.html">
+     A moving reference frame with conservation of angular momentum
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module_04/yoyo-despin_02.html">
-     Yoyo despin revisited (cord constraint)
+     Yoyo despin design
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module_04/homework.html">
+     Homework
     </a>
    </li>
    <li class="toctree-l2">
@@ -262,14 +339,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../module_05/overview.html">
    Module 5 - dynamics in your career
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../module_05/project.html">
      Module 05 - project
@@ -300,21 +380,15 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/ce2120%20project%20cook.html#background">
-     Background
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../M05_submissions/Contaxis-rough.html">
      Project proposal - robotic arm
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -358,7 +432,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -380,12 +454,12 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -401,7 +475,7 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://compmech.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/getting-started/01_interactions.ipynb&branch=master"><button type="button"
+        <a class="jupyterhub-button" href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/getting-started/01_interactions.ipynb&branch=master"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -415,14 +489,13 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-python">
    What is Python?
@@ -554,14 +627,160 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Interacting with Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-python">
+   What is Python?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-python">
+   Why Python?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-is-a-versatile-language-you-can-analyze-data-build-websites-e-g-instagram-mozilla-pinterest-make-art-or-music-etc-because-it-is-a-versatile-language-employers-love-python-if-you-know-python-they-will-want-to-hire-you-jessica-mckellar-ex-director-of-the-python-software-foundation-in-a-2014-tutorial">
+     <em>
+      Python is a versatile language, you can analyze data, build websites (e.g., Instagram, Mozilla, Pinterest), make art or music, etc. Because it is a versatile language, employers love Python: if you know Python they will want to hire you.
+     </em>
+     —Jessica McKellar, ex Director of the Python Software Foundation, in a 2014 tutorial.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#let-s-get-started">
+   Let’s get started
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#your-first-program">
+     Your first program
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#key-concept-function">
+       Key concept: function
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-as-a-calculator">
+     Python as a calculator
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#discuss-with-your-neighbor">
+       Discuss with your neighbor:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercises">
+       Exercises:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-and-their-type">
+     Variables and their type
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise">
+       Exercise:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#string-variables">
+     String variables
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-it-looks-like-a-duck-and-quacks-like-a-duck-then-it-s-probably-a-duck">
+       “If it looks like a duck, and quacks like a duck, then it’s probably a duck.”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-assignments">
+     More assignments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reflection-point">
+   Reflection point
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-variables">
+     Special variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-and-comparison-operators">
+     Logical and comparison operators
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note">
+       Note:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Exercise:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-we-ve-learned">
+   What we’ve learned
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problems">
+   Problems
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="interacting-with-python">
@@ -576,6 +795,18 @@ But let’s also learn a little bit of background.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
@@ -621,11 +852,6 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world!!
-</pre></div>
-</div>
-</div>
 </div>
 <p>Easy peasy!! You just wrote your first program and you learned how to use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function. Yes, <code class="docutils literal notranslate"><span class="pre">print()</span></code> is a function: we pass the <em>argument</em> we want the function to act on, inside the parentheses. In the case above, we passed a <em>string</em>, which is a series of characters between quotation marks. Don’t worry, we will come back to what strings are later on in this lesson.</p>
 <div class="section" id="key-concept-function">
@@ -647,20 +873,10 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">1.25</span> <span class="o">+</span> <span class="mf">3.65</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.9
 </pre></div>
 </div>
 </div>
@@ -671,20 +887,10 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="mi">4</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
@@ -695,20 +901,10 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
@@ -717,11 +913,6 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span><span class="o">**</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.5
 </pre></div>
 </div>
 </div>
@@ -736,11 +927,6 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
-</pre></div>
-</div>
-</div>
 </div>
 <p>Yes! The order of operations matters!</p>
 <p>If you don’t remember what we are talking about, review the <a class="reference external" href="https://en.wikibooks.org/wiki/Arithmetic/Order_of_Operations">Arithmetics/Order of operations</a>. A frequent situation that exposes this is the following:</p>
@@ -750,20 +936,10 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.5
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
 </pre></div>
 </div>
 </div>
@@ -904,11 +1080,6 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;this is a string1&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>The operation above is called <em>concatenation</em>: chaining two strings together into one. Insteresting, eh? But look at this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">w</span></code></p>
@@ -924,11 +1095,6 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -936,20 +1102,10 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
 </pre></div>
 </div>
 </div>
@@ -974,12 +1130,6 @@ On a blank Jupyter notebook, you should have in front of you the input line coun
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The sum of x and y is: 7.5
-The difference between x and y is: -1.5
-</pre></div>
-</div>
-</div>
 </div>
 <p>Notice what we did above: we used the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function with a string message, followed by a variable, and Python printed a useful combination of the message and the variable value. This is a pro tip! You want to print for humans. Let’s now check the type of the new variables we just created above:</p>
 <div class="cell docutils container">
@@ -988,20 +1138,10 @@ The difference between x and y is: -1.5
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">diff_xy</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
 </pre></div>
 </div>
 </div>
@@ -1029,11 +1169,6 @@ For now, we will look at just the first three of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1041,20 +1176,10 @@ For now, we will look at just the first three of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;We do need oxygen&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1098,11 +1223,6 @@ For now, we will look at just the first three of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
 </div>
 <p>We can assign the truth value of a comparison operation to a new variable name:</p>
 <div class="cell docutils container">
@@ -1118,20 +1238,10 @@ For now, we will look at just the first three of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
 </pre></div>
 </div>
 </div>
@@ -1153,11 +1263,6 @@ For now, we will look at just the first three of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
 </div>
 <p>Remember that the logical operator <code class="docutils literal notranslate"><span class="pre">and</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> only when both operands are <code class="docutils literal notranslate"><span class="pre">True</span></code>. In the case above the first operand is <code class="docutils literal notranslate"><span class="pre">True</span></code> but the second one is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <p>If we try the <code class="docutils literal notranslate"><span class="pre">or</span></code> operation using the same operands we should get a <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
@@ -1167,21 +1272,11 @@ For now, we will look at just the first three of these.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
 </div>
 <p>And the negation of the second operand results in …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1203,11 +1298,6 @@ For now, we will look at just the first three of these.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1302,36 +1392,42 @@ c. What is the result of the following logical operation, `volume&gt;1000` (in i
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../module_00/introduction.html" title="previous page">Overview</a>
-    <a class='right-next' id="next-link" href="../module_01/overview.html" title="next page">Module 1 - Definitions and equations</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../module_00/introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Overview</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../module_01/overview.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Module 1 - Definitions and equations</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ryan C. Cooper<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By <a href = https://cooperrc.github.io> Ryan C. Cooper</a><br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
   </body>
 </html>

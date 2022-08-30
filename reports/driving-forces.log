@@ -1,20 +1,20 @@
 Traceback (most recent call last):
-  File "/usr/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/usr/lib/python3.9/site-packages/nbclient/client.py", line 1087, in execute
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/usr/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/usr/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
     return future.result()
-  File "/usr/lib/python3.9/site-packages/nbclient/client.py", line 540, in async_execute
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/usr/lib/python3.9/site-packages/nbclient/client.py", line 832, in async_execute_cell
-    self._check_raise_for_error(cell, exec_reply)
-  File "/usr/lib/python3.9/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
-    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/ryan/.conda/envs/newwork/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 import numpy as np
@@ -27,12 +27,13 @@ plt.rcParams.update({
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m<ipython-input-1-33fe12422d8d>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      3[0m [0mplt[0m[0;34m.[0m[0mstyle[0m[0;34m.[0m[0muse[0m[0;34m([0m[0;34m'fivethirtyeight'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      4[0m plt.rcParams.update({
-[1;32m      5[0m   [0;34m"text.usetex"[0m[0;34m:[0m [0;32mTrue[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+Input [0;32mIn [1][0m, in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      3[0m plt[38;5;241m.[39mstyle[38;5;241m.[39muse([38;5;124m'[39m[38;5;124mfivethirtyeight[39m[38;5;124m'[39m)
+[1;32m      4[0m plt[38;5;241m.[39mrcParams[38;5;241m.[39mupdate({
+[1;32m      5[0m   [38;5;124m"[39m[38;5;124mtext.usetex[39m[38;5;124m"[39m: [38;5;28;01mTrue[39;00m,
+[1;32m      6[0m   [38;5;124m"[39m[38;5;124mfont.sans-serif[39m[38;5;124m"[39m: [[38;5;124m"[39m[38;5;124mHelvetica[39m[38;5;124m"[39m]})
 
 [0;31mModuleNotFoundError[0m: No module named 'matplotlib'
 ModuleNotFoundError: No module named 'matplotlib'

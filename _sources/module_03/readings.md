@@ -1,44 +1,26 @@
-## Material
-* [Kasdin and Paley's _Engineering Dynamics_ ch. 4](https://www.jstor.org/stable/j.ctvcm4ggj.7) 
-* [Kasdin and Paley's _Engineering Dynamics_ ch. 5](https://www.jstor.org/stable/j.ctvcm4ggj.8). 
+# Reference Material: Videos + Notes
+
+## Applying Newtonian Mechanics [__Notes here__](https://drive.google.com/file/d/1FmJuH_eCVTddrL-rmIThEssO3epMKdoA/view?usp=sharing)
+- [**Video**: Car on truck ramp moving 30 mph](https://youtu.be/C53BAKaQvpw)
+- [**Video**: Free-falling spring-mass system](https://youtu.be/z1cxOoMPDmA)
+- [**Video**: Pendulum motion](https://youtu.be/NDZkuxp5n9A)
+- [**Video**: Tying down a payload on a truck bed](https://youtu.be/ab2fmL-9XyU)
+- [**Video**: Solving nonlinear equations of motion p I](https://youtu.be/fcx9jR0O0rY) [__Notes here__](https://drive.google.com/file/d/1owUZF6me2H9iy-sozoVg20jKa9cPJKqV/view?usp=sharing)
+- [**Video**: Solving nonlinear equations of motion p II](https://youtu.be/QcENiGydyF0) [__Notes here__](https://drive.google.com/file/d/1owUZF6me2H9iy-sozoVg20jKa9cPJKqV/view?usp=sharing)
+## Textbook reference
+* [Kasdin and Paley's _Engineering Dynamics_ ch. 3](https://www.jstor.org/stable/j.ctvcm4ggj.6) 
 * [Kasdin and Paley's _Engineering Dynamics_ ch. 9](https://www.jstor.org/stable/j.ctvcm4ggj.12). 
 
 Focus on:
 
-1. __Equation 4.2__ Impulse-Momentum equation
-
-2. __Example 4.1__ Impulsive spring
-
-3. __Definition 4.2 and Equation 4.7__ Angular momentum for of Newton's second law
-
-4. __Example 4.3__ Calculating the angular momentum of a moving point mass
-
-5. __Example 4.7__ Tetherball
-
-6. __Equations 5.6 and 5.16 and Table 5.1__ Work-energy equation and potential energy
-
-6. __Example 9.17__ A flywheel
-
-7. __Example 9.22__ Yo-yo de-spin 
-
-
-__Choose three examples and discuss how kinematics and Newton's second law were
-applied to create an equation of motion.__ Take a look at what the rest of the
-class writes and add some discussion points on a colleague's interpretation.
-
-
-
-1. Applying Newtonian Mechanics 
-[__Notes here__](https://drive.google.com/file/d/1FmJuH_eCVTddrL-rmIThEssO3epMKdoA/view?usp=sharing){target="_blank"}
-
-    a. [Car on truck ramp moving 30 mph](https://forms.gle/pE6tQL3axGh7KJ9N8){target="_blank"}
-
-    b. [Free-falling spring-mass system](https://forms.gle/CqaFwGDKXbi6cRHN9){target="_blank"}
-
-    c. [Pendulum motion](https://forms.gle/PM2JEpo1aCe6zj1v5){target="_blank"}
-
-    d. [Tying down a payload on a truck bed](https://forms.gle/sGxf7VzZoPLNBrk79){target="_blank"}
-
-2. [Solving nonlinear equations of motion](https://forms.gle/115BoSNE3R2K2vEv5){target="_blank"}
-[__Notes
-here__](https://drive.google.com/file/d/1owUZF6me2H9iy-sozoVg20jKa9cPJKqV/view?usp=sharing){target="_blank"}
+1. Example 3.1 - Solving a pendulum equation using Cartesian coordinates
+2. Example 3.3 - Satellite tracking
+3. Example 3.4 - Pendulum using different coordinates
+4. Example 3.5 - Inclined plane
+5. Example 3.12 - Particle on a spring free to move in a plane
+6. Section 3.5 - The Polar frame and fictional forces
+7. Example 3.14 - Pendulum in an accelerating box
+8. tutorial 3.3 - Particle on a hemisphere
+9. Example 9.6 - the moment of a couple
+10. Example 9.9 - Disk rolling down an incline plane
+11. Example 9.15 - The compound pendulum
