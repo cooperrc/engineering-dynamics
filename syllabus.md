@@ -2,10 +2,6 @@
 
 ## Applied Mechanics II: Dynamics
 
-**Excluding materials for purchase, syllabus information may be subject
-to change. The most up-to-date syllabus is located within the course in
-HuskyCT.**
-
 ### Course and Instructor Information
 
 **Course Title:** CE2120 - Applied Mechanics II
@@ -212,7 +208,7 @@ In order to be successful in this course I expect:
 |**Item**  |       **Percent** |  **Requirement** |
 |---|---|---|
 |Participation|20 %|Discussions and peer review
-|Homework| 30 %|Submit solutions on HuskyCT and revise based upon textbook solution
+|Homework| 30 %|Submit solutions on Google Classroom and revise based upon textbook solution
 |Quizzes|30 %|5 quizzes
 |Project Report| 20 %|Create one dynamics application to share with new engineers
 
@@ -268,7 +264,7 @@ select "Google Drive", select "Upload".
 
 There will be six quizzes, one for each module. The quizzes are composed
 of 2-4 questions based upon the readings and homeworks. You will scan
-and upload your work to HuskyCT *along with a 10-30-second video
+and upload your work to Google Classroom *along with a 10-30-second video
 explaining your solution*.
 
 #### Note on the Project Report
@@ -313,7 +309,7 @@ and resources.*
 
 I will make every effort to provide feedback and grades within 7 days.
 To keep track of your performance in the course, refer to My Grades in
-HuskyCT.
+Google Classroom.
 
 **Weekly Time Commitment**
 
@@ -431,19 +427,6 @@ Connecticut, visit the [*University's Privacy
 page*](https://privacy.uconn.edu/).
 
 **NOTE:** This course was not tested or designed for mobile devices.
-
-### Help
-
-[*Technical and Academic Help*](http://ecampus.uconn.edu/help.html)
-provides a guide to technical and academic assistance.
-
-This course is completely facilitated online using the learning
-management platform, [*HuskyCT*](https://lms.uconn.edu). If you have
-difficulty accessing HuskyCT, you have access to the in person/live
-person support options available during regular business hours through
-the [*Help Center*](http://helpcenter.uconn.edu/). You also have [*24x7
-Course Support*](http://www.ecampus24x7.uconn.edu/) including access to
-live chat, phone, and support documents.
 
 ### Minimum Technical Skills
 
