@@ -2,6 +2,15 @@
 
 ## Applied Mechanics II: Dynamics
 
+- **Course Discussion**: [*campuswire.com/p/G71D67C67*](https://campuswire.com/p/G71D67C67) Use code: **5970**
+- **Submit Assignments**: [**Google Classroom (Engineering
+  Dynamics)**](https://classroom.google.com/c/NTQ0NDYzMDU0Njc1?cjc=ffhilaf).
+  use code: **ffhilaf**
+- **Jupyter Server**:
+  [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu) use _net id_
+  and _password_
+
+
 ### Course and Instructor Information
 
 **Course Title:** CE2120 - Applied Mechanics II
@@ -18,10 +27,6 @@ questions on Campuswire (the preferred contact)*
 
 **Preferred Contact:** Post course-related questions and comments to
 Campuswire:
-
-[*campuswire.com/p/G71D67C67*](https://campuswire.com/p/G71D67C67)
-
-Use code: **5970**
 
 Personal questions should be communicated privately via UConn email or
 Campuswire Direct Message (DM)
@@ -81,7 +86,7 @@ repository*](https://github.com/cooperrc/engineering-dynamics)
 [*https://horizon.uconn.edu*](https://horizon.uconn.edu)
 
 All of the **Required Python software** you need for this course is installed
-and ready at [compmech.uconn.edu](https://compmech.uconn.edu)
+and ready at [ugmelab.uconn.edu](https://ugmelab.uconn.edu)
 
 **Required software:** Jupyter, Python, GitHub, and
 ([*Google*](https://software.uconn.edu/software/google-apps/)/[*Microsoft*](https://software.uconn.edu/microsoft-products-students/)/OpenOffice),
@@ -112,10 +117,9 @@ the Google Calendar to your student or personal Google account for
 updates.
 
 <iframe
-src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=Y19jbGFzc3Jvb203OTUzOWRiYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230047a8"
+src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb203OTUzOWRiYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230047a8"
 style="border:solid 1px #777" width="600" height="400" frameborder="0"
 scrolling="no"></iframe>
-
 ### Course Livestreams
 
 #### [Prof. Cooper's YouTube Channel](https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA)
@@ -416,7 +420,7 @@ The software/technical requirements for this course include:
     Education Privacy Policy*](https://www.google.com/edu/trust/)
 - Jupyter and Python: a full Jupyter environment with the necessary
   Python libraries is ready at
-  [compmech.uconn.edu](https://compmech.uconn.edu)
+  [ugmelab.uconn.edu](https://ugmelab.uconn.edu)
 -   Dedicated access to high-speed internet with a minimum speed of 1.5
     Mbps (4 Mbps or higher is recommended).
 -   Webcam or phone camera: you should be able to record yourself and
