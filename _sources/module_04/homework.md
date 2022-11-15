@@ -1,5 +1,5 @@
 # Homework
-Complete problems: __4.2, 4.6, 4.13, 5.3, 5.8, 5.9, 5.10, 5.17, 5.18, 9.14__
+Complete problems: __4.2, 4.6, 4.13, 9.14__
 
 
 - [Chapter 4 - Kasdin and Paley](https://www.jstor.org/stable/j.ctvcm4ggj.7)
