@@ -1,11 +1,13 @@
-# Syllabus - CE2120 Fall 2022
+# Syllabus - CE2120 Spring 2023
 
 ## Applied Mechanics II: Dynamics
 
-- **Course Discussion**: [*campuswire.com/p/G71D67C67*](https://campuswire.com/p/G71D67C67) Use code: **5970**
+- **Course Discussion**:
+  [*campuswire.com/p/G336E7C13*](https://campuswire.com/p/G336E7C13) Use
+  code: **8136**
 - **Submit Assignments**: [**Google Classroom (Engineering
-  Dynamics)**](https://classroom.google.com/c/NTQ0NDYzMDU0Njc1?cjc=ffhilaf).
-  use code: **ffhilaf**
+  Dynamics)**](https://classroom.google.com/c/NTgzOTk1MDkwMzM0?cjc=zgsll7e).
+  use code: **zgsll7e**
 - **Jupyter Server**:
   [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu) use _net id_
   and _password_
@@ -26,7 +28,7 @@
 questions on Campuswire (the preferred contact)*
 
 **Preferred Contact:** Post course-related questions and comments to
-Campuswire:
+Campuswire.
 
 Personal questions should be communicated privately via UConn email or
 Campuswire Direct Message (DM)
@@ -72,7 +74,7 @@ download) through the UConn library subscription at the following links:
     Dynamics*](https://www.jstor.org/stable/j.ctvcm4ggj.14)[* ch.
     11*](https://www.jstor.org/stable/j.ctvcm4ggj.14)
 
-Additional materials are being created at the following link:
+Additional materials are under active development at the following link:
 
 [*Engineering
 Dynamics*](https://cooperrc.github.io/engineering-dynamics/intro.html)[*
@@ -93,33 +95,32 @@ and ready at [ugmelab.uconn.edu](https://ugmelab.uconn.edu)
 Plotting software (Python, Excel, or Google Sheets)
 
 **Campuswire:** This session we will be using [*Campuswire
-*](https://campuswire.com/p/G71D67C67) for class discussion. The system
+*](https://cooperrc.github.io/engineering-dynamics/syllabus.html#applied-mechanics-ii-dynamics) for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
 questions on Campuswire. If you have any problems or feedback for the
 developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
 
-Use code: **5970**
 
-**Google Classroom**: You will turn in assignments and check grades at
-[**Applied Mechanics II (Engineering
-Dynamics)**](https://classroom.google.com/c/NTQ0NDYzMDU0Njc1?cjc=ffhilaf).
+**Google Classroom**: You will turn in assignments and check grades on
+Google Classroom. Use the private comments if you are requesting extra time
+on an assignment, put two piece of information in the comment:
 
-Use code: **ffhilaf**
+1. When will you submit the assignment?
+2. What help do you need?
 
 ### Course Calendar
 
-**Schedule:** The course schedule is managed by Google Classroom,
-[*CE2120 - Fall Google
-Calendar*](https://calendar.google.com/calendar/embed?src=c_classroom79539dba%40group.calendar.google.com&ctz=America%2FNew_York)**.
+**Schedule:** The course schedule is managed by Google Classroom.
 Assignments are due by 11:59pm on the specified due dates. You can add
 the Google Calendar to your student or personal Google account for
 updates.
 
 <iframe
-src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb203OTUzOWRiYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230047a8"
-style="border:solid 1px #777" width="600" height="400" frameborder="0"
+src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb21iZjk2NzRjM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB"
+style="border:solid 1px #777" width="800" height="600" frameborder="0"
 scrolling="no"></iframe>
+
 ### Course Livestreams
 
 #### [Prof. Cooper's YouTube Channel](https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA)
@@ -219,17 +220,20 @@ In order to be successful in this course I expect:
 #### Note on Due dates
 
 All the course due dates are included in the 
-[*CE2120 - Fall Google
-Calendar*](https://calendar.google.com/calendar/embed?src=c_classroom79539dba%40group.calendar.google.com&ctz=America%2FNew_York)**.
+[course
+calendar](https://cooperrc.github.io/engineering-dynamics/syllabus.html#course-calendar)
 Assignments should be submitted before 11:59pm on the due date.
 
 *Due dates are flexible to account for
 personal scheduling*. You do not need an excuse, but you
-need to contact
-[*ryan.c.cooper\@uconn.edu*](mailto:ryan.c.cooper@uconn.edu) to ask for
-an extension. If you need help with the material, we can set up a
-[meeting](https://cooperrc.github.io). If you just need more time, I'm happy to provide a
-few extra days to get to an assignment done.
+need to put a note in the assignment private comments that states:
+1. When will you submit the assignment?
+2. What help do you need?
+
+
+If you need help with the material, we can set up a
+[meeting](https://cooperrc.github.io). If you just need more time, I'm
+happy to provide a few extra days to get to an assignment done.
 
 #### Note on Participation grade
 
@@ -264,10 +268,15 @@ Download
 from the app store. Scan the document, press "send", press "share",
 select "Google Drive", select "Upload".
 
-[]{#anchor-16}Note on Quizzes
+#### Note on Quizzes
 
-There will be six quizzes, one for each module. The quizzes are composed
-of 2-4 questions based upon the readings and homeworks. You will scan
+There will be five quizzes, one for each module. The quizzes are composed
+of 2-4 questions based upon the readings and homeworks. The class before
+quizzes for modules 01-04, I will ask you to design questions that demonstrate your
+understanding of the material. I will build the quiz based upon our
+in-class discussion. 
+
+You will scan
 and upload your work to Google Classroom *along with a 10-30-second video
 explaining your solution*.
 
@@ -277,6 +286,7 @@ I want you to build a dynamics project that interests you.
 Ideally, you can use this project in an engineering portfolio to
 demonstrate your grasp of Newtonian mechanics. My goal is to help you
 build this solution in a Jupyter notebook.
+
 ### Grading Scale
 
 | **Explanation** | **Letter Grade** | **GPA** |

@@ -1,16 +1,18 @@
 # Module 3 - Constrained engineering systems
 
-_4-bar linkage_
+_Pendulum motion_
 
-1. Engineering systems with many moving parts
-    1. constrain the motion (0-DOF)
-    2. to maintain motion need constraint forces
-    3. constraints doing work vs constraint force
-2. Mechanical advantage
-    1. gear ratios
-    2. levers
-    3. linkages
-3. Relative motion
-    1. fixing coordinate systems to moving parts
-    2. absolute and relative motion
-    3. constraint forces and work done
+1. Creating equations of motion
+    1. draw a **Free body diagram**
+    2. draw a **Kinetic diagram**
+    3. use kinematic constraints to create the equations of motion for
+       the system
+2. Solving equations of motion
+    1. Derive and define a set of linear differential equations e.g.
+        - $\ddot{x} = -\omega^2 x$
+        - $\ddot{x} = \lambda x$
+        - $\ddot{x} = constant$
+    2. Solve this set of linear differential equations
+    3. Derive and define nonlinear differential equations
+    4. Use computational methods to solve nonlinear differential
+       equations
