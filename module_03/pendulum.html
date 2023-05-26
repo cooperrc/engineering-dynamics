@@ -1,581 +1,490 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pendulum plotting solution &#8212; Engineering Dynamics</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module_03/pendulum';</script>
     <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Nonlinear pendulum solution" href="nonlinear.html" />
     <link rel="prev" title="Solving equations of motion" href="plotting-solutions.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/dyn_logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Welcome to Applied Mechanics II - Engineering Dynamics
-  </a>
- </li>
+    
+    
+    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to Applied Mechanics II - Engineering Dynamics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_00/introduction.html">Overview</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/01_interactions.html">Interacting with Python</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../syllabus.html">
-   Syllabus - CE2120 Fall 2022
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../module_00/meet_cooper.html">
-   About the Instructor
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../content.html">
-   Module Content
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_00/overview.html">
-   Module 0 - Getting Started
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_00/introduction.html">
-     Overview
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../getting-started/01_interactions.html">
-     Interacting with Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_01/overview.html">
-   Module 1 - Definitions and equations
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_01/readings.html">
-     Reference Material: Videos + Notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_01/introduction.html">
-     Introduction to Engineering Dynamics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_01/philosophy.html">
-     Philosophy of Newtonian Mechanics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_01/definitions.html">
-     Definitions in Dynamics: kinematics and kinetics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_01/snowflake.html">
-     Snowflake time of flight
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_01/homework.html">
-     Homework #1
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_02/overview.html">
-   Module 2 - constrained dynamic motion
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/readings.html">
-     Reference Material: Videos + Notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
-     Working with Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/rigid-bodies.html">
-     Rigid body lectures and notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/mechanical-advantage.html">
-     Mechanical advantage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/driving-forces.html">
-     Driving forces for moving systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/valentine.html">
-     Happy Valentine’s Linkage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/homework.html">
-     Module_02 Homework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/project.html">
-     Module 2 - Project: four-bar linkage design
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
-   Module 3 - Constrained engineering systems
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="readings.html">
-     Reference Material: Videos + Notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="solving-eoms.html">
-     Solutions with equations of motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../getting-started/03_integrate.html">
-     Introduction to functions and integration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="kasdin.html">
-     Examples in Kasdin+Paley dynamics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plotting-solutions.html">
-     Solving equations of motion
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Pendulum plotting solution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="nonlinear.html">
-     Nonlinear pendulum solution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="hemisphere-rolling.html">
-     Rolling on hemisphere
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="homework.html">
-     Homework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="project.html">
-     Module 3 - Project: pendulum solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_04/overview.html">
-   Module 4 - Momentum and Energy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/readings.html">
-     Materials
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/dice.html">
-     Weighted dice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/central-force.html">
-     Central force motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/table-momentum.html">
-     A moving reference frame with conservation of angular momentum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html">
-     Yoyo despin design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/homework.html">
-     Homework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/project.html">
-     Module_04 - project
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_05/overview.html">
-   Module 5 - dynamics in your career
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_05/project.html">
-     Module 05 - project
-     <em>
-      build an example
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/Alnaimi-rough.html">
-     Project proposal - car accident impulse/momentum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/project-6.html">
-     Module 05 - project
-     <em>
-      build an example
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/ce2120%20project%20cook.html">
-     CE 2120 Project -
-     <em>
-      Knee Joint Model
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/Contaxis-rough.html">
-     Project proposal - robotic arm
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_01/overview.html">Module 1 - Definitions and equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/readings.html">Reference Material: Videos + Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/introduction.html">Introduction to Engineering Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/philosophy.html">Philosophy of Newtonian Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/definitions.html">Definitions in Dynamics: kinematics and kinetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/snowflake.html">Snowflake time of flight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/homework.html">Homework #1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_02/overview.html">Module 2 - constrained dynamic motion</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/readings.html">Reference Material: Videos + Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/02_Working_with_Python.html">Working with Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/rigid-bodies.html">Rigid body lectures and notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/mechanical-advantage.html">Mechanical advantage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/driving-forces.html">Driving forces for moving systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/valentine.html">Happy Valentine’s Linkage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/homework.html">Module_02 Homework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/project.html">Module 2 - Project: four-bar linkage design</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">Module 3 - Constrained engineering systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="readings.html">Reference Material: Videos + Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solving-eoms.html">Solutions with equations of motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/03_integrate.html">Introduction to functions and integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kasdin.html">Examples in Kasdin+Paley dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting-solutions.html">Solving equations of motion</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pendulum plotting solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear.html">Nonlinear pendulum solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hemisphere-rolling.html">Rolling on hemisphere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework.html">Homework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Module 3 - Project: pendulum solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_04/overview.html">Module 4 - Momentum and Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/readings.html">Materials</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module_04/dice.html">Weighted dice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/central-force.html">Central force motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/table-momentum.html">A moving reference frame with conservation of angular momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/yoyo-despin_02.html">Yoyo despin design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/homework.html">Homework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/project.html">Module_04 - project</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_05/overview.html">Module 5 - dynamics in your career</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_05/project.html">Module 05 - project <em>build an example</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/Alnaimi-rough.html">Project proposal - car accident impulse/momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/project-6.html">Module 05 - project <em>build an example</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/ce2120%20project%20cook.html">CE 2120 Project - <em>Knee Joint Model</em></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/Contaxis-rough.html">Project proposal - robotic arm</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_03/pendulum.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/cooperrc/engineering-dynamics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_03/pendulum.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_03/pendulum.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_03/pendulum.ipynb&branch=master" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_03/pendulum.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_03/pendulum.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cooperrc/engineering-dynamics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_03/pendulum.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/module_03/pendulum.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pendulum plotting solution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linearize-equation-of-motion">
-   Linearize equation of motion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-the-solution-for-the-linearized-simple-pendulum">
-   Plot the solution for the linearized simple pendulum
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motion-of-the-pendulum">
-   Motion of the pendulum
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#animation-of-the-pendulum-motion">
-   Animation of the pendulum motion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wrapping-up">
-   Wrapping up
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearize-equation-of-motion">Linearize equation of motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-solution-for-the-linearized-simple-pendulum">Plot the solution for the linearized simple pendulum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-of-the-pendulum">Motion of the pendulum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#animation-of-the-pendulum-motion">Animation of the pendulum motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping up</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Pendulum plotting solution</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linearize-equation-of-motion">
-   Linearize equation of motion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-the-solution-for-the-linearized-simple-pendulum">
-   Plot the solution for the linearized simple pendulum
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motion-of-the-pendulum">
-   Motion of the pendulum
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#animation-of-the-pendulum-motion">
-   Animation of the pendulum motion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wrapping-up">
-   Wrapping up
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -584,45 +493,40 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
-</pre></div>
-</div>
-</div>
+</details>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.lib.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
 <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;NDZkuxp5n9A&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<iframe
-    width="400"
-    height="300"
-    src="https://www.youtube.com/embed/NDZkuxp5n9A"
-    frameborder="0"
-    allowfullscreen
-></iframe>
-</div></div>
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/NDZkuxp5n9A"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
-<div class="section" id="pendulum-plotting-solution">
-<h1>Pendulum plotting solution<a class="headerlink" href="#pendulum-plotting-solution" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="pendulum-plotting-solution">
+<h1>Pendulum plotting solution<a class="headerlink" href="#pendulum-plotting-solution" title="Permalink to this headline">#</a></h1>
 <p>A pendulum is another <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_oscillator">harmonic oscillator</a>, but you have to <em>linearize</em> the equation of motion. The simple pendulum equation of motion is as such</p>
 <p><span class="math notranslate nohighlight">\(\ddot{\theta} = -\frac{g}{L}\sin\theta\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(g\)</span> is acceleration due to gravity and <span class="math notranslate nohighlight">\(L\)</span> is the length of the pendulum.</p>
 <div class="section" id="linearize-equation-of-motion">
-<h2>Linearize equation of motion<a class="headerlink" href="#linearize-equation-of-motion" title="Permalink to this headline">¶</a></h2>
+<h2>Linearize equation of motion<a class="headerlink" href="#linearize-equation-of-motion" title="Permalink to this headline">#</a></h2>
 <p>You can’t integrate this equation of motion, so you can take a <a class="reference external" href="https://mathworld.wolfram.com/TaylorSeries.html">Taylor series</a> expansion</p>
 <p><span class="math notranslate nohighlight">\(\sin\theta = \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} + ...\)</span></p>
 <p>Now, you can use the first term in the series to create the harmonic oscillator equation</p>
@@ -630,6 +534,11 @@
 <p>where <span class="math notranslate nohighlight">\(\omega = \sqrt{\frac{g}{L}}\)</span>.</p>
 <p>You can see how these Taylor series terms diverge from the actual <span class="math notranslate nohighlight">\(\sin\)</span> function below.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 <span class="n">order1</span> <span class="o">=</span> <span class="n">theta</span>
@@ -647,13 +556,14 @@
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../_images/pendulum_3_0.png" src="../_images/pendulum_3_0.png" />
+<img alt="../_images/dd956f79572897e83622976d2fa321a198baedaf24794a52689370b9fd7c0718.png" src="../_images/dd956f79572897e83622976d2fa321a198baedaf24794a52689370b9fd7c0718.png" />
 </div>
 </div>
 </div>
 <div class="section" id="plot-the-solution-for-the-linearized-simple-pendulum">
-<h2>Plot the solution for the linearized simple pendulum<a class="headerlink" href="#plot-the-solution-for-the-linearized-simple-pendulum" title="Permalink to this headline">¶</a></h2>
+<h2>Plot the solution for the linearized simple pendulum<a class="headerlink" href="#plot-the-solution-for-the-linearized-simple-pendulum" title="Permalink to this headline">#</a></h2>
 <p>The solution to the harmonic oscillator is given as such</p>
 <p><span class="math notranslate nohighlight">\(\theta(t) = \theta_0 \cos\omega t + \frac{\dot{\theta}_0}{\omega}\sin\omega t\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\theta_0\)</span> is the initial angle of the pendulum and <span class="math notranslate nohighlight">\(\dot{\theta}_0\)</span> is the initial angular velocity of the pendulum (+ counter-clockwise/ - clockwise motion).</p>
@@ -677,12 +587,12 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta$ (deg)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/pendulum_5_1.png" src="../_images/pendulum_5_1.png" />
+<img alt="../_images/31295185f12f7c70122d9d17f767f02571103b173efb638e76ae1df7f5692f9b.png" src="../_images/31295185f12f7c70122d9d17f767f02571103b173efb638e76ae1df7f5692f9b.png" />
 </div>
 </div>
 </div>
 <div class="section" id="motion-of-the-pendulum">
-<h2>Motion of the pendulum<a class="headerlink" href="#motion-of-the-pendulum" title="Permalink to this headline">¶</a></h2>
+<h2>Motion of the pendulum<a class="headerlink" href="#motion-of-the-pendulum" title="Permalink to this headline">#</a></h2>
 <p>The solution plotted above is the orientation of the pendulum. The position of the mass is</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{r} = L\hat{e}_r = L(\sin\theta \hat{i} - \cos\theta \hat{j})\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\theta = \theta(t)\)</span> that you created above. Below, you plot the x- and y- positions of the simple pendulum.</p>
@@ -701,7 +611,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;position (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/pendulum_7_1.png" src="../_images/pendulum_7_1.png" />
+<img alt="../_images/528463e1551660e88bafb0f058247a2a0f353efdeed207627fcbf3c03bca213b.png" src="../_images/528463e1551660e88bafb0f058247a2a0f353efdeed207627fcbf3c03bca213b.png" />
 </div>
 </div>
 <blockquote>
@@ -713,9 +623,14 @@
 </div></blockquote>
 </div>
 <div class="section" id="animation-of-the-pendulum-motion">
-<h2>Animation of the pendulum motion<a class="headerlink" href="#animation-of-the-pendulum-motion" title="Permalink to this headline">¶</a></h2>
+<h2>Animation of the pendulum motion<a class="headerlink" href="#animation-of-the-pendulum-motion" title="Permalink to this headline">#</a></h2>
 <p>Here, you can see how the pendulum swings. It starts at <span class="math notranslate nohighlight">\(\theta_0=10^o\)</span> and swings left to <span class="math notranslate nohighlight">\(\theta(t=T/2)=-10^o\)</span>. In this simple pendulum model, you did not include any effects of air resistance, friction, or damping so the motion will continue to oscillate until acted upon by another system.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
@@ -754,303 +669,302 @@
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><video width="432" height="288" controls autoplay loop>
-  <source type="video/mp4" src="data:video/mp4;base64,AAAAIGZ0eXBNNFYgAAACAE00ViBpc29taXNvMmF2YzEAAAAIZnJlZQAAOiFtZGF0AAACrgYF//+q
-3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE2MSByMzAzOSA1NDRjNjFmIC0gSC4yNjQvTVBF
-Ry00IEFWQyBjb2RlYyAtIENvcHlsZWZ0IDIwMDMtMjAyMSAtIGh0dHA6Ly93d3cudmlkZW9sYW4u
-b3JnL3gyNjQuaHRtbCAtIG9wdGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFs
-eXNlPTB4MzoweDExMyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVk
-X3JlZj0xIG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBk
-ZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTkg
-bG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRl
-cmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJf
-cHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9
-MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlpbnRfbWluPTIwIHNjZW5lY3V0PTQwIGludHJhX3Jl
-ZnJlc2g9MCByY19sb29rYWhlYWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAu
-NjAgcXBtaW49MCBxcG1heD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAQ
-HWWIhAA7//73Tr8Cmx7G6gOSVwr2yqQmWblSawHypgAAAwAAJv/gZJfAFOJi8w36iE//Mf37wJhp
-M0nL/8jS9E+pePBJ2WP2SbpBgz/zZNuDYtKPrYfezz8tzz47+uN9/+cBLLomwAAAB1V9F3Mob7t1
-FfE6YOhRXLfx+1B2IZo0MrYOh9VnETb7v1QXhvh3AoAyOVjVBkJh+ZcZQklS1PcuLf4A6L3hd0A6
-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
-Ni4xMDA=
+  <source type="video/mp4" src="data:video/mp4;base64,AAAAHGZ0eXBNNFYgAAACAGlzb21pc28yYXZjMQAAAAhmcmVlAAA54G1kYXQAAAKgBgX//5zcRem9
+5tlIt5Ys2CDZI+7veDI2NCAtIGNvcmUgMTU3IC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENv
+cHlsZWZ0IDIwMDMtMjAxOCAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9w
+dGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDExMyBtZT1o
+ZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0xIG1lX3JhbmdlPTE2
+IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBkZWFkem9uZT0yMSwxMSBmYXN0
+X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTkgbG9va2FoZWFkX3RocmVhZHM9
+MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2Nv
+bXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9
+MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50
+PTI1MCBrZXlpbnRfbWluPTIwIHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhl
+YWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1heD02
+OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAQ22WIhAA7//73Tr8Cmx7G6gOS
+Vwr2yqQmWblSawHypgAAAwAAJv/gozF8AHmD2vleEFGSyhKEga4kongo5ptZcwrhjxVYKQdusV8O
+mKC1uLcG6y4YaMNUFqkRIporDrcZD8UO7dIPskAAAAREX1ZNtGv/1YhZZtQMbOPCfPBqK6U4pffI
+Yp9YrLzcXhbh5opW3o1nOAhgxFhUFO0UEF0Vs0EuAihjsussecdMAg29Ipy/0E/He2PIluLDMpU8
+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
 ">
   Your browser does not support the video tag.
-</video></div><img alt="../_images/pendulum_10_1.png" src="../_images/pendulum_10_1.png" />
+</video></div><img alt="../_images/93b1db8447306488638d1a6fb07f624160c070f47f38e4b9400e5463712a1e7b.png" src="../_images/93b1db8447306488638d1a6fb07f624160c070f47f38e4b9400e5463712a1e7b.png" />
 </div>
 </div>
 </div>
 <div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
 <p>In this notebook, you plotted the solution for a simple pendulum and used the kinematic definitions to plot the motion of the pendulum.</p>
 </div>
 </div>
@@ -1067,7 +981,7 @@ Ni4xMDA=
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./module_03"
         },
         predefinedOutput: true
@@ -1075,44 +989,109 @@ Ni4xMDA=
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="plotting-solutions.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Solving equations of motion</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="plotting-solutions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Solving equations of motion</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="nonlinear.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="nonlinear.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Nonlinear pendulum solution</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By <a href = https://cooperrc.github.io> Ryan C. Cooper</a><br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearize-equation-of-motion">Linearize equation of motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-solution-for-the-linearized-simple-pendulum">Plot the solution for the linearized simple pendulum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-of-the-pendulum">Motion of the pendulum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#animation-of-the-pendulum-motion">Animation of the pendulum motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping up</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

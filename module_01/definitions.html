@@ -1,699 +1,505 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Definitions in Dynamics: kinematics and kinetics &#8212; Engineering Dynamics</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'module_01/definitions';</script>
     <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Snowflake time of flight" href="snowflake.html" />
     <link rel="prev" title="Philosophy of Newtonian Mechanics" href="philosophy.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/dyn_logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Engineering Dynamics</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Welcome to Applied Mechanics II - Engineering Dynamics
-  </a>
- </li>
+    
+    
+    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to Applied Mechanics II - Engineering Dynamics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_00/introduction.html">Overview</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/01_interactions.html">Interacting with Python</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../syllabus.html">
-   Syllabus - CE2120 Fall 2022
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../module_00/meet_cooper.html">
-   About the Instructor
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../content.html">
-   Module Content
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_00/overview.html">
-   Module 0 - Getting Started
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_00/introduction.html">
-     Overview
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../getting-started/01_interactions.html">
-     Interacting with Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
-   Module 1 - Definitions and equations
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="readings.html">
-     Reference Material: Videos + Notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="introduction.html">
-     Introduction to Engineering Dynamics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="philosophy.html">
-     Philosophy of Newtonian Mechanics
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Definitions in Dynamics: kinematics and kinetics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="snowflake.html">
-     Snowflake time of flight
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="homework.html">
-     Homework #1
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_02/overview.html">
-   Module 2 - constrained dynamic motion
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/readings.html">
-     Reference Material: Videos + Notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../getting-started/02_Working_with_Python.html">
-     Working with Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/rigid-bodies.html">
-     Rigid body lectures and notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/mechanical-advantage.html">
-     Mechanical advantage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/driving-forces.html">
-     Driving forces for moving systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/valentine.html">
-     Happy Valentine’s Linkage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/homework.html">
-     Module_02 Homework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_02/project.html">
-     Module 2 - Project: four-bar linkage design
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_03/overview.html">
-   Module 3 - Constrained engineering systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/readings.html">
-     Reference Material: Videos + Notes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/solving-eoms.html">
-     Solutions with equations of motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../getting-started/03_integrate.html">
-     Introduction to functions and integration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/kasdin.html">
-     Examples in Kasdin+Paley dynamics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/plotting-solutions.html">
-     Solving equations of motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/pendulum.html">
-     Pendulum plotting solution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/nonlinear.html">
-     Nonlinear pendulum solution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/hemisphere-rolling.html">
-     Rolling on hemisphere
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/homework.html">
-     Homework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_03/project.html">
-     Module 3 - Project: pendulum solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_04/overview.html">
-   Module 4 - Momentum and Energy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/readings.html">
-     Materials
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/dice.html">
-     Weighted dice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/central-force.html">
-     Central force motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/table-momentum.html">
-     A moving reference frame with conservation of angular momentum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/yoyo-despin_02.html">
-     Yoyo despin design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/homework.html">
-     Homework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_04/project.html">
-     Module_04 - project
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../module_05/overview.html">
-   Module 5 - dynamics in your career
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module_05/project.html">
-     Module 05 - project
-     <em>
-      build an example
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/Alnaimi-rough.html">
-     Project proposal - car accident impulse/momentum
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/project-6.html">
-     Module 05 - project
-     <em>
-      build an example
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/ce2120%20project%20cook.html">
-     CE 2120 Project -
-     <em>
-      Knee Joint Model
-     </em>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../M05_submissions/Contaxis-rough.html">
-     Project proposal - robotic arm
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">Module 1 - Definitions and equations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="readings.html">Reference Material: Videos + Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction to Engineering Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="philosophy.html">Philosophy of Newtonian Mechanics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Definitions in Dynamics: kinematics and kinetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snowflake.html">Snowflake time of flight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework.html">Homework #1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_02/overview.html">Module 2 - constrained dynamic motion</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/readings.html">Reference Material: Videos + Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/02_Working_with_Python.html">Working with Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/rigid-bodies.html">Rigid body lectures and notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/mechanical-advantage.html">Mechanical advantage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/driving-forces.html">Driving forces for moving systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/valentine.html">Happy Valentine’s Linkage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/homework.html">Module_02 Homework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/project.html">Module 2 - Project: four-bar linkage design</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_03/overview.html">Module 3 - Constrained engineering systems</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/readings.html">Reference Material: Videos + Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/solving-eoms.html">Solutions with equations of motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/03_integrate.html">Introduction to functions and integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/kasdin.html">Examples in Kasdin+Paley dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/plotting-solutions.html">Solving equations of motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/pendulum.html">Pendulum plotting solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/nonlinear.html">Nonlinear pendulum solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/hemisphere-rolling.html">Rolling on hemisphere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/homework.html">Homework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_03/project.html">Module 3 - Project: pendulum solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_04/overview.html">Module 4 - Momentum and Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/readings.html">Materials</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module_04/dice.html">Weighted dice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/central-force.html">Central force motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/table-momentum.html">A moving reference frame with conservation of angular momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/yoyo-despin_02.html">Yoyo despin design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/homework.html">Homework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_04/project.html">Module_04 - project</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../module_05/overview.html">Module 5 - dynamics in your career</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module_05/project.html">Module 05 - project <em>build an example</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/Alnaimi-rough.html">Project proposal - car accident impulse/momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/project-6.html">Module 05 - project <em>build an example</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/ce2120%20project%20cook.html">CE 2120 Project - <em>Knee Joint Model</em></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../M05_submissions/Contaxis-rough.html">Project proposal - robotic arm</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/module_01/definitions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/cooperrc/engineering-dynamics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/definitions.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_01/definitions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_01/definitions.ipynb&branch=master" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/engineering-dynamics/master?urlpath=tree/module_01/definitions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https://github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_01/definitions.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cooperrc/engineering-dynamics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cooperrc/engineering-dynamics/issues/new?title=Issue%20on%20page%20%2Fmodule_01/definitions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/module_01/definitions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Definitions in Dynamics: kinematics and kinetics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kinematics-the-geometry-of-motion">
-   Kinematics: the geometry of motion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#position">
-     Position
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#velocity">
-     Velocity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-velocity-given-position">
-     Example - velocity given position
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#speed">
-   Speed
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acceleration">
-   Acceleration
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rotation-and-orientation">
-   Rotation and Orientation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#planar-motion-angular-velocity">
-   Planar motion: angular velocity
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kinetics-forces-work-energy-impulse-momentum">
-   Kinetics - forces, work-energy, impulse-momentum
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#newton-euler-equations">
-     Newton-Euler equations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-changing-a-tire">
-     Example - changing a tire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#work-energy-equations">
-     Work-Energy equations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-elevator-motor-selection">
-     Example - elevator motor selection
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#impulse-momentum-equations">
-     Impulse-momentum equations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-hitting-a-golf-ball">
-     Example - hitting a golf ball
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wrapping-up">
-   Wrapping up
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-the-geometry-of-motion">Kinematics: the geometry of motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position">Position</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity">Velocity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-velocity-given-position">Example - velocity given position</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speed">Speed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration">Acceleration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-and-orientation">Rotation and Orientation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planar-motion-angular-velocity">Planar motion: angular velocity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetics-forces-work-energy-impulse-momentum">Kinetics - forces, work-energy, impulse-momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-euler-equations">Newton-Euler equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-changing-a-tire">Example - changing a tire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-energy-equations">Work-Energy equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-elevator-motor-selection">Example - elevator motor selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse-momentum-equations">Impulse-momentum equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hitting-a-golf-ball">Example - hitting a golf ball</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping up</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Definitions in Dynamics: kinematics and kinetics</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kinematics-the-geometry-of-motion">
-   Kinematics: the geometry of motion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#position">
-     Position
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#velocity">
-     Velocity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-velocity-given-position">
-     Example - velocity given position
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#speed">
-   Speed
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acceleration">
-   Acceleration
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rotation-and-orientation">
-   Rotation and Orientation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#planar-motion-angular-velocity">
-   Planar motion: angular velocity
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kinetics-forces-work-energy-impulse-momentum">
-   Kinetics - forces, work-energy, impulse-momentum
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#newton-euler-equations">
-     Newton-Euler equations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-changing-a-tire">
-     Example - changing a tire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#work-energy-equations">
-     Work-Energy equations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-elevator-motor-selection">
-     Example - elevator motor selection
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#impulse-momentum-equations">
-     Impulse-momentum equations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-hitting-a-golf-ball">
-     Example - hitting a golf ball
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wrapping-up">
-   Wrapping up
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -701,30 +507,19 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
-</pre></div>
+</details>
 </div>
-</div>
-</div>
-<div class="section" id="definitions-in-dynamics-kinematics-and-kinetics">
-<h1>Definitions in Dynamics: kinematics and kinetics<a class="headerlink" href="#definitions-in-dynamics-kinematics-and-kinetics" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="definitions-in-dynamics-kinematics-and-kinetics">
+<h1>Definitions in Dynamics: kinematics and kinetics<a class="headerlink" href="#definitions-in-dynamics-kinematics-and-kinetics" title="Permalink to this headline">#</a></h1>
 <p>Dynamics (and Applied Mechanics II) is the study of motion and interacting objects. Dynamic models have two sets of deinitions</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Kinematics: the study of the geometry of motion</p></li>
 <li><p>Kinetics: the study of forces, work, and impulsive components</p></li>
 </ol>
 <div class="section" id="kinematics-the-geometry-of-motion">
-<h2>Kinematics: the geometry of motion<a class="headerlink" href="#kinematics-the-geometry-of-motion" title="Permalink to this headline">¶</a></h2>
+<h2>Kinematics: the geometry of motion<a class="headerlink" href="#kinematics-the-geometry-of-motion" title="Permalink to this headline">#</a></h2>
 <div class="section" id="position">
-<h3>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h3>
+<h3>Position<a class="headerlink" href="#position" title="Permalink to this headline">#</a></h3>
 <p>Classical physics describes the position of an object using three
 independent coordinates e.g.</p>
 <div class="math notranslate nohighlight">
@@ -760,17 +555,18 @@ unit vectors that describe three directions.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/definitions_2_0.png" src="../_images/definitions_2_0.png" />
+<img alt="../_images/5b8567f67dfb00fd57b0f111fa29ab59ecec013a7a46da08c641770aa30a6ae0.png" src="../_images/5b8567f67dfb00fd57b0f111fa29ab59ecec013a7a46da08c641770aa30a6ae0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="velocity">
-<h3>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">¶</a></h3>
+<h3>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">#</a></h3>
 <p>The velocity of an object is the change in position per length of time.</p>
-<p>\begin{equation}
-\mathbf{v}<em>{P/O} = \frac{d\mathbf{r}</em>{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
+<div class="amsmath math notranslate nohighlight" id="equation-7684878c-02ff-4549-9863-53e761253ead">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7684878c-02ff-4549-9863-53e761253ead" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
 \dot{z}\hat{k}
-\end{equation}</p>
+\end{equation}\]</div>
 <blockquote>
 <div><p><strong>Note:</strong> The notation <span class="math notranslate nohighlight">\(\dot{x}\)</span> and <span class="math notranslate nohighlight">\(\ddot{x}\)</span> is short-hand for writing out
 <span class="math notranslate nohighlight">\(\frac{dx}{dt}\)</span> and <span class="math notranslate nohighlight">\(\frac{d^2x}{dt^2}\)</span>, respectively.</p>
@@ -780,7 +576,7 @@ three independent coordinates, where
 <span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}\)</span>.</p>
 </div>
 <div class="section" id="example-velocity-given-position">
-<h3>Example - velocity given position<a class="headerlink" href="#example-velocity-given-position" title="Permalink to this headline">¶</a></h3>
+<h3>Example - velocity given position<a class="headerlink" href="#example-velocity-given-position" title="Permalink to this headline">#</a></h3>
 <p>You can find velocity based upon postion, but you can only find changes
 in position with velocity. Consider tracking the motion of a car driving
 down a road using GPS. You determine its motion and create the position,</p>
@@ -793,6 +589,11 @@ down a road using GPS. You determine its motion and create the position,</p>
 <p>To get the velocity, calculate <span class="math notranslate nohighlight">\(\mathbf{v} = \dot{\mathbf{r}}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mathbf{v} = (2t)\hat{i} +3 \hat{j}\)</span></p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
@@ -807,14 +608,15 @@ down a road using GPS. You determine its motion and create the position,</p>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../_images/definitions_5_0.png" src="../_images/definitions_5_0.png" />
+<img alt="../_images/d318c421b3a62a7a7c60bdef7a3a7aa2a70afa72e9b2d77c7ffadff4e427e59b.png" src="../_images/d318c421b3a62a7a7c60bdef7a3a7aa2a70afa72e9b2d77c7ffadff4e427e59b.png" />
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="speed">
-<h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h2>
+<h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">#</a></h2>
 <p>The speed of an object is the
 <a class="reference external" href="https://www.mathsisfun.com/algebra/vectors.html">magnitude</a> of the
 velocity,</p>
@@ -824,7 +626,7 @@ velocity,</p>
 <p><span class="math notranslate nohighlight">\(v = |\mathbf{v}| = \sqrt{\dot{x}^2+\dot{y}^2} = \sqrt{4t^2 +9}\)</span></p>
 </div>
 <div class="section" id="acceleration">
-<h2>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h2>
+<h2>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">#</a></h2>
 <p>The acceleration of an object is the change in velocity per length of
 time.</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{a}_{P/O} = \frac{d \mathbf{v}_{P/O} }{dt} = \ddot{x}\hat{i} +
@@ -833,7 +635,7 @@ time.</p>
 acceleration of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point of origin</em> <span class="math notranslate nohighlight">\(O\)</span>.</p>
 </div>
 <div class="section" id="rotation-and-orientation">
-<h2>Rotation and Orientation<a class="headerlink" href="#rotation-and-orientation" title="Permalink to this headline">¶</a></h2>
+<h2>Rotation and Orientation<a class="headerlink" href="#rotation-and-orientation" title="Permalink to this headline">#</a></h2>
 <p>The definitions of position, velocity, and acceleration all describe a
 single point, but dynamic engineering systems are composed of rigid
 bodies is needed to describe the position of an object.</p>
@@ -847,6 +649,11 @@ its rotational orientation, as seen in the animation below. We will
 revisit 3D motion in Module_05. For now, we will limit our description of
 motion to <em>planar motion</em>.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
 <span class="n">vid</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;li7t--8UZms?loop=1&quot;</span><span class="p">)</span>
@@ -854,20 +661,22 @@ motion to <em>planar motion</em>.</p>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<iframe
-    width="400"
-    height="300"
-    src="https://www.youtube.com/embed/li7t--8UZms?loop=1"
-    frameborder="0"
-    allowfullscreen
-></iframe>
-</div></div>
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/li7t--8UZms?loop=1"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 </div>
 <div class="section" id="planar-motion-angular-velocity">
-<h2>Planar motion: angular velocity<a class="headerlink" href="#planar-motion-angular-velocity" title="Permalink to this headline">¶</a></h2>
+<h2>Planar motion: angular velocity<a class="headerlink" href="#planar-motion-angular-velocity" title="Permalink to this headline">#</a></h2>
 <p>Planar motion means that an object’s motion is described using three components:</p>
 <ul class="simple">
 <li><p>x-position</p></li>
@@ -887,9 +696,9 @@ motion to <em>planar motion</em>.</p>
 </ul>
 </div>
 <div class="section" id="kinetics-forces-work-energy-impulse-momentum">
-<h2>Kinetics - forces, work-energy, impulse-momentum<a class="headerlink" href="#kinetics-forces-work-energy-impulse-momentum" title="Permalink to this headline">¶</a></h2>
+<h2>Kinetics - forces, work-energy, impulse-momentum<a class="headerlink" href="#kinetics-forces-work-energy-impulse-momentum" title="Permalink to this headline">#</a></h2>
 <div class="section" id="newton-euler-equations">
-<h3>Newton-Euler equations<a class="headerlink" href="#newton-euler-equations" title="Permalink to this headline">¶</a></h3>
+<h3>Newton-Euler equations<a class="headerlink" href="#newton-euler-equations" title="Permalink to this headline">#</a></h3>
 <p>In this course, you will use the Newton-Euler equations to relate motion to applied forces and moments</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a}\)</span></p></li>
@@ -898,7 +707,7 @@ motion to <em>planar motion</em>.</p>
 <p>The Newton-Euler equations describe forces in terms of acceleration and angular acceleration. The <span class="math notranslate nohighlight">\(m\)</span> is the mass of the object and the <span class="math notranslate nohighlight">\(I\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Moment_of_inertia">moment of inertia</a> of the object. You can think of <em>moment of inertia</em> as a way to measure distribution of mass, its measured in terms of <span class="math notranslate nohighlight">\([kg\cdot m^2]\)</span>, in SI units.</p>
 </div>
 <div class="section" id="example-changing-a-tire">
-<h3>Example - changing a tire<a class="headerlink" href="#example-changing-a-tire" title="Permalink to this headline">¶</a></h3>
+<h3>Example - changing a tire<a class="headerlink" href="#example-changing-a-tire" title="Permalink to this headline">#</a></h3>
 <p>When you change a tire, you either need to engage the brakes or leave the tire in contact with the ground. If not, you can calculate how quickly the tire will accelerate for a an applied moment.</p>
 <p>In this example, a <span class="math notranslate nohighlight">\(m=10~kg\)</span>, tire with moment of inertia <span class="math notranslate nohighlight">\(I =1~kg\cdot m^2\)</span> is able to rotate freely. The tire iron has a 10-N force on both sides, each 0.1-m from the center of the tire.</p>
 <ul class="simple">
@@ -909,7 +718,7 @@ motion to <em>planar motion</em>.</p>
 <p>Both the acceleration components are <span class="math notranslate nohighlight">\(\ddot{x} = \ddot{y} = 0~m/s\)</span>. The angular acceleration is <span class="math notranslate nohighlight">\(\ddot{\theta}\hat{k} = \frac{2~N\cdot m}{1~kg-m^2} = 2~\frac{rad}{s^2}\hat{k}\)</span>.</p>
 </div>
 <div class="section" id="work-energy-equations">
-<h3>Work-Energy equations<a class="headerlink" href="#work-energy-equations" title="Permalink to this headline">¶</a></h3>
+<h3>Work-Energy equations<a class="headerlink" href="#work-energy-equations" title="Permalink to this headline">#</a></h3>
 <p><strong>Work</strong> is defined as a force acting through a distance and/or a moment acting over a given rotation, <span class="math notranslate nohighlight">\(dW=F\cdot d\mathbf{r}+Md\theta\)</span>. When mechanical <strong>work</strong> is added to a dynamic system, the energy of the system has to change. If you <em>ignore changes in temperature</em>, then there are two possible conversions</p>
 <ul class="simple">
 <li><p>kinetic energy, <span class="math notranslate nohighlight">\(T = \frac{1}{2}mv^2 + \frac{1}{2}I\dot{\theta}^2\)</span></p></li>
@@ -928,7 +737,7 @@ motion to <em>planar motion</em>.</p>
 <p>This equation states that the mechanical work, <span class="math notranslate nohighlight">\(W_{1\rightarrow 2}\)</span>, will create a change in total energy of the system, <span class="math notranslate nohighlight">\(T+V\)</span>. The subscripts <span class="math notranslate nohighlight">\(1~and~2\)</span> describe a starting and ending point.</p>
 </div>
 <div class="section" id="example-elevator-motor-selection">
-<h3>Example - elevator motor selection<a class="headerlink" href="#example-elevator-motor-selection" title="Permalink to this headline">¶</a></h3>
+<h3>Example - elevator motor selection<a class="headerlink" href="#example-elevator-motor-selection" title="Permalink to this headline">#</a></h3>
 <p>You are an engineer asked to select an electric motor for a 1000-kg elevator. The elevator has a 1000-kg counterweight as shown below. What information do you need to select the motor?</p>
 <p><img alt="diagram of elevator with counterweight and motor" src="../_images/elevator.svg" /></p>
 <p>First, consider the work done to go from 0-30 m.</p>
@@ -952,7 +761,7 @@ motion to <em>planar motion</em>.</p>
 <p>So the time it takes to reach maximum speed is <span class="math notranslate nohighlight">\(\Delta t = 1~s\)</span>. You should select a motor that creates <span class="math notranslate nohighlight">\(\dot{W}_{1\rightarrow 2} = \frac{2250~J}{1~s} = 2.25~kW\)</span> of power.</p>
 </div>
 <div class="section" id="impulse-momentum-equations">
-<h3>Impulse-momentum equations<a class="headerlink" href="#impulse-momentum-equations" title="Permalink to this headline">¶</a></h3>
+<h3>Impulse-momentum equations<a class="headerlink" href="#impulse-momentum-equations" title="Permalink to this headline">#</a></h3>
 <p>Newton first described the laws of motion in terms of <em>momentum</em>, <span class="math notranslate nohighlight">\(\mathbf{p} = m\mathbf{v}\)</span> and force. The second law was stated as the equation</p>
 <p><span class="math notranslate nohighlight">\(F = d(m\mathbf{v})\)</span></p>
 <p>The applied force, <span class="math notranslate nohighlight">\(F\)</span>, will change the momentum, <span class="math notranslate nohighlight">\(m\mathbf{v}\)</span>. The same equation is true for rotation of an object</p>
@@ -966,7 +775,7 @@ motion to <em>planar motion</em>.</p>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{F}dt\)</span> is the linear impulse, <span class="math notranslate nohighlight">\(\mathbf{M}dt\)</span> is the moment-impulse, <span class="math notranslate nohighlight">\(m\mathbf{v}\)</span> is linear momentum, and <span class="math notranslate nohighlight">\(I\dot{\theta}\)</span> is angular momentum.</p>
 </div>
 <div class="section" id="example-hitting-a-golf-ball">
-<h3>Example - hitting a golf ball<a class="headerlink" href="#example-hitting-a-golf-ball" title="Permalink to this headline">¶</a></h3>
+<h3>Example - hitting a golf ball<a class="headerlink" href="#example-hitting-a-golf-ball" title="Permalink to this headline">#</a></h3>
 <p>When a golf ball is hit by a club, it goes from rest to 45 m/s (~100 mph) almost instantly. If you take the derivative of velocity to get acceleration, you have</p>
 <p><span class="math notranslate nohighlight">\(a = \frac{45~m/s}{0~s} = \infty~m/s^2\)</span></p>
 <p>which would mean that the applied force is <a class="reference external" href="https://golf.com/gear/golf-balls/how-many-dimples-on-a-golf-ball/#:~:text=But%20in%20the%20modern%20game,1.620%20ounces%2C%20or%2045.93%20grams.">0.045~kg</a><span class="math notranslate nohighlight">\(\cdot \infty~m/s^2=\infty~N\)</span>. Its just not helpful information, and in reality there must be some change in time between 0 and <span class="math notranslate nohighlight">\(45~m/s\)</span>.</p>
@@ -975,7 +784,7 @@ motion to <em>planar motion</em>.</p>
 </div>
 </div>
 <div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
 <p>In this notebook you defined:</p>
 <ul class="simple">
 <li><p>Kinematics - the geometry of motion</p>
@@ -1011,7 +820,7 @@ motion to <em>planar motion</em>.</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./module_01"
         },
         predefinedOutput: true
@@ -1019,44 +828,124 @@ motion to <em>planar motion</em>.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="philosophy.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Philosophy of Newtonian Mechanics</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="philosophy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Philosophy of Newtonian Mechanics</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="snowflake.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="snowflake.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Snowflake time of flight</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By <a href = https://cooperrc.github.io> Ryan C. Cooper</a><br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-the-geometry-of-motion">Kinematics: the geometry of motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position">Position</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity">Velocity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-velocity-given-position">Example - velocity given position</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speed">Speed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration">Acceleration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-and-orientation">Rotation and Orientation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planar-motion-angular-velocity">Planar motion: angular velocity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetics-forces-work-energy-impulse-momentum">Kinetics - forces, work-energy, impulse-momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-euler-equations">Newton-Euler equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-changing-a-tire">Example - changing a tire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-energy-equations">Work-Energy equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-elevator-motor-selection">Example - elevator motor selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse-momentum-equations">Impulse-momentum equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hitting-a-golf-ball">Example - hitting a golf ball</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping up</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

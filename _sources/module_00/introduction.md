@@ -38,17 +38,9 @@ software, and materials
 
 * Read the syllabus and post a discussion response on Campuswire
 * Acquaint yourself with the course instructor
-* Verify your computer settings are HuskyCT compatible
-* Read about the course’s organization and tools 
+* Read about the course organization and tools 
 * Complete and submit a Jupyter notebook
 * Take a 5-minute practice quiz 
 * Submit a practice quiz. 
-* Review the University of Connecticut’s academic policies. 
-* Watch the Introduction videos and answer the questions 
-
-<p><strong>Note:</strong> See the course schedule for specific due dates</p> 
-<iframe
-width="600" height="400" style="border-width: 0;"
-src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=dWNvbm4uZWR1X3ZlaHJhNTdiZW5yNmhydTdoczc5OTdxcDUwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23616161&amp;showTitle=1&amp;mode=AGENDA&amp;showTabs=1&amp;showCalendars=0"
-frameborder="0" scrolling="no"></iframe>
+* Review the University of Connecticuts academic policies. 
 
