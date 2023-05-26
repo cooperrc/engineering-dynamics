@@ -1,13 +1,12 @@
-# Syllabus - CE2120 Spring 2023
+# Syllabus - CE2120 Summer 2023
 
 ## Applied Mechanics II: Dynamics
 
 - **Course Discussion**:
-  [*campuswire.com/p/G336E7C13*](https://campuswire.com/p/G336E7C13) Use
-  code: **8136**
-- **Submit Assignments**: [**Google Classroom (Engineering
-  Dynamics)**](https://classroom.google.com/c/NTgzOTk1MDkwMzM0?cjc=zgsll7e).
-  use code: **zgsll7e**
+  [Campuswire/G2535CB99](https://campuswire.com/p/G2535CB99) **9730**
+- **Submit Assignments**: [**Google Classroom (CE2120 - Summer Session I
+  '2310')**](https://classroom.google.com/c/NjExODc2MDU1NjAx?cjc=pau4kzh).
+  use code: **pau4kzh**
 - **Jupyter Server**:
   [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu) use _net id_
   and _password_
@@ -17,7 +16,7 @@
 
 **Course Title:** CE2120 - Applied Mechanics II
 
-**Format:** Hybrid
+**Format:** Online
 
 **Prerequisite:** CE 2110 and MATH 2110 or 2130
 
@@ -84,9 +83,6 @@ Cooper*](https://cooperrc.github.io/engineering-dynamics/intro.html)
 suggestions/comments/updates in the *[*GitHub
 repository*](https://github.com/cooperrc/engineering-dynamics)
 
-**Virtual Computer Lab:** UConn Engineering Desktop
-[*https://horizon.uconn.edu*](https://horizon.uconn.edu)
-
 All of the **Required Python software** you need for this course is installed
 and ready at [ugmelab.uconn.edu](https://ugmelab.uconn.edu)
 
@@ -117,11 +113,12 @@ the Google Calendar to your student or personal Google account for
 updates.
 
 <iframe
-src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb21iZjk2NzRjM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB"
-style="border:solid 1px #777" width="800" height="600" frameborder="0"
+src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb21hODAxYWMwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26"
+style="border:solid 1px #777" width="500" height="300" frameborder="0"
 scrolling="no"></iframe>
 
-### Course Livestreams
+
+### Course Livestreams and Videos
 
 #### [Prof. Cooper's YouTube Channel](https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA)
 
@@ -157,16 +154,11 @@ problems:
 
 2.  Appy **kinetics** to rigid body engineering problems, including:
 
-    1.  The Newton-Euler equations: 
-        > $\mathbf{F} = m\mathbf{a}$ and
-        > $M = \frac{d}{dt}h$
+    1.  The Newton-Euler equations: $\mathbf{F} = m\mathbf{a}$ and $M = \frac{d}{dt}h$
 
-    2.  Conservation of energy:
-        > $T_{1} + V_{1} + W_{1\rightarrow 2} = T_{2} + V_{2}$
+    2.  Conservation of energy: $T_{1} + V_{1} + W_{1\rightarrow 2} = T_{2} + V_{2}$
 
-    3.  Conservation of momentum: 
-        > $\mathbf{F}dt = d(m\mathbf{v})$
-        > and $\mathbf{M}dt = d\mathbf{h}$
+    3.  Conservation of momentum: $\mathbf{F}dt = d(m\mathbf{v})$ and $\mathbf{M}dt = d\mathbf{h}$
 
 3.  Apply kinematics and kinetics to solve a variety of engineering
     problems and use these disciplines to extend this work to problems
@@ -233,7 +225,7 @@ need to put a note in the assignment private comments that states:
 
 If you need help with the material, we can set up a
 [meeting](https://cooperrc.github.io). If you just need more time, I'm
-happy to provide a few extra days to get to an assignment done.
+happy to provide an extra day to get to an assignment done.
 
 #### Note on Participation grade
 
@@ -274,7 +266,7 @@ There will be five quizzes, one for each module. The quizzes are composed
 of 2-4 questions based upon the readings and homeworks. The class before
 quizzes for modules 01-04, I will ask you to design questions that demonstrate your
 understanding of the material. I will build the quiz based upon our
-in-class discussion. 
+discussion. 
 
 You will scan
 and upload your work to Google Classroom *along with a 10-30-second video
@@ -327,15 +319,15 @@ Google Classroom.
 
 **Weekly Time Commitment**
 
-You should expect to dedicate between 6 - 8 hours a week to this
+You should expect to dedicate between 25 - 32 hours a week to this
 course. This expectation is based on the various course activities,
 assignments, and assessments and the University of Connecticut's policy
 regarding credit hours. More information related to hours per week per
 credit can be accessed at the [*Online Student
 website*](https://onlinestudent.uconn.edu/learn-more/#collapsepanel-269-1-0-07).
 
-This course requires *lots of practice*. You should set aside 6-8 hours
-per week (assuming a 5-day work-week) to write out example problems from
+This course requires *lots of practice*. You should set aside 5-6 hours
+per day (assuming a 5-day work-week) to write out example problems from
 the textbook, try homework problems, and revise answers. This is the
 best way to prepare for quizzes.
 

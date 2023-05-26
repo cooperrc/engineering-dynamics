@@ -20,7 +20,7 @@ parse:
       - replacements
       - smartquotes
       - substitution
-      - takslist
+      - tasklist
     myst_dmath_double_inline: true
 
 

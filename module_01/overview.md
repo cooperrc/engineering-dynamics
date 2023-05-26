@@ -1,7 +1,5 @@
 # Module 1 - Definitions and equations
 
-_ball rolling on plane_
-
 In this module, we want to understand what makes objects move and how we
 can describe motion. In previous physics courses, you might remember the
 [kinematic
