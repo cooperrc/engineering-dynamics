@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Snowflake time of flight &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Homework #1" href="homework.html" />
     <link rel="prev" title="Definitions in Dynamics: kinematics and kinetics" href="definitions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -497,12 +499,12 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="snowflake-time-of-flight">
-<h1>Snowflake time of flight<a class="headerlink" href="#snowflake-time-of-flight" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="snowflake-time-of-flight">
+<h1>Snowflake time of flight<a class="headerlink" href="#snowflake-time-of-flight" title="Permalink to this heading">#</a></h1>
 <p>Have you ever watched a snowflake fall and thought, “How long has that snowflake been falling?”</p>
 <p>Here, we want to determine the time of flight for a snowflake. We’ll start simple and add some complexity to make a more accurate model.</p>
-<div class="section" id="simplest-model">
-<h2>Simplest model<a class="headerlink" href="#simplest-model" title="Permalink to this headline">#</a></h2>
+<section id="simplest-model">
+<h2>Simplest model<a class="headerlink" href="#simplest-model" title="Permalink to this heading">#</a></h2>
 <p>The simplest assumption we can make is that the only force acting on the snowflake is gravity. This leads to one differential equation,</p>
 <p><span class="math notranslate nohighlight">\(-mg = m\ddot{y}\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the snowflake, <span class="math notranslate nohighlight">\(g=9.81~\frac{m}{s^2}\)</span>, and <span class="math notranslate nohighlight">\(\ddot{y}\)</span> is the second derivative with respect to time for the height of the snowflake i.e. its vertical acceleration.</p>
@@ -536,7 +538,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;height (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/5bbbd2d50881a2ca437e657691c07719c328001c515c8fa4ddfe16eec740624f.png" src="../_images/5bbbd2d50881a2ca437e657691c07719c328001c515c8fa4ddfe16eec740624f.png" />
+<img alt="../_images/9b56bc65409719e9cce6e230befa7ae7d88a20a8d151d802275e0172411c63c3.png" src="../_images/9b56bc65409719e9cce6e230befa7ae7d88a20a8d151d802275e0172411c63c3.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -557,16 +559,16 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="our-solution-constant-acceleration">
-<h2>Our solution - constant acceleration<a class="headerlink" href="#our-solution-constant-acceleration" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="our-solution-constant-acceleration">
+<h2>Our solution - constant acceleration<a class="headerlink" href="#our-solution-constant-acceleration" title="Permalink to this heading">#</a></h2>
 <p>According to your calculations, the snowflake will start at 1,000-m altitude and reach ground level at almost 14.3 seconds.</p>
 <blockquote>
 <div><p><strong>Note:</strong> What’s wrong with the height curve here?</p>
 </div></blockquote>
-</div>
-<div class="section" id="a-little-problem-speed-of-snowflake">
-<h2>A little problem - speed of snowflake<a class="headerlink" href="#a-little-problem-speed-of-snowflake" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="a-little-problem-speed-of-snowflake">
+<h2>A little problem - speed of snowflake<a class="headerlink" href="#a-little-problem-speed-of-snowflake" title="Permalink to this heading">#</a></h2>
 <p>The graph of height-vs-time keeps getting steeper. The steeper the graph, the faster the snowflake. How fast is your snowflake traveling when it hits the ground?</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -588,16 +590,16 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;vertical speed (m/s)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/e035265dd630f18e98b27f6c0d096ee2bee31dbaab9cf98ebdf6ccc601bd84b7.png" src="../_images/e035265dd630f18e98b27f6c0d096ee2bee31dbaab9cf98ebdf6ccc601bd84b7.png" />
+<img alt="../_images/880bb6425f445bc39317e3df5fa1c0ec7eec5982be91aff3a2f508b444d350b5.png" src="../_images/880bb6425f445bc39317e3df5fa1c0ec7eec5982be91aff3a2f508b444d350b5.png" />
 </div>
 </div>
 <p>According to your calculations, the snowflake is traveling at 140 m/s when it strikes the ground. This is &gt;300 mph (or &gt;500 km/h). Whoah…</p>
 <p>If you caught this snowflake on your tongue it would feel like catching an icy <a class="reference external" href="https://en.wikipedia.org/wiki/BB_gun#Safety">BB gun pellet</a>, ouch!</p>
 <p>You are missing a key force in the free body diagram that <em>slows</em> down the snowflake, <a class="reference external" href="https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/falling.html"><em>air resistance</em> or drag</a>.</p>
 <p><img alt="Air drag free body diagram" src="https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/Images/falling.gif" /></p>
-</div>
-<div class="section" id="improved-model-with-air-resistance">
-<h2>Improved model with air resistance<a class="headerlink" href="#improved-model-with-air-resistance" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="improved-model-with-air-resistance">
+<h2>Improved model with air resistance<a class="headerlink" href="#improved-model-with-air-resistance" title="Permalink to this heading">#</a></h2>
 <p>Adding drag to the free body diagram, now you have a new model.</p>
 <p><span class="math notranslate nohighlight">\(m\ddot{y} = -mg + C_d \frac{r\dot{y}^2}{2}A\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(C_d\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Drag_coefficient">unitless drag coefficient</a>, <span class="math notranslate nohighlight">\(r=1.025~kg/m^3\)</span> is the <a class="reference external" href="https://www.macinstruments.com/blog/what-is-the-density-of-air-at-stp/">density of air</a>,  <span class="math notranslate nohighlight">\(m=3~mg\)</span> is the <a class="reference external" href="https://hypertextbook.com/facts/2001/JudyMoy.shtml">mass of a snowflake</a>, and <span class="math notranslate nohighlight">\(A=\pi D^2/4\)</span> is the area of the snowflake of <a class="reference external" href="https://gpm.nasa.gov/sites/default/files/document_files/parsivel_Tokay_c3vp_agu.pdf">diameter</a> <span class="math notranslate nohighlight">\(D=6~mm\)</span>.</p>
@@ -633,11 +635,11 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;vertical speed (m/s)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/9ed02690bbfda5fb327555c306a05fcbe3241ca01e9a7d587dbf4651878f08f2.png" src="../_images/9ed02690bbfda5fb327555c306a05fcbe3241ca01e9a7d587dbf4651878f08f2.png" />
+<img alt="../_images/bd96b2ab9012b13485f7d1d5e7dd58ff7e959ae92be03af037422574a9bf3dde.png" src="../_images/bd96b2ab9012b13485f7d1d5e7dd58ff7e959ae92be03af037422574a9bf3dde.png" />
 </div>
 </div>
-<div class="section" id="make-a-comparison-to-previous-model">
-<h3>Make a comparison to previous model<a class="headerlink" href="#make-a-comparison-to-previous-model" title="Permalink to this headline">#</a></h3>
+<section id="make-a-comparison-to-previous-model">
+<h3>Make a comparison to previous model<a class="headerlink" href="#make-a-comparison-to-previous-model" title="Permalink to this heading">#</a></h3>
 <p>In the constant acceleration model, the snowflake reached the ground in 14 seconds. In the improved air resistance model, you find that the snowflake only accelerates for 0.5 seconds. After that, it floats at a constant velocity until impact. This means, you can approximate that the snowflake travels at a constant velocity equal to its terminal velocity, <span class="math notranslate nohighlight">\(v_{term}\)</span>, as such</p>
 <p><span class="math notranslate nohighlight">\(\frac{dv}{dt} = 0 = -g +\frac{C_d rA}{2m}v_{term}^2\)</span></p>
 <p><span class="math notranslate nohighlight">\(v_{term} = -\sqrt{\frac{2mg}{C_d rA}}\)</span></p>
@@ -667,17 +669,17 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;height (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/5ceb0f0dc94d91497ddd2f0807156abbbe04ce0b00d497ea98fad8745036a088.png" src="../_images/5ceb0f0dc94d91497ddd2f0807156abbbe04ce0b00d497ea98fad8745036a088.png" />
+<img alt="../_images/ac5033e4da8e585198b4f255145fc8327eb9f6ff940c5d4df3fc078028e84938.png" src="../_images/ac5033e4da8e585198b4f255145fc8327eb9f6ff940c5d4df3fc078028e84938.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
 <p>The first model you created assumed constant acceleration, but after accounting for drag you found out that a snowflake reaches a terminal velocity in less than 0.5 seconds. The more accurate model to calculate time of flight was actually a constant velocity model.</p>
 <p>You found that the snowflake drifts slowly to the surface over the course of 496 seconds (or 8 minutes). Gently landing at 2 m/s.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

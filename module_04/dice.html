@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Weighted dice &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Central force motion" href="central-force.html" />
     <link rel="prev" title="Materials" href="readings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -493,8 +495,8 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="weighted-dice">
-<h1>Weighted dice<a class="headerlink" href="#weighted-dice" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="weighted-dice">
+<h1>Weighted dice<a class="headerlink" href="#weighted-dice" title="Permalink to this heading">#</a></h1>
 <p><img alt="weighted vs unweighted dice and their potential energy functions" src="../_images/dice.png" /></p>
 <p>Dice are used to determine outcomes in a number of games. We use dice because there <em>should be</em> an equal probability of any side showing on top. One way to trick your friends is to purchase a weighted dice. The weighted dice (if it is properly designed) is the same shape and the same mass as a normal, unweighted dice, but it has a higher probability of landing on a 6. <em>How is that possible</em>?</p>
 <div class="cell tag_hide-input docutils container">
@@ -522,8 +524,8 @@ document.write(`
         ></iframe>
         </div></div>
 </div>
-<div class="section" id="dice-characteristics">
-<h2>Dice characteristics<a class="headerlink" href="#dice-characteristics" title="Permalink to this headline">#</a></h2>
+<section id="dice-characteristics">
+<h2>Dice characteristics<a class="headerlink" href="#dice-characteristics" title="Permalink to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://www.dice.co.uk/outlines.htm">Dice weights and measurements</a> you will consider are as follows</p>
 <ul class="simple">
 <li><p>m = 10.4 g</p></li>
@@ -566,12 +568,12 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;potential energy (mJ)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/ba4544cd6979f97a3f1c28c98bdb87c87c2fa7ed1190d6b033a15862f4ef881e.png" src="../_images/ba4544cd6979f97a3f1c28c98bdb87c87c2fa7ed1190d6b033a15862f4ef881e.png" />
+<img alt="../_images/f1b0b6a8377474d113a7c5a55bbfaa9e2aff978f9ecbc9d32519695b074b9537.png" src="../_images/f1b0b6a8377474d113a7c5a55bbfaa9e2aff978f9ecbc9d32519695b074b9537.png" />
 </div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>Weighted dice<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id1">
+<h2>Weighted dice<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p><img alt="weighted dice rotating from 0 to 90 deg" src="../_images/dice-weighted.svg" /></p>
 <p>The weighted dice has the same characteristics as the unweighted dice, but the center of mass is now shifted towards the bottom of the dice by 50%</p>
 <ul class="simple">
@@ -599,7 +601,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/47f01c4e1384c4f2e91e963741c23c0fb0cbf29a713c36b6a4e65f24cb79a207.png" src="../_images/47f01c4e1384c4f2e91e963741c23c0fb0cbf29a713c36b6a4e65f24cb79a207.png" />
+<img alt="../_images/9f653a3c657890638f1e987200d556f505b87726444daa7a1cc1fbb367f94dd5.png" src="../_images/9f653a3c657890638f1e987200d556f505b87726444daa7a1cc1fbb367f94dd5.png" />
 </div>
 </div>
 <p>To get from <span class="math notranslate nohighlight">\(\theta=0^o~to\theta=90^o\)</span>, the total energy change is 0 for the unweighted dice. The weighted dice has an increase in energy of 0.55 mJ. In order to rotate the unweighted dice, the system needs a minum of 0.2 mJ. For the weighted dice, the system needs 0.7 mJ.</p>
@@ -649,16 +651,16 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;potential energy (mJ)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/e285be8f9d366fd87ea8dc89b7d48c6557f1729b4e99491e2c3f0c52355cb54c.png" src="../_images/e285be8f9d366fd87ea8dc89b7d48c6557f1729b4e99491e2c3f0c52355cb54c.png" />
+<img alt="../_images/88032e0b14e39e8af41263f011feae376316ffa10c9d1fc11fea6d7066c836de.png" src="../_images/88032e0b14e39e8af41263f011feae376316ffa10c9d1fc11fea6d7066c836de.png" />
 </div>
 </div>
-</div>
-<div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
 <p>In this notebook, you calculated the potential energy of a dice sitting on a table and the minimum amount of energy needed to rotate the dice to another side. Then, you considered a weighted dice that has the same mass, but shifted away from the 6-side.</p>
 <p>You found that shifting the center of mass lower by 5.5 mm led to higher potential energy on every other side and larger energies needed to rotate to another side.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

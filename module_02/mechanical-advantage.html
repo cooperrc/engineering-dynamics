@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Mechanical advantage &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Driving forces for moving systems" href="driving-forces.html" />
     <link rel="prev" title="Rigid body lectures and notes" href="rigid-bodies.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -493,8 +495,8 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="mechanical-advantage">
-<h1>Mechanical advantage<a class="headerlink" href="#mechanical-advantage" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="mechanical-advantage">
+<h1>Mechanical advantage<a class="headerlink" href="#mechanical-advantage" title="Permalink to this heading">#</a></h1>
 <p>In the diagram below, there is a 50-N force, <span class="math notranslate nohighlight">\(F\)</span>, applied downwards on a
 constrained linkage system. There is a restoring force, <span class="math notranslate nohighlight">\(R\)</span>, that
 maintains a slow change in the angle of the mechanism, <span class="math notranslate nohighlight">\(\theta\)</span>, as it
@@ -502,8 +504,8 @@ changes from <span class="math notranslate nohighlight">\(89^o\)</span> to <span
 goal is to determine the necessary restoring force <span class="math notranslate nohighlight">\(R\)</span> as a
 function of angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p><img alt="two-bar linkage sliding on surface" src="../_images/two-bar.svg" /></p>
-<div class="section" id="kinematics-geometry-of-motion">
-<h2>Kinematics - geometry of motion<a class="headerlink" href="#kinematics-geometry-of-motion" title="Permalink to this headline">#</a></h2>
+<section id="kinematics-geometry-of-motion">
+<h2>Kinematics - geometry of motion<a class="headerlink" href="#kinematics-geometry-of-motion" title="Permalink to this heading">#</a></h2>
 <p>This system has two rigid bodies connected at point <span class="math notranslate nohighlight">\(A\)</span> by a pin and the
 whole system is pinned to the ground at <span class="math notranslate nohighlight">\(O\)</span>. Point <span class="math notranslate nohighlight">\(B\)</span> slides
 along a horizontal surface. The total degrees of freedom are</p>
@@ -544,12 +546,12 @@ two angles have to be equal</p></li>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/c8add0ba8286ad44573327a09db57832f64c3ccb419bc5f6bb350504b24d34ac.png" src="../_images/c8add0ba8286ad44573327a09db57832f64c3ccb419bc5f6bb350504b24d34ac.png" />
+<img alt="../_images/373f6242dad8f604b1888bd62891ba5e136c9c47ad9ddb84427e74c013254ac0.png" src="../_images/373f6242dad8f604b1888bd62891ba5e136c9c47ad9ddb84427e74c013254ac0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="kinetics-applied-forces-and-constraint-forces">
-<h2>Kinetics - applied forces and constraint forces<a class="headerlink" href="#kinetics-applied-forces-and-constraint-forces" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="kinetics-applied-forces-and-constraint-forces">
+<h2>Kinetics - applied forces and constraint forces<a class="headerlink" href="#kinetics-applied-forces-and-constraint-forces" title="Permalink to this heading">#</a></h2>
 <p>The applied force, <span class="math notranslate nohighlight">\(F=50~N\)</span> is constant, but <span class="math notranslate nohighlight">\(R\)</span> is dependent upon the
 geometry of the system. You solved for the kinematics in the first part,
 here you can use the Newton-Euler equations to solve for <span class="math notranslate nohighlight">\(R\)</span> given <span class="math notranslate nohighlight">\(\theta\)</span> and
@@ -605,16 +607,16 @@ equations relate <span class="math notranslate nohighlight">\(R\)</span> to <spa
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/bdc9d092d126a31baf52e576bd42dc9e3abf43c95cce8f0d74259584edc39f85.png" src="../_images/bdc9d092d126a31baf52e576bd42dc9e3abf43c95cce8f0d74259584edc39f85.png" />
+<img alt="../_images/b3c32bb0805a16ce197482ce72447dac9a4ef3550df88ecd52353107b0462f1e.png" src="../_images/b3c32bb0805a16ce197482ce72447dac9a4ef3550df88ecd52353107b0462f1e.png" />
 </div>
 </div>
-</div>
-<div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
 <p>Take a look at the mechanical advantage and disadvantage this system can create. For angles close to <span class="math notranslate nohighlight">\(\theta\approx 90^o\)</span>, the restoring force is close to zero. In this case, the applied force is mostly directed at constraints on the system. When the angles are close to <span class="math notranslate nohighlight">\(\theta \approx 0^o\)</span>, the required restoring force can be <span class="math notranslate nohighlight">\(&gt;100\times\)</span> the input force.</p>
 <p>Have you seen this type of linkage system in engineering devices?</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

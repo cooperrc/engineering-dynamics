@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Yoyo despin revisited (cord constraint) &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -156,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -436,8 +438,8 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="yoyo-despin-revisited-cord-constraint">
-<h1>Yoyo despin revisited (cord constraint)<a class="headerlink" href="#yoyo-despin-revisited-cord-constraint" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="yoyo-despin-revisited-cord-constraint">
+<h1>Yoyo despin revisited (cord constraint)<a class="headerlink" href="#yoyo-despin-revisited-cord-constraint" title="Permalink to this heading">#</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">SVG</span>
 
@@ -448,9 +450,9 @@ document.write(`
 payload. These cords unravel and slow the spinning of the rocket. In
 this tutorial, you will consider the engineering system, conservation of
 angular momentum, and conservation of energy.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="engineering-system-kinematics">
-<h1>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="engineering-system-kinematics">
+<h1>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this heading">#</a></h1>
 <p>As the yoyo mass unravels, it moves further from the payload. The total
 distance from the payload center of mass (COM) is described by</p>
 <p><span class="math notranslate nohighlight">\(r_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}\)</span></p>
@@ -493,9 +495,9 @@ is spinning at <span class="math notranslate nohighlight">\(\omega_B^0=10~rad/s\
 <p>The equations for position and velocity are the essential kinematic
 equations to define angular momentum and kinetic energy, the two kinetic
 equations.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="engineering-system-kinetics-conservation-of-angular-momentum">
-<h1>Engineering system - kinetics (conservation of angular momentum)<a class="headerlink" href="#engineering-system-kinetics-conservation-of-angular-momentum" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="engineering-system-kinetics-conservation-of-angular-momentum">
+<h1>Engineering system - kinetics (conservation of angular momentum)<a class="headerlink" href="#engineering-system-kinetics-conservation-of-angular-momentum" title="Permalink to this heading">#</a></h1>
 <p>The angular momentum is constant because <span class="math notranslate nohighlight">\(\sum \mathbf{M}_G = 0 =
 \frac{d}{dt}\mathbf{h}_G\)</span>. The total angular momentum is as such</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{h}_G = I_G \omega_B \hat{k} + m_P \mathbf{r}_{P/G} \times
@@ -511,9 +513,9 @@ the relative angular velocity of the yoyo cord. At time <span class="math notran
 are release and <span class="math notranslate nohighlight">\(\theta = \dot{\theta}=0\)</span>. There are three unknown
 variables in this angular momentum equation, <span class="math notranslate nohighlight">\(\omega_B\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, and
 <span class="math notranslate nohighlight">\(\dot{\theta}\)</span>. You need another equation, use work-energy.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="engineering-system-kinetics-work-energy-formulation">
-<h1>Engineering system - kinetics (work-energy formulation)<a class="headerlink" href="#engineering-system-kinetics-work-energy-formulation" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="engineering-system-kinetics-work-energy-formulation">
+<h1>Engineering system - kinetics (work-energy formulation)<a class="headerlink" href="#engineering-system-kinetics-work-energy-formulation" title="Permalink to this heading">#</a></h1>
 <p>There is no external work done to the system, the tension in the yoyo
 cords are internal constraint forces, so the total work done is 0, e.g.
 for a <span class="math notranslate nohighlight">\(T\Delta l\)</span> there is an equal and opposite <span class="math notranslate nohighlight">\(-T\Delta l\)</span> on
@@ -525,9 +527,9 @@ m(R^2\theta^2(\omega_B+\dot{\theta})^2+R^2\omega_B^2)\)</span></p>
 <p>combining terms and simplifying</p>
 <p><span class="math notranslate nohighlight">\(\left(\frac{I_G}{2mR^2}+1\right)( (\omega_B^0)^2-\omega_B)  = 
 \theta^2(\omega_B+\dot{\theta})^2\)</span></p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="combining-equations-and-solving">
-<h1>Combining equations and solving<a class="headerlink" href="#combining-equations-and-solving" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="combining-equations-and-solving">
+<h1>Combining equations and solving<a class="headerlink" href="#combining-equations-and-solving" title="Permalink to this heading">#</a></h1>
 <p>Substitute <span class="math notranslate nohighlight">\(c = \left(\frac{I_G}{2mR^2}+1\right)\)</span> so you are left with</p>
 <ol class="arabic simple">
 <li><p>conservation of angular momentum</p></li>
@@ -591,7 +593,7 @@ R\omega_B^0 t_f\)</span></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

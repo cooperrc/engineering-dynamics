@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Module 2 - Project: four-bar linkage design &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Module 3 - Constrained engineering systems" href="../module_03/overview.html" />
     <link rel="prev" title="Module_02 Homework" href="homework.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -500,8 +502,8 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="module-2-project-four-bar-linkage-design">
-<h1>Module 2 - Project: four-bar linkage design<a class="headerlink" href="#module-2-project-four-bar-linkage-design" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="module-2-project-four-bar-linkage-design">
+<h1>Module 2 - Project: four-bar linkage design<a class="headerlink" href="#module-2-project-four-bar-linkage-design" title="Permalink to this heading">#</a></h1>
 <p>In this notebook, you will build your own four-bar mechanical linkage and plot the path of the components. You can choose your own link sizes. Some areas of interest for different backgrounds:</p>
 <ul class="simple">
 <li><p>Automotive design: <a class="reference external" href="https://youtu.be/d4eLPEVJ64E">windshield wiper motion</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Watt%27s_linkage">watt linkage suspension</a></p></li>
@@ -511,8 +513,8 @@ document.write(`
 <p>In this notebook, you will step through the process of defining the
 kinematics of a <a class="reference external" href="https://en.wikipedia.org/wiki/Four-bar_linkage">four-bar
 linkage</a>.</p>
-<div class="section" id="what-youll-do">
-<h2>What you’ll do<a class="headerlink" href="#what-youll-do" title="Permalink to this headline">#</a></h2>
+<section id="what-youll-do">
+<h2>What you’ll do<a class="headerlink" href="#what-youll-do" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>solve a series of nonlinear equations using
 <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fsolve.html"><code class="docutils literal notranslate"><span class="pre">fsolve</span></code></a></p></li>
@@ -521,9 +523,9 @@ linkage</a>.</p>
 location</p></li>
 <li><p>plot and animate the motion of the four-bar linkage</p></li>
 </ul>
-</div>
-<div class="section" id="what-youll-need">
-<h2>What you’ll need<a class="headerlink" href="#what-youll-need" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="what-youll-need">
+<h2>What you’ll need<a class="headerlink" href="#what-youll-need" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Jupyter and Python - you can run this notebook with the “Launch” icon in the Engineering Dynamics online resource</p></li>
 <li><p>vector equations to solve for the constraints on the linkage mechanism</p></li>
@@ -546,9 +548,9 @@ f_2(\theta_2,~\theta_3)\end{array}\right]=\left[\begin{array}{c}
 l_1\sin\theta_1+l_2\sin\theta_2-l_3\sin\theta_3 -d_y\\
 l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 \end{array}\right]\)</span></p>
-</div>
-<div class="section" id="defining-your-system">
-<h2>Defining your system<a class="headerlink" href="#defining-your-system" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="defining-your-system">
+<h2>Defining your system<a class="headerlink" href="#defining-your-system" title="Permalink to this heading">#</a></h2>
 <p>As an example, I am creating a short arm that pivots a longer arm. Similar to a windshield wiper design</p>
 <blockquote>
 <div><p><strong>Note</strong>: you can double-click this cell in Jupyter to edit the text. Then, you can update the geometry of your four-bar linkage.</p>
@@ -608,12 +610,12 @@ l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a06ef0e13a99c4dddaabf6cbba4810d4e2cab87f3a36960057b82b42351bed8b.png" src="../_images/a06ef0e13a99c4dddaabf6cbba4810d4e2cab87f3a36960057b82b42351bed8b.png" />
+<img alt="../_images/9290f7a1889fb827452f4151e2d542e43569b9247ccc9a08e33f28da92859dfe.png" src="../_images/9290f7a1889fb827452f4151e2d542e43569b9247ccc9a08e33f28da92859dfe.png" />
 </div>
 </div>
-</div>
-<div class="section" id="motion-of-the-links">
-<h2>Motion of the links<a class="headerlink" href="#motion-of-the-links" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="motion-of-the-links">
+<h2>Motion of the links<a class="headerlink" href="#motion-of-the-links" title="Permalink to this heading">#</a></h2>
 <p>Now I have the position of the links, but I want to see what it looks like and what paths the components trace. Here, I use the vector definitions to define the positions of the links and connections</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(r_A = l_1 \cos\theta_1\hat{i} + l_1 \sin\theta_1\hat{j}\)</span></p></li>
@@ -631,8 +633,8 @@ l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 </div>
 </div>
 </div>
-<div class="section" id="plot-one-orientation-and-the-paths">
-<h3>Plot one orientation and the paths<a class="headerlink" href="#plot-one-orientation-and-the-paths" title="Permalink to this headline">#</a></h3>
+<section id="plot-one-orientation-and-the-paths">
+<h3>Plot one orientation and the paths<a class="headerlink" href="#plot-one-orientation-and-the-paths" title="Permalink to this heading">#</a></h3>
 <p>The paths of the links are now in the variables <code class="docutils literal notranslate"><span class="pre">rA</span></code>, <code class="docutils literal notranslate"><span class="pre">rB</span></code>, <code class="docutils literal notranslate"><span class="pre">rC</span></code>, and <code class="docutils literal notranslate"><span class="pre">rP</span></code>. I will plot the paths of these 4 points and the shape at a point in time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -665,13 +667,13 @@ l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a9067914767f0fa0295d485f98b170db1b0bdff8ca6978f2472adb6b8b9fe32a.png" src="../_images/a9067914767f0fa0295d485f98b170db1b0bdff8ca6978f2472adb6b8b9fe32a.png" />
+<img alt="../_images/841b88efe5b974a59b926abb0d85f8e21b460994a74ed8e95eab66e448bd4402.png" src="../_images/841b88efe5b974a59b926abb0d85f8e21b460994a74ed8e95eab66e448bd4402.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="determining-the-speed-of-the-components">
-<h2>Determining the speed of the components<a class="headerlink" href="#determining-the-speed-of-the-components" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="determining-the-speed-of-the-components">
+<h2>Determining the speed of the components<a class="headerlink" href="#determining-the-speed-of-the-components" title="Permalink to this heading">#</a></h2>
 <p>Now, I use the constraint equations from above to determine the speed of the link motion.</p>
 <p><span class="math notranslate nohighlight">\(\frac{d\bar{f}(\bar{x})}{dt}= \left[\begin{array}{c}
 f_1(\theta_2,~\theta_3) \\ 
@@ -728,12 +730,12 @@ l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\si
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;output angular speed (radian/s)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/88917c3ef8c09d743540b03a7c13662b576f3a179beba8c261751176afdbdef6.png" src="../_images/88917c3ef8c09d743540b03a7c13662b576f3a179beba8c261751176afdbdef6.png" />
+<img alt="../_images/a6e78501be879d09862aad5a9d24ce17fd8f051084d9ae300e8373bed8acebd2.png" src="../_images/a6e78501be879d09862aad5a9d24ce17fd8f051084d9ae300e8373bed8acebd2.png" />
 </div>
 </div>
-</div>
-<div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
 <p>You should edit this notebook to create your own four-bar linkage analysis.</p>
 <ul class="simple">
 <li><p>Choose a geometry</p></li>
@@ -742,8 +744,8 @@ l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\si
 <li><p>add your own <strong>wrapping up</strong> section to add any details or further analysis</p></li>
 <li><p>what did you learn?</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

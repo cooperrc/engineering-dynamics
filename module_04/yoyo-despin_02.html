@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Yoyo despin design &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Homework" href="homework.html" />
     <link rel="prev" title="A moving reference frame with conservation of angular momentum" href="table-momentum.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -494,8 +496,8 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="yoyo-despin-design">
-<h1>Yoyo despin design<a class="headerlink" href="#yoyo-despin-design" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="yoyo-despin-design">
+<h1>Yoyo despin design<a class="headerlink" href="#yoyo-despin-design" title="Permalink to this heading">#</a></h1>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -517,8 +519,8 @@ document.write(`
 payload. These cords unravel and slow the spinning of the rocket. In
 this tutorial, you will consider the engineering system, conservation of
 angular momentum, and conservation of energy.</p>
-<div class="section" id="engineering-system-kinematics">
-<h2>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this headline">#</a></h2>
+<section id="engineering-system-kinematics">
+<h2>Engineering system - kinematics<a class="headerlink" href="#engineering-system-kinematics" title="Permalink to this heading">#</a></h2>
 <p>As the yoyo mass unravels, it moves further from the payload. The total
 distance from the payload center of mass (COM) is described by</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{r}_{P/G} = R\hat{e}_R + l\hat{e}_{\theta}\)</span></p>
@@ -566,9 +568,9 @@ is spinning at <span class="math notranslate nohighlight">\(\omega_B^0=10~rad/s\
 <p>The equations for position and velocity are the essential kinematic
 equations to define angular momentum and kinetic energy, the two kinetic
 equations.</p>
-</div>
-<div class="section" id="engineering-system-kinetics-conservation-of-angular-momentum">
-<h2>Engineering system - kinetics (conservation of angular momentum)<a class="headerlink" href="#engineering-system-kinetics-conservation-of-angular-momentum" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="engineering-system-kinetics-conservation-of-angular-momentum">
+<h2>Engineering system - kinetics (conservation of angular momentum)<a class="headerlink" href="#engineering-system-kinetics-conservation-of-angular-momentum" title="Permalink to this heading">#</a></h2>
 <p>The angular momentum is constant because <span class="math notranslate nohighlight">\(\sum \mathbf{M}_G = 0 =
 \frac{d}{dt}\mathbf{h}_G\)</span>. The total angular momentum is as such</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{h}_G = I_G \omega_B \hat{k} + m_P \mathbf{r}_{P/G} \times
@@ -584,9 +586,9 @@ the relative angular velocity of the yoyo cord. At time <span class="math notran
 are release and <span class="math notranslate nohighlight">\(\theta = \dot{\theta}=0\)</span>. There are three unknown
 variables in this angular momentum equation, <span class="math notranslate nohighlight">\(\omega_B\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, and
 <span class="math notranslate nohighlight">\(\dot{\theta}\)</span>. You need another equation, use work-energy.</p>
-</div>
-<div class="section" id="engineering-system-kinetics-work-energy-formulation">
-<h2>Engineering system - kinetics (work-energy formulation)<a class="headerlink" href="#engineering-system-kinetics-work-energy-formulation" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="engineering-system-kinetics-work-energy-formulation">
+<h2>Engineering system - kinetics (work-energy formulation)<a class="headerlink" href="#engineering-system-kinetics-work-energy-formulation" title="Permalink to this heading">#</a></h2>
 <p>There is no external work done to the system, the tension in the yoyo
 cords are internal constraint forces, so the total work done is 0, e.g.
 for a <span class="math notranslate nohighlight">\(T\Delta l\)</span> there is an equal and opposite <span class="math notranslate nohighlight">\(-T\Delta l\)</span> on
@@ -598,9 +600,9 @@ m(R^2\theta^2(\omega_B+\dot{\theta})^2+R^2\omega_B^2)\)</span></p>
 <p>combining terms and simplifying</p>
 <p><span class="math notranslate nohighlight">\(\left(\frac{I_G}{2mR^2}+1\right)( (\omega_B^0)^2-\omega_B)  = 
 \theta^2(\omega_B+\dot{\theta})^2\)</span></p>
-</div>
-<div class="section" id="combining-equations-and-solving">
-<h2>Combining equations and solving<a class="headerlink" href="#combining-equations-and-solving" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="combining-equations-and-solving">
+<h2>Combining equations and solving<a class="headerlink" href="#combining-equations-and-solving" title="Permalink to this heading">#</a></h2>
 <p>Substitute <span class="math notranslate nohighlight">\(c = \left(\frac{I_G}{2mR^2}+1\right)\)</span> so you are left with</p>
 <ol class="arabic simple">
 <li><p>conservation of angular momentum</p></li>
@@ -657,7 +659,7 @@ the orginal conservation of angular momentum equation to solve for
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/98abdf6cfdf4ffcfa18d0bbc5b43f504bcd3d103ca1fe340d4e7632b74deaced.png" src="../_images/98abdf6cfdf4ffcfa18d0bbc5b43f504bcd3d103ca1fe340d4e7632b74deaced.png" />
+<img alt="../_images/ea2895790ab0f8ff857ac9c4be93a55e32978d15c1e0b14c12e7d727bf6bc048.png" src="../_images/ea2895790ab0f8ff857ac9c4be93a55e32978d15c1e0b14c12e7d727bf6bc048.png" />
 </div>
 </div>
 <p>The added benefit of using cords to release the yoyos is that the
@@ -681,11 +683,11 @@ R\omega_B^0 t_f\)</span></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6f4ef6dc441b7baf27083423f629c4fd82933047895ac28c0124b0c0dde8357c.png" src="../_images/6f4ef6dc441b7baf27083423f629c4fd82933047895ac28c0124b0c0dde8357c.png" />
+<img alt="../_images/eb81504c7171660b872775c4b95c2cefdb8c4fde7fe68f26bcaf36ad4258db4d.png" src="../_images/eb81504c7171660b872775c4b95c2cefdb8c4fde7fe68f26bcaf36ad4258db4d.png" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

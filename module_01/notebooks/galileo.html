@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Galileo’s rolling experiment &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -156,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -485,15 +487,15 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="galileos-rolling-experiment">
-<h1>Galileo’s rolling experiment<a class="headerlink" href="#galileos-rolling-experiment" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="galileos-rolling-experiment">
+<h1>Galileo’s rolling experiment<a class="headerlink" href="#galileos-rolling-experiment" title="Permalink to this heading">#</a></h1>
 <p>Galileo is credited with creating the field of kinematics. One of his
 earliest experiments was to measure the position and speed of a ball
 rolling on an incline plane. He determined that the position was
 proportional to the square of time. This means that the motion is
 described by constant acceleration.</p>
-<div class="section" id="kinematics-of-rolling">
-<h2>Kinematics of rolling<a class="headerlink" href="#kinematics-of-rolling" title="Permalink to this headline">#</a></h2>
+<section id="kinematics-of-rolling">
+<h2>Kinematics of rolling<a class="headerlink" href="#kinematics-of-rolling" title="Permalink to this heading">#</a></h2>
 <p>Here, consider a lacrosse ball rolling on a slope. Before you create
 the equations of motion for the ball, consider the kinematics of a
 rolling ball. The point-of-contact between the ground and ball has the
@@ -514,9 +516,9 @@ to its rotation rate as such,</p>
 <li><p>acceleration: <span class="math notranslate nohighlight">\(a = -R\ddot{\theta}\)</span>.</p></li>
 </ul>
 <p>These are general constraints for an object that rolls without slipping.</p>
-</div>
-<div class="section" id="kinetics-of-rolling">
-<h2>Kinetics of rolling<a class="headerlink" href="#kinetics-of-rolling" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="kinetics-of-rolling">
+<h2>Kinetics of rolling<a class="headerlink" href="#kinetics-of-rolling" title="Permalink to this heading">#</a></h2>
 <p>The ball rolls down an incline of 5<span class="math notranslate nohighlight">\(^o\)</span>. Start with the free body
 diagram.</p>
 <p><img alt="ball rolling FBD" src="module_01/notebooks/images/ball-rolling_FBD.svg" /></p>
@@ -548,9 +550,9 @@ objects, the relationship is better represented by an inequality, <span class="m
 \leq \mu N\)</span>. Coulomb friction represents the upper bound on the force
 of friction, it cannot be universally applied as an equality.</p>
 </div></blockquote>
-</div>
-<div class="section" id="solving-for-the-motion-of-the-ball-on-a-slope">
-<h2>Solving for the motion of the ball on a slope<a class="headerlink" href="#solving-for-the-motion-of-the-ball-on-a-slope" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="solving-for-the-motion-of-the-ball-on-a-slope">
+<h2>Solving for the motion of the ball on a slope<a class="headerlink" href="#solving-for-the-motion-of-the-ball-on-a-slope" title="Permalink to this heading">#</a></h2>
 <p>You now have 1 constraint equation and 3 kinetic equations with four
 unknowns. You can set up the 4 equations and 4 unknowns</p>
 <ol class="arabic simple">
@@ -583,7 +585,7 @@ unknowns. You can set up the 4 equations and 4 unknowns</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;position (m)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/2c428ad3c3a2033c0bca6fbccfe55d68f8cbf3f80876c22cb126356323978d40.png" src="../../_images/2c428ad3c3a2033c0bca6fbccfe55d68f8cbf3f80876c22cb126356323978d40.png" />
+<img alt="../../_images/cf4e9133e487a0fed04ff0b3a85346f7877bc2b863344b7fb3b13cc4349e6ad7.png" src="../../_images/cf4e9133e487a0fed04ff0b3a85346f7877bc2b863344b7fb3b13cc4349e6ad7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -593,23 +595,23 @@ unknowns. You can set up the 4 equations and 4 unknowns</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1f72fa55e0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8605cf27f0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/691cb5957a71884d8bc57982d195c82122892c78578d26a0169d10905e192a4a.png" src="../../_images/691cb5957a71884d8bc57982d195c82122892c78578d26a0169d10905e192a4a.png" />
+<img alt="../../_images/985c272aa231b4d303cd6c557d89149ad58208918e8d8fd6646f91176f093f81.png" src="../../_images/985c272aa231b4d303cd6c557d89149ad58208918e8d8fd6646f91176f093f81.png" />
 </div>
 </div>
-</div>
-<div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
 <p>In this notebook, you</p>
 <ul class="simple">
 <li><p>defined kinematic constraints for rolling</p></li>
 <li><p>used a free body diagram and kinetic diagram to set up 3 planar equations of motion</p></li>
 <li><p>integrated the equations of motion to plot the position and rotation of a ball rolling on a plane</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

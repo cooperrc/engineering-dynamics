@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Module 3 - Project: pendulum solutions &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Module 4 - Momentum and Energy" href="../module_04/overview.html" />
     <link rel="prev" title="Homework" href="homework.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -496,16 +498,16 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="module-3-project-pendulum-solutions">
-<h1>Module 3 - Project: pendulum solutions<a class="headerlink" href="#module-3-project-pendulum-solutions" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="module-3-project-pendulum-solutions">
+<h1>Module 3 - Project: pendulum solutions<a class="headerlink" href="#module-3-project-pendulum-solutions" title="Permalink to this heading">#</a></h1>
 <p>In this notebook, you will compare two solutions for the motion of a swinging pendulum</p>
 <ol class="arabic simple">
 <li><p>linearized solution for <span class="math notranslate nohighlight">\(\ddot{\theta}(t) = -\frac{g}{L}\theta\)</span></p></li>
 <li><p>numerical solution for <span class="math notranslate nohighlight">\(\ddot{\theta}(t) = -\frac{g}{L}\sin\theta\)</span></p></li>
 </ol>
 <p>You can choose your own pendulum length <span class="math notranslate nohighlight">\(L\)</span> for the analysis. Try tying a string to an object and recording the swinging of the pendulum. You can estimate the initial angle and its period of oscillation.</p>
-<div class="section" id="linear-solution">
-<h2>1. Linear solution<a class="headerlink" href="#linear-solution" title="Permalink to this headline">#</a></h2>
+<section id="linear-solution">
+<h2>1. Linear solution<a class="headerlink" href="#linear-solution" title="Permalink to this heading">#</a></h2>
 <p>The linear solution is the first order Taylor series approximation for the equation of motion</p>
 <p><span class="math notranslate nohighlight">\(\ddot{\theta}(t) = -\frac{g}{L}\sin\theta \approx -\frac{g}{L}\theta\)</span></p>
 <p>The solution to this simple harmonic oscillator function is</p>
@@ -539,13 +541,13 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta(t)$ [degrees]&#39;)
 </pre></div>
 </div>
-<img alt="../_images/4811768e0a27838b5215defa03addb23f23be8d8b00ac860fc99aa9a7444fef8.png" src="../_images/4811768e0a27838b5215defa03addb23f23be8d8b00ac860fc99aa9a7444fef8.png" />
+<img alt="../_images/bc0922e711cf160a18a3439b2f1e68e61213a8a39e74c3ddaf4a93768583426e.png" src="../_images/bc0922e711cf160a18a3439b2f1e68e61213a8a39e74c3ddaf4a93768583426e.png" />
 </div>
 </div>
 <p>In the plot above, you should see harmonic motion. If it starts from rest at <span class="math notranslate nohighlight">\(60^o\)</span> the pendulum will swing to <span class="math notranslate nohighlight">\(-60^o\)</span> in <span class="math notranslate nohighlight">\(\frac{T}{2} =\frac{\pi}{\omega}\)</span> seconds.</p>
-</div>
-<div class="section" id="numerical-solution">
-<h2>2. Numerical solution<a class="headerlink" href="#numerical-solution" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="numerical-solution">
+<h2>2. Numerical solution<a class="headerlink" href="#numerical-solution" title="Permalink to this heading">#</a></h2>
 <p>In the numerical solution, there is no need to linearize the equation of motion. You <em>do</em> need to create a <strong>state</strong> variable as such</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{x} = [x_1,~x_2] = [\theta,~\dot{\theta}]\)</span></p>
 <p>now, you can describe 2 first order equations in a function as such</p>
@@ -559,7 +561,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
 <span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">def</span> <span class="nf">pendulum</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;pendulum equations of motion for theta and dtheta/dt</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;pendulum equations of motion for theta and dtheta/dt</span>
 <span class="sd">    arguments</span>
 <span class="sd">    ---------</span>
 <span class="sd">    t: current time</span>
@@ -606,12 +608,12 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta(t)$ [degrees]&#39;)
 </pre></div>
 </div>
-<img alt="../_images/c1bcaeb155ad313917b87a46525d9f080d1d54d888b483a0f53f2553099d2ac4.png" src="../_images/c1bcaeb155ad313917b87a46525d9f080d1d54d888b483a0f53f2553099d2ac4.png" />
+<img alt="../_images/f8e349847fae456b8105c0a5bc325685b79a4b965ebd0efa9072e627f8b10f13.png" src="../_images/f8e349847fae456b8105c0a5bc325685b79a4b965ebd0efa9072e627f8b10f13.png" />
 </div>
 </div>
-</div>
-<div class="section" id="comparing-results">
-<h2>Comparing results<a class="headerlink" href="#comparing-results" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="comparing-results">
+<h2>Comparing results<a class="headerlink" href="#comparing-results" title="Permalink to this heading">#</a></h2>
 <p>At first glance, it would seem both solutions are <em>close enough</em>, but here you can plot them together and compare.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -626,7 +628,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta(t)$ [degrees]&#39;)
 </pre></div>
 </div>
-<img alt="../_images/9aad3d68bd14c51981a1aed495534010c93b27756bd4c988dceafa91908d27eb.png" src="../_images/9aad3d68bd14c51981a1aed495534010c93b27756bd4c988dceafa91908d27eb.png" />
+<img alt="../_images/5991b6e44af88739f196a8956e277f60c0f57ed1b3954725ad50905b2995a290.png" src="../_images/5991b6e44af88739f196a8956e277f60c0f57ed1b3954725ad50905b2995a290.png" />
 </div>
 </div>
 <p>You should notice a difference in time period between the two solutions, which means the natural frequencies are different.</p>
@@ -669,19 +671,19 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\ddot{\\theta}(t)$ (rad/s$^2$)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/61aac1c062063de1ba2f432dbdadfcd4a347b52ce309ecd872664dc41fc73e53.png" src="../_images/61aac1c062063de1ba2f432dbdadfcd4a347b52ce309ecd872664dc41fc73e53.png" />
+<img alt="../_images/4415d7ebf6f349bd80d856dfff705f5b5d683646ebe4321549a2aba69d671dd0.png" src="../_images/4415d7ebf6f349bd80d856dfff705f5b5d683646ebe4321549a2aba69d671dd0.png" />
 </div>
 </div>
-<div class="section" id="question-prompt">
-<h3>Question prompt<a class="headerlink" href="#question-prompt" title="Permalink to this headline">#</a></h3>
+<section id="question-prompt">
+<h3>Question prompt<a class="headerlink" href="#question-prompt" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Where do you see the biggest difference between the linearized solution and the numerical solution?</p></li>
 <li><p>What are ways you can quantify the error between then two results? Is one solution more <em>accurate</em>?</p></li>
 <li><p>What other calculations can you compare between these two solutions?</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Numerical Solution of Yoyo despinning &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -156,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -507,8 +509,8 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="numerical-solution-of-yoyo-despinning">
-<h1>Numerical Solution of Yoyo despinning<a class="headerlink" href="#numerical-solution-of-yoyo-despinning" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="numerical-solution-of-yoyo-despinning">
+<h1>Numerical Solution of Yoyo despinning<a class="headerlink" href="#numerical-solution-of-yoyo-despinning" title="Permalink to this heading">#</a></h1>
 <p><img alt="Yoyo Despin on a track" src="../_images/yoyo-despin_01.svg" /></p>
 <p>The image above shows a proposed yoyo despin mechanism that has two
 masses attached to a sliding track that keeps the two small masses, <span class="math notranslate nohighlight">\(m\)</span>,
@@ -536,11 +538,11 @@ in line with the larger cylindrical mass, <span class="math notranslate nohighli
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/13b2231de0378f91746cb629bf4f8278e46fead9567dd4b2b1d57d88b35b03b0.png" src="../_images/13b2231de0378f91746cb629bf4f8278e46fead9567dd4b2b1d57d88b35b03b0.png" />
+<img alt="../_images/d7dbbfd78cc3c0dba34e97af4cfca44552e0f96a6f460062f6fe22afe92fa661.png" src="../_images/d7dbbfd78cc3c0dba34e97af4cfca44552e0f96a6f460062f6fe22afe92fa661.png" />
 </div>
 </div>
-<div class="section" id="define-the-state-and-d-dt-state">
-<h2>Define the state and d/dt(state)<a class="headerlink" href="#define-the-state-and-d-dt-state" title="Permalink to this headline">#</a></h2>
+<section id="define-the-state-and-d-dt-state">
+<h2>Define the state and d/dt(state)<a class="headerlink" href="#define-the-state-and-d-dt-state" title="Permalink to this heading">#</a></h2>
 <p>In this part, we define the second order differential equation as a state-space form</p>
 <p>the state = <span class="math notranslate nohighlight">\([r,~\dot{r}]\)</span></p>
 <p>and the derivative of the state is</p>
@@ -549,7 +551,7 @@ in line with the larger cylindrical mass, <span class="math notranslate nohighli
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">yoyo_ode</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;define d2r/dt2= r*(h0/2m)^2/(M*R^2/4m+r^2)^2&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;define d2r/dt2= r*(h0/2m)^2/(M*R^2/4m+r^2)^2&#39;&#39;&#39;</span>
     <span class="n">dr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
     <span class="n">dr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">dr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">h0</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">M</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
@@ -590,12 +592,12 @@ in line with the larger cylindrical mass, <span class="math notranslate nohighli
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;yoyo pos (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/46eb17dbf366b9da5e0c5cfcedbe069d706ea0b28c33adfdafca590b5ec89878.png" src="../_images/46eb17dbf366b9da5e0c5cfcedbe069d706ea0b28c33adfdafca590b5ec89878.png" />
+<img alt="../_images/8ddd0e949bc248a5a327e072bb77d649c85140299c1745a9444c6d58db74263f.png" src="../_images/8ddd0e949bc248a5a327e072bb77d649c85140299c1745a9444c6d58db74263f.png" />
 </div>
 </div>
-</div>
-<div class="section" id="to-save-to-file-from-python-output">
-<h2>To save to file from python output<a class="headerlink" href="#to-save-to-file-from-python-output" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="to-save-to-file-from-python-output">
+<h2>To save to file from python output<a class="headerlink" href="#to-save-to-file-from-python-output" title="Permalink to this heading">#</a></h2>
 <p>Have to join the time, <span class="math notranslate nohighlight">\(r\)</span>, and <span class="math notranslate nohighlight">\(\dot{r}\)</span> into an array then save to a file:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -605,7 +607,7 @@ in line with the larger cylindrical mass, <span class="math notranslate nohighli
 </div>
 </div>
 <p>This line of code organizes a comma-separated-value file into the file t_r_rdot.csv with no headers.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>time (s)</p></th>
 <th class="head"><p>r (m)</p></th>
@@ -623,8 +625,8 @@ in line with the larger cylindrical mass, <span class="math notranslate nohighli
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>The Newton-Euler equations &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -156,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -430,8 +432,8 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="the-newton-euler-equations">
-<h1>The Newton-Euler equations<a class="headerlink" href="#the-newton-euler-equations" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="the-newton-euler-equations">
+<h1>The Newton-Euler equations<a class="headerlink" href="#the-newton-euler-equations" title="Permalink to this heading">#</a></h1>
 <p>Engineering mechanics uses 6 equations of motion to describe the
 relationship between applied forces and moments to the motion of rigid
 bodies. These 6 equations are the <em>Newton-Euler</em> kinetic equations, you
@@ -464,8 +466,8 @@ it is to rotate an object. The units for moment of inertia are
 <span class="math notranslate nohighlight">\(kg-m^2\)</span> (in SI). A quick explanation of moment of inertia is that it
 is the variance in the center of mass.</p>
 </div></blockquote>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
 <p>Consider a baseball that is thrown. It has an initial velocity of 6 m/s
 at an angle of 60<span class="math notranslate nohighlight">\(^o\)</span> from the ground and its rotating 10 times/sec.
 Determine the acceleration of the baseball and its maximum height.</p>
@@ -503,9 +505,9 @@ position and angle of the baseball.</p>
 applied moment, so the angular acceleration is 0 rad/s/s. The ball will
 continue spinning until an external moment is applied e.g. another
 player’s baseball mitt.</p>
-</div>
-<div class="section" id="describing-kinetic-properties">
-<h2>Describing kinetic properties<a class="headerlink" href="#describing-kinetic-properties" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="describing-kinetic-properties">
+<h2>Describing kinetic properties<a class="headerlink" href="#describing-kinetic-properties" title="Permalink to this heading">#</a></h2>
 <p>The motion of the baseball, its path and its rotation, describes the
 <strong>kinematics</strong> or <em>geometry of motion</em>. You can also use <strong>kinetic</strong>
 properties to describe moving object. The Newton-Euler create
@@ -516,8 +518,8 @@ properties.</p>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the <em>force</em> acting on the baseball. A <em>force</em> is a
 vector quantity with magnitude and direction or another way to state
 this is that it has components along each unit vector.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

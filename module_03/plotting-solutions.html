@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Solving equations of motion &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Pendulum plotting solution" href="pendulum.html" />
     <link rel="prev" title="Examples in Kasdin+Paley dynamics" href="kasdin.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -513,10 +515,10 @@ document.write(`
         ></iframe>
         </div></div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="solving-equations-of-motion">
-<h1>Solving equations of motion<a class="headerlink" href="#solving-equations-of-motion" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="solving-equations-of-motion">
+<h1>Solving equations of motion<a class="headerlink" href="#solving-equations-of-motion" title="Permalink to this heading">#</a></h1>
 <p>In this notebook, you will plot the solutions to three 1-DOF equations of motion. Each starts at the origin with an initial velocity, <span class="math notranslate nohighlight">\(v = 5~m/s\)</span>. The three equations of motion and solutions are derived in the video above</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>system</p></th>
 <th class="head"><p>equation of motion</p></th>
@@ -538,8 +540,8 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<div class="section" id="coulomb-friction-on-a-sliding-block">
-<h2>Coulomb friction on a sliding block<a class="headerlink" href="#coulomb-friction-on-a-sliding-block" title="Permalink to this headline">#</a></h2>
+<section id="coulomb-friction-on-a-sliding-block">
+<h2>Coulomb friction on a sliding block<a class="headerlink" href="#coulomb-friction-on-a-sliding-block" title="Permalink to this heading">#</a></h2>
 <p>This first example, has a small trick. The acceleration is constant, <span class="math notranslate nohighlight">\(-\mu g\)</span>, until the velocity is zero. At this point, the block stops moving. To solve for <span class="math notranslate nohighlight">\(x(t)\)</span></p>
 <ul class="simple">
 <li><p>calculate <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(v(t)\)</span> if acceleration is constant</p></li>
@@ -564,12 +566,12 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;position (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/56dde09c36e472b45c61992048139588f2e75167f58cb9deefa29eb0f76dcda0.png" src="../_images/56dde09c36e472b45c61992048139588f2e75167f58cb9deefa29eb0f76dcda0.png" />
+<img alt="../_images/c11a6892ac1e172e0b0f0757d82a84f9491d82b3fca2c3895819606add294026.png" src="../_images/c11a6892ac1e172e0b0f0757d82a84f9491d82b3fca2c3895819606add294026.png" />
 </div>
 </div>
-</div>
-<div class="section" id="viscous-friction">
-<h2>Viscous friction<a class="headerlink" href="#viscous-friction" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="viscous-friction">
+<h2>Viscous friction<a class="headerlink" href="#viscous-friction" title="Permalink to this heading">#</a></h2>
 <p>This second example has a exponentially decaying speed. This type of motion is common in door dampers and shock absorbers. The faster the object moves, the faster it decelerates.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(v(t) = v_0 e^{-\frac{b}{m}t}\)</span></p></li>
@@ -591,12 +593,12 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;position (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/bc0be23a3c5899d69db4cbb9765436260b7a59cc0e0c4fe7db13d69a81dd6afe.png" src="../_images/bc0be23a3c5899d69db4cbb9765436260b7a59cc0e0c4fe7db13d69a81dd6afe.png" />
+<img alt="../_images/f4478be0cc95e035698f3457e3c992e344ad511784b81969bced09e455166cf8.png" src="../_images/f4478be0cc95e035698f3457e3c992e344ad511784b81969bced09e455166cf8.png" />
 </div>
 </div>
-</div>
-<div class="section" id="linear-spring-and-the-harmonic-oscillator">
-<h2>Linear spring and the harmonic oscillator<a class="headerlink" href="#linear-spring-and-the-harmonic-oscillator" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="linear-spring-and-the-harmonic-oscillator">
+<h2>Linear spring and the harmonic oscillator<a class="headerlink" href="#linear-spring-and-the-harmonic-oscillator" title="Permalink to this heading">#</a></h2>
 <p>This third example is a <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_oscillator">harmonic oscillator</a>. Any object that has a restoring force e.g. a spring attached to a mass, a pendulum swinging, object hanging from a rubber band. The harmonic oscillator is described by the general equation</p>
 <p><span class="math notranslate nohighlight">\(\ddot{x} = -\omega^2 x\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\omega = \sqrt{\frac{k}{m}}\)</span> for a spring mass. Here, <span class="math notranslate nohighlight">\(k=2~N/m\)</span> and m=0.5 kg.</p>
@@ -611,12 +613,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/36c5bcbd48802349ed639cc6957883d0266992f66ddd1881364db06556f7216b.png" src="../_images/36c5bcbd48802349ed639cc6957883d0266992f66ddd1881364db06556f7216b.png" />
+<img alt="../_images/37e0f9dc6f1ac08113f5d54868394e3d47b420be255b7a3169dc986a42dde51d.png" src="../_images/37e0f9dc6f1ac08113f5d54868394e3d47b420be255b7a3169dc986a42dde51d.png" />
 </div>
 </div>
-</div>
-<div class="section" id="wrapping-up-comparing-all-three-examples">
-<h2>Wrapping up - comparing all three examples<a class="headerlink" href="#wrapping-up-comparing-all-three-examples" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="wrapping-up-comparing-all-three-examples">
+<h2>Wrapping up - comparing all three examples<a class="headerlink" href="#wrapping-up-comparing-all-three-examples" title="Permalink to this heading">#</a></h2>
 <p>You have plotted three solutions</p>
 <ol class="arabic simple">
 <li><p>sliding with friction</p></li>
@@ -636,7 +638,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dc870797edc224a68d8b1c817ec182f526e1e2af31bdc4ce11461ab2523c88b3.png" src="../_images/dc870797edc224a68d8b1c817ec182f526e1e2af31bdc4ce11461ab2523c88b3.png" />
+<img alt="../_images/c1a20430de96d194bbe7cb6f3c6946adab865d6b9fe302ae68cce17650dad843.png" src="../_images/c1a20430de96d194bbe7cb6f3c6946adab865d6b9fe302ae68cce17650dad843.png" />
 </div>
 </div>
 <p>Some similiraties between the three plots</p>
@@ -649,8 +651,8 @@ document.write(`
 <li><p>the friction and viscous friction have a final position, but the harmonic plot continues to move</p></li>
 <li><p>the blue friction plot has two distinct functions: <span class="math notranslate nohighlight">\(\propto t^2\)</span> and <span class="math notranslate nohighlight">\(\propto constant\)</span>, but the other plots are continuous functions</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

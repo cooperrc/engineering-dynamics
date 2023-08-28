@@ -1,12 +1,12 @@
-# Syllabus - CE2120 Summer 2023
+# Syllabus - CE2120 Fall 2023
 
 ## Applied Mechanics II: Dynamics
 
 - **Course Discussion**:
-  [Campuswire/G2535CB99](https://campuswire.com/p/G2535CB99) **9730**
-- **Submit Assignments**: [**Google Classroom (CE2120 - Summer Session I
-  '2310')**](https://classroom.google.com/c/NjExODc2MDU1NjAx?cjc=pau4kzh).
-  use code: **pau4kzh**
+  [Campuswire/G2535CB99](https://campuswire.com/p/GA8A14AD9) **6434**
+- **Submit Assignments**: [**Google Classroom (CE2120 - Fall
+  2023)**](https://classroom.google.com/c/NTIzNzEwNzYzODMw?cjc=lity5rz).
+  use code: **lity5rz**
 - **Jupyter Server**:
   [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu) use _net id_
   and _password_
@@ -16,7 +16,8 @@
 
 **Course Title:** CE2120 - Applied Mechanics II
 
-**Format:** Online
+**Format:** Flipped Lecture (work on problems in class, review material
+at home)
 
 **Prerequisite:** CE 2110 and MATH 2110 or 2130
 
@@ -113,10 +114,9 @@ the Google Calendar to your student or personal Google account for
 updates.
 
 <iframe
-src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb21hODAxYWMwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26"
-style="border:solid 1px #777" width="500" height="300" frameborder="0"
+src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb21hYWQxZjJmOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
+style="border:solid 1px #777" width="500" height="400" frameborder="0"
 scrolling="no"></iframe>
-
 
 ### Course Livestreams and Videos
 
@@ -319,17 +319,17 @@ Google Classroom.
 
 **Weekly Time Commitment**
 
-You should expect to dedicate between 25 - 32 hours a week to this
+You should expect to dedicate between 6 - 10 hours a week to this
 course. This expectation is based on the various course activities,
 assignments, and assessments and the University of Connecticut's policy
 regarding credit hours. More information related to hours per week per
 credit can be accessed at the [*Online Student
 website*](https://onlinestudent.uconn.edu/learn-more/#collapsepanel-269-1-0-07).
 
-This course requires *lots of practice*. You should set aside 5-6 hours
-per day (assuming a 5-day work-week) to write out example problems from
+This course requires *lots of practice*. You should set aside 1-2 hours
+per week to write out example problems from
 the textbook, try homework problems, and revise answers. This is the
-best way to prepare for quizzes.
+best way to learn and understand the material. 
 
 ### Student Authentication and Verification
 

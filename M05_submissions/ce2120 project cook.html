@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>CE 2120 Project - Knee Joint Model &#8212; Engineering Dynamics</title>
   
   
@@ -43,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Project proposal - robotic arm" href="Contaxis-rough.html" />
     <link rel="prev" title="Module 05 - project build an example" href="project-6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -156,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -503,20 +505,20 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="ce-2120-project-knee-joint-model">
-<h1>CE 2120 Project - <em>Knee Joint Model</em><a class="headerlink" href="#ce-2120-project-knee-joint-model" title="Permalink to this headline">#</a></h1>
-<div class="section" id="by-caroline-cook">
-<h2>By Caroline Cook<a class="headerlink" href="#by-caroline-cook" title="Permalink to this headline">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="ce-2120-project-knee-joint-model">
+<h1>CE 2120 Project - <em>Knee Joint Model</em><a class="headerlink" href="#ce-2120-project-knee-joint-model" title="Permalink to this heading">#</a></h1>
+<section id="by-caroline-cook">
+<h2>By Caroline Cook<a class="headerlink" href="#by-caroline-cook" title="Permalink to this heading">#</a></h2>
 <p>In this project, I will be creating a double pendulum to model the movement of walking. I will use the Newton-Euler derived equation of motion to predict various movements, and compare it to real life accelerometer data that I recorded of myself walking. We will be able to see the relationship between acceleration and time, and if my equation derived data and recorded data mirror each other.</p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="background">
-<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h1>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="background">
+<h1>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h1>
 <p>The double pendulum model has two links and two degrees of freedom. Link 1 (L1) plays the role of the femur, and link 2 (L2) acts as the tibia. The knee will be point mass 1 (m1) and the foot/ankle will be point mass 2 (m2). I’ve drawn some rough free body diagrams of the system, and also broken it up into two for each link. Ultimately though, the reaction forces will not be needed in the equation of motion.
 <img alt="IMG_0467.jpeg" src="M05_submissions/attachment:IMG_0467.jpeg" /></p>
 <hr class="docutils" />
-<div class="section" id="measurements">
-<h2>Measurements<a class="headerlink" href="#measurements" title="Permalink to this headline">#</a></h2>
+<section id="measurements">
+<h2>Measurements<a class="headerlink" href="#measurements" title="Permalink to this heading">#</a></h2>
 <p>I measured my own leg, and recorded my femur (l1) to be 16 inches and l2 to be 15 inches. As for the masses, the force you put on your knees when you walk on even ground is one and a half times your body weight. I weigh 135 lbs, so 1 1/2 times that is 202.5 lb, and to keep things simple I evenly distributed it amongst the two masses, so each is 101.25 lbs or roughly 46 kg. As for angles, we can begin in full flexion (peak of motion for walking, and both links are aligned), and assign them to each be 60º (or pi/3 rad). Initial angular velocity can be 0 rad/s.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -550,7 +552,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Acceleration VS Theta1&#39;)
 </pre></div>
 </div>
-<img alt="../_images/0cdf000753fea89b94334fa263a6fa66224d03e3adb89c25ff98b3eda3653458.png" src="../_images/0cdf000753fea89b94334fa263a6fa66224d03e3adb89c25ff98b3eda3653458.png" />
+<img alt="../_images/ce845687a80ff85bf5db04c2f99dc9da995a9ff117ef13258085f65d3d5d8cc8.png" src="../_images/ce845687a80ff85bf5db04c2f99dc9da995a9ff117ef13258085f65d3d5d8cc8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -560,7 +562,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.284862768173795
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.28486276817379
 </pre></div>
 </div>
 </div>
@@ -828,7 +830,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9604583</span><span class="n">a00d2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">accel_data</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">shape</span>
 
 <span class="ne">NameError</span>: name &#39;i1&#39; is not defined
@@ -875,36 +877,36 @@ document.write(`
 <img alt="../_images/78452c3df46a5457427f1670a49e24c550b54bbbb712f3eb5a19e31d02d6d43a.png" src="../_images/78452c3df46a5457427f1670a49e24c550b54bbbb712f3eb5a19e31d02d6d43a.png" />
 </div>
 </div>
-</div>
-<div class="section" id="proposed-outline">
-<h2>Proposed Outline:<a class="headerlink" href="#proposed-outline" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id1">
-<h3>Background<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="proposed-outline">
+<h2>Proposed Outline:<a class="headerlink" href="#proposed-outline" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Background<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>What are you trying to model?</p></li>
 <li><p>How are you simplifying the model (here: aim for rigid bodies, massless springs, etc.)</p></li>
 <li><p>Draw a free body diagram and show the motion</p></li>
 </ul>
-</div>
-<div class="section" id="model-and-method">
-<h3>Model and method<a class="headerlink" href="#model-and-method" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="model-and-method">
+<h3>Model and method<a class="headerlink" href="#model-and-method" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Show how you create your model: aim to explain to another student in CE2120</p></li>
 <li><p>State your assumptions, constants, equations</p></li>
 <li><p>Show your analysis</p></li>
 <li><p>What is important about your result? Show a graph or two to demonstrate what’s important</p></li>
 </ul>
-</div>
-<div class="section" id="wrapping-up">
-<h3>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="wrapping-up">
+<h3>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>What was the original goal in your background? How did you meet the goal?</p></li>
 <li><p>What was an interesting fact you learned from this analysis? Did it change how you see this device?</p></li>
 <li><p>Any next steps? were there missing parts to the analysis? how could you make it better?</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
