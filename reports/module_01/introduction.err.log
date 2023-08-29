@@ -15,14 +15,67 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import sympy
+from matplotlib import animation
+from IPython.display import HTML
+fig, ax = plt.subplots(1,1);
+ax.plot(x, x*0, '-', linewidth = 10, label = 'bridge')
+Q = ax.quiver([0, 10], 
+           [0, 0], 
+           [0, 0],
+           [Py(x[1]), Ry(x[1])], 
+          scale = 3500, label = 'reaction forces')
+mark, = ax.plot(x[1], 0.01, 'v', markersize = 30, label = 'walker position')
+
+ax.legend(loc = 'lower center')
+ax.set_xlim(-0.5, 10.5)
+ax.set_ylim(-0.1, 0.1)
+
+def animate(i):
+    """updates the horizontal and vertical vector components by a
+    fixed increment on each frame
+    """
+    Q.set_UVC(np.array([0,  0]), 
+              np.array([Py(x[i]), Ry(x[i])]))
+
+    mark.set_data(x[i], 0.05)
+
+    return Q, mark
+
+# you need to set blit=False, or the first set of arrows never gets
+# cleared on subsequent frames
+anim = animation.FuncAnimation(fig, animate,
+                               frames = range(len(t)-1), blit=False)
+HTML(anim.to_html5_video())
 ------------------
 
+----- stderr -----
+/tmp/ipykernel_2287/99178247.py:23: MatplotlibDeprecationWarning: Setting data with a non sequence type is deprecated since 3.7 and will be remove two minor releases later
+  mark.set_data(x[i], 0.05)
+------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[2], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01msympy[39;00m
+[0;31mRuntimeError[0m                              Traceback (most recent call last)
+Cell [0;32mIn[5], line 31[0m
+[1;32m     27[0m [38;5;66;03m# you need to set blit=False, or the first set of arrows never gets[39;00m
+[1;32m     28[0m [38;5;66;03m# cleared on subsequent frames[39;00m
+[1;32m     29[0m anim [38;5;241m=[39m animation[38;5;241m.[39mFuncAnimation(fig, animate,
+[1;32m     30[0m                                frames [38;5;241m=[39m [38;5;28mrange[39m([38;5;28mlen[39m(t)[38;5;241m-[39m[38;5;241m1[39m), blit[38;5;241m=[39m[38;5;28;01mFalse[39;00m)
+[0;32m---> 31[0m HTML([43manim[49m[38;5;241;43m.[39;49m[43mto_html5_video[49m[43m([49m[43m)[49m)
 
-[0;31mModuleNotFoundError[0m: No module named 'sympy'
+File [0;32m/opt/hostedtoolcache/Python/3.9.17/x64/lib/python3.9/site-packages/matplotlib/animation.py:1284[0m, in [0;36mAnimation.to_html5_video[0;34m(self, embed_limit)[0m
+[1;32m   1281[0m path [38;5;241m=[39m Path(tmpdir, [38;5;124m"[39m[38;5;124mtemp.m4v[39m[38;5;124m"[39m)
+[1;32m   1282[0m [38;5;66;03m# We create a writer manually so that we can get the[39;00m
+[1;32m   1283[0m [38;5;66;03m# appropriate size for the tag[39;00m
+[0;32m-> 1284[0m Writer [38;5;241m=[39m [43mwriters[49m[43m[[49m[43mmpl[49m[38;5;241;43m.[39;49m[43mrcParams[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43manimation.writer[39;49m[38;5;124;43m'[39;49m[43m][49m[43m][49m
+[1;32m   1285[0m writer [38;5;241m=[39m Writer(codec[38;5;241m=[39m[38;5;124m'[39m[38;5;124mh264[39m[38;5;124m'[39m,
+[1;32m   1286[0m                 bitrate[38;5;241m=[39mmpl[38;5;241m.[39mrcParams[[38;5;124m'[39m[38;5;124manimation.bitrate[39m[38;5;124m'[39m],
+[1;32m   1287[0m                 fps[38;5;241m=[39m[38;5;241m1000.[39m [38;5;241m/[39m [38;5;28mself[39m[38;5;241m.[39m_interval)
+[1;32m   1288[0m [38;5;28mself[39m[38;5;241m.[39msave([38;5;28mstr[39m(path), writer[38;5;241m=[39mwriter)
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.17/x64/lib/python3.9/site-packages/matplotlib/animation.py:148[0m, in [0;36mMovieWriterRegistry.__getitem__[0;34m(self, name)[0m
+[1;32m    146[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mis_available(name):
+[1;32m    147[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_registered[name]
+[0;32m--> 148[0m [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([38;5;124mf[39m[38;5;124m"[39m[38;5;124mRequested MovieWriter ([39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[38;5;124m) not available[39m[38;5;124m"[39m)
+
+[0;31mRuntimeError[0m: Requested MovieWriter (ffmpeg) not available
 
