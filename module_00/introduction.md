@@ -18,9 +18,7 @@ kinematics. Newton defined three kinetic laws that helped describe how force,
 impact, and energy relate to changes in motion. 
 
 This introduction will get you up to speed on the tools we are using to explore
-dynamics: HuskyCT, Google Documents, Adams multibody dynamics, and Piazza
-discussion board. 
-
+dynamics: HuskyCT, Jupyter, and GitHub Discussions. 
 # Objectives
 
 Upon completion of this module you will be able to 
