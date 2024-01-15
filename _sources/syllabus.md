@@ -1,12 +1,10 @@
-# Syllabus - CE2120 Fall 2023
+# Syllabus - CE2120 Spring 2024
 
 ## Applied Mechanics II: Dynamics
 
-- **Course Discussion**:
-  [Campuswire/G2535CB99](https://campuswire.com/p/GA8A14AD9) **6434**
-- **Submit Assignments**: [**Google Classroom (CE2120 - Fall
-  2023)**](https://classroom.google.com/c/NTIzNzEwNzYzODMw?cjc=lity5rz).
-  use code: **lity5rz**
+- **Course Discussion**:  [GitHub Discussions](https://github.com/cooperrc/engineering-dynamics/discussions)
+    _make a github.com account to post questions and answers_
+- **Submit Assignments**: [**HuskyCT**](https://learn.uconn.edu).
 - **Jupyter Server**:
   [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu) use _net id_
   and _password_
@@ -91,32 +89,15 @@ and ready at [ugmelab.uconn.edu](https://ugmelab.uconn.edu)
 ([*Google*](https://software.uconn.edu/software/google-apps/)/[*Microsoft*](https://software.uconn.edu/microsoft-products-students/)/OpenOffice),
 Plotting software (Python, Excel, or Google Sheets)
 
-**Campuswire:** This session we will be using [*Campuswire
-*](https://cooperrc.github.io/engineering-dynamics/syllabus.html#applied-mechanics-ii-dynamics) for class discussion. The system
+**GitHub Discussions:** This session we will be using GitHub Discussions for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
-questions on Campuswire. If you have any problems or feedback for the
-developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
-
-
-**Google Classroom**: You will turn in assignments and check grades on
-Google Classroom. Use the private comments if you are requesting extra time
-on an assignment, put two piece of information in the comment:
-
-1. When will you submit the assignment?
-2. What help do you need?
+questions on the discussion board. 
 
 ### Course Calendar
 
-**Schedule:** The course schedule is managed by Google Classroom.
-Assignments are due by 11:59pm on the specified due dates. You can add
-the Google Calendar to your student or personal Google account for
-updates.
-
-<iframe
-src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb21hYWQxZjJmOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
-style="border:solid 1px #777" width="500" height="400" frameborder="0"
-scrolling="no"></iframe>
+**Schedule:** The course schedule is managed by HuskyCT.
+Assignments are due by 11:59pm on the specified due dates. 
 
 ### Course Livestreams and Videos
 
@@ -205,7 +186,7 @@ In order to be successful in this course I expect:
 |**Item**  |       **Percent** |  **Requirement** |
 |---|---|---|
 |Participation|20 %|Discussions and peer review
-|Homework| 30 %|Submit solutions on Google Classroom and revise based upon textbook solution
+|Homework| 30 %|Submit solutions on HuskyCT and revise based upon textbook solution
 |Quizzes|30 %|5 quizzes
 |Project Report| 20 %|Create one dynamics application to share with new engineers
 
@@ -218,7 +199,7 @@ Assignments should be submitted before 11:59pm on the due date.
 
 *Due dates are flexible to account for
 personal scheduling*. You do not need an excuse, but you
-need to put a note in the assignment private comments that states:
+need to put a note in the assignment submission that states:
 1. When will you submit the assignment?
 2. What help do you need?
 
@@ -269,7 +250,7 @@ understanding of the material. I will build the quiz based upon our
 discussion. 
 
 You will scan
-and upload your work to Google Classroom *along with a 10-30-second video
+and upload your work to HuskyCT *along with a 10-30-second video
 explaining your solution*.
 
 #### Note on the Project Report
@@ -314,8 +295,7 @@ and resources.*
 ### Feedback and Grades
 
 I will make every effort to provide feedback and grades within 7 days.
-To keep track of your performance in the course, refer to My Grades in
-Google Classroom.
+To keep track of your performance in the course, refer to HuskyCT grades.
 
 **Weekly Time Commitment**
 
