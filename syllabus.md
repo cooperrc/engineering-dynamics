@@ -23,13 +23,13 @@ at home)
 [***ryan.c.cooper\@uconn.edu***](mailto:ryan.c.cooper@uconn.edu)
 
 **Office Hours/Availability:** by appointment (Mon/Wed/Thur 9-5) *post
-questions on Campuswire (the preferred contact)*
+questions on GitHub Discussions (the preferred contact)*
 
 **Preferred Contact:** Post course-related questions and comments to
-Campuswire.
+GitHub Discussions.
 
 Personal questions should be communicated privately via UConn email or
-Campuswire Direct Message (DM)
+GitHub Discussions Direct Message (DM)
 
 ### Course Materials
 
@@ -220,7 +220,7 @@ you add to our learning community. You will fill out 2 forms:
 
 You can add to the class in a number
 of ways including, but not limited to:
-- adding questions or answers to Campuswire discussions
+- adding questions or answers to GitHub Discussions discussions
 - attending lectures
 - participating in a study group or group chat
 - sharing notes from lectures or videos
@@ -287,7 +287,7 @@ progresses. *All changes will be communicated via the calendar or
 another appropriate notification.*
 
 **Late Policy:** If you need more time for an assignment or experience
-technical difficulties, reach out via Campuswire or email. The
+technical difficulties, reach out via GitHub Discussions or email. The
 instructor can make accommodations for work, family, and personal
 reasons. *We ask that you be respectful of the instructors' limited time
 and resources.*
@@ -419,7 +419,7 @@ page*](https://privacy.uconn.edu/).
 To be successful in this course, you will need the following technical
 skills:
 
--   Use the Campuswire class discussions
+-   Use GitHub Discussions
 -   Create graphics and graphs and include them in Google documents and
     Jupyter notebooks
 -   Work within two or more browser windows simultaneously.

@@ -25,8 +25,8 @@ Upon completion of this module you will be able to
 
 1. Recognize the course objectives, requirements, grading policy, required
 software, and materials
-2. View video content and submit answers on Campuswire
-3. Use the discussion board on Campuswire
+2. View video content and submit answers on GitHub Discussions
+3. Use the discussion board on GitHub Discussions
 4. Locate course areas and features, and recognize their general purposes
 5. Complete a Jupyter notebook exercise
 5. Scan and upload a hand-written assignment
@@ -34,7 +34,7 @@ software, and materials
 
 # Activities
 
-* Read the syllabus and post a discussion response on Campuswire
+* Read the syllabus and post a discussion response on GitHub Discussions
 * Acquaint yourself with the course instructor
 * Read about the course organization and tools 
 * Complete and submit a Jupyter notebook
