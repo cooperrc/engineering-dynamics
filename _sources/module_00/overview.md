@@ -2,4 +2,4 @@
 
 This introduction will get you up to speed on the tools we are using to
 explore dynamics: HuskyCT, Google Documents, Jupyter,
-and Campuswire discussion board.
+and GitHub Discussions.
