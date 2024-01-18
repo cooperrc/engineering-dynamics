@@ -1,8 +1,16 @@
-# Adams tutorial: projectile motion prediction
+# Project_01 - Develop Dynamics Project Proposal
 
-In this tutorial, you will create a 3D computational model of a projectile that
-is given an initial velocity and acted upon by gravity. 
+Submit a Document that answers the following questions:
 
-The first step is to complete the tutorial, answer the questions in the Google
-Form, then save your work for the preparation of your Adams Project Report 01. 
+1. How did you apply new knowledge in this module?
+
+2. You have the basic definitions needed for dynamic systems. What is an
+example that would help your engineering career? Examples could include:
+robotic applications, biomechanics applications such as prosthetics or
+helmet design, glider flight motion,  etc. **Start with a Free Body
+Diagram and Kinetic Diagram and describe what forces need to be
+estimated, measured, predicted, etc.**
+
+3. How will this project be applied to your career, hobby, or general
+   interests?
 
