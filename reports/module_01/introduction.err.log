@@ -49,7 +49,7 @@ HTML(anim.to_html5_video())
 ------------------
 
 ----- stderr -----
-/tmp/ipykernel_2364/99178247.py:23: MatplotlibDeprecationWarning: Setting data with a non sequence type is deprecated since 3.7 and will be remove two minor releases later
+/tmp/ipykernel_2267/99178247.py:23: MatplotlibDeprecationWarning: Setting data with a non sequence type is deprecated since 3.7 and will be remove two minor releases later
   mark.set_data(x[i], 0.05)
 ------------------
 
