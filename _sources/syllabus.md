@@ -1,12 +1,10 @@
-# Syllabus - CE2120 Summer 2023
+# Syllabus - CE2120 Spring 2024
 
 ## Applied Mechanics II: Dynamics
 
-- **Course Discussion**:
-  [Campuswire/G2535CB99](https://campuswire.com/p/G2535CB99) **9730**
-- **Submit Assignments**: [**Google Classroom (CE2120 - Summer Session I
-  '2310')**](https://classroom.google.com/c/NjExODc2MDU1NjAx?cjc=pau4kzh).
-  use code: **pau4kzh**
+- **Course Discussion**:  [GitHub Discussions](https://github.com/cooperrc/engineering-dynamics/discussions)
+    _make a github.com account to post questions and answers_
+- **Submit Assignments**: [**HuskyCT**](https://learn.uconn.edu).
 - **Jupyter Server**:
   [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu) use _net id_
   and _password_
@@ -16,7 +14,8 @@
 
 **Course Title:** CE2120 - Applied Mechanics II
 
-**Format:** Online
+**Format:** Flipped Lecture (work on problems in class, review material
+at home)
 
 **Prerequisite:** CE 2110 and MATH 2110 or 2130
 
@@ -24,13 +23,13 @@
 [***ryan.c.cooper\@uconn.edu***](mailto:ryan.c.cooper@uconn.edu)
 
 **Office Hours/Availability:** by appointment (Mon/Wed/Thur 9-5) *post
-questions on Campuswire (the preferred contact)*
+questions on GitHub Discussions (the preferred contact)*
 
 **Preferred Contact:** Post course-related questions and comments to
-Campuswire.
+GitHub Discussions.
 
 Personal questions should be communicated privately via UConn email or
-Campuswire Direct Message (DM)
+GitHub Discussions Direct Message (DM)
 
 ### Course Materials
 
@@ -90,33 +89,15 @@ and ready at [ugmelab.uconn.edu](https://ugmelab.uconn.edu)
 ([*Google*](https://software.uconn.edu/software/google-apps/)/[*Microsoft*](https://software.uconn.edu/microsoft-products-students/)/OpenOffice),
 Plotting software (Python, Excel, or Google Sheets)
 
-**Campuswire:** This session we will be using [*Campuswire
-*](https://cooperrc.github.io/engineering-dynamics/syllabus.html#applied-mechanics-ii-dynamics) for class discussion. The system
+**GitHub Discussions:** This session we will be using GitHub Discussions for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
-questions on Campuswire. If you have any problems or feedback for the
-developers, email [*tade\@campuswire.com*](mailto:tade@campuswire.com).
-
-
-**Google Classroom**: You will turn in assignments and check grades on
-Google Classroom. Use the private comments if you are requesting extra time
-on an assignment, put two piece of information in the comment:
-
-1. When will you submit the assignment?
-2. What help do you need?
+questions on the discussion board. 
 
 ### Course Calendar
 
-**Schedule:** The course schedule is managed by Google Classroom.
-Assignments are due by 11:59pm on the specified due dates. You can add
-the Google Calendar to your student or personal Google account for
-updates.
-
-<iframe
-src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y19jbGFzc3Jvb21hODAxYWMwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26"
-style="border:solid 1px #777" width="500" height="300" frameborder="0"
-scrolling="no"></iframe>
-
+**Schedule:** The course schedule is managed by HuskyCT.
+Assignments are due by 11:59pm on the specified due dates. 
 
 ### Course Livestreams and Videos
 
@@ -205,7 +186,7 @@ In order to be successful in this course I expect:
 |**Item**  |       **Percent** |  **Requirement** |
 |---|---|---|
 |Participation|20 %|Discussions and peer review
-|Homework| 30 %|Submit solutions on Google Classroom and revise based upon textbook solution
+|Homework| 30 %|Submit solutions on HuskyCT and revise based upon textbook solution
 |Quizzes|30 %|5 quizzes
 |Project Report| 20 %|Create one dynamics application to share with new engineers
 
@@ -218,7 +199,7 @@ Assignments should be submitted before 11:59pm on the due date.
 
 *Due dates are flexible to account for
 personal scheduling*. You do not need an excuse, but you
-need to put a note in the assignment private comments that states:
+need to put a note in the assignment submission that states:
 1. When will you submit the assignment?
 2. What help do you need?
 
@@ -239,7 +220,7 @@ you add to our learning community. You will fill out 2 forms:
 
 You can add to the class in a number
 of ways including, but not limited to:
-- adding questions or answers to Campuswire discussions
+- adding questions or answers to GitHub Discussions discussions
 - attending lectures
 - participating in a study group or group chat
 - sharing notes from lectures or videos
@@ -269,7 +250,7 @@ understanding of the material. I will build the quiz based upon our
 discussion. 
 
 You will scan
-and upload your work to Google Classroom *along with a 10-30-second video
+and upload your work to HuskyCT *along with a 10-30-second video
 explaining your solution*.
 
 #### Note on the Project Report
@@ -306,7 +287,7 @@ progresses. *All changes will be communicated via the calendar or
 another appropriate notification.*
 
 **Late Policy:** If you need more time for an assignment or experience
-technical difficulties, reach out via Campuswire or email. The
+technical difficulties, reach out via GitHub Discussions or email. The
 instructor can make accommodations for work, family, and personal
 reasons. *We ask that you be respectful of the instructors' limited time
 and resources.*
@@ -314,22 +295,21 @@ and resources.*
 ### Feedback and Grades
 
 I will make every effort to provide feedback and grades within 7 days.
-To keep track of your performance in the course, refer to My Grades in
-Google Classroom.
+To keep track of your performance in the course, refer to HuskyCT grades.
 
 **Weekly Time Commitment**
 
-You should expect to dedicate between 25 - 32 hours a week to this
+You should expect to dedicate between 6 - 10 hours a week to this
 course. This expectation is based on the various course activities,
 assignments, and assessments and the University of Connecticut's policy
 regarding credit hours. More information related to hours per week per
 credit can be accessed at the [*Online Student
 website*](https://onlinestudent.uconn.edu/learn-more/#collapsepanel-269-1-0-07).
 
-This course requires *lots of practice*. You should set aside 5-6 hours
-per day (assuming a 5-day work-week) to write out example problems from
+This course requires *lots of practice*. You should set aside 1-2 hours
+per week to write out example problems from
 the textbook, try homework problems, and revise answers. This is the
-best way to prepare for quizzes.
+best way to learn and understand the material. 
 
 ### Student Authentication and Verification
 
@@ -439,7 +419,7 @@ page*](https://privacy.uconn.edu/).
 To be successful in this course, you will need the following technical
 skills:
 
--   Use the Campuswire class discussions
+-   Use GitHub Discussions
 -   Create graphics and graphs and include them in Google documents and
     Jupyter notebooks
 -   Work within two or more browser windows simultaneously.
