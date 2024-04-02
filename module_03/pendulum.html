@@ -1,13 +1,13 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Pendulum plotting solution &#8212; Engineering Dynamics</title>
   
   
@@ -18,57 +18,55 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module_03/pendulum';</script>
-    <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
+    <link rel="icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Nonlinear pendulum solution" href="nonlinear.html" />
     <link rel="prev" title="Solving equations of motion" href="plotting-solutions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -76,7 +74,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -111,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,9 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -142,12 +153,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Engineering Dynamics - Home"/>
+    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Engineering Dynamics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -158,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Spring 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -175,6 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module_01/definitions.html">Definitions in Dynamics: kinematics and kinetics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_01/snowflake.html">Snowflake time of flight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_01/homework.html">Homework #1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/project.html">Project_01 - Develop Dynamics Project Proposal</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_02/overview.html">Module 2 - constrained dynamic motion</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -423,20 +446,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -477,7 +502,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -520,13 +545,13 @@ document.write(`
         ></iframe>
         </div></div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="pendulum-plotting-solution">
-<h1>Pendulum plotting solution<a class="headerlink" href="#pendulum-plotting-solution" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="pendulum-plotting-solution">
+<h1>Pendulum plotting solution<a class="headerlink" href="#pendulum-plotting-solution" title="Link to this heading">#</a></h1>
 <p>A pendulum is another <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_oscillator">harmonic oscillator</a>, but you have to <em>linearize</em> the equation of motion. The simple pendulum equation of motion is as such</p>
 <p><span class="math notranslate nohighlight">\(\ddot{\theta} = -\frac{g}{L}\sin\theta\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(g\)</span> is acceleration due to gravity and <span class="math notranslate nohighlight">\(L\)</span> is the length of the pendulum.</p>
-<div class="section" id="linearize-equation-of-motion">
-<h2>Linearize equation of motion<a class="headerlink" href="#linearize-equation-of-motion" title="Permalink to this headline">#</a></h2>
+<section id="linearize-equation-of-motion">
+<h2>Linearize equation of motion<a class="headerlink" href="#linearize-equation-of-motion" title="Link to this heading">#</a></h2>
 <p>You can’t integrate this equation of motion, so you can take a <a class="reference external" href="https://mathworld.wolfram.com/TaylorSeries.html">Taylor series</a> expansion</p>
 <p><span class="math notranslate nohighlight">\(\sin\theta = \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} + ...\)</span></p>
 <p>Now, you can use the first term in the series to create the harmonic oscillator equation</p>
@@ -558,12 +583,12 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/dd956f79572897e83622976d2fa321a198baedaf24794a52689370b9fd7c0718.png" src="../_images/dd956f79572897e83622976d2fa321a198baedaf24794a52689370b9fd7c0718.png" />
+<img alt="../_images/8ab71f8a7801f46be46f0b8da6792fc5b3c1251def7daf5ee0724a26266699a7.png" src="../_images/8ab71f8a7801f46be46f0b8da6792fc5b3c1251def7daf5ee0724a26266699a7.png" />
 </div>
 </div>
-</div>
-<div class="section" id="plot-the-solution-for-the-linearized-simple-pendulum">
-<h2>Plot the solution for the linearized simple pendulum<a class="headerlink" href="#plot-the-solution-for-the-linearized-simple-pendulum" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="plot-the-solution-for-the-linearized-simple-pendulum">
+<h2>Plot the solution for the linearized simple pendulum<a class="headerlink" href="#plot-the-solution-for-the-linearized-simple-pendulum" title="Link to this heading">#</a></h2>
 <p>The solution to the harmonic oscillator is given as such</p>
 <p><span class="math notranslate nohighlight">\(\theta(t) = \theta_0 \cos\omega t + \frac{\dot{\theta}_0}{\omega}\sin\omega t\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\theta_0\)</span> is the initial angle of the pendulum and <span class="math notranslate nohighlight">\(\dot{\theta}_0\)</span> is the initial angular velocity of the pendulum (+ counter-clockwise/ - clockwise motion).</p>
@@ -587,12 +612,12 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta$ (deg)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/31295185f12f7c70122d9d17f767f02571103b173efb638e76ae1df7f5692f9b.png" src="../_images/31295185f12f7c70122d9d17f767f02571103b173efb638e76ae1df7f5692f9b.png" />
+<img alt="../_images/d6808e7d1e1444c799d9b366253ef0bfd9aee3c3479e46624396531fef71494a.png" src="../_images/d6808e7d1e1444c799d9b366253ef0bfd9aee3c3479e46624396531fef71494a.png" />
 </div>
 </div>
-</div>
-<div class="section" id="motion-of-the-pendulum">
-<h2>Motion of the pendulum<a class="headerlink" href="#motion-of-the-pendulum" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="motion-of-the-pendulum">
+<h2>Motion of the pendulum<a class="headerlink" href="#motion-of-the-pendulum" title="Link to this heading">#</a></h2>
 <p>The solution plotted above is the orientation of the pendulum. The position of the mass is</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{r} = L\hat{e}_r = L(\sin\theta \hat{i} - \cos\theta \hat{j})\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\theta = \theta(t)\)</span> that you created above. Below, you plot the x- and y- positions of the simple pendulum.</p>
@@ -611,7 +636,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;position (m)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/528463e1551660e88bafb0f058247a2a0f353efdeed207627fcbf3c03bca213b.png" src="../_images/528463e1551660e88bafb0f058247a2a0f353efdeed207627fcbf3c03bca213b.png" />
+<img alt="../_images/151b95161b2c1f94d0c6ec952c2309eb32f28c7e79a7bb1c0ae2c7a155056443.png" src="../_images/151b95161b2c1f94d0c6ec952c2309eb32f28c7e79a7bb1c0ae2c7a155056443.png" />
 </div>
 </div>
 <blockquote>
@@ -621,9 +646,9 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(\cos\theta = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + ...\)</span></p>
 <p>so you can approximate <span class="math notranslate nohighlight">\(\cos\theta \approx 1\)</span>.</p>
 </div></blockquote>
-</div>
-<div class="section" id="animation-of-the-pendulum-motion">
-<h2>Animation of the pendulum motion<a class="headerlink" href="#animation-of-the-pendulum-motion" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="animation-of-the-pendulum-motion">
+<h2>Animation of the pendulum motion<a class="headerlink" href="#animation-of-the-pendulum-motion" title="Link to this heading">#</a></h2>
 <p>Here, you can see how the pendulum swings. It starts at <span class="math notranslate nohighlight">\(\theta_0=10^o\)</span> and swings left to <span class="math notranslate nohighlight">\(\theta(t=T/2)=-10^o\)</span>. In this simple pendulum model, you did not include any effects of air resistance, friction, or damping so the motion will continue to oscillate until acted upon by another system.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -650,7 +675,7 @@ document.write(`
     <span class="k">return</span> <span class="p">(</span><span class="n">line1</span><span class="p">,</span> <span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;function that updates the line and marker data</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;function that updates the line and marker data</span>
 <span class="sd">    arguments:</span>
 <span class="sd">    ----------</span>
 <span class="sd">    i: index of timestep</span>
@@ -671,303 +696,42 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><video width="432" height="288" controls autoplay loop>
-  <source type="video/mp4" src="data:video/mp4;base64,AAAAHGZ0eXBNNFYgAAACAGlzb21pc28yYXZjMQAAAAhmcmVlAAA54G1kYXQAAAKgBgX//5zcRem9
-5tlIt5Ys2CDZI+7veDI2NCAtIGNvcmUgMTU3IC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENv
-cHlsZWZ0IDIwMDMtMjAxOCAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9w
-dGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDExMyBtZT1o
-ZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0xIG1lX3JhbmdlPTE2
-IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBkZWFkem9uZT0yMSwxMSBmYXN0
-X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTkgbG9va2FoZWFkX3RocmVhZHM9
-MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2Nv
-bXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9
-MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50
-PTI1MCBrZXlpbnRfbWluPTIwIHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhl
-YWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1heD02
-OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAQ22WIhAA7//73Tr8Cmx7G6gOS
-Vwr2yqQmWblSawHypgAAAwAAJv/gozF8AHmD2vleEFGSyhKEga4kongo5ptZcwrhjxVYKQdusV8O
-mKC1uLcG6y4YaMNUFqkRIporDrcZD8UO7dIPskAAAAREX1ZNtGv/1YhZZtQMbOPCfPBqK6U4pffI
-Yp9YrLzcXhbh5opW3o1nOAhgxFhUFO0UEF0Vs0EuAihjsussecdMAg29Ipy/0E/He2PIluLDMpU8
-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
-">
-  Your browser does not support the video tag.
-</video></div><img alt="../_images/93b1db8447306488638d1a6fb07f624160c070f47f38e4b9400e5463712a1e7b.png" src="../_images/93b1db8447306488638d1a6fb07f624160c070f47f38e4b9400e5463712a1e7b.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">34</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="k">return</span> <span class="p">(</span><span class="n">line1</span><span class="p">,</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">anim</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">animate</span><span class="p">,</span> <span class="n">init_func</span><span class="o">=</span><span class="n">init</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>                                <span class="n">frames</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span> <span class="n">interval</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> 
+<span class="g g-Whitespace">     </span><span class="mi">32</span>                                <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">HTML</span><span class="p">(</span><span class="n">anim</span><span class="o">.</span><span class="n">to_html5_video</span><span class="p">())</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/matplotlib/animation.py:1285,</span> in <span class="ni">Animation.to_html5_video</span><span class="nt">(self, embed_limit)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="s2">&quot;temp.m4v&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span> <span class="c1"># We create a writer manually so that we can get the</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span> <span class="c1"># appropriate size for the tag</span>
+<span class="ne">-&gt; </span><span class="mi">1285</span> <span class="n">Writer</span> <span class="o">=</span> <span class="n">writers</span><span class="p">[</span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.writer&#39;</span><span class="p">]]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1286</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">Writer</span><span class="p">(</span><span class="n">codec</span><span class="o">=</span><span class="s1">&#39;h264&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span>                 <span class="n">bitrate</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.bitrate&#39;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1288</span>                 <span class="n">fps</span><span class="o">=</span><span class="mf">1000.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1289</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">writer</span><span class="o">=</span><span class="n">writer</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/matplotlib/animation.py:148,</span> in <span class="ni">MovieWriterRegistry.__getitem__</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_available</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_registered</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">148</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Requested MovieWriter (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">) not available&quot;</span><span class="p">)</span>
+
+<span class="ne">RuntimeError</span>: Requested MovieWriter (ffmpeg) not available
+</pre></div>
+</div>
+<img alt="../_images/1429305da56bf0db462c8677740774e513ea11a79ca46d5cae518c27dda2e84b.png" src="../_images/1429305da56bf0db462c8677740774e513ea11a79ca46d5cae518c27dda2e84b.png" />
 </div>
 </div>
-</div>
-<div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Link to this heading">#</a></h2>
 <p>In this notebook, you plotted the solution for a simple pendulum and used the kinematic definitions to plot the motion of the pendulum.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -994,11 +758,10 @@ AAAAAC1pbHN0AAAAJal0b28AAAAdZGF0YQAAAAEAAAAATGF2ZjU4LjI5LjEwMA==
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="plotting-solutions.html"
@@ -1018,10 +781,7 @@ AAAAAC1pbHN0AAAAJal0b28AAAAdZGF0YQAAAAEAAAAATGF2ZjU4LjI5LjEwMA==
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1029,6 +789,7 @@ AAAAAC1pbHN0AAAAJal0b28AAAAdZGF0YQAAAAEAAAAATGF2ZjU4LjI5LjEwMA==
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1062,9 +823,10 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1088,8 +850,8 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
