@@ -1,13 +1,13 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Kinematics: the geometry of motion &#8212; Engineering Dynamics</title>
   
   
@@ -18,55 +18,53 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module_01/kinematics';</script>
-    <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
+    <link rel="icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -74,7 +72,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -109,11 +115,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -128,9 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -140,12 +153,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Engineering Dynamics - Home"/>
+    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Engineering Dynamics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -156,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -173,6 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="definitions.html">Definitions in Dynamics: kinematics and kinetics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="snowflake.html">Snowflake time of flight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homework.html">Homework #1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Project_01 - Develop Dynamics Project Proposal</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_02/overview.html">Module 2 - constrained dynamic motion</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -291,7 +316,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_01/kinematics.ipynb&branch=master" target="_blank"
+      <li><a href="https://nanohub.org/tools/dynamics/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_01/kinematics.ipynb&branch=master" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -421,20 +446,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -484,12 +511,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="kinematics-the-geometry-of-motion">
-<h1>Kinematics: the geometry of motion<a class="headerlink" href="#kinematics-the-geometry-of-motion" title="Permalink to this headline">#</a></h1>
-<div class="section" id="galileos-physics-kinematics">
-<h2>Galileo’s Physics: Kinematics<a class="headerlink" href="#galileos-physics-kinematics" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="kinematics-the-geometry-of-motion">
+<h1>Kinematics: the geometry of motion<a class="headerlink" href="#kinematics-the-geometry-of-motion" title="Link to this heading">#</a></h1>
+<section id="galileos-physics-kinematics">
+<h2>Galileo’s Physics: Kinematics<a class="headerlink" href="#galileos-physics-kinematics" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a>
 1564-1642, created the foundations for classical engineering physics by
 defining <strong>kinematics</strong>. <strong>Kinematics</strong> is the study of the
@@ -500,8 +527,8 @@ position, velocity, and acceleration to make informed predictions.</p>
 Galileo’s hypthosis: objects all fall at the same rate of change in
 speed. Now, engineers take this for granted and use a gravitational
 constant to describe acceleration, <span class="math notranslate nohighlight">\(g=9.81~\frac{m}{s^2}\)</span>.</p>
-<div class="section" id="inclined-ramp-experiment">
-<h3>Inclined ramp experiment<a class="headerlink" href="#inclined-ramp-experiment" title="Permalink to this headline">#</a></h3>
+<section id="inclined-ramp-experiment">
+<h3>Inclined ramp experiment<a class="headerlink" href="#inclined-ramp-experiment" title="Link to this heading">#</a></h3>
 <p>Placing two round objects, of the same shape, on an inclined plane, you
 can release them and see they both</p>
 <ul class="simple">
@@ -534,14 +561,14 @@ unit vectors that describe three</p>
 </div>
 </details>
 </div>
-</div>
-</div>
-<div class="section" id="velocity">
-<h2>Velocity<a class="headerlink" href="#velocity" title="Permalink to this headline">#</a></h2>
-<p>The velocity of an object is the change in <span class="xref myst">position</span> per length of time.
+</section>
+</section>
+<section id="velocity">
+<h2>Velocity<a class="headerlink" href="#velocity" title="Link to this heading">#</a></h2>
+<p>The velocity of an object is the change in <a class="reference internal" href="../kinematics.html#equation-position">()</a> per length of time.
 <a id='velociy'></a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d6e51bbf-5090-4433-8270-7147c39d2eed">
-<span class="eqno">()<a class="headerlink" href="#equation-d6e51bbf-5090-4433-8270-7147c39d2eed" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-57035b06-1f9a-4fc2-8206-677cfbb97ea1">
+<span class="eqno">()<a class="headerlink" href="#equation-57035b06-1f9a-4fc2-8206-677cfbb97ea1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathbf{v}_{P/O} = \frac{d\mathbf{r}_{P/O}}{dt} = \dot{x}\hat{i} + \dot{y}\hat{j} +
 \dot{z}\hat{k}
 \end{equation}\]</div>
@@ -552,9 +579,9 @@ unit vectors that describe three</p>
 <p>The definition of velocity in equation <a class="reference internal" href="../kinematics.html#equation-velocity">()</a> depends upon the change in position of all
 three independent coordinates, where
 <span class="math notranslate nohighlight">\(\frac{d}{dt}(x\hat{i})=\dot{x}\hat{i}\)</span>.</p>
-</div>
-<div class="section" id="example-gps-vs-speedometer">
-<h2>Example - GPS vs speedometer<a class="headerlink" href="#example-gps-vs-speedometer" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="example-gps-vs-speedometer">
+<h2>Example - GPS vs speedometer<a class="headerlink" href="#example-gps-vs-speedometer" title="Link to this heading">#</a></h2>
 <p>You can find velocity based upon postion, but you can only find changes
 in position with velocity. Consider tracking the motion of a car driving
 down a road using GPS. You determine its motion and create the position,
@@ -583,32 +610,32 @@ down a road using GPS. You determine its motion and create the position,
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/26700a6bfd595b5675eb3af1271785d7ed6893f959566afdebc2275c87854f55.png" src="../_images/26700a6bfd595b5675eb3af1271785d7ed6893f959566afdebc2275c87854f55.png" />
+<img alt="../_images/c4fe0e598386c30507ff7206fe1e6db533f77a56323406434daa22dd482f978a.png" src="../_images/c4fe0e598386c30507ff7206fe1e6db533f77a56323406434daa22dd482f978a.png" />
 </div>
 </div>
-</div>
-<div class="section" id="speed">
-<h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="speed">
+<h2>Speed<a class="headerlink" href="#speed" title="Link to this heading">#</a></h2>
 <p>The speed of an object is the
 <a class="reference external" href="https://www.mathsisfun.com/algebra/vectors.html">magnitude</a> of the
 velocity,</p>
 <p><span class="math notranslate nohighlight">\(|\mathbf{v}_{P/O}| = \sqrt{\mathbf{v}\cdot\mathbf{v}} =
 \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}\)</span></p>
-<div class="section" id="remember-the-chain-rule">
-<h3>Remember the chain rule<a class="headerlink" href="#remember-the-chain-rule" title="Permalink to this headline">#</a></h3>
+<section id="remember-the-chain-rule">
+<h3>Remember the chain rule<a class="headerlink" href="#remember-the-chain-rule" title="Link to this heading">#</a></h3>
 <p>In Dynamics, there are many moving parts, so it is usually safer to
 assume that a variable is a function of time. Consider the derivative of
 position,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f21f28c3-2b14-4f7d-b24d-71c98503a0ee">
-<span class="eqno">()<a class="headerlink" href="#equation-f21f28c3-2b14-4f7d-b24d-71c98503a0ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-966d3023-1b75-44fa-bdf3-1cc6751f1f7c">
+<span class="eqno">()<a class="headerlink" href="#equation-966d3023-1b75-44fa-bdf3-1cc6751f1f7c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}(x\hat{i}+y\hat{j}) = \dot{x}\hat{i} + \dot{y}\hat{j} +
 x\dot{\hat{i}} + y\dot{\hat{j}}, 
 \end{equation}\]</div>
 <p>in a fixed coordinate system (like the ground)
 <span class="math notranslate nohighlight">\(\dot{\hat{i}}=\dot{\hat{j}}=0\)</span> because these unit vectors do not change direction.</p>
-</div>
-<div class="section" id="chain-rule-in-dynamics">
-<h3>Chain rule in dynamics<a class="headerlink" href="#chain-rule-in-dynamics" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="chain-rule-in-dynamics">
+<h3>Chain rule in dynamics<a class="headerlink" href="#chain-rule-in-dynamics" title="Link to this heading">#</a></h3>
 <p>In calculus, many times the <a class="reference external" href="https://en.wikipedia.org/wiki/Chain_rule">chain rule</a> is shown as an example</p>
 <ul>
 <li><div class="math notranslate nohighlight">
@@ -652,19 +679,19 @@ e.g. \)</span><span class="math notranslate nohighlight">\(x(t),~y(t),~\theta(t)
 \[\frac{d}{dt}\sin\theta =\dot{\theta}\cos\theta\]</div>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="acceleration">
-<h2>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="acceleration">
+<h2>Acceleration<a class="headerlink" href="#acceleration" title="Link to this heading">#</a></h2>
 <p>The acceleration of an object is the change in velocity per length of
 time.</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{a}_{P/O} = \frac{d \mathbf{v}_{P/O} }{dt} = \ddot{x}\hat{i} +
 \ddot{y}\hat{j} + \ddot{z}\hat{k}\)</span></p>
 <p>where <span class="math notranslate nohighlight">\(\ddot{x}=\frac{d^2 x}{dt^2}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a}_{P/O}\)</span> is the
 acceleration of point <span class="math notranslate nohighlight">\(P\)</span> <em>with respect to the point of origin</em> <span class="math notranslate nohighlight">\(O\)</span>.</p>
-</div>
-<div class="section" id="rotation-and-orientation">
-<h2>Rotation and Orientation<a class="headerlink" href="#rotation-and-orientation" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="rotation-and-orientation">
+<h2>Rotation and Orientation<a class="headerlink" href="#rotation-and-orientation" title="Link to this heading">#</a></h2>
 <p>The definitions of position, velocity, and acceleration all describe a
 single point, but dynamic engineering systems are composed of rigid
 bodies is needed to describe the position of an object.</p>
@@ -718,14 +745,14 @@ revisit 3D motion in Module_05</p>
         ></iframe>
         </div></div>
 </div>
-</div>
-<div class="section" id="rotation-in-planar-motion">
-<h2>Rotation in planar motion<a class="headerlink" href="#rotation-in-planar-motion" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="rotation-in-planar-motion">
+<h2>Rotation in planar motion<a class="headerlink" href="#rotation-in-planar-motion" title="Link to this heading">#</a></h2>
 <p>Our initial focus is planar rotations e.g. yaw and roll are fixed. For a
 body constrained to planar motion, you need 3 independent measurements
 to describe its position e.g. <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(\theta\)</span></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -752,16 +779,12 @@ to describe its position e.g. <span class="math notranslate nohighlight">\(x\)</
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -769,6 +792,7 @@ to describe its position e.g. <span class="math notranslate nohighlight">\(x\)</
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -811,9 +835,10 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -837,8 +862,8 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

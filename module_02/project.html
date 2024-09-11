@@ -1,13 +1,13 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Module 2 - Project: four-bar linkage design &#8212; Engineering Dynamics</title>
   
   
@@ -18,57 +18,55 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module_02/project';</script>
-    <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
+    <link rel="icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Module 3 - Constrained engineering systems" href="../module_03/overview.html" />
     <link rel="prev" title="Module_02 Homework" href="homework.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -76,7 +74,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -111,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,9 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -142,12 +153,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Engineering Dynamics - Home"/>
+    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Engineering Dynamics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -158,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -175,6 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module_01/definitions.html">Definitions in Dynamics: kinematics and kinetics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_01/snowflake.html">Snowflake time of flight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_01/homework.html">Homework #1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/project.html">Project_01 - Develop Dynamics Project Proposal</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">Module 2 - constrained dynamic motion</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -293,7 +316,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_02/project.ipynb&branch=master" target="_blank"
+      <li><a href="https://nanohub.org/tools/dynamics/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_02/project.ipynb&branch=master" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -423,20 +446,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -481,7 +506,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
@@ -500,8 +525,8 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="module-2-project-four-bar-linkage-design">
-<h1>Module 2 - Project: four-bar linkage design<a class="headerlink" href="#module-2-project-four-bar-linkage-design" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="module-2-project-four-bar-linkage-design">
+<h1>Module 2 - Project: four-bar linkage design<a class="headerlink" href="#module-2-project-four-bar-linkage-design" title="Link to this heading">#</a></h1>
 <p>In this notebook, you will build your own four-bar mechanical linkage and plot the path of the components. You can choose your own link sizes. Some areas of interest for different backgrounds:</p>
 <ul class="simple">
 <li><p>Automotive design: <a class="reference external" href="https://youtu.be/d4eLPEVJ64E">windshield wiper motion</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Watt%27s_linkage">watt linkage suspension</a></p></li>
@@ -511,8 +536,8 @@ document.write(`
 <p>In this notebook, you will step through the process of defining the
 kinematics of a <a class="reference external" href="https://en.wikipedia.org/wiki/Four-bar_linkage">four-bar
 linkage</a>.</p>
-<div class="section" id="what-youll-do">
-<h2>What you’ll do<a class="headerlink" href="#what-youll-do" title="Permalink to this headline">#</a></h2>
+<section id="what-youll-do">
+<h2>What you’ll do<a class="headerlink" href="#what-youll-do" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>solve a series of nonlinear equations using
 <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fsolve.html"><code class="docutils literal notranslate"><span class="pre">fsolve</span></code></a></p></li>
@@ -521,9 +546,9 @@ linkage</a>.</p>
 location</p></li>
 <li><p>plot and animate the motion of the four-bar linkage</p></li>
 </ul>
-</div>
-<div class="section" id="what-youll-need">
-<h2>What you’ll need<a class="headerlink" href="#what-youll-need" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="what-youll-need">
+<h2>What you’ll need<a class="headerlink" href="#what-youll-need" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Jupyter and Python - you can run this notebook with the “Launch” icon in the Engineering Dynamics online resource</p></li>
 <li><p>vector equations to solve for the constraints on the linkage mechanism</p></li>
@@ -546,9 +571,9 @@ f_2(\theta_2,~\theta_3)\end{array}\right]=\left[\begin{array}{c}
 l_1\sin\theta_1+l_2\sin\theta_2-l_3\sin\theta_3 -d_y\\
 l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 \end{array}\right]\)</span></p>
-</div>
-<div class="section" id="defining-your-system">
-<h2>Defining your system<a class="headerlink" href="#defining-your-system" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="defining-your-system">
+<h2>Defining your system<a class="headerlink" href="#defining-your-system" title="Link to this heading">#</a></h2>
 <p>As an example, I am creating a short arm that pivots a longer arm. Similar to a windshield wiper design</p>
 <blockquote>
 <div><p><strong>Note</strong>: you can double-click this cell in Jupyter to edit the text. Then, you can update the geometry of your four-bar linkage.</p>
@@ -608,12 +633,12 @@ l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a06ef0e13a99c4dddaabf6cbba4810d4e2cab87f3a36960057b82b42351bed8b.png" src="../_images/a06ef0e13a99c4dddaabf6cbba4810d4e2cab87f3a36960057b82b42351bed8b.png" />
+<img alt="../_images/36f353138cd014eb9ce4ba8df01dee7f142a9fe93407832cd87cb15b7bad5c50.png" src="../_images/36f353138cd014eb9ce4ba8df01dee7f142a9fe93407832cd87cb15b7bad5c50.png" />
 </div>
 </div>
-</div>
-<div class="section" id="motion-of-the-links">
-<h2>Motion of the links<a class="headerlink" href="#motion-of-the-links" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="motion-of-the-links">
+<h2>Motion of the links<a class="headerlink" href="#motion-of-the-links" title="Link to this heading">#</a></h2>
 <p>Now I have the position of the links, but I want to see what it looks like and what paths the components trace. Here, I use the vector definitions to define the positions of the links and connections</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(r_A = l_1 \cos\theta_1\hat{i} + l_1 \sin\theta_1\hat{j}\)</span></p></li>
@@ -631,8 +656,8 @@ l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 </div>
 </div>
 </div>
-<div class="section" id="plot-one-orientation-and-the-paths">
-<h3>Plot one orientation and the paths<a class="headerlink" href="#plot-one-orientation-and-the-paths" title="Permalink to this headline">#</a></h3>
+<section id="plot-one-orientation-and-the-paths">
+<h3>Plot one orientation and the paths<a class="headerlink" href="#plot-one-orientation-and-the-paths" title="Link to this heading">#</a></h3>
 <p>The paths of the links are now in the variables <code class="docutils literal notranslate"><span class="pre">rA</span></code>, <code class="docutils literal notranslate"><span class="pre">rB</span></code>, <code class="docutils literal notranslate"><span class="pre">rC</span></code>, and <code class="docutils literal notranslate"><span class="pre">rP</span></code>. I will plot the paths of these 4 points and the shape at a point in time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -665,13 +690,13 @@ l_1\cos\theta_1+l_2\cos\theta_2-l_3\cos\theta_3 -d_x
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a9067914767f0fa0295d485f98b170db1b0bdff8ca6978f2472adb6b8b9fe32a.png" src="../_images/a9067914767f0fa0295d485f98b170db1b0bdff8ca6978f2472adb6b8b9fe32a.png" />
+<img alt="../_images/4248b6c213b9c031e7070eea55736ee6a7b2fb63d494a9f92987e48f200e8454.png" src="../_images/4248b6c213b9c031e7070eea55736ee6a7b2fb63d494a9f92987e48f200e8454.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="determining-the-speed-of-the-components">
-<h2>Determining the speed of the components<a class="headerlink" href="#determining-the-speed-of-the-components" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="determining-the-speed-of-the-components">
+<h2>Determining the speed of the components<a class="headerlink" href="#determining-the-speed-of-the-components" title="Link to this heading">#</a></h2>
 <p>Now, I use the constraint equations from above to determine the speed of the link motion.</p>
 <p><span class="math notranslate nohighlight">\(\frac{d\bar{f}(\bar{x})}{dt}= \left[\begin{array}{c}
 f_1(\theta_2,~\theta_3) \\ 
@@ -728,12 +753,12 @@ l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\si
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;output angular speed (radian/s)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/88917c3ef8c09d743540b03a7c13662b576f3a179beba8c261751176afdbdef6.png" src="../_images/88917c3ef8c09d743540b03a7c13662b576f3a179beba8c261751176afdbdef6.png" />
+<img alt="../_images/c1d29fcb17a47a88a3c3b096a7b174ce4ad459c9ee3015143d7ef2bb14c51644.png" src="../_images/c1d29fcb17a47a88a3c3b096a7b174ce4ad459c9ee3015143d7ef2bb14c51644.png" />
 </div>
 </div>
-</div>
-<div class="section" id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Link to this heading">#</a></h2>
 <p>You should edit this notebook to create your own four-bar linkage analysis.</p>
 <ul class="simple">
 <li><p>Choose a geometry</p></li>
@@ -742,8 +767,8 @@ l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\si
 <li><p>add your own <strong>wrapping up</strong> section to add any details or further analysis</p></li>
 <li><p>what did you learn?</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -770,11 +795,10 @@ l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\si
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="homework.html"
@@ -794,10 +818,7 @@ l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\si
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -805,6 +826,7 @@ l_1\dot{\theta_1}\sin\theta_1+l_2\dot{\theta_2}\sin\theta_2-l_3\dot{\theta_3}\si
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -842,9 +864,10 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -868,8 +891,8 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,13 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Module 3 - Project: pendulum solutions &#8212; Engineering Dynamics</title>
   
   
@@ -18,57 +18,55 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module_03/project';</script>
-    <link rel="shortcut icon" href="../_static/spiderman-favicon.png"/>
+    <link rel="icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Module 4 - Momentum and Energy" href="../module_04/overview.html" />
     <link rel="prev" title="Homework" href="homework.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -76,7 +74,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -111,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,9 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -142,12 +153,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/dyn_logo.png" class="logo__image only-light" alt="Engineering Dynamics - Home"/>
+    <script>document.write(`<img src="../_static/dyn_logo.png" class="logo__image only-dark" alt="Engineering Dynamics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -158,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Summer 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - CE2120 Fall 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -175,6 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module_01/definitions.html">Definitions in Dynamics: kinematics and kinetics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_01/snowflake.html">Snowflake time of flight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_01/homework.html">Homework #1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_01/project.html">Project_01 - Develop Dynamics Project Proposal</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_02/overview.html">Module 2 - constrained dynamic motion</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -293,7 +316,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://ugmelab.uconn.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_03/project.ipynb&branch=master" target="_blank"
+      <li><a href="https://nanohub.org/tools/dynamics/hub/user-redirect/git-pull?repo=https%3A//github.com/cooperrc/engineering-dynamics&urlpath=tree/engineering-dynamics/module_03/project.ipynb&branch=master" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -423,20 +446,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -478,7 +503,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
@@ -496,16 +521,16 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="module-3-project-pendulum-solutions">
-<h1>Module 3 - Project: pendulum solutions<a class="headerlink" href="#module-3-project-pendulum-solutions" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="module-3-project-pendulum-solutions">
+<h1>Module 3 - Project: pendulum solutions<a class="headerlink" href="#module-3-project-pendulum-solutions" title="Link to this heading">#</a></h1>
 <p>In this notebook, you will compare two solutions for the motion of a swinging pendulum</p>
 <ol class="arabic simple">
 <li><p>linearized solution for <span class="math notranslate nohighlight">\(\ddot{\theta}(t) = -\frac{g}{L}\theta\)</span></p></li>
 <li><p>numerical solution for <span class="math notranslate nohighlight">\(\ddot{\theta}(t) = -\frac{g}{L}\sin\theta\)</span></p></li>
 </ol>
 <p>You can choose your own pendulum length <span class="math notranslate nohighlight">\(L\)</span> for the analysis. Try tying a string to an object and recording the swinging of the pendulum. You can estimate the initial angle and its period of oscillation.</p>
-<div class="section" id="linear-solution">
-<h2>1. Linear solution<a class="headerlink" href="#linear-solution" title="Permalink to this headline">#</a></h2>
+<section id="linear-solution">
+<h2>1. Linear solution<a class="headerlink" href="#linear-solution" title="Link to this heading">#</a></h2>
 <p>The linear solution is the first order Taylor series approximation for the equation of motion</p>
 <p><span class="math notranslate nohighlight">\(\ddot{\theta}(t) = -\frac{g}{L}\sin\theta \approx -\frac{g}{L}\theta\)</span></p>
 <p>The solution to this simple harmonic oscillator function is</p>
@@ -539,13 +564,13 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta(t)$ [degrees]&#39;)
 </pre></div>
 </div>
-<img alt="../_images/4811768e0a27838b5215defa03addb23f23be8d8b00ac860fc99aa9a7444fef8.png" src="../_images/4811768e0a27838b5215defa03addb23f23be8d8b00ac860fc99aa9a7444fef8.png" />
+<img alt="../_images/dbb2a027f6ab69300212ca244f0d0cfbbef89bffc19579640ae474218e0cef4c.png" src="../_images/dbb2a027f6ab69300212ca244f0d0cfbbef89bffc19579640ae474218e0cef4c.png" />
 </div>
 </div>
 <p>In the plot above, you should see harmonic motion. If it starts from rest at <span class="math notranslate nohighlight">\(60^o\)</span> the pendulum will swing to <span class="math notranslate nohighlight">\(-60^o\)</span> in <span class="math notranslate nohighlight">\(\frac{T}{2} =\frac{\pi}{\omega}\)</span> seconds.</p>
-</div>
-<div class="section" id="numerical-solution">
-<h2>2. Numerical solution<a class="headerlink" href="#numerical-solution" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="numerical-solution">
+<h2>2. Numerical solution<a class="headerlink" href="#numerical-solution" title="Link to this heading">#</a></h2>
 <p>In the numerical solution, there is no need to linearize the equation of motion. You <em>do</em> need to create a <strong>state</strong> variable as such</p>
 <p><span class="math notranslate nohighlight">\(\mathbf{x} = [x_1,~x_2] = [\theta,~\dot{\theta}]\)</span></p>
 <p>now, you can describe 2 first order equations in a function as such</p>
@@ -559,7 +584,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
 <span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">def</span> <span class="nf">pendulum</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;pendulum equations of motion for theta and dtheta/dt</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;pendulum equations of motion for theta and dtheta/dt</span>
 <span class="sd">    arguments</span>
 <span class="sd">    ---------</span>
 <span class="sd">    t: current time</span>
@@ -606,12 +631,12 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta(t)$ [degrees]&#39;)
 </pre></div>
 </div>
-<img alt="../_images/c1bcaeb155ad313917b87a46525d9f080d1d54d888b483a0f53f2553099d2ac4.png" src="../_images/c1bcaeb155ad313917b87a46525d9f080d1d54d888b483a0f53f2553099d2ac4.png" />
+<img alt="../_images/fbbc4d641e84988c632a1354544c978067f9a4a1ca387dbd8e18eb97e0b8e79b.png" src="../_images/fbbc4d641e84988c632a1354544c978067f9a4a1ca387dbd8e18eb97e0b8e79b.png" />
 </div>
 </div>
-</div>
-<div class="section" id="comparing-results">
-<h2>Comparing results<a class="headerlink" href="#comparing-results" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="comparing-results">
+<h2>Comparing results<a class="headerlink" href="#comparing-results" title="Link to this heading">#</a></h2>
 <p>At first glance, it would seem both solutions are <em>close enough</em>, but here you can plot them together and compare.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -626,7 +651,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\theta(t)$ [degrees]&#39;)
 </pre></div>
 </div>
-<img alt="../_images/9aad3d68bd14c51981a1aed495534010c93b27756bd4c988dceafa91908d27eb.png" src="../_images/9aad3d68bd14c51981a1aed495534010c93b27756bd4c988dceafa91908d27eb.png" />
+<img alt="../_images/06fa2f01dd26eac5cebdf36cd1797ac652ced7a9ce1103981840f6d4bcf04ab0.png" src="../_images/06fa2f01dd26eac5cebdf36cd1797ac652ced7a9ce1103981840f6d4bcf04ab0.png" />
 </div>
 </div>
 <p>You should notice a difference in time period between the two solutions, which means the natural frequencies are different.</p>
@@ -669,19 +694,19 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$\\ddot{\\theta}(t)$ (rad/s$^2$)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/61aac1c062063de1ba2f432dbdadfcd4a347b52ce309ecd872664dc41fc73e53.png" src="../_images/61aac1c062063de1ba2f432dbdadfcd4a347b52ce309ecd872664dc41fc73e53.png" />
+<img alt="../_images/d693250e5b342ab403ad505963725fb6b0c62fb49c1a97c27ae11f6e68a66233.png" src="../_images/d693250e5b342ab403ad505963725fb6b0c62fb49c1a97c27ae11f6e68a66233.png" />
 </div>
 </div>
-<div class="section" id="question-prompt">
-<h3>Question prompt<a class="headerlink" href="#question-prompt" title="Permalink to this headline">#</a></h3>
+<section id="question-prompt">
+<h3>Question prompt<a class="headerlink" href="#question-prompt" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Where do you see the biggest difference between the linearized solution and the numerical solution?</p></li>
 <li><p>What are ways you can quantify the error between then two results? Is one solution more <em>accurate</em>?</p></li>
 <li><p>What other calculations can you compare between these two solutions?</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -708,11 +733,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="homework.html"
@@ -732,10 +756,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -743,6 +764,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -777,9 +799,10 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -803,8 +826,8 @@ By <a href = https://cooperrc.github.io> Ryan C. Cooper</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

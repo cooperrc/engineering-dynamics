@@ -1,19 +1,17 @@
 Traceback (most recent call last):
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/home/ryan/miniconda3/envs/nbdev/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/site-packages/nbclient/client.py", line 1093, in execute
+  File "/home/ryan/miniconda3/envs/nbdev/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
-    return just_run(coro(*args, **kwargs))
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
-    return loop.run_until_complete(coro)
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+  File "/home/ryan/miniconda3/envs/nbdev/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/ryan/miniconda3/envs/nbdev/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/site-packages/nbclient/client.py", line 559, in async_execute
+  File "/home/ryan/miniconda3/envs/nbdev/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/site-packages/nbclient/client.py", line 854, in async_execute_cell
-    self._check_raise_for_error(cell, exec_reply)
-  File "/home/ryan/.conda/envs/work3-9/lib/python3.9/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+  File "/home/ryan/miniconda3/envs/nbdev/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/ryan/miniconda3/envs/nbdev/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -21,26 +19,26 @@ from IPython.core.display import SVG
 SVG(filename='../dyn-logo.svg')
 ------------------
 
+
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m<ipython-input-2-65b947f5ef06>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0mdisplay[0m [0;32mimport[0m [0mSVG[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0mSVG[0m[0;34m([0m[0mfilename[0m[0;34m=[0m[0;34m'../dyn-logo.svg'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m~/.conda/envs/work3-9/lib/python3.9/site-packages/IPython/core/display.py[0m in [0;36m__init__[0;34m(self, data, url, filename, metadata)[0m
-[1;32m    635[0m             [0mself[0m[0;34m.[0m[0mmetadata[0m [0;34m=[0m [0;34m{[0m[0;34m}[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    636[0m [0;34m[0m[0m
-[0;32m--> 637[0;31m         [0mself[0m[0;34m.[0m[0mreload[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    638[0m         [0mself[0m[0;34m.[0m[0m_check_data[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    639[0m [0;34m[0m[0m
+Cell [0;32mIn[2], line 2[0m
+[1;32m      1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m SVG
+[0;32m----> 2[0m [43mSVG[49m[43m([49m[43mfilename[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43m../dyn-logo.svg[39;49m[38;5;124;43m'[39;49m[43m)[49m
 
-[0;32m~/.conda/envs/work3-9/lib/python3.9/site-packages/IPython/core/display.py[0m in [0;36mreload[0;34m(self)[0m
-[1;32m    660[0m         [0;34m"""Reload the raw data from file or URL."""[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    661[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0mfilename[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 662[0;31m             [0;32mwith[0m [0mopen[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfilename[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_read_flags[0m[0;34m)[0m [0;32mas[0m [0mf[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    663[0m                 [0mself[0m[0;34m.[0m[0mdata[0m [0;34m=[0m [0mf[0m[0;34m.[0m[0mread[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    664[0m         [0;32melif[0m [0mself[0m[0;34m.[0m[0murl[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m~/miniconda3/envs/nbdev/lib/python3.10/site-packages/IPython/core/display.py:327[0m, in [0;36mDisplayObject.__init__[0;34m(self, data, url, filename, metadata)[0m
+[1;32m    324[0m [38;5;28;01melif[39;00m [38;5;28mself[39m[38;5;241m.[39mmetadata [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[1;32m    325[0m     [38;5;28mself[39m[38;5;241m.[39mmetadata [38;5;241m=[39m {}
+[0;32m--> 327[0m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mreload[49m[43m([49m[43m)[49m
+[1;32m    328[0m [38;5;28mself[39m[38;5;241m.[39m_check_data()
+
+File [0;32m~/miniconda3/envs/nbdev/lib/python3.10/site-packages/IPython/core/display.py:353[0m, in [0;36mDisplayObject.reload[0;34m(self)[0m
+[1;32m    351[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mfilename [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[1;32m    352[0m     encoding [38;5;241m=[39m [38;5;28;01mNone[39;00m [38;5;28;01mif[39;00m [38;5;124m"[39m[38;5;124mb[39m[38;5;124m"[39m [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39m_read_flags [38;5;28;01melse[39;00m [38;5;124m"[39m[38;5;124mutf-8[39m[38;5;124m"[39m
+[0;32m--> 353[0m     [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mfilename[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_read_flags[49m[43m,[49m[43m [49m[43mencoding[49m[38;5;241;43m=[39;49m[43mencoding[49m[43m)[49m [38;5;28;01mas[39;00m f:
+[1;32m    354[0m         [38;5;28mself[39m[38;5;241m.[39mdata [38;5;241m=[39m f[38;5;241m.[39mread()
+[1;32m    355[0m [38;5;28;01melif[39;00m [38;5;28mself[39m[38;5;241m.[39murl [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[1;32m    356[0m     [38;5;66;03m# Deferred import[39;00m
 
 [0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '../dyn-logo.svg'
-FileNotFoundError: [Errno 2] No such file or directory: '../dyn-logo.svg'
 

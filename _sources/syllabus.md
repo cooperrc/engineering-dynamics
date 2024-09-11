@@ -1,13 +1,12 @@
-# Syllabus - CE2120 Spring 2024
+# Syllabus - CE2120 Fall 2024
 
 ## Applied Mechanics II: Dynamics
 
 - **Course Discussion**:  [GitHub Discussions](https://github.com/cooperrc/engineering-dynamics/discussions)
     _make a github.com account to post questions and answers_
 - **Submit Assignments**: [**HuskyCT**](https://learn.uconn.edu).
-- **Jupyter Server**:
-  [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu) use _net id_
-  and _password_
+- **Jupyter Server**: <https://nanohub.org/tools/dynamics> *create your
+  own nanoHUB account for access*
 
 
 ### Course and Instructor Information
@@ -83,7 +82,7 @@ suggestions/comments/updates in the *[*GitHub
 repository*](https://github.com/cooperrc/engineering-dynamics)
 
 All of the **Required Python software** you need for this course is installed
-and ready at [ugmelab.uconn.edu](https://ugmelab.uconn.edu)
+and ready at <https://nanohub.org/tools/dynamics>
 
 **Required software:** Jupyter, Python, GitHub, and
 ([*Google*](https://software.uconn.edu/software/google-apps/)/[*Microsoft*](https://software.uconn.edu/microsoft-products-students/)/OpenOffice),
@@ -101,7 +100,11 @@ Assignments are due by 11:59pm on the specified due dates.
 
 ### Course Livestreams and Videos
 
-#### [Prof. Cooper's YouTube Channel](https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA)
+#### [@ProfRyanCooper's YouTube Channel](https://www.youtube.com/@ProfRyanCooper)
+
+[Prof. Cooper's old YouTube
+Channel](https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA) _for
+previous recordings and further resources_
 
 ### Course Description
 
@@ -188,13 +191,12 @@ In order to be successful in this course I expect:
 |Participation|20 %|Discussions and peer review
 |Homework| 30 %|Submit solutions on HuskyCT and revise based upon textbook solution
 |Quizzes|30 %|5 quizzes
-|Project Report| 20 %|Create one dynamics application to share with new engineers
+|Projects| 20 %|Ananlyze and submit three engineering dynamics Jupyter notebooks and one
+final independent project
 
 #### Note on Due dates
 
-All the course due dates are included in the 
-[course
-calendar](https://cooperrc.github.io/engineering-dynamics/syllabus.html#course-calendar)
+All the course due dates are included in HuskyCT
 Assignments should be submitted before 11:59pm on the due date.
 
 *Due dates are flexible to account for
