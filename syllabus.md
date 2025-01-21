@@ -1,4 +1,4 @@
-# Syllabus - CE2120 Fall 2024
+# Syllabus - ME2120 Spring 2025
 
 ## Applied Mechanics II: Dynamics
 
@@ -11,7 +11,7 @@
 
 ### Course and Instructor Information
 
-**Course Title:** CE2120 - Applied Mechanics II
+**Course Title:** ME2120 - Applied Mechanics II
 
 **Format:** Flipped Lecture (work on problems in class, review material
 at home)
