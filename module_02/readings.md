@@ -2,10 +2,8 @@
 
 - [**Video**: Disney's research team: Computational design of character motion](https://youtu.be/DfznnKUwywQ)
 - [**Video**: Disney's research team: Inverse kinematics for retargeting robots](https://youtu.be/3ffYypVOGy4)
-- [**Video**: Prof. Cooper's oscillating fan kinematics](https://youtu.be/A5I-08-RlKI)
-- [**Video**: Rigid body kinematics](https://youtu.be/QaZg6T3Dgww) [__Notes here__](https://drive.google.com/file/d/1FmJuH_eCVTddrL-rmIThEssO3epMKdoA/view?usp=sharing)
-- [**Video**: Rotating reference frames](https://youtu.be/bG6UUD9AxxU) [__Notes here__](https://drive.google.com/file/d/13waVmu8Le_1-qN3hWz2IADqKwbdONQYj/view?usp=sharing)
-- [**Video**: Bike gear kinematics](https://youtu.be/fvka32BTZ4w) [__Notes here__](https://drive.google.com/file/d/1KfNgCpHweSyqAlhpPkq86cxI69QdYqb0/view?usp=sharing)
+- [**Video**: Prof. Cooper's oscillating fan kinematics](https://youtu.be/RXIik4ePfek)
+- [**Video**: Bike gear kinematics](https://youtu.be/WrefsCLBQTw)[__Notes here__](./03_bike-gears.pdf)
 
 ## Textbook reference
 [Kasdin and Paley's _Engineering Dynamics_ ch. 8](https://www.jstor.org/stable/j.ctvcm4ggj.11) 
