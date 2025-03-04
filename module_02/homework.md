@@ -13,7 +13,7 @@ the outer radii. Its acceleration when the forces are first applied is $\alpha
  
 3. A mechanical sliding mechanism is designed for two arms to move the roller at
 point C along the ground. A force $F=100~N$ is applied at the connecting link.
-The long arm OA has length $l_1 = 50~mm$ and the short arm has length $l_2 =
+The long arm has length $l_1 = 50~mm$ and the short arm has length $l_2 =
 42.43~mm$. A restoring force, $R$, is applied to prevent the system from accelerating
 
 a. What angle, $\theta_1$, would the restoring force be $R=0$?
