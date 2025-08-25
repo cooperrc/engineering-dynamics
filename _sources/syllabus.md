@@ -1,4 +1,4 @@
-# Syllabus - ME2120 Spring 2025
+# Syllabus - ME2120 Fall 2025
 
 ## Applied Mechanics II: Dynamics
 

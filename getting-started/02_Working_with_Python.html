@@ -63,7 +63,7 @@
     <link rel="icon" href="../_static/spiderman-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rigid body lectures and notes" href="../module_02/rigid-bodies.html" />
+    <link rel="next" title="Rigid body motion" href="../module_02/rigid-bodies.html" />
     <link rel="prev" title="Reference Material: Videos + Notes" href="../module_02/readings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,7 +180,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - ME2120 Spring 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus - ME2120 Fall 2025</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module_00/meet_cooper.html">About the Instructor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content.html">Module Content</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../module_00/overview.html">Module 0 - Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -203,7 +203,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../module_02/overview.html">Module 2 - constrained dynamic motion</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../module_02/readings.html">Reference Material: Videos + Notes</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Working with Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module_02/rigid-bodies.html">Rigid body lectures and notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module_02/rigid-bodies.html">Rigid body motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_02/mechanical-advantage.html">Mechanical advantage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_02/driving-forces.html">Driving forces for moving systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module_02/valentine.html">Happy Valentine’s Linkage</a></li>
@@ -958,7 +958,7 @@ for <code class="docutils literal notranslate"><span class="pre">step</span></co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_115452/2664324349.py:1: RuntimeWarning: invalid value encountered in divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_4860/2664324349.py:1: RuntimeWarning: invalid value encountered in divide
   x_array / y_array
 </pre></div>
 </div>
@@ -1297,8 +1297,8 @@ for <code class="docutils literal notranslate"><span class="pre">step</span></co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[84, 37, 53, 16, 34, 13, 56, 28, 81, 78]
-[80, 95, 91, 21, 28, 94, 30, 93, 72, 62]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[17, 2, 4, 29, 32, 52, 26, 59, 10, 21]
+[76, 47, 86, 83, 64, 65, 5, 40, 45, 0]
 </pre></div>
 </div>
 </div>
@@ -1315,8 +1315,8 @@ for <code class="docutils literal notranslate"><span class="pre">step</span></co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 15 µs, sys: 0 ns, total: 15 µs
-Wall time: 17.2 µs
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 18 µs, sys: 0 ns, total: 18 µs
+Wall time: 19.8 µs
 </pre></div>
 </div>
 </div>
@@ -1328,7 +1328,7 @@ Wall time: 17.2 µs
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[164, 132, 144, 37, 62, 107, 86, 121, 153, 140]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[93, 49, 90, 112, 96, 117, 31, 99, 55, 21]
 </pre></div>
 </div>
 </div>
@@ -1354,8 +1354,8 @@ Wall time: 17.2 µs
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[47 61 88 26 45 73 96 50  8 29]
-[64 27 53 87 40 30 79 66 22 56]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[76 18 75 37 23 71 66 76 44  7]
+[ 3  8 99 83 23 76 45 58 38  7]
 </pre></div>
 </div>
 </div>
@@ -1369,8 +1369,8 @@ Wall time: 17.2 µs
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 12 µs, sys: 0 ns, total: 12 µs
-Wall time: 14.8 µs
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 14 µs, sys: 0 ns, total: 14 µs
+Wall time: 16.2 µs
 </pre></div>
 </div>
 </div>
@@ -1453,7 +1453,7 @@ Wall time: 14.8 µs
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7be7ecbd0a00&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f45e1040b50&gt;
 </pre></div>
 </div>
 <img alt="../_images/becdb66932b771ed635afa567cf51cddc1ad2f5816101f0d5e6f433f1c22d547.png" src="../_images/becdb66932b771ed635afa567cf51cddc1ad2f5816101f0d5e6f433f1c22d547.png" />
@@ -1581,7 +1581,7 @@ Wall time: 14.8 µs
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Rigid body lectures and notes</p>
+        <p class="prev-next-title">Rigid body motion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
