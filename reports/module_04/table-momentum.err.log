@@ -1,0 +1,96 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from matplotlib import animation
+from IPython.display import HTML
+
+fig, ax = plt.subplots()
+
+ax.axis(ax_lims*1.3)
+ax.set_aspect('equal')
+
+ax.set_xlabel('x-position (m)')
+ax.set_ylabel('y-position (m)')
+
+line, = ax.plot([], [], '--')
+marker, = ax.plot([], [], 'o', markersize=10)
+
+# 2. Create an initializing (`init`) function that clears the previous line and marker
+
+def init():
+    line.set_data([], [])
+    marker.set_data([], [])
+    return (line,marker,)
+
+# 3. Create an animating (`animate`) function that updates the line
+
+def animate(i):
+    '''function that updates the line and marker data
+    arguments:
+    ----------
+    i: index of timestep
+    outputs:
+    --------
+    line: the line object plotted in the above ax.plot(...)
+    marker: the marker for the end of the 2-bar linkage plotted above with ax.plot('...','o')'''
+    line.set_data(xp[:i], yp[:i])
+    marker.set_data([xp[i-1], yp[i-1]])
+    return (line, marker, )
+
+# 4. Create an animation (`anim`) variable using the `animation.FuncAnimation`
+
+anim = animation.FuncAnimation(fig, animate, init_func=init,
+                               frames=range(0,len(sol.t)), interval=30, 
+                               blit=True)
+
+HTML(anim.to_html5_video())
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mRuntimeError[0m                              Traceback (most recent call last)
+Cell [0;32mIn[7], line 43[0m
+[1;32m     37[0m [38;5;66;03m# 4. Create an animation (`anim`) variable using the `animation.FuncAnimation`[39;00m
+[1;32m     39[0m anim [38;5;241m=[39m animation[38;5;241m.[39mFuncAnimation(fig, animate, init_func[38;5;241m=[39minit,
+[1;32m     40[0m                                frames[38;5;241m=[39m[38;5;28mrange[39m([38;5;241m0[39m,[38;5;28mlen[39m(sol[38;5;241m.[39mt)), interval[38;5;241m=[39m[38;5;241m30[39m, 
+[1;32m     41[0m                                blit[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[0;32m---> 43[0m HTML([43manim[49m[38;5;241;43m.[39;49m[43mto_html5_video[49m[43m([49m[43m)[49m)
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/matplotlib/animation.py:1265[0m, in [0;36mAnimation.to_html5_video[0;34m(self, embed_limit)[0m
+[1;32m   1262[0m path [38;5;241m=[39m Path(tmpdir, [38;5;124m"[39m[38;5;124mtemp.m4v[39m[38;5;124m"[39m)
+[1;32m   1263[0m [38;5;66;03m# We create a writer manually so that we can get the[39;00m
+[1;32m   1264[0m [38;5;66;03m# appropriate size for the tag[39;00m
+[0;32m-> 1265[0m Writer [38;5;241m=[39m [43mwriters[49m[43m[[49m[43mmpl[49m[38;5;241;43m.[39;49m[43mrcParams[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43manimation.writer[39;49m[38;5;124;43m'[39;49m[43m][49m[43m][49m
+[1;32m   1266[0m writer [38;5;241m=[39m Writer(codec[38;5;241m=[39m[38;5;124m'[39m[38;5;124mh264[39m[38;5;124m'[39m,
+[1;32m   1267[0m                 bitrate[38;5;241m=[39mmpl[38;5;241m.[39mrcParams[[38;5;124m'[39m[38;5;124manimation.bitrate[39m[38;5;124m'[39m],
+[1;32m   1268[0m                 fps[38;5;241m=[39m[38;5;241m1000.[39m [38;5;241m/[39m [38;5;28mself[39m[38;5;241m.[39m_interval)
+[1;32m   1269[0m [38;5;28mself[39m[38;5;241m.[39msave([38;5;28mstr[39m(path), writer[38;5;241m=[39mwriter)
+
+File [0;32m/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/matplotlib/animation.py:128[0m, in [0;36mMovieWriterRegistry.__getitem__[0;34m(self, name)[0m
+[1;32m    126[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mis_available(name):
+[1;32m    127[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_registered[name]
+[0;32m--> 128[0m [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([38;5;124mf[39m[38;5;124m"[39m[38;5;124mRequested MovieWriter ([39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[38;5;124m) not available[39m[38;5;124m"[39m)
+
+[0;31mRuntimeError[0m: Requested MovieWriter (ffmpeg) not available
+
