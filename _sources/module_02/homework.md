@@ -11,7 +11,7 @@ the outer radii. Its acceleration when the forces are first applied is $\alpha
 
 ![two-bar linkage mechanism](./images/two-bar_HW.svg)
  
-3. A mechanical sliding mechanism is designed for two arms to move the roller at
+2. A mechanical sliding mechanism is designed for two arms to move the roller at
 point C along the ground. A force $F=100~N$ is applied at the connecting link.
 The long arm OA has length $l_1 = 50~mm$ and the short arm has length $l_2 =
 42.43~mm$. A restoring force, $R$, is applied to prevent the system from accelerating
@@ -30,10 +30,12 @@ motion for a given time.
 a.  four-bar linkage shown in the video here
 
 <iframe width="560" height="315"
-src="https://www.youtube.com/embed/a3ybMtWZJlw" title="YouTube video
-player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>"
+src="https://www.youtube.com/embed/HhYwEQjyA_k?si=a7zslDF_s5r4rR_Z"
+title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope;
+picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen></iframe>
 
 $l_1 = 0.25~m,~l_2 = 1~m,~ l_3 = 1~m$
 
@@ -54,15 +56,17 @@ What are the rotation rates for links 2 and 3 (AB and BC, respectively)
 
 b. four-bar linkage shown in the video here
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/gErKDtwH5l0" title="YouTube video
-player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>"
+<iframe width="600" height="338"
+src="https://www.youtube.com/embed/C2LN1ONTjIU?si=7vdg_4gXyuIHuAz8"
+title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope;
+picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen></iframe>
 
 $l_1 = 0.25~m,~l_2 = 1~m,~ l_3 = 1~m$
 
-$dx = 1~m ~and~ dy = -0.25~m$
+$dx = 1~m ~and~ dy = -0.75~m$
 
 at time, $t$, link 1 (OA) is rotating at 10 rad/s. The positions of the pins
 are as follows
@@ -73,4 +77,4 @@ $r_A = 0\hat{i}+0.25\hat{j}$ [m]
 
 $r_B = 0.968\hat{i} + 0.499\hat{j}$ [m]
 
-$r_C = 1\hat{i} - 0.5\hat{j}$ [m]
+$r_C = 1\hat{i} - 0.75\hat{j}$ [m]
