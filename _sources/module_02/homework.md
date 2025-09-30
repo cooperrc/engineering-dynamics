@@ -75,6 +75,6 @@ $r_0 = 0\hat{i} + 0 \hat{j}$ [m]
 
 $r_A = 0\hat{i}+0.25\hat{j}$ [m]
 
-$r_B = 0.968\hat{i} + 0.499\hat{j}$ [m]
+$r_B = 1\hat{i} + 0.25\hat{j}$ [m]
 
 $r_C = 1\hat{i} - 0.75\hat{j}$ [m]
