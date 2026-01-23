@@ -1,9 +1,8 @@
-# Syllabus - ME2120 Fall 2025
+# Syllabus - ME2120 Spring 2026
 
 ## Applied Mechanics II: Dynamics
 
-- **Course Discussion**:  [GitHub Discussions](https://github.com/cooperrc/engineering-dynamics/discussions)
-    _make a github.com account to post questions and answers_
+- **Course Discussion**:  [Teams Discussion](https://github.com/cooperrc/engineering-dynamics/discussion://teams.microsoft.com/l/channel/19%3AkAdyh1VwnEcI5ATuPO0T15yhrAqmWXQYJNnhdVqlHBA1%40thread.tacv2/General?groupId=cdc1b61b-9338-4100-95d0-b790b0e15598&tenantId=17f1a87e-2a25-4eaa-b9df-9d439034b080)
 - **Submit Assignments**: [**HuskyCT**](https://learn.uconn.edu).
 - **Jupyter Server**: <https://nanohub.org/tools/dynamics> *create your
   own nanoHUB account for access*
@@ -76,7 +75,7 @@ Additional materials are under active development at the following link:
 [*Engineering
 Dynamics*](https://cooperrc.github.io/engineering-dynamics/intro.html)[*
 by Ryan C.
-Cooper*](https://cooperrc.github.io/engineering-dynamics/intro.html)
+Cooper*](https://cooperrc.github.io/)
 *this is a work in progress. Feel free to add
 suggestions/comments/updates in the *[*GitHub
 repository*](https://github.com/cooperrc/engineering-dynamics)
@@ -88,7 +87,7 @@ and ready at <https://nanohub.org/tools/dynamics>
 ([*Google*](https://software.uconn.edu/software/google-apps/)/[*Microsoft*](https://software.uconn.edu/microsoft-products-students/)/OpenOffice),
 Plotting software (Python, Excel, or Google Sheets)
 
-**GitHub Discussions:** This session we will be using GitHub Discussions for class discussion. The system
+**Teams Discussions:** This session we will be using GitHub Discussions for class discussion. The system
 is catered to getting you help fast and efficiently from classmates and
 myself. Rather than emailing questions, I prefer you to post your
 questions on the discussion board. 
@@ -101,10 +100,6 @@ Assignments are due by 11:59pm on the specified due dates.
 ### Course Livestreams and Videos
 
 #### [@ProfRyanCooper's YouTube Channel](https://www.youtube.com/@ProfRyanCooper)
-
-[Prof. Cooper's old YouTube
-Channel](https://www.youtube.com/channel/UC6oOZZrQwJpOkra-QSGy3GA) _for
-previous recordings and further resources_
 
 ### Course Description
 
@@ -189,10 +184,9 @@ In order to be successful in this course I expect:
 |**Item**  |       **Percent** |  **Requirement** |
 |---|---|---|
 |Participation|20 %|Discussions and peer review
-|Homework| 30 %|Submit solutions on HuskyCT and revise based upon textbook solution
-|Quizzes|30 %|5 quizzes
-|Projects| 20 %|Ananlyze and submit three engineering dynamics Jupyter notebooks and one
-final independent project
+|Reading Quizzes | 10 % | Interact with Learning Coach AI agent and demonstrate understanding of the reading material
+|Case Problems| 30 %|Submit solutions on HuskyCT and revise based upon feedback
+|Projects| 40 %|Ananlyze and submit three engineering dynamics Jupyter notebooks and one final independent project
 
 #### Note on Due dates
 
@@ -213,12 +207,11 @@ happy to provide an extra day to get to an assignment done.
 #### Note on Participation grade
 
 The participation grade is based upon your own self assessment of how
-you add to our learning community. You will fill out 2 forms:
+you add to our learning community. You will fill out a form two address
+t parts:
 
-1. Halfway: What is your current assessment? Why do you feel that way? I
-   will help connect you to others if you don't feel engaged
-2. Final: What is your final assessment? How did you participate? Ths
-   is your final Participation grade.
+1. What is your final assessment? 
+2. How did you participate? 
 
 You can add to the class in a number
 of ways including, but not limited to:
@@ -243,17 +236,6 @@ Download
 from the app store. Scan the document, press "send", press "share",
 select "Google Drive", select "Upload".
 
-#### Note on Quizzes
-
-There will be five quizzes, one for each module. The quizzes are composed
-of 2-4 questions based upon the readings and homeworks. The class before
-quizzes for modules 01-04, I will ask you to design questions that demonstrate your
-understanding of the material. I will build the quiz based upon our
-discussion. 
-
-You will scan
-and upload your work to HuskyCT *along with a 10-30-second video
-explaining your solution*.
 
 #### Note on the Project Report
 
@@ -289,7 +271,7 @@ progresses. *All changes will be communicated via the calendar or
 another appropriate notification.*
 
 **Late Policy:** If you need more time for an assignment or experience
-technical difficulties, reach out via GitHub Discussions or email. The
+technical difficulties, reach out via Teams Discussions. The
 instructor can make accommodations for work, family, and personal
 reasons. *We ask that you be respectful of the instructors' limited time
 and resources.*
@@ -421,7 +403,7 @@ page*](https://privacy.uconn.edu/).
 To be successful in this course, you will need the following technical
 skills:
 
--   Use GitHub Discussions
+-   Use online Discussions
 -   Create graphics and graphs and include them in Google documents and
     Jupyter notebooks
 -   Work within two or more browser windows simultaneously.
