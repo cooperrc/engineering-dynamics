@@ -1,8 +1,7 @@
-# Syllabus - ME2120 Spring 2026
+# Syllabus - ME2120
 
 ## Applied Mechanics II: Dynamics
 
-- **Course Discussion**:  [Teams Discussion](https://github.com/cooperrc/engineering-dynamics/discussion://teams.microsoft.com/l/channel/19%3AkAdyh1VwnEcI5ATuPO0T15yhrAqmWXQYJNnhdVqlHBA1%40thread.tacv2/General?groupId=cdc1b61b-9338-4100-95d0-b790b0e15598&tenantId=17f1a87e-2a25-4eaa-b9df-9d439034b080)
 - **Submit Assignments**: [**HuskyCT**](https://learn.uconn.edu).
 - **Jupyter Server**: <https://nanohub.org/tools/dynamics> *create your
   own nanoHUB account for access*
@@ -20,14 +19,10 @@ at home)
 **Instructor**: Prof. Ryan C. Cooper
 [***ryan.c.cooper\@uconn.edu***](mailto:ryan.c.cooper@uconn.edu)
 
-**Office Hours/Availability:** by appointment (Mon/Wed/Thur 9-5) *post
-questions on GitHub Discussions (the preferred contact)*
+**Office Hours/Availability:** by appointment (Mon-Fri 9-4) 
 
 **Preferred Contact:** Post course-related questions and comments to
-GitHub Discussions.
-
-Personal questions should be communicated privately via UConn email or
-GitHub Discussions Direct Message (DM)
+HuskyCT Discussions.
 
 ### Course Materials
 
@@ -86,11 +81,6 @@ and ready at <https://nanohub.org/tools/dynamics>
 **Required software:** Jupyter, Python, GitHub, and
 ([*Google*](https://software.uconn.edu/software/google-apps/)/[*Microsoft*](https://software.uconn.edu/microsoft-products-students/)/OpenOffice),
 Plotting software (Python, Excel, or Google Sheets)
-
-**Teams Discussions:** This session we will be using GitHub Discussions for class discussion. The system
-is catered to getting you help fast and efficiently from classmates and
-myself. Rather than emailing questions, I prefer you to post your
-questions on the discussion board. 
 
 ### Course Calendar
 
@@ -184,9 +174,8 @@ In order to be successful in this course I expect:
 |**Item**  |       **Percent** |  **Requirement** |
 |---|---|---|
 |Participation|20 %|Discussions and peer review
-|Reading Quizzes | 10 % | Interact with Learning Coach AI agent and demonstrate understanding of the reading material
-|Case Problems| 30 %|Submit solutions on HuskyCT and revise based upon feedback
-|Projects| 40 %|Ananlyze and submit three engineering dynamics Jupyter notebooks and one final independent project
+|Case Problems| 50 %|Submit solutions on HuskyCT and revise based upon feedback
+|Projects| 30 %|Ananlyze and submit three engineering dynamics Jupyter notebooks and one final independent project
 
 #### Note on Due dates
 
@@ -215,7 +204,7 @@ t parts:
 
 You can add to the class in a number
 of ways including, but not limited to:
-- adding questions or answers to GitHub Discussions discussions
+- adding questions or answers to discussions
 - attending lectures
 - participating in a study group or group chat
 - sharing notes from lectures or videos
