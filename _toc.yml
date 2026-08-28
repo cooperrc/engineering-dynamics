@@ -6,7 +6,6 @@ root: intro
 chapters:
 - file: syllabus
 - file: module_00/meet_cooper
-- file: content
 - file: module_00/overview
   sections:
     - file: module_00/introduction
