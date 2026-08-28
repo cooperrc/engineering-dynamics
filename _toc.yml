@@ -10,12 +10,12 @@ chapters:
 - file: module_00/overview
   sections:
     - file: module_00/introduction
-    - file: getting-started/01_interactions
+    - file: module_01/philosophy
 - file: module_01/overview
   sections:
     - file: module_01/readings
     - file: module_01/introduction
-    - file: module_01/philosophy
+    - file: getting-started/01_interactions
     - file: module_01/definitions
     - file: module_01/snowflake
     - file: module_01/galileo

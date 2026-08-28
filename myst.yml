@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 380b167c-d3a7-4ec0-ba8a-83863cbe8b52
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/cooperrc/engineering-dynamics
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
